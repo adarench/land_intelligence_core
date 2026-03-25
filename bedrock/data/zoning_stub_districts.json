@@ -1,0 +1,73 @@
+{
+  "jurisdictions": [
+    {
+      "jurisdiction": "BenchmarkCounty_UT",
+      "districts": [
+        {
+          "district": "R-1",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-1000.0, -1000.0], [-1000.0, 5000.0], [5000.0, 5000.0], [5000.0, -1000.0], [-1000.0, -1000.0]]]
+          }
+        }
+      ]
+    },
+    {
+      "jurisdiction": "Salt Lake City",
+      "districts": [
+        {
+          "district": "R-1-7000",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-111.92, 40.75], [-111.92, 40.77], [-111.90, 40.77], [-111.90, 40.75], [-111.92, 40.75]]]
+          }
+        },
+        {
+          "district": "RMF-35",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-111.90, 40.75], [-111.90, 40.77], [-111.88, 40.77], [-111.88, 40.75], [-111.90, 40.75]]]
+          }
+        }
+      ]
+    },
+    {
+      "jurisdiction": "Lehi",
+      "districts": [
+        {
+          "district": "R-1-22",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-111.89, 40.38], [-111.89, 40.40], [-111.86, 40.40], [-111.86, 40.38], [-111.89, 40.38]]]
+          }
+        },
+        {
+          "district": "TH-5",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-111.86, 40.38], [-111.86, 40.40], [-111.83, 40.40], [-111.83, 40.38], [-111.86, 40.38]]]
+          }
+        }
+      ]
+    },
+    {
+      "jurisdiction": "Draper",
+      "districts": [
+        {
+          "district": "R3",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-111.88, 40.49], [-111.88, 40.51], [-111.85, 40.51], [-111.85, 40.49], [-111.88, 40.49]]]
+          }
+        },
+        {
+          "district": "C-2",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-111.85, 40.49], [-111.85, 40.51], [-111.82, 40.51], [-111.82, 40.49], [-111.85, 40.49]]]
+          }
+        }
+      ]
+    }
+  ]
+}

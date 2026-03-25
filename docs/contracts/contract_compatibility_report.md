@@ -34,7 +34,7 @@ Canonical contracts:
 - canonical capacity field is `units`
 - compatibility aliases `feasible_units` and `max_units` remain accepted
 - financial projections are embedded directly in the canonical contract
-- the public feasibility API currently wraps canonical results in a response envelope
+- the public feasibility API returns canonical `FeasibilityResult`
 
 ## Compatibility matrix
 
@@ -42,10 +42,11 @@ Canonical contracts:
 | --- | --- | --- | --- |
 | `bedrock/contracts/parcel.py` consumers | `Parcel(area)` | `Parcel(area_sqft)` with property alias `area` | Compatible |
 | `bedrock/engines/zoning_engine.py` | `ZoningDistrict + DevelopmentStandard[]` | `ZoningRules` via `build_zoning_rules(...)` | Compatible with adapter normalization |
-| `bedrock/services/zoning_service.py` | `ZoningDistrictLookupResult` or local shim `ZoningLookupResult` | not yet canonical public output | Transitional only |
-| `bedrock/services/layout_service.py` | local `LayoutResult(units, road_length, ...)` | canonical `LayoutResult(unit_count, road_length_ft, parcel_id, ...)` via conversion helpers and validators | Compatible with shim |
+| `bedrock/services/zoning_service.py` | local `ZoningLookupResult` including `rules: ZoningRules` | canonical `ZoningRules` for public zoning API and internal pipeline composition | Compatible with orchestration shim |
+| `bedrock/services/layout_service.py` | `LayoutResult` plus `SubdivisionLayout` compatibility alias | canonical `LayoutResult(unit_count, road_length_ft, parcel_id, ...)` via conversion helpers and validators | Compatible with shim |
 | `bedrock/pipelines/parcel_feasibility_pipeline.py` | `FeasibilityResult(max_units, ...)` | `FeasibilityResult(units, ...)` via alias compatibility | Compatible |
-| `bedrock/api/feasibility_api.py` | `FeasibilityEvaluationResponse(results=[FeasibilityResult])` | wrapper around canonical results | Compatible with API-layer wrapper |
+| `bedrock/api/feasibility_api.py` | `FeasibilityResult` | canonical feasibility stage result | Compatible |
+| `bedrock/api/pipeline_api.py` | `PipelineRunRequest(parcel_geometry,...) -> FeasibilityResult` | end-to-end orchestration response aligned to canonical feasibility stage contract | Compatible |
 
 ## Validation rules for Bedrock services
 
@@ -75,7 +76,5 @@ Canonical contracts:
 
 ## Known gaps
 
-- the public zoning API still returns district-only lookup output rather than canonical `ZoningRules`
-- the public layout API still uses milestone-local request and response models from `bedrock.services.layout_service`
 - the legacy GIS layout service model does not carry `parcel_id`; Bedrock must continue enriching that field
-- the public Bedrock feasibility API returns a response wrapper rather than a bare `FeasibilityResult`
+- orchestration API duplicates feasibility functionality already exposed by `POST /feasibility/evaluate`; governance may choose to keep both surfaces or collapse one

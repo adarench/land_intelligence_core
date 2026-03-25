@@ -69,7 +69,13 @@ flowchart TD
 
 ## Public API normalization level
 
-Current Bedrock APIs are active platform boundaries. Feasibility remains wrapped in a response envelope; the other primary stage APIs emit canonical stage contracts.
+Current Bedrock APIs are active platform boundaries. Stage APIs emit canonical contracts directly:
+
+- `POST /parcel/load` -> `Parcel`
+- `POST /zoning/lookup` -> `ZoningRules`
+- `POST /layout/search` -> `LayoutResult`
+- `POST /feasibility/evaluate` -> `FeasibilityResult`
+- `POST /pipeline/run` -> `FeasibilityResult`
 
 ## Parcel runtime state
 
@@ -97,28 +103,28 @@ Current Bedrock APIs are active platform boundaries. Feasibility remains wrapped
 - implemented directly in Bedrock
 - supports one-layout evaluation and multi-layout ranking
 - computes deterministic financial outputs and explanation data
-- returns wrapper response `FeasibilityEvaluationResponse`
-- wrapped result objects are canonical `FeasibilityResult`
+- returns canonical `FeasibilityResult`
 
 ## Current runtime failure and compatibility model
 
 Compatibility layers in use:
 
-- feasibility response wrapper
+- layout/search compatibility aliases normalized through `build_layout_result(...)`
+- `SubdivisionLayout` compatibility alias to canonical `LayoutResult`
 
 ## Current state vs target state
 
 ### Current state
 
 - public APIs exist
-- parcel, zoning, and layout align to canonical stage contracts
-- feasibility exposes canonical results through a wrapper
+- parcel, zoning, layout, and feasibility align to canonical stage contracts
+- orchestration endpoint surface exists, but full end-to-end operational validation is pending
 
 ### Target state
 
 - public boundaries emit the governance-approved canonical contracts directly
 - zoning emits parcel-scoped `ZoningRules`
 - layout emits canonical `LayoutResult`
-- feasibility response envelope, if retained, is explicitly governed as part of the service contract
+- feasibility emits canonical `FeasibilityResult`
 
 `takeoff_archive` is frozen legacy research code and is not part of the active Land Feasibility Platform.

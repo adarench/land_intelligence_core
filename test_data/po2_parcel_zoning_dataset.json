@@ -1,0 +1,618 @@
+{
+  "dataset": "po2_supported_jurisdictions_v1",
+  "description": "PO-2 stabilization matrix using deterministic, buildable parcels in supported jurisdictions only.",
+  "records": [
+    {
+      "parcel_id": "po2-slc-r1-7000-01",
+      "jurisdiction": "Salt Lake City",
+      "zoning_district": "R-1-7000",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94120957366566,
+              40.79003689547184
+            ],
+            [
+              -111.94120957366566,
+              40.79243689547184
+            ],
+            [
+              -111.93880957366567,
+              40.79243689547184
+            ],
+            [
+              -111.93880957366567,
+              40.79003689547184
+            ],
+            [
+              -111.94120957366566,
+              40.79003689547184
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R-1-7000 delta=0.0012"
+    },
+    {
+      "parcel_id": "po2-slc-r1-7000-02",
+      "jurisdiction": "Salt Lake City",
+      "zoning_district": "R-1-7000",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94140957366567,
+              40.78983689547184
+            ],
+            [
+              -111.94140957366567,
+              40.79263689547184
+            ],
+            [
+              -111.93860957366566,
+              40.79263689547184
+            ],
+            [
+              -111.93860957366566,
+              40.78983689547184
+            ],
+            [
+              -111.94140957366567,
+              40.78983689547184
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R-1-7000 delta=0.0014"
+    },
+    {
+      "parcel_id": "po2-slc-r1-7000-03",
+      "jurisdiction": "Salt Lake City",
+      "zoning_district": "R-1-7000",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94160957366566,
+              40.78963689547184
+            ],
+            [
+              -111.94160957366566,
+              40.792836895471844
+            ],
+            [
+              -111.93840957366567,
+              40.792836895471844
+            ],
+            [
+              -111.93840957366567,
+              40.78963689547184
+            ],
+            [
+              -111.94160957366566,
+              40.78963689547184
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R-1-7000 delta=0.0016"
+    },
+    {
+      "parcel_id": "po2-slc-r1-7000-04",
+      "jurisdiction": "Salt Lake City",
+      "zoning_district": "R-1-7000",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94180957366567,
+              40.78943689547184
+            ],
+            [
+              -111.94180957366567,
+              40.79303689547184
+            ],
+            [
+              -111.93820957366566,
+              40.79303689547184
+            ],
+            [
+              -111.93820957366566,
+              40.78943689547184
+            ],
+            [
+              -111.94180957366567,
+              40.78943689547184
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R-1-7000 delta=0.0018"
+    },
+    {
+      "parcel_id": "po2-slc-r1-7000-05",
+      "jurisdiction": "Salt Lake City",
+      "zoning_district": "R-1-7000",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94220957366566,
+              40.78903689547184
+            ],
+            [
+              -111.94220957366566,
+              40.79343689547184
+            ],
+            [
+              -111.93780957366566,
+              40.79343689547184
+            ],
+            [
+              -111.93780957366566,
+              40.78903689547184
+            ],
+            [
+              -111.94220957366566,
+              40.78903689547184
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R-1-7000 delta=0.0022"
+    },
+    {
+      "parcel_id": "po2-slc-r1-7000-06",
+      "jurisdiction": "Salt Lake City",
+      "zoning_district": "R-1-7000",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94260957366566,
+              40.78863689547184
+            ],
+            [
+              -111.94260957366566,
+              40.79383689547184
+            ],
+            [
+              -111.93740957366566,
+              40.79383689547184
+            ],
+            [
+              -111.93740957366566,
+              40.78863689547184
+            ],
+            [
+              -111.94260957366566,
+              40.78863689547184
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R-1-7000 delta=0.0026"
+    },
+    {
+      "parcel_id": "po2-lehi-th5-01",
+      "jurisdiction": "Lehi",
+      "zoning_district": "TH-5",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91917050646572,
+              40.431058617129764
+            ],
+            [
+              -111.91917050646572,
+              40.43345861712976
+            ],
+            [
+              -111.91677050646572,
+              40.43345861712976
+            ],
+            [
+              -111.91677050646572,
+              40.431058617129764
+            ],
+            [
+              -111.91917050646572,
+              40.431058617129764
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in TH-5 delta=0.0012"
+    },
+    {
+      "parcel_id": "po2-lehi-th5-02",
+      "jurisdiction": "Lehi",
+      "zoning_district": "TH-5",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91937050646573,
+              40.430858617129765
+            ],
+            [
+              -111.91937050646573,
+              40.43365861712976
+            ],
+            [
+              -111.91657050646572,
+              40.43365861712976
+            ],
+            [
+              -111.91657050646572,
+              40.430858617129765
+            ],
+            [
+              -111.91937050646573,
+              40.430858617129765
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in TH-5 delta=0.0014"
+    },
+    {
+      "parcel_id": "po2-lehi-th5-03",
+      "jurisdiction": "Lehi",
+      "zoning_district": "TH-5",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91957050646572,
+              40.43065861712976
+            ],
+            [
+              -111.91957050646572,
+              40.433858617129765
+            ],
+            [
+              -111.91637050646573,
+              40.433858617129765
+            ],
+            [
+              -111.91637050646573,
+              40.43065861712976
+            ],
+            [
+              -111.91957050646572,
+              40.43065861712976
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in TH-5 delta=0.0016"
+    },
+    {
+      "parcel_id": "po2-lehi-th5-04",
+      "jurisdiction": "Lehi",
+      "zoning_district": "TH-5",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91977050646572,
+              40.43045861712976
+            ],
+            [
+              -111.91977050646572,
+              40.434058617129764
+            ],
+            [
+              -111.91617050646572,
+              40.434058617129764
+            ],
+            [
+              -111.91617050646572,
+              40.43045861712976
+            ],
+            [
+              -111.91977050646572,
+              40.43045861712976
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in TH-5 delta=0.0018"
+    },
+    {
+      "parcel_id": "po2-lehi-th5-05",
+      "jurisdiction": "Lehi",
+      "zoning_district": "TH-5",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.92017050646572,
+              40.43005861712976
+            ],
+            [
+              -111.92017050646572,
+              40.43445861712976
+            ],
+            [
+              -111.91577050646572,
+              40.43445861712976
+            ],
+            [
+              -111.91577050646572,
+              40.43005861712976
+            ],
+            [
+              -111.92017050646572,
+              40.43005861712976
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in TH-5 delta=0.0022"
+    },
+    {
+      "parcel_id": "po2-lehi-th5-06",
+      "jurisdiction": "Lehi",
+      "zoning_district": "TH-5",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.92057050646572,
+              40.42965861712976
+            ],
+            [
+              -111.92057050646572,
+              40.43485861712976
+            ],
+            [
+              -111.91537050646572,
+              40.43485861712976
+            ],
+            [
+              -111.91537050646572,
+              40.42965861712976
+            ],
+            [
+              -111.92057050646572,
+              40.42965861712976
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in TH-5 delta=0.0026"
+    },
+    {
+      "parcel_id": "po2-draper-r3-01",
+      "jurisdiction": "Draper",
+      "zoning_district": "R3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87542936864271,
+              40.51747581763975
+            ],
+            [
+              -111.87542936864271,
+              40.51987581763974
+            ],
+            [
+              -111.87302936864272,
+              40.51987581763974
+            ],
+            [
+              -111.87302936864272,
+              40.51747581763975
+            ],
+            [
+              -111.87542936864271,
+              40.51747581763975
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R3 delta=0.0012"
+    },
+    {
+      "parcel_id": "po2-draper-r3-02",
+      "jurisdiction": "Draper",
+      "zoning_district": "R3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87562936864272,
+              40.51727581763975
+            ],
+            [
+              -111.87562936864272,
+              40.52007581763974
+            ],
+            [
+              -111.87282936864271,
+              40.52007581763974
+            ],
+            [
+              -111.87282936864271,
+              40.51727581763975
+            ],
+            [
+              -111.87562936864272,
+              40.51727581763975
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R3 delta=0.0014"
+    },
+    {
+      "parcel_id": "po2-draper-r3-03",
+      "jurisdiction": "Draper",
+      "zoning_district": "R3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87582936864271,
+              40.51707581763974
+            ],
+            [
+              -111.87582936864271,
+              40.52027581763975
+            ],
+            [
+              -111.87262936864272,
+              40.52027581763975
+            ],
+            [
+              -111.87262936864272,
+              40.51707581763974
+            ],
+            [
+              -111.87582936864271,
+              40.51707581763974
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R3 delta=0.0016"
+    },
+    {
+      "parcel_id": "po2-draper-r3-04",
+      "jurisdiction": "Draper",
+      "zoning_district": "R3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87602936864272,
+              40.51687581763974
+            ],
+            [
+              -111.87602936864272,
+              40.52047581763975
+            ],
+            [
+              -111.87242936864271,
+              40.52047581763975
+            ],
+            [
+              -111.87242936864271,
+              40.51687581763974
+            ],
+            [
+              -111.87602936864272,
+              40.51687581763974
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R3 delta=0.0018"
+    },
+    {
+      "parcel_id": "po2-draper-r3-05",
+      "jurisdiction": "Draper",
+      "zoning_district": "R3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87642936864272,
+              40.516475817639744
+            ],
+            [
+              -111.87642936864272,
+              40.52087581763975
+            ],
+            [
+              -111.87202936864271,
+              40.52087581763975
+            ],
+            [
+              -111.87202936864271,
+              40.516475817639744
+            ],
+            [
+              -111.87642936864272,
+              40.516475817639744
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R3 delta=0.0022"
+    },
+    {
+      "parcel_id": "po2-draper-r3-06",
+      "jurisdiction": "Draper",
+      "zoning_district": "R3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87682936864272,
+              40.516075817639745
+            ],
+            [
+              -111.87682936864272,
+              40.52127581763975
+            ],
+            [
+              -111.87162936864272,
+              40.52127581763975
+            ],
+            [
+              -111.87162936864272,
+              40.516075817639745
+            ],
+            [
+              -111.87682936864272,
+              40.516075817639745
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Buildable deterministic square in R3 delta=0.0026"
+    }
+  ]
+}

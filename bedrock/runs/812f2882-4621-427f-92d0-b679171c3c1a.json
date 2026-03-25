@@ -1,0 +1,757 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "812f2882-4621-427f-92d0-b679171c3c1a",
+  "parcel_id": "coverage-provo-07",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "coverage-provo-07",
+    "jurisdiction": "Provo",
+    "district": "R-1-10",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "R-1-10:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 10000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+          "observed_at": "2026-03-20T20:54:09.620505Z"
+        }
+      },
+      {
+        "id": "R-1-10:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 4.36,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+          "observed_at": "2026-03-20T20:54:09.620505Z"
+        }
+      },
+      {
+        "id": "R-1-10:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+          "observed_at": "2026-03-20T20:54:09.620505Z"
+        }
+      },
+      {
+        "id": "R-1-10:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.42,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+          "observed_at": "2026-03-20T20:54:09.620505Z"
+        }
+      },
+      {
+        "id": "R-1-10:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+          "observed_at": "2026-03-20T20:54:09.620505Z"
+        }
+      },
+      {
+        "id": "R-1-10:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+          "observed_at": "2026-03-20T20:54:09.620505Z"
+        }
+      },
+      {
+        "id": "R-1-10:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+          "observed_at": "2026-03-20T20:54:09.620505Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 8.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 10000.0,
+    "max_units_per_acre": 4.36,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.42,
+    "min_frontage_ft": null,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+      "observed_at": "2026-03-20T20:54:09.620505Z"
+    }
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-coverage-provo-07-0fdb387b934c",
+    "parcel_id": "coverage-provo-07",
+    "unit_count": 16,
+    "road_length_ft": 2826.6,
+    "lot_geometries": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.66048560545815,
+              40.232709890109895
+            ],
+            [
+              -111.66074470721148,
+              40.232709890109895
+            ],
+            [
+              -111.66074470721148,
+              40.23324807692308
+            ],
+            [
+              -111.66048560545815,
+              40.23324807692308
+            ],
+            [
+              -111.66048560545815,
+              40.232709890109895
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.66037044912333,
+              40.23324807692308
+            ],
+            [
+              -111.66011134737,
+              40.23324807692308
+            ],
+            [
+              -111.66011134737,
+              40.232709890109895
+            ],
+            [
+              -111.66037044912333,
+              40.232709890109895
+            ],
+            [
+              -111.66037044912333,
+              40.23324807692308
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.66048560545815,
+              40.23435192307692
+            ],
+            [
+              -111.66074470721148,
+              40.23435192307692
+            ],
+            [
+              -111.66074470721148,
+              40.23489010989011
+            ],
+            [
+              -111.66048560545815,
+              40.23489010989011
+            ],
+            [
+              -111.66048560545815,
+              40.23435192307692
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.66037044912333,
+              40.23489010989011
+            ],
+            [
+              -111.66011134737,
+              40.23489010989011
+            ],
+            [
+              -111.66011134737,
+              40.23435192307692
+            ],
+            [
+              -111.66037044912333,
+              40.23435192307692
+            ],
+            [
+              -111.66037044912333,
+              40.23489010989011
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.6599424218326,
+              40.23324807692308
+            ],
+            [
+              -111.65968332007925,
+              40.23324807692308
+            ],
+            [
+              -111.65968332007925,
+              40.232709890109895
+            ],
+            [
+              -111.6599424218326,
+              40.232709890109895
+            ],
+            [
+              -111.6599424218326,
+              40.23324807692308
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.6599424218326,
+              40.23489010989011
+            ],
+            [
+              -111.65968332007925,
+              40.23489010989011
+            ],
+            [
+              -111.65968332007925,
+              40.23435192307692
+            ],
+            [
+              -111.6599424218326,
+              40.23435192307692
+            ],
+            [
+              -111.6599424218326,
+              40.23489010989011
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.65951439454184,
+              40.23324807692308
+            ],
+            [
+              -111.65925529278852,
+              40.23324807692308
+            ],
+            [
+              -111.65925529278852,
+              40.232709890109895
+            ],
+            [
+              -111.65951439454184,
+              40.232709890109895
+            ],
+            [
+              -111.65951439454184,
+              40.23324807692308
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.65951439454184,
+              40.23489010989011
+            ],
+            [
+              -111.65925529278852,
+              40.23489010989011
+            ],
+            [
+              -111.65925529278852,
+              40.23435192307692
+            ],
+            [
+              -111.65951439454184,
+              40.23435192307692
+            ],
+            [
+              -111.65951439454184,
+              40.23489010989011
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.66048560545815,
+              40.23375604395605
+            ],
+            [
+              -111.66048560545815,
+              40.23324807692308
+            ],
+            [
+              -111.66074470721148,
+              40.23324807692308
+            ],
+            [
+              -111.66074470721148,
+              40.23375604395605
+            ],
+            [
+              -111.66048560545815,
+              40.23375604395605
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.66037044912333,
+              40.23375604395605
+            ],
+            [
+              -111.66011134737,
+              40.23375604395605
+            ],
+            [
+              -111.66011134737,
+              40.23324807692308
+            ],
+            [
+              -111.66037044912333,
+              40.23324807692308
+            ],
+            [
+              -111.66037044912333,
+              40.23375604395605
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.66048560545815,
+              40.233843956043955
+            ],
+            [
+              -111.66074470721148,
+              40.233843956043955
+            ],
+            [
+              -111.66074470721148,
+              40.23435192307692
+            ],
+            [
+              -111.66048560545815,
+              40.23435192307692
+            ],
+            [
+              -111.66048560545815,
+              40.233843956043955
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.66037044912333,
+              40.233843956043955
+            ],
+            [
+              -111.66037044912333,
+              40.23435192307692
+            ],
+            [
+              -111.66011134737,
+              40.23435192307692
+            ],
+            [
+              -111.66011134737,
+              40.233843956043955
+            ],
+            [
+              -111.66037044912333,
+              40.233843956043955
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.6599424218326,
+              40.23375604395605
+            ],
+            [
+              -111.65968332007925,
+              40.23375604395605
+            ],
+            [
+              -111.65968332007925,
+              40.23324807692308
+            ],
+            [
+              -111.6599424218326,
+              40.23324807692308
+            ],
+            [
+              -111.6599424218326,
+              40.23375604395605
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.6599424218326,
+              40.233843956043955
+            ],
+            [
+              -111.6599424218326,
+              40.23435192307692
+            ],
+            [
+              -111.65968332007925,
+              40.23435192307692
+            ],
+            [
+              -111.65968332007925,
+              40.233843956043955
+            ],
+            [
+              -111.6599424218326,
+              40.233843956043955
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.65951439454184,
+              40.23375604395605
+            ],
+            [
+              -111.65925529278852,
+              40.23375604395605
+            ],
+            [
+              -111.65925529278852,
+              40.23324807692308
+            ],
+            [
+              -111.65951439454184,
+              40.23324807692308
+            ],
+            [
+              -111.65951439454184,
+              40.23375604395605
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.65951439454184,
+              40.233843956043955
+            ],
+            [
+              -111.65951439454184,
+              40.23435192307692
+            ],
+            [
+              -111.65925529278852,
+              40.23435192307692
+            ],
+            [
+              -111.65925529278852,
+              40.233843956043955
+            ],
+            [
+              -111.65951439454184,
+              40.233843956043955
+            ]
+          ]
+        ]
+      }
+    ],
+    "road_geometries": [
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.66085605458149,
+            40.2338
+          ],
+          [
+            -111.6591439454185,
+            40.2338
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.66042802729073,
+            40.232709890109895
+          ],
+          [
+            -111.66042802729073,
+            40.23378626373626
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.66042802729073,
+            40.23381373626374
+          ],
+          [
+            -111.66042802729073,
+            40.23489010989011
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.66,
+            40.232709890109895
+          ],
+          [
+            -111.66,
+            40.23378626373626
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.66,
+            40.23381373626374
+          ],
+          [
+            -111.66,
+            40.23489010989011
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.65957197270926,
+            40.232709890109895
+          ],
+          [
+            -111.65957197270926,
+            40.23378626373626
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.65957197270926,
+            40.23381373626374
+          ],
+          [
+            -111.65957197270926,
+            40.23489010989011
+          ]
+        ]
+      }
+    ],
+    "open_space_area_sqft": 488371.2299978315,
+    "utility_length_ft": 0.0,
+    "score": null,
+    "buildable_area_sqft": null,
+    "metadata": {
+      "source_engine": "bedrock.layout_service",
+      "source_run_id": null,
+      "observed_at": "2026-03-20T20:54:09.639560Z"
+    }
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "f1b075f2-fd68-59af-9d1f-c396bbfff12d",
+    "layout_id": "layout-coverage-provo-07-0fdb387b934c",
+    "parcel_id": "coverage-provo-07",
+    "units": 16,
+    "estimated_home_price": 480000.0,
+    "construction_cost_per_home": 416000.0,
+    "development_cost_total": 1190584.2933884298,
+    "projected_revenue": 7680000.0,
+    "projected_cost": 7846584.29338843,
+    "projected_profit": -166584.29338843003,
+    "ROI": -0.02123016680376387,
+    "profit_margin": -0.02169066320161849,
+    "revenue_per_unit": 480000.0,
+    "cost_per_unit": 490411.5183367769,
+    "rank": null,
+    "risk_score": 0.703106483930475,
+    "requested_units": null,
+    "constraint_violations": [
+      "projected_profit_negative"
+    ],
+    "confidence": 0.9,
+    "status": "constrained",
+    "financial_summary": {
+      "units": 16,
+      "estimated_home_price": 480000.0,
+      "construction_cost_per_home": 416000.0,
+      "road_cost_per_ft": 300.0,
+      "road_length": 2826.6,
+      "land_cost": 0.0,
+      "projected_revenue": 7680000.0,
+      "development_cost_total": 1190584.2933884298,
+      "projected_cost": 7846584.29338843,
+      "projected_profit": -166584.29338843003,
+      "ROI": -0.02123016680376387,
+      "development_cost_breakdown": {
+        "roads": 847980.0,
+        "utilities": 0.0,
+        "grading": 84798.0,
+        "sitework": 201806.29338842974,
+        "permitting": 56000.0
+      },
+      "profit_margin": -0.02169066320161849,
+      "revenue_per_unit": 480000.0,
+      "cost_per_unit": 490411.5183367769
+    },
+    "explanation": {
+      "primary_driver": "road_cost",
+      "cost_breakdown": {
+        "construction": 6656000.0,
+        "development": 1190584.2933884298
+      },
+      "revenue_breakdown": {
+        "units": 16,
+        "price_per_home": 480000.0
+      }
+    },
+    "assumptions": {
+      "used_default_estimated_home_price": true,
+      "used_default_construction_cost_per_home": true,
+      "used_default_road_cost_per_ft": true,
+      "used_default_land_price": true,
+      "used_default_soft_cost_factor": true
+    },
+    "metadata": null
+  },
+  "timestamp": "2026-03-20T20:54:09.639835Z",
+  "git_commit": "ceaa51d8bb6aa1d29cf293e8e9dd47cbc86f6c8e",
+  "input_hash": "d5f006707752481d659c7bdfabadda12c477fcc0ce29ec135b7891819244c73a",
+  "stage_runtimes": {
+    "parcel.load": 0.000012,
+    "zoning.lookup": 0.00299,
+    "layout.search": 0.018842,
+    "feasibility.evaluate": 0.000222
+  }
+}

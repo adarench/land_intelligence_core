@@ -1,0 +1,109 @@
+{
+  "baseline_reference": {
+    "current_benchmark_report_path": "/tmp/layout_benchmark_current.json",
+    "current_evaluation_report_path": "/tmp/layout_eval_current.json",
+    "layout_evaluation_baseline_path": "bedrock/benchmarks/layout_evaluation_baseline.json"
+  },
+  "contracts": {
+    "layout_result": "unchanged",
+    "parcel": "unchanged",
+    "policy": "No changes to core data contracts; baseline only constrains evaluation metrics.",
+    "zoning_rules": "unchanged"
+  },
+  "datasets": {
+    "layout_benchmark": {
+      "case_count": 20,
+      "manifest_path": "test_data/layout_benchmark_manifest.json",
+      "sha256_manifest": "859dabfb12e6db4c8a5ff2cbb7472fb2d5330417984f3d6f7403c72a43bc4420"
+    },
+    "layout_evaluation": {
+      "case_count": 72,
+      "manifest_path": "test_data/layout_evaluation_manifest.json",
+      "parcel_count": 24,
+      "parcels_path": "test_data/layout_evaluation_parcels.json",
+      "scenario_count": 3,
+      "sha256_manifest": "4186b8e23c15105cc3f28e1a13fee03dedfe9953afdc40bbc85a958a2012dd97",
+      "sha256_parcels": "0c4236a1a6463e1fd8ee802298ffcdc12759cc077393e616db380c694b1a0d37"
+    }
+  },
+  "expected_output_ranges": {
+    "scenario_A": {
+      "layout_score": {
+        "max": 0.95,
+        "min": 0.72
+      },
+      "road_length_ft": {
+        "max": 2600.0,
+        "min": 750.0
+      },
+      "unit_yield": {
+        "max": 30,
+        "min": 8
+      }
+    },
+    "scenario_B": {
+      "layout_score": {
+        "max": 0.86,
+        "min": 0.7
+      },
+      "road_length_ft": {
+        "max": 2500.0,
+        "min": 650.0
+      },
+      "unit_yield": {
+        "max": 20,
+        "min": 5
+      }
+    },
+    "scenario_C": {
+      "layout_score": {
+        "max": 0.8,
+        "min": 0.6
+      },
+      "road_length_ft": {
+        "max": 2700.0,
+        "min": 650.0
+      },
+      "unit_yield": {
+        "max": 14,
+        "min": 3
+      }
+    }
+  },
+  "generated_at": "2026-03-20T00:00:00Z",
+  "pass_fail_criteria": {
+    "layout_benchmark": {
+      "avg_layout_score_min": 0.81,
+      "avg_runtime_seconds_max": 0.1,
+      "avg_units_min": 16.5,
+      "failure_count_max": 0,
+      "total_invalid_lot_count_max": 0
+    },
+    "layout_evaluation": {
+      "average_layout_score_min": 0.77,
+      "average_unit_yield_min": 11.5,
+      "average_yield_efficiency_min": 0.37,
+      "constraint_violation_count_max": 0,
+      "runtime_max_seconds_max": 0.95,
+      "runtime_p95_seconds_max": 0.15,
+      "solver_failure_count_max": 0,
+      "solver_success_rate_min": 1.0,
+      "zero_tolerance_solver_or_runtime_failures": true
+    }
+  },
+  "purpose": "Recenter regression baseline for higher-quality layout output expectations.",
+  "spec_name": "layout_regression_baseline_v2",
+  "variance_thresholds": {
+    "aggregate": {
+      "average_layout_score_drop_pct_max": 0.02,
+      "average_unit_yield_drop_pct_max": 0.03,
+      "runtime_p95_increase_pct_max": 0.25
+    },
+    "nondeterminism_policy": "Use range-based checks for units/score/road length; do not require exact values.",
+    "per_case": {
+      "layout_score_drop_abs_max": 0.03,
+      "road_length_pct_change_max": 0.2,
+      "unit_yield_drop_abs_max": 1
+    }
+  }
+}

@@ -7,6 +7,7 @@ It is separate from the live operational status layer in `bedrock/status/`.
 ## Important
 
 - `bedrock/status/` is the canonical operational status source.
+- `docs/system_state/status_truth_matrix.md` is the canonical reconciliation matrix for roadmap/architecture/system-state alignment.
 - System-level files there are owned by `orchestrator_agent`.
 - Those files were intentionally left in place during this documentation-only reorganization.
 

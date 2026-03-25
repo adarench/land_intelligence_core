@@ -1,0 +1,36 @@
+[
+  {
+    "city": "BenchmarkCounty_UT",
+    "zoning_code": "R-1",
+    "zoning_name": "Benchmark Residential",
+    "density": null,
+    "source_layer": "zoning",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -1000.0,
+            -1000.0
+          ],
+          [
+            -1000.0,
+            5000.0
+          ],
+          [
+            5000.0,
+            5000.0
+          ],
+          [
+            5000.0,
+            -1000.0
+          ],
+          [
+            -1000.0,
+            -1000.0
+          ]
+        ]
+      ]
+    }
+  }
+]

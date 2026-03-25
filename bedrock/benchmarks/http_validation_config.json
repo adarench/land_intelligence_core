@@ -1,0 +1,2348 @@
+{
+  "name": "http_full_chain_validation_v4_expanded",
+  "description": "Expanded deterministic HTTP validation suite with broader positive coverage and explicit negative/edge cases.",
+  "default_max_candidates": 8,
+  "cases": [
+    {
+      "case_id": "exp-salt-lake-city-001",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=rect; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94143457366566,
+              40.78984189547184
+            ],
+            [
+              -111.94143457366566,
+              40.79239189547184
+            ],
+            [
+              -111.93888457366567,
+              40.79239189547184
+            ],
+            [
+              -111.93888457366567,
+              40.78984189547184
+            ],
+            [
+              -111.94143457366566,
+              40.78984189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-002",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=trapezoid; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94143457366566,
+              40.78984189547184
+            ],
+            [
+              -111.94112857366567,
+              40.79239189547184
+            ],
+            [
+              -111.93919057366567,
+              40.79239189547184
+            ],
+            [
+              -111.93888457366567,
+              40.78984189547184
+            ],
+            [
+              -111.94143457366566,
+              40.78984189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-003",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=concave; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94143457366566,
+              40.78984189547184
+            ],
+            [
+              -111.94143457366566,
+              40.79239189547184
+            ],
+            [
+              -111.94061857366566,
+              40.79239189547184
+            ],
+            [
+              -111.94061857366566,
+              40.79111689547184
+            ],
+            [
+              -111.93970057366568,
+              40.79111689547184
+            ],
+            [
+              -111.93970057366568,
+              40.79239189547184
+            ],
+            [
+              -111.93888457366567,
+              40.79239189547184
+            ],
+            [
+              -111.93888457366567,
+              40.78984189547184
+            ],
+            [
+              -111.94143457366566,
+              40.78984189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-004",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=irregular; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94143457366566,
+              40.78984189547184
+            ],
+            [
+              -111.94117957366566,
+              40.79239189547184
+            ],
+            [
+              -111.94003207366566,
+              40.79218789547184
+            ],
+            [
+              -111.93888457366567,
+              40.79175439547184
+            ],
+            [
+              -111.93908857366567,
+              40.78984189547184
+            ],
+            [
+              -111.94143457366566,
+              40.78984189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-005",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=rect; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94128457366565,
+              40.78996189547184
+            ],
+            [
+              -111.94128457366565,
+              40.79251189547184
+            ],
+            [
+              -111.93873457366567,
+              40.79251189547184
+            ],
+            [
+              -111.93873457366567,
+              40.78996189547184
+            ],
+            [
+              -111.94128457366565,
+              40.78996189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-006",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=trapezoid; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94128457366565,
+              40.78996189547184
+            ],
+            [
+              -111.94097857366566,
+              40.79251189547184
+            ],
+            [
+              -111.93904057366566,
+              40.79251189547184
+            ],
+            [
+              -111.93873457366567,
+              40.78996189547184
+            ],
+            [
+              -111.94128457366565,
+              40.78996189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-007",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=concave; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94128457366565,
+              40.78996189547184
+            ],
+            [
+              -111.94128457366565,
+              40.79251189547184
+            ],
+            [
+              -111.94046857366565,
+              40.79251189547184
+            ],
+            [
+              -111.94046857366565,
+              40.79123689547184
+            ],
+            [
+              -111.93955057366567,
+              40.79123689547184
+            ],
+            [
+              -111.93955057366567,
+              40.79251189547184
+            ],
+            [
+              -111.93873457366567,
+              40.79251189547184
+            ],
+            [
+              -111.93873457366567,
+              40.78996189547184
+            ],
+            [
+              -111.94128457366565,
+              40.78996189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-008",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=irregular; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94128457366565,
+              40.78996189547184
+            ],
+            [
+              -111.94102957366566,
+              40.79251189547184
+            ],
+            [
+              -111.93988207366566,
+              40.79230789547184
+            ],
+            [
+              -111.93873457366567,
+              40.79187439547184
+            ],
+            [
+              -111.93893857366567,
+              40.78996189547184
+            ],
+            [
+              -111.94128457366565,
+              40.78996189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-009",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=rect; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94116457366566,
+              40.79010189547184
+            ],
+            [
+              -111.94116457366566,
+              40.79265189547184
+            ],
+            [
+              -111.93861457366567,
+              40.79265189547184
+            ],
+            [
+              -111.93861457366567,
+              40.79010189547184
+            ],
+            [
+              -111.94116457366566,
+              40.79010189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-010",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=trapezoid; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94116457366566,
+              40.79010189547184
+            ],
+            [
+              -111.94085857366566,
+              40.79265189547184
+            ],
+            [
+              -111.93892057366567,
+              40.79265189547184
+            ],
+            [
+              -111.93861457366567,
+              40.79010189547184
+            ],
+            [
+              -111.94116457366566,
+              40.79010189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-011",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=concave; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94116457366566,
+              40.79010189547184
+            ],
+            [
+              -111.94116457366566,
+              40.79265189547184
+            ],
+            [
+              -111.94034857366566,
+              40.79265189547184
+            ],
+            [
+              -111.94034857366566,
+              40.79137689547184
+            ],
+            [
+              -111.93943057366567,
+              40.79137689547184
+            ],
+            [
+              -111.93943057366567,
+              40.79265189547184
+            ],
+            [
+              -111.93861457366567,
+              40.79265189547184
+            ],
+            [
+              -111.93861457366567,
+              40.79010189547184
+            ],
+            [
+              -111.94116457366566,
+              40.79010189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-012",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=irregular; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94116457366566,
+              40.79010189547184
+            ],
+            [
+              -111.94090957366566,
+              40.79265189547184
+            ],
+            [
+              -111.93976207366566,
+              40.792447895471845
+            ],
+            [
+              -111.93861457366567,
+              40.79201439547184
+            ],
+            [
+              -111.93881857366567,
+              40.79010189547184
+            ],
+            [
+              -111.94116457366566,
+              40.79010189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-013",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=rect; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94110457366565,
+              40.78986189547184
+            ],
+            [
+              -111.94110457366565,
+              40.79241189547184
+            ],
+            [
+              -111.93855457366567,
+              40.79241189547184
+            ],
+            [
+              -111.93855457366567,
+              40.78986189547184
+            ],
+            [
+              -111.94110457366565,
+              40.78986189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-014",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=trapezoid; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94110457366565,
+              40.78986189547184
+            ],
+            [
+              -111.94079857366566,
+              40.79241189547184
+            ],
+            [
+              -111.93886057366566,
+              40.79241189547184
+            ],
+            [
+              -111.93855457366567,
+              40.78986189547184
+            ],
+            [
+              -111.94110457366565,
+              40.78986189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-015",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=concave; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94110457366565,
+              40.78986189547184
+            ],
+            [
+              -111.94110457366565,
+              40.79241189547184
+            ],
+            [
+              -111.94028857366565,
+              40.79241189547184
+            ],
+            [
+              -111.94028857366565,
+              40.79113689547184
+            ],
+            [
+              -111.93937057366567,
+              40.79113689547184
+            ],
+            [
+              -111.93937057366567,
+              40.79241189547184
+            ],
+            [
+              -111.93855457366567,
+              40.79241189547184
+            ],
+            [
+              -111.93855457366567,
+              40.78986189547184
+            ],
+            [
+              -111.94110457366565,
+              40.78986189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-016",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=irregular; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94110457366565,
+              40.78986189547184
+            ],
+            [
+              -111.94084957366566,
+              40.79241189547184
+            ],
+            [
+              -111.93970207366566,
+              40.79220789547184
+            ],
+            [
+              -111.93855457366567,
+              40.79177439547183
+            ],
+            [
+              -111.93875857366567,
+              40.78986189547184
+            ],
+            [
+              -111.94110457366565,
+              40.78986189547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-017",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=rect; scale=1.0; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94165957366566,
+              40.78961689547184
+            ],
+            [
+              -111.94165957366566,
+              40.79261689547184
+            ],
+            [
+              -111.93865957366567,
+              40.79261689547184
+            ],
+            [
+              -111.93865957366567,
+              40.78961689547184
+            ],
+            [
+              -111.94165957366566,
+              40.78961689547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-salt-lake-city-018",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-slc-r1-7000-viable; style=trapezoid; scale=1.0; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94165957366566,
+              40.78961689547184
+            ],
+            [
+              -111.94129957366566,
+              40.79261689547184
+            ],
+            [
+              -111.93901957366568,
+              40.79261689547184
+            ],
+            [
+              -111.93865957366567,
+              40.78961689547184
+            ],
+            [
+              -111.94165957366566,
+              40.78961689547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-001",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=rect; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91939550646572,
+              40.43086361712976
+            ],
+            [
+              -111.91939550646572,
+              40.43341361712976
+            ],
+            [
+              -111.91684550646573,
+              40.43341361712976
+            ],
+            [
+              -111.91684550646573,
+              40.43086361712976
+            ],
+            [
+              -111.91939550646572,
+              40.43086361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-002",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=trapezoid; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91939550646572,
+              40.43086361712976
+            ],
+            [
+              -111.91908950646572,
+              40.43341361712976
+            ],
+            [
+              -111.91715150646573,
+              40.43341361712976
+            ],
+            [
+              -111.91684550646573,
+              40.43086361712976
+            ],
+            [
+              -111.91939550646572,
+              40.43086361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-003",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=concave; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91939550646572,
+              40.43086361712976
+            ],
+            [
+              -111.91939550646572,
+              40.43341361712976
+            ],
+            [
+              -111.91857950646572,
+              40.43341361712976
+            ],
+            [
+              -111.91857950646572,
+              40.43213861712976
+            ],
+            [
+              -111.91766150646573,
+              40.43213861712976
+            ],
+            [
+              -111.91766150646573,
+              40.43341361712976
+            ],
+            [
+              -111.91684550646573,
+              40.43341361712976
+            ],
+            [
+              -111.91684550646573,
+              40.43086361712976
+            ],
+            [
+              -111.91939550646572,
+              40.43086361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-004",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=irregular; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91939550646572,
+              40.43086361712976
+            ],
+            [
+              -111.91914050646572,
+              40.43341361712976
+            ],
+            [
+              -111.91799300646572,
+              40.43320961712976
+            ],
+            [
+              -111.91684550646573,
+              40.43277611712976
+            ],
+            [
+              -111.91704950646573,
+              40.43086361712976
+            ],
+            [
+              -111.91939550646572,
+              40.43086361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-005",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=rect; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91924550646571,
+              40.43098361712976
+            ],
+            [
+              -111.91924550646571,
+              40.43353361712976
+            ],
+            [
+              -111.91669550646573,
+              40.43353361712976
+            ],
+            [
+              -111.91669550646573,
+              40.43098361712976
+            ],
+            [
+              -111.91924550646571,
+              40.43098361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-006",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=trapezoid; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91924550646571,
+              40.43098361712976
+            ],
+            [
+              -111.91893950646572,
+              40.43353361712976
+            ],
+            [
+              -111.91700150646572,
+              40.43353361712976
+            ],
+            [
+              -111.91669550646573,
+              40.43098361712976
+            ],
+            [
+              -111.91924550646571,
+              40.43098361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-007",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=concave; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91924550646571,
+              40.43098361712976
+            ],
+            [
+              -111.91924550646571,
+              40.43353361712976
+            ],
+            [
+              -111.91842950646571,
+              40.43353361712976
+            ],
+            [
+              -111.91842950646571,
+              40.43225861712976
+            ],
+            [
+              -111.91751150646573,
+              40.43225861712976
+            ],
+            [
+              -111.91751150646573,
+              40.43353361712976
+            ],
+            [
+              -111.91669550646573,
+              40.43353361712976
+            ],
+            [
+              -111.91669550646573,
+              40.43098361712976
+            ],
+            [
+              -111.91924550646571,
+              40.43098361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-008",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=irregular; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91924550646571,
+              40.43098361712976
+            ],
+            [
+              -111.91899050646572,
+              40.43353361712976
+            ],
+            [
+              -111.91784300646572,
+              40.433329617129765
+            ],
+            [
+              -111.91669550646573,
+              40.43289611712976
+            ],
+            [
+              -111.91689950646573,
+              40.43098361712976
+            ],
+            [
+              -111.91924550646571,
+              40.43098361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-009",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=rect; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91912550646572,
+              40.431123617129764
+            ],
+            [
+              -111.91912550646572,
+              40.43367361712976
+            ],
+            [
+              -111.91657550646573,
+              40.43367361712976
+            ],
+            [
+              -111.91657550646573,
+              40.431123617129764
+            ],
+            [
+              -111.91912550646572,
+              40.431123617129764
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-010",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=trapezoid; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91912550646572,
+              40.431123617129764
+            ],
+            [
+              -111.91881950646572,
+              40.43367361712976
+            ],
+            [
+              -111.91688150646573,
+              40.43367361712976
+            ],
+            [
+              -111.91657550646573,
+              40.431123617129764
+            ],
+            [
+              -111.91912550646572,
+              40.431123617129764
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-011",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=concave; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91912550646572,
+              40.431123617129764
+            ],
+            [
+              -111.91912550646572,
+              40.43367361712976
+            ],
+            [
+              -111.91830950646572,
+              40.43367361712976
+            ],
+            [
+              -111.91830950646572,
+              40.43239861712976
+            ],
+            [
+              -111.91739150646573,
+              40.43239861712976
+            ],
+            [
+              -111.91739150646573,
+              40.43367361712976
+            ],
+            [
+              -111.91657550646573,
+              40.43367361712976
+            ],
+            [
+              -111.91657550646573,
+              40.431123617129764
+            ],
+            [
+              -111.91912550646572,
+              40.431123617129764
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-012",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=irregular; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91912550646572,
+              40.431123617129764
+            ],
+            [
+              -111.91887050646572,
+              40.43367361712976
+            ],
+            [
+              -111.91772300646572,
+              40.43346961712977
+            ],
+            [
+              -111.91657550646573,
+              40.43303611712976
+            ],
+            [
+              -111.91677950646573,
+              40.431123617129764
+            ],
+            [
+              -111.91912550646572,
+              40.431123617129764
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-013",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=rect; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91906550646571,
+              40.43088361712976
+            ],
+            [
+              -111.91906550646571,
+              40.43343361712976
+            ],
+            [
+              -111.91651550646573,
+              40.43343361712976
+            ],
+            [
+              -111.91651550646573,
+              40.43088361712976
+            ],
+            [
+              -111.91906550646571,
+              40.43088361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-014",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=trapezoid; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91906550646571,
+              40.43088361712976
+            ],
+            [
+              -111.91875950646572,
+              40.43343361712976
+            ],
+            [
+              -111.91682150646572,
+              40.43343361712976
+            ],
+            [
+              -111.91651550646573,
+              40.43088361712976
+            ],
+            [
+              -111.91906550646571,
+              40.43088361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-015",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=concave; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91906550646571,
+              40.43088361712976
+            ],
+            [
+              -111.91906550646571,
+              40.43343361712976
+            ],
+            [
+              -111.91824950646571,
+              40.43343361712976
+            ],
+            [
+              -111.91824950646571,
+              40.43215861712976
+            ],
+            [
+              -111.91733150646573,
+              40.43215861712976
+            ],
+            [
+              -111.91733150646573,
+              40.43343361712976
+            ],
+            [
+              -111.91651550646573,
+              40.43343361712976
+            ],
+            [
+              -111.91651550646573,
+              40.43088361712976
+            ],
+            [
+              -111.91906550646571,
+              40.43088361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-016",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=irregular; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91906550646571,
+              40.43088361712976
+            ],
+            [
+              -111.91881050646572,
+              40.43343361712976
+            ],
+            [
+              -111.91766300646572,
+              40.43322961712976
+            ],
+            [
+              -111.91651550646573,
+              40.432796117129755
+            ],
+            [
+              -111.91671950646572,
+              40.43088361712976
+            ],
+            [
+              -111.91906550646571,
+              40.43088361712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-017",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=rect; scale=1.0; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91962050646572,
+              40.43063861712976
+            ],
+            [
+              -111.91962050646572,
+              40.43363861712976
+            ],
+            [
+              -111.91662050646573,
+              40.43363861712976
+            ],
+            [
+              -111.91662050646573,
+              40.43063861712976
+            ],
+            [
+              -111.91962050646572,
+              40.43063861712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-lehi-018",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-lehi-th5-viable; style=trapezoid; scale=1.0; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91962050646572,
+              40.43063861712976
+            ],
+            [
+              -111.91926050646572,
+              40.43363861712976
+            ],
+            [
+              -111.91698050646573,
+              40.43363861712976
+            ],
+            [
+              -111.91662050646573,
+              40.43063861712976
+            ],
+            [
+              -111.91962050646572,
+              40.43063861712976
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-001",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=rect; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87565436864271,
+              40.517280817639744
+            ],
+            [
+              -111.87565436864271,
+              40.51983081763974
+            ],
+            [
+              -111.87310436864273,
+              40.51983081763974
+            ],
+            [
+              -111.87310436864273,
+              40.517280817639744
+            ],
+            [
+              -111.87565436864271,
+              40.517280817639744
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-002",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=trapezoid; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87565436864271,
+              40.517280817639744
+            ],
+            [
+              -111.87534836864272,
+              40.51983081763974
+            ],
+            [
+              -111.87341036864272,
+              40.51983081763974
+            ],
+            [
+              -111.87310436864273,
+              40.517280817639744
+            ],
+            [
+              -111.87565436864271,
+              40.517280817639744
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-003",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=concave; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87565436864271,
+              40.517280817639744
+            ],
+            [
+              -111.87565436864271,
+              40.51983081763974
+            ],
+            [
+              -111.87483836864271,
+              40.51983081763974
+            ],
+            [
+              -111.87483836864271,
+              40.518555817639744
+            ],
+            [
+              -111.87392036864273,
+              40.518555817639744
+            ],
+            [
+              -111.87392036864273,
+              40.51983081763974
+            ],
+            [
+              -111.87310436864273,
+              40.51983081763974
+            ],
+            [
+              -111.87310436864273,
+              40.517280817639744
+            ],
+            [
+              -111.87565436864271,
+              40.517280817639744
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-004",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=irregular; scale=0.85; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87565436864271,
+              40.517280817639744
+            ],
+            [
+              -111.87539936864272,
+              40.51983081763974
+            ],
+            [
+              -111.87425186864272,
+              40.51962681763975
+            ],
+            [
+              -111.87310436864273,
+              40.51919331763975
+            ],
+            [
+              -111.87330836864272,
+              40.517280817639744
+            ],
+            [
+              -111.87565436864271,
+              40.517280817639744
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-005",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=rect; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87550436864271,
+              40.517400817639746
+            ],
+            [
+              -111.87550436864271,
+              40.519950817639746
+            ],
+            [
+              -111.87295436864272,
+              40.519950817639746
+            ],
+            [
+              -111.87295436864272,
+              40.517400817639746
+            ],
+            [
+              -111.87550436864271,
+              40.517400817639746
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-006",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=trapezoid; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87550436864271,
+              40.517400817639746
+            ],
+            [
+              -111.87519836864271,
+              40.519950817639746
+            ],
+            [
+              -111.87326036864272,
+              40.519950817639746
+            ],
+            [
+              -111.87295436864272,
+              40.517400817639746
+            ],
+            [
+              -111.87550436864271,
+              40.517400817639746
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-007",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=concave; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87550436864271,
+              40.517400817639746
+            ],
+            [
+              -111.87550436864271,
+              40.519950817639746
+            ],
+            [
+              -111.87468836864271,
+              40.519950817639746
+            ],
+            [
+              -111.87468836864271,
+              40.518675817639746
+            ],
+            [
+              -111.87377036864272,
+              40.518675817639746
+            ],
+            [
+              -111.87377036864272,
+              40.519950817639746
+            ],
+            [
+              -111.87295436864272,
+              40.519950817639746
+            ],
+            [
+              -111.87295436864272,
+              40.517400817639746
+            ],
+            [
+              -111.87550436864271,
+              40.517400817639746
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-008",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=irregular; scale=0.85; shift=(0.0,0.0)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87550436864271,
+              40.517400817639746
+            ],
+            [
+              -111.87524936864271,
+              40.519950817639746
+            ],
+            [
+              -111.87410186864271,
+              40.51974681763975
+            ],
+            [
+              -111.87295436864272,
+              40.51931331763974
+            ],
+            [
+              -111.87315836864272,
+              40.517400817639746
+            ],
+            [
+              -111.87550436864271,
+              40.517400817639746
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-009",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=rect; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87538436864271,
+              40.51754081763975
+            ],
+            [
+              -111.87538436864271,
+              40.52009081763975
+            ],
+            [
+              -111.87283436864273,
+              40.52009081763975
+            ],
+            [
+              -111.87283436864273,
+              40.51754081763975
+            ],
+            [
+              -111.87538436864271,
+              40.51754081763975
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-010",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=trapezoid; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87538436864271,
+              40.51754081763975
+            ],
+            [
+              -111.87507836864272,
+              40.52009081763975
+            ],
+            [
+              -111.87314036864272,
+              40.52009081763975
+            ],
+            [
+              -111.87283436864273,
+              40.51754081763975
+            ],
+            [
+              -111.87538436864271,
+              40.51754081763975
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-011",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=concave; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87538436864271,
+              40.51754081763975
+            ],
+            [
+              -111.87538436864271,
+              40.52009081763975
+            ],
+            [
+              -111.87456836864271,
+              40.52009081763975
+            ],
+            [
+              -111.87456836864271,
+              40.51881581763975
+            ],
+            [
+              -111.87365036864273,
+              40.51881581763975
+            ],
+            [
+              -111.87365036864273,
+              40.52009081763975
+            ],
+            [
+              -111.87283436864273,
+              40.52009081763975
+            ],
+            [
+              -111.87283436864273,
+              40.51754081763975
+            ],
+            [
+              -111.87538436864271,
+              40.51754081763975
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-012",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=irregular; scale=0.85; shift=(0.00012,0.00014)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87538436864271,
+              40.51754081763975
+            ],
+            [
+              -111.87512936864272,
+              40.52009081763975
+            ],
+            [
+              -111.87398186864272,
+              40.51988681763975
+            ],
+            [
+              -111.87283436864273,
+              40.519453317639744
+            ],
+            [
+              -111.87303836864272,
+              40.51754081763975
+            ],
+            [
+              -111.87538436864271,
+              40.51754081763975
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-013",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=rect; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87532436864271,
+              40.51730081763974
+            ],
+            [
+              -111.87532436864271,
+              40.51985081763974
+            ],
+            [
+              -111.87277436864272,
+              40.51985081763974
+            ],
+            [
+              -111.87277436864272,
+              40.51730081763974
+            ],
+            [
+              -111.87532436864271,
+              40.51730081763974
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-014",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=trapezoid; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87532436864271,
+              40.51730081763974
+            ],
+            [
+              -111.87501836864271,
+              40.51985081763974
+            ],
+            [
+              -111.87308036864272,
+              40.51985081763974
+            ],
+            [
+              -111.87277436864272,
+              40.51730081763974
+            ],
+            [
+              -111.87532436864271,
+              40.51730081763974
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-015",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=concave; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87532436864271,
+              40.51730081763974
+            ],
+            [
+              -111.87532436864271,
+              40.51985081763974
+            ],
+            [
+              -111.87450836864271,
+              40.51985081763974
+            ],
+            [
+              -111.87450836864271,
+              40.51857581763974
+            ],
+            [
+              -111.87359036864272,
+              40.51857581763974
+            ],
+            [
+              -111.87359036864272,
+              40.51985081763974
+            ],
+            [
+              -111.87277436864272,
+              40.51985081763974
+            ],
+            [
+              -111.87277436864272,
+              40.51730081763974
+            ],
+            [
+              -111.87532436864271,
+              40.51730081763974
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-016",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=irregular; scale=0.85; shift=(0.00018,-0.0001)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87532436864271,
+              40.51730081763974
+            ],
+            [
+              -111.87506936864271,
+              40.51985081763974
+            ],
+            [
+              -111.87392186864271,
+              40.519646817639746
+            ],
+            [
+              -111.87277436864272,
+              40.51921331763974
+            ],
+            [
+              -111.87297836864272,
+              40.51730081763974
+            ],
+            [
+              -111.87532436864271,
+              40.51730081763974
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-017",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=rect; scale=1.0; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87587936864271,
+              40.51705581763974
+            ],
+            [
+              -111.87587936864271,
+              40.520055817639744
+            ],
+            [
+              -111.87287936864273,
+              40.520055817639744
+            ],
+            [
+              -111.87287936864273,
+              40.51705581763974
+            ],
+            [
+              -111.87587936864271,
+              40.51705581763974
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "exp-draper-018",
+      "jurisdiction": "Draper",
+      "expected_chain_success": true,
+      "notes": "expanded positive case from runtime-draper-r3-viable; style=trapezoid; scale=1.0; shift=(-0.00015,-0.00012)",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87587936864271,
+              40.51705581763974
+            ],
+            [
+              -111.87551936864271,
+              40.520055817639744
+            ],
+            [
+              -111.87323936864273,
+              40.520055817639744
+            ],
+            [
+              -111.87287936864273,
+              40.51705581763974
+            ],
+            [
+              -111.87587936864271,
+              40.51705581763974
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "edge-unsupported-ogden-001",
+      "jurisdiction": "Ogden",
+      "expected_chain_success": false,
+      "notes": "unsupported jurisdiction should fail safely at zoning/pipeline",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ],
+            [
+              -111.94150957366566,
+              40.79273689547184
+            ],
+            [
+              -111.93850957366567,
+              40.79273689547184
+            ],
+            [
+              -111.93850957366567,
+              40.78973689547184
+            ],
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "edge-unsupported-provo-002",
+      "jurisdiction": "Provo",
+      "expected_chain_success": false,
+      "notes": "unsupported jurisdiction should fail safely at zoning/pipeline",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ],
+            [
+              -111.94114957366565,
+              40.79273689547184
+            ],
+            [
+              -111.93886957366567,
+              40.79273689547184
+            ],
+            [
+              -111.93850957366567,
+              40.78973689547184
+            ],
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "edge-invalid-self-intersection-003",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": false,
+      "notes": "invalid bowtie polygon topology should fail validation safely",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ],
+            [
+              -111.93850957366567,
+              40.79273689547184
+            ],
+            [
+              -111.94150957366566,
+              40.79273689547184
+            ],
+            [
+              -111.93850957366567,
+              40.78973689547184
+            ],
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "edge-invalid-linestring-004",
+      "jurisdiction": "Lehi",
+      "expected_chain_success": false,
+      "notes": "invalid geometry type for parcel should fail safely",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.94150957366566,
+            40.78973689547184
+          ],
+          [
+            -111.93850957366567,
+            40.79273689547184
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "edge-tiny-parcel-005",
+      "jurisdiction": "Draper",
+      "expected_chain_success": false,
+      "notes": "tiny parcel likely produces no viable layout but must not crash",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87572,
+              40.51718
+            ],
+            [
+              -111.87572,
+              40.5172
+            ],
+            [
+              -111.8757,
+              40.5172
+            ],
+            [
+              -111.8757,
+              40.51718
+            ],
+            [
+              -111.87572,
+              40.51718
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    },
+    {
+      "case_id": "edge-invalid-too-few-points-006",
+      "jurisdiction": "Salt Lake City",
+      "expected_chain_success": false,
+      "notes": "polygon ring with too few unique points should fail safely",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ],
+            [
+              -111.93850957366567,
+              40.79273689547184
+            ],
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ]
+          ]
+        ]
+      },
+      "max_candidates": 8
+    }
+  ],
+  "determinism": {
+    "runs": 3,
+    "case_ids": [
+      "exp-salt-lake-city-001",
+      "exp-salt-lake-city-013",
+      "exp-lehi-007",
+      "exp-draper-001",
+      "exp-draper-013"
+    ],
+    "fields": [
+      "status_code",
+      "zoning_result.district",
+      "layout_result.unit_count",
+      "layout_result.road_length_ft",
+      "feasibility_result.ROI",
+      "feasibility_result.projected_profit"
+    ]
+  },
+  "gates": {
+    "absolute": {
+      "min_chain_success_rate": 0.75,
+      "endpoint_min_success_rate": {
+        "parcel.load": 0.8,
+        "zoning.lookup": 0.75,
+        "layout.search": 0.75,
+        "feasibility.evaluate": 0.75,
+        "pipeline.run": 0.75
+      },
+      "endpoint_max_p95_seconds": {
+        "parcel.load": 0.05,
+        "zoning.lookup": 2.0,
+        "layout.search": 2.0,
+        "feasibility.evaluate": 0.2,
+        "pipeline.run": 2.5
+      },
+      "min_contract_conformance_rate": 1.0,
+      "max_unexpected_500_errors": 0,
+      "allowed_error_classes": {
+        "parcel.load": [
+          "invalid_parcel_input",
+          "validation_error"
+        ],
+        "zoning.lookup": [
+          "no_district_match",
+          "ambiguous_district_match",
+          "incomplete_zoning_rules",
+          "invalid_zoning_rules",
+          "validation_error"
+        ],
+        "layout.search": [
+          "no_viable_layout",
+          "runtime_budget_exceeded",
+          "no_buildable_units",
+          "layout_runtime_error",
+          "validation_error"
+        ],
+        "feasibility.evaluate": [
+          "validation_error"
+        ],
+        "pipeline.run": [
+          "invalid_parcel_input",
+          "no_district_match",
+          "ambiguous_district_match",
+          "incomplete_zoning_rules",
+          "invalid_zoning_rules",
+          "no_viable_layout",
+          "runtime_budget_exceeded",
+          "no_buildable_units",
+          "layout_solver_failure",
+          "invalid_feasibility_output",
+          "feasibility_evaluation_failure",
+          "validation_error"
+        ]
+      },
+      "min_expected_outcome_match_rate": 0.98,
+      "min_determinism_consistency_rate": 1.0
+    },
+    "regression": {
+      "max_success_rate_drop": 0.05,
+      "max_runtime_regression_ratio": 1.5,
+      "allow_new_error_classes": false
+    }
+  }
+}

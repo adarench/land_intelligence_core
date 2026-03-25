@@ -1,0 +1,541 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "ee1d016b-0938-4a17-9ea3-d5597970e805",
+  "parcel_id": "lehi-r-1-15-pipeline",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "lehi-r-1-15-pipeline",
+    "jurisdiction": "Lehi",
+    "district": "R-1-15",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "R-1-15:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 15000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/lehi",
+          "observed_at": "2026-03-20T20:25:10.831096Z"
+        }
+      },
+      {
+        "id": "R-1-15:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 2.9,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/lehi",
+          "observed_at": "2026-03-20T20:25:10.831096Z"
+        }
+      },
+      {
+        "id": "R-1-15:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/lehi",
+          "observed_at": "2026-03-20T20:25:10.831096Z"
+        }
+      },
+      {
+        "id": "R-1-15:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.38,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/lehi",
+          "observed_at": "2026-03-20T20:25:10.831096Z"
+        }
+      },
+      {
+        "id": "R-1-15:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 30.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/lehi",
+          "observed_at": "2026-03-20T20:25:10.831096Z"
+        }
+      },
+      {
+        "id": "R-1-15:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 10.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/lehi",
+          "observed_at": "2026-03-20T20:25:10.831096Z"
+        }
+      },
+      {
+        "id": "R-1-15:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/lehi",
+          "observed_at": "2026-03-20T20:25:10.831096Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 30.0,
+      "side": 10.0,
+      "rear": 25.0
+    },
+    "min_lot_size_sqft": 15000.0,
+    "max_units_per_acre": 2.9,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.38,
+    "min_frontage_ft": null,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/lehi",
+      "observed_at": "2026-03-20T20:25:10.831096Z"
+    }
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-lehi-r-1-15-pipeline-a2e7f14a9caa",
+    "parcel_id": "lehi-r-1-15-pipeline",
+    "unit_count": 8,
+    "road_length_ft": 2388.3,
+    "lot_geometries": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85240591740332,
+              40.41370460255891
+            ],
+            [
+              -111.85240591740332,
+              40.412858448712754
+            ],
+            [
+              -111.85266571077804,
+              40.412858448712754
+            ],
+            [
+              -111.85266571077804,
+              40.41370460255891
+            ],
+            [
+              -111.85240591740332,
+              40.41370460255891
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.8522904536812,
+              40.41370460255891
+            ],
+            [
+              -111.85203066030648,
+              40.41370460255891
+            ],
+            [
+              -111.85203066030648,
+              40.412858448712754
+            ],
+            [
+              -111.8522904536812,
+              40.412858448712754
+            ],
+            [
+              -111.8522904536812,
+              40.41370460255891
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85240591740332,
+              40.413792514646815
+            ],
+            [
+              -111.85266571077804,
+              40.413792514646815
+            ],
+            [
+              -111.85266571077804,
+              40.41463866849297
+            ],
+            [
+              -111.85240591740332,
+              40.41463866849297
+            ],
+            [
+              -111.85240591740332,
+              40.413792514646815
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.8522904536812,
+              40.413792514646815
+            ],
+            [
+              -111.8522904536812,
+              40.41463866849297
+            ],
+            [
+              -111.85203066030648,
+              40.41463866849297
+            ],
+            [
+              -111.85203066030648,
+              40.413792514646815
+            ],
+            [
+              -111.8522904536812,
+              40.413792514646815
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85186261850752,
+              40.41370460255891
+            ],
+            [
+              -111.85160282513279,
+              40.41370460255891
+            ],
+            [
+              -111.85160282513279,
+              40.412858448712754
+            ],
+            [
+              -111.85186261850752,
+              40.412858448712754
+            ],
+            [
+              -111.85186261850752,
+              40.41370460255891
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85186261850752,
+              40.413792514646815
+            ],
+            [
+              -111.85186261850752,
+              40.41463866849297
+            ],
+            [
+              -111.85160282513279,
+              40.41463866849297
+            ],
+            [
+              -111.85160282513279,
+              40.413792514646815
+            ],
+            [
+              -111.85186261850752,
+              40.413792514646815
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85143478333383,
+              40.41370460255891
+            ],
+            [
+              -111.8511749899591,
+              40.41370460255891
+            ],
+            [
+              -111.8511749899591,
+              40.412858448712754
+            ],
+            [
+              -111.85143478333383,
+              40.412858448712754
+            ],
+            [
+              -111.85143478333383,
+              40.41370460255891
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85143478333383,
+              40.413792514646815
+            ],
+            [
+              -111.85143478333383,
+              40.41463866849297
+            ],
+            [
+              -111.8511749899591,
+              40.41463866849297
+            ],
+            [
+              -111.8511749899591,
+              40.413792514646815
+            ],
+            [
+              -111.85143478333383,
+              40.413792514646815
+            ]
+          ]
+        ]
+      }
+    ],
+    "road_geometries": [
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85277602071595,
+            40.41374855860286
+          ],
+          [
+            -111.8510646800212,
+            40.41374855860286
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85234818554225,
+            40.412858448712754
+          ],
+          [
+            -111.85234818554225,
+            40.41373482233912
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85234818554225,
+            40.4137622948666
+          ],
+          [
+            -111.85234818554225,
+            40.41463866849297
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85192035036857,
+            40.412858448712754
+          ],
+          [
+            -111.85192035036857,
+            40.41373482233912
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85192035036857,
+            40.4137622948666
+          ],
+          [
+            -111.85192035036857,
+            40.41463866849297
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85149251519489,
+            40.412858448712754
+          ],
+          [
+            -111.85149251519489,
+            40.41373482233912
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85149251519489,
+            40.4137622948666
+          ],
+          [
+            -111.85149251519489,
+            40.41463866849297
+          ]
+        ]
+      }
+    ],
+    "open_space_area_sqft": 499999.9999982414,
+    "utility_length_ft": 0.0,
+    "score": null,
+    "buildable_area_sqft": null,
+    "metadata": {
+      "source_engine": "bedrock.layout_service",
+      "source_run_id": null,
+      "observed_at": "2026-03-20T20:25:10.851500Z"
+    }
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "804ac7a1-f2d2-5637-92eb-5bf08424dc6c",
+    "layout_id": "layout-lehi-r-1-15-pipeline-a2e7f14a9caa",
+    "parcel_id": "lehi-r-1-15-pipeline",
+    "units": 8,
+    "estimated_home_price": 480000.0,
+    "construction_cost_per_home": 436800.0,
+    "development_cost_total": 1022750.5702479339,
+    "projected_revenue": 3840000.0,
+    "projected_cost": 4517150.570247934,
+    "projected_profit": -677150.5702479342,
+    "ROI": -0.14990657488992384,
+    "profit_margin": -0.17634129433539952,
+    "revenue_per_unit": 480000.0,
+    "cost_per_unit": 564643.8212809918,
+    "rank": null,
+    "risk_score": 0.7292452441024407,
+    "requested_units": null,
+    "constraint_violations": [
+      "projected_profit_negative"
+    ],
+    "confidence": 0.9,
+    "status": "constrained",
+    "financial_summary": {
+      "units": 8,
+      "estimated_home_price": 480000.0,
+      "construction_cost_per_home": 436800.0,
+      "road_cost_per_ft": 300.0,
+      "road_length": 2388.3,
+      "land_cost": 0.0,
+      "projected_revenue": 3840000.0,
+      "development_cost_total": 1022750.5702479339,
+      "projected_cost": 4517150.570247934,
+      "projected_profit": -677150.5702479342,
+      "ROI": -0.14990657488992384,
+      "development_cost_breakdown": {
+        "roads": 716490.0,
+        "utilities": 0.0,
+        "grading": 71649.0,
+        "sitework": 206611.57024793388,
+        "permitting": 28000.0
+      },
+      "profit_margin": -0.17634129433539952,
+      "revenue_per_unit": 480000.0,
+      "cost_per_unit": 564643.8212809918
+    },
+    "explanation": {
+      "primary_driver": "road_cost",
+      "cost_breakdown": {
+        "construction": 3494400.0,
+        "development": 1022750.5702479339
+      },
+      "revenue_breakdown": {
+        "units": 8,
+        "price_per_home": 480000.0
+      }
+    },
+    "assumptions": {
+      "used_default_estimated_home_price": true,
+      "used_default_construction_cost_per_home": true,
+      "used_default_road_cost_per_ft": true,
+      "used_default_land_price": true,
+      "used_default_soft_cost_factor": true
+    },
+    "metadata": null
+  },
+  "timestamp": "2026-03-20T20:25:10.851746Z",
+  "git_commit": "ceaa51d8bb6aa1d29cf293e8e9dd47cbc86f6c8e",
+  "input_hash": "67c74768245c7422a4efbea9e31d773a23025ba3a41cb8c8aeff3bc84503dd58",
+  "stage_runtimes": {
+    "parcel.load": 0.000014,
+    "zoning.lookup": 0.003907,
+    "layout.search": 0.020167,
+    "feasibility.evaluate": 0.000203
+  }
+}

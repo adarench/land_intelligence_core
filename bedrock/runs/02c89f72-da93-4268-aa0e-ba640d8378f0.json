@@ -1,0 +1,973 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "02c89f72-da93-4268-aa0e-ba640d8378f0",
+  "parcel_id": "po2-slc-r1-7000-01",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "po2-slc-r1-7000-01",
+    "jurisdiction": "Salt Lake City",
+    "district": "R-1-7000",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "R-1-7000:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 7000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "observed_at": "2026-03-20T21:05:36.926176Z"
+        }
+      },
+      {
+        "id": "R-1-7000:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 6.22,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "observed_at": "2026-03-20T21:05:36.926176Z"
+        }
+      },
+      {
+        "id": "R-1-7000:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "observed_at": "2026-03-20T21:05:36.926176Z"
+        }
+      },
+      {
+        "id": "R-1-7000:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.45,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "observed_at": "2026-03-20T21:05:36.926176Z"
+        }
+      },
+      {
+        "id": "R-1-7000:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "observed_at": "2026-03-20T21:05:36.926176Z"
+        }
+      },
+      {
+        "id": "R-1-7000:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "observed_at": "2026-03-20T21:05:36.926176Z"
+        }
+      },
+      {
+        "id": "R-1-7000:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "observed_at": "2026-03-20T21:05:36.926176Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 8.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 7000.0,
+    "max_units_per_acre": 6.22,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.45,
+    "min_frontage_ft": null,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+      "observed_at": "2026-03-20T21:05:36.926176Z"
+    }
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-po2-slc-r1-7000-01-80f84ce28b59",
+    "parcel_id": "po2-slc-r1-7000-01",
+    "unit_count": 24,
+    "road_length_ft": 2932.2,
+    "lot_geometries": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94059505895981,
+              40.79014678558173
+            ],
+            [
+              -111.94085632366495,
+              40.79014678558173
+            ],
+            [
+              -111.94085632366495,
+              40.79050557679052
+            ],
+            [
+              -111.94059505895981,
+              40.79050557679052
+            ],
+            [
+              -111.94059505895981,
+              40.79014678558173
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94059505895981,
+              40.79050557679052
+            ],
+            [
+              -111.94085632366495,
+              40.79050557679052
+            ],
+            [
+              -111.94085632366495,
+              40.79086436799931
+            ],
+            [
+              -111.94059505895981,
+              40.79086436799931
+            ],
+            [
+              -111.94059505895981,
+              40.79050557679052
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9404789413131,
+              40.79050557679052
+            ],
+            [
+              -111.94021767660799,
+              40.79050557679052
+            ],
+            [
+              -111.94021767660799,
+              40.79014678558173
+            ],
+            [
+              -111.9404789413131,
+              40.79014678558173
+            ],
+            [
+              -111.9404789413131,
+              40.79050557679052
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9404789413131,
+              40.79086436799931
+            ],
+            [
+              -111.94021767660799,
+              40.79086436799931
+            ],
+            [
+              -111.94021767660799,
+              40.79050557679052
+            ],
+            [
+              -111.9404789413131,
+              40.79050557679052
+            ],
+            [
+              -111.9404789413131,
+              40.79086436799931
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94059505895981,
+              40.79160942294437
+            ],
+            [
+              -111.94085632366495,
+              40.79160942294437
+            ],
+            [
+              -111.94085632366495,
+              40.79196821415316
+            ],
+            [
+              -111.94059505895981,
+              40.79196821415316
+            ],
+            [
+              -111.94059505895981,
+              40.79160942294437
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94059505895981,
+              40.79196821415316
+            ],
+            [
+              -111.94085632366495,
+              40.79196821415316
+            ],
+            [
+              -111.94085632366495,
+              40.79232700536195
+            ],
+            [
+              -111.94059505895981,
+              40.79232700536195
+            ],
+            [
+              -111.94059505895981,
+              40.79196821415316
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9404789413131,
+              40.79196821415316
+            ],
+            [
+              -111.94021767660799,
+              40.79196821415316
+            ],
+            [
+              -111.94021767660799,
+              40.79160942294437
+            ],
+            [
+              -111.9404789413131,
+              40.79160942294437
+            ],
+            [
+              -111.9404789413131,
+              40.79196821415316
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9404789413131,
+              40.79232700536195
+            ],
+            [
+              -111.94021767660799,
+              40.79232700536195
+            ],
+            [
+              -111.94021767660799,
+              40.79196821415316
+            ],
+            [
+              -111.9404789413131,
+              40.79196821415316
+            ],
+            [
+              -111.9404789413131,
+              40.79232700536195
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9399515148423,
+              40.79050557679052
+            ],
+            [
+              -111.93969025013719,
+              40.79050557679052
+            ],
+            [
+              -111.93969025013719,
+              40.79014678558173
+            ],
+            [
+              -111.9399515148423,
+              40.79014678558173
+            ],
+            [
+              -111.9399515148423,
+              40.79050557679052
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9399515148423,
+              40.79086436799931
+            ],
+            [
+              -111.93969025013719,
+              40.79086436799931
+            ],
+            [
+              -111.93969025013719,
+              40.79050557679052
+            ],
+            [
+              -111.9399515148423,
+              40.79050557679052
+            ],
+            [
+              -111.9399515148423,
+              40.79086436799931
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9399515148423,
+              40.79196821415316
+            ],
+            [
+              -111.93969025013719,
+              40.79196821415316
+            ],
+            [
+              -111.93969025013719,
+              40.79160942294437
+            ],
+            [
+              -111.9399515148423,
+              40.79160942294437
+            ],
+            [
+              -111.9399515148423,
+              40.79196821415316
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9399515148423,
+              40.79232700536195
+            ],
+            [
+              -111.93969025013719,
+              40.79232700536195
+            ],
+            [
+              -111.93969025013719,
+              40.79196821415316
+            ],
+            [
+              -111.9399515148423,
+              40.79196821415316
+            ],
+            [
+              -111.9399515148423,
+              40.79232700536195
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93942408837151,
+              40.79050557679052
+            ],
+            [
+              -111.93916282366638,
+              40.79050557679052
+            ],
+            [
+              -111.93916282366638,
+              40.79014678558173
+            ],
+            [
+              -111.93942408837151,
+              40.79014678558173
+            ],
+            [
+              -111.93942408837151,
+              40.79050557679052
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93942408837151,
+              40.79086436799931
+            ],
+            [
+              -111.93916282366638,
+              40.79086436799931
+            ],
+            [
+              -111.93916282366638,
+              40.79050557679052
+            ],
+            [
+              -111.93942408837151,
+              40.79050557679052
+            ],
+            [
+              -111.93942408837151,
+              40.79086436799931
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93942408837151,
+              40.79196821415316
+            ],
+            [
+              -111.93916282366638,
+              40.79196821415316
+            ],
+            [
+              -111.93916282366638,
+              40.79160942294437
+            ],
+            [
+              -111.93942408837151,
+              40.79160942294437
+            ],
+            [
+              -111.93942408837151,
+              40.79196821415316
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93942408837151,
+              40.79232700536195
+            ],
+            [
+              -111.93916282366638,
+              40.79232700536195
+            ],
+            [
+              -111.93916282366638,
+              40.79196821415316
+            ],
+            [
+              -111.93942408837151,
+              40.79196821415316
+            ],
+            [
+              -111.93942408837151,
+              40.79232700536195
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94059505895981,
+              40.79119293942789
+            ],
+            [
+              -111.94059505895981,
+              40.79086436799931
+            ],
+            [
+              -111.94085632366495,
+              40.79086436799931
+            ],
+            [
+              -111.94085632366495,
+              40.79119293942789
+            ],
+            [
+              -111.94059505895981,
+              40.79119293942789
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9404789413131,
+              40.79119293942789
+            ],
+            [
+              -111.94021767660799,
+              40.79119293942789
+            ],
+            [
+              -111.94021767660799,
+              40.79086436799931
+            ],
+            [
+              -111.9404789413131,
+              40.79086436799931
+            ],
+            [
+              -111.9404789413131,
+              40.79119293942789
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94059505895981,
+              40.79128085151579
+            ],
+            [
+              -111.94085632366495,
+              40.79128085151579
+            ],
+            [
+              -111.94085632366495,
+              40.79160942294437
+            ],
+            [
+              -111.94059505895981,
+              40.79160942294437
+            ],
+            [
+              -111.94059505895981,
+              40.79128085151579
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9404789413131,
+              40.79128085151579
+            ],
+            [
+              -111.9404789413131,
+              40.79160942294437
+            ],
+            [
+              -111.94021767660799,
+              40.79160942294437
+            ],
+            [
+              -111.94021767660799,
+              40.79128085151579
+            ],
+            [
+              -111.9404789413131,
+              40.79128085151579
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9399515148423,
+              40.79119293942789
+            ],
+            [
+              -111.93969025013719,
+              40.79119293942789
+            ],
+            [
+              -111.93969025013719,
+              40.79086436799931
+            ],
+            [
+              -111.9399515148423,
+              40.79086436799931
+            ],
+            [
+              -111.9399515148423,
+              40.79119293942789
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.9399515148423,
+              40.79128085151579
+            ],
+            [
+              -111.9399515148423,
+              40.79160942294437
+            ],
+            [
+              -111.93969025013719,
+              40.79160942294437
+            ],
+            [
+              -111.93969025013719,
+              40.79128085151579
+            ],
+            [
+              -111.9399515148423,
+              40.79128085151579
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93942408837151,
+              40.79119293942789
+            ],
+            [
+              -111.93916282366638,
+              40.79119293942789
+            ],
+            [
+              -111.93916282366638,
+              40.79086436799931
+            ],
+            [
+              -111.93942408837151,
+              40.79086436799931
+            ],
+            [
+              -111.93942408837151,
+              40.79119293942789
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93942408837151,
+              40.79128085151579
+            ],
+            [
+              -111.93942408837151,
+              40.79160942294437
+            ],
+            [
+              -111.93916282366638,
+              40.79160942294437
+            ],
+            [
+              -111.93916282366638,
+              40.79128085151579
+            ],
+            [
+              -111.93942408837151,
+              40.79128085151579
+            ]
+          ]
+        ]
+      }
+    ],
+    "road_geometries": [
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.94106442660726,
+            40.79123689547184
+          ],
+          [
+            -111.93895472072407,
+            40.79123689547184
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.94053700013646,
+            40.79014678558173
+          ],
+          [
+            -111.94053700013646,
+            40.7912231592081
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.94053700013646,
+            40.79125063173558
+          ],
+          [
+            -111.94053700013646,
+            40.79232700536195
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.94000957366566,
+            40.79014678558173
+          ],
+          [
+            -111.94000957366566,
+            40.7912231592081
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.94000957366566,
+            40.79125063173558
+          ],
+          [
+            -111.94000957366566,
+            40.79232700536195
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.93948214719487,
+            40.79014678558173
+          ],
+          [
+            -111.93948214719487,
+            40.7912231592081
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.93948214719487,
+            40.79125063173558
+          ],
+          [
+            -111.93948214719487,
+            40.79232700536195
+          ]
+        ]
+      }
+    ],
+    "open_space_area_sqft": 581193.7399978134,
+    "utility_length_ft": 0.0,
+    "score": null,
+    "buildable_area_sqft": null,
+    "metadata": {
+      "source_engine": "bedrock.layout_service",
+      "source_run_id": null,
+      "observed_at": "2026-03-20T21:05:36.950735Z"
+    }
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "3852fb2e-91b9-5520-9301-a7603476df7b",
+    "layout_id": "layout-po2-slc-r1-7000-01-80f84ce28b59",
+    "parcel_id": "po2-slc-r1-7000-01",
+    "units": 24,
+    "estimated_home_price": 480000.0,
+    "construction_cost_per_home": 449280.00000000006,
+    "development_cost_total": 1291788.7024793387,
+    "projected_revenue": 11520000.0,
+    "projected_cost": 12074508.70247934,
+    "projected_profit": -554508.7024793401,
+    "ROI": -0.04592391426787237,
+    "profit_margin": -0.04813443597910939,
+    "revenue_per_unit": 480000.0,
+    "cost_per_unit": 503104.5292699725,
+    "rank": null,
+    "risk_score": 0.6874446743141549,
+    "requested_units": null,
+    "constraint_violations": [
+      "projected_profit_negative"
+    ],
+    "confidence": 0.9,
+    "status": "constrained",
+    "financial_summary": {
+      "units": 24,
+      "estimated_home_price": 480000.0,
+      "construction_cost_per_home": 449280.00000000006,
+      "road_cost_per_ft": 300.0,
+      "road_length": 2932.2,
+      "land_cost": 0.0,
+      "projected_revenue": 11520000.0,
+      "development_cost_total": 1291788.7024793387,
+      "projected_cost": 12074508.70247934,
+      "projected_profit": -554508.7024793401,
+      "ROI": -0.04592391426787237,
+      "development_cost_breakdown": {
+        "roads": 879660.0,
+        "utilities": 0.0,
+        "grading": 87966.0,
+        "sitework": 240162.70247933886,
+        "permitting": 84000.0
+      },
+      "profit_margin": -0.04813443597910939,
+      "revenue_per_unit": 480000.0,
+      "cost_per_unit": 503104.5292699725
+    },
+    "explanation": {
+      "primary_driver": "road_cost",
+      "cost_breakdown": {
+        "construction": 10782720.000000002,
+        "development": 1291788.7024793387
+      },
+      "revenue_breakdown": {
+        "units": 24,
+        "price_per_home": 480000.0
+      }
+    },
+    "assumptions": {
+      "used_default_estimated_home_price": true,
+      "used_default_construction_cost_per_home": true,
+      "used_default_road_cost_per_ft": true,
+      "used_default_land_price": true,
+      "used_default_soft_cost_factor": true
+    },
+    "metadata": null
+  },
+  "timestamp": "2026-03-20T21:05:36.951105Z",
+  "git_commit": "ceaa51d8bb6aa1d29cf293e8e9dd47cbc86f6c8e",
+  "input_hash": "b8abe7229447d5752c2c3868ff41a149cd18c555f79c8d551d3b9ca9badaf91b",
+  "stage_runtimes": {
+    "parcel.load": 0.000181,
+    "zoning.lookup": 0.00527,
+    "layout.search": 0.024384,
+    "feasibility.evaluate": 0.000299
+  }
+}

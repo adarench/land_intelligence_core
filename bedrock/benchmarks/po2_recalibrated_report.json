@@ -1,0 +1,131 @@
+{
+  "gate_result": {
+    "district_accuracy_passed": true,
+    "district_accuracy_target": 0.95,
+    "fallback_usage_passed": true,
+    "fallback_usage_required_max": 0.0,
+    "parcel_usability_passed": true,
+    "parcel_usability_target": 0.95,
+    "pipeline_success_passed": true,
+    "pipeline_success_target": 0.8,
+    "po2_gate_passed": true,
+    "rule_completeness_passed": true,
+    "rule_completeness_target": 0.95,
+    "stub_zoning_passed": true,
+    "stub_zoning_required_max": 0.0,
+    "synthetic_dataset_passed": true,
+    "synthetic_dataset_required_max": 0.0,
+    "zoning_success_passed": true,
+    "zoning_success_target": 0.9
+  },
+  "gate_thresholds": {
+    "district_accuracy": {
+      "justification": "Wrong district assignment invalidates downstream feasibility calculations.",
+      "target": 0.95
+    },
+    "fallback_usage_rate": {
+      "justification": "Fallback-derived rules mask representation regressions in real datasets.",
+      "target_max": 0.0
+    },
+    "parcel_usability_rate": {
+      "justification": "Production benchmark parcels must be layout-usable, not merely zoning-resolvable.",
+      "target": 0.95
+    },
+    "pipeline_success_rate": {
+      "justification": "PO-2 requires majority end-to-end success before unlocking downstream work.",
+      "target": 0.8
+    },
+    "rule_completeness_rate": {
+      "justification": "Layout-safe zoning fields must be present for nearly all production cases.",
+      "target": 0.95
+    },
+    "stub_zoning_rate": {
+      "justification": "Production progress cannot be measured against stub zoning outputs.",
+      "target_max": 0.0
+    },
+    "synthetic_dataset_rate": {
+      "justification": "Synthetic datasets are fixture-only and must not influence production signal.",
+      "target_max": 0.0
+    },
+    "zoning_success_rate": {
+      "justification": "Zoning lookup must be highly reliable to avoid cascading false negatives.",
+      "target": 0.9
+    }
+  },
+  "generated_at": "2026-03-19T20:47:03.519968+00:00",
+  "matrix_breakdown": {
+    "fixture_regression_matrix": {
+      "district_accuracy": 1.0,
+      "fallback_usage_rate": 0.0,
+      "geometry_stability_rate": 1.0,
+      "matrix_scope": "fixture",
+      "parcel_usability_rate": 1.0,
+      "partial_rule_usable_rate": 0.0,
+      "pipeline_success_rate": 1.0,
+      "rule_completeness_rate": 1.0,
+      "stub_zoning_rate": 0.0,
+      "synthetic_dataset_rate": 1.0,
+      "total": 20,
+      "zoning_success_rate": 1.0
+    },
+    "representative_jurisdictions": {
+      "district_accuracy": 1.0,
+      "fallback_usage_rate": 0.0,
+      "geometry_stability_rate": 1.0,
+      "matrix_scope": "production",
+      "parcel_usability_rate": 1.0,
+      "partial_rule_usable_rate": 0.0,
+      "pipeline_success_rate": 1.0,
+      "rule_completeness_rate": 1.0,
+      "stub_zoning_rate": 0.0,
+      "synthetic_dataset_rate": 0.0,
+      "total": 3,
+      "zoning_success_rate": 1.0
+    },
+    "supported_buildable_matrix": {
+      "district_accuracy": 1.0,
+      "fallback_usage_rate": 0.0,
+      "geometry_stability_rate": 1.0,
+      "matrix_scope": "production",
+      "parcel_usability_rate": 1.0,
+      "partial_rule_usable_rate": 0.0,
+      "pipeline_success_rate": 1.0,
+      "rule_completeness_rate": 1.0,
+      "stub_zoning_rate": 0.0,
+      "synthetic_dataset_rate": 0.0,
+      "total": 18,
+      "zoning_success_rate": 1.0
+    }
+  },
+  "signal_quality_before_after": {
+    "after_fixture_matrix": {
+      "synthetic_dataset_rate": 1.0,
+      "total": 20
+    },
+    "after_production_matrix": {
+      "district_accuracy": 1.0,
+      "fallback_usage_rate": 0.0,
+      "parcel_usability_rate": 1.0,
+      "partial_rule_usable_rate": 0.0,
+      "pipeline_success_rate": 1.0,
+      "rule_completeness_rate": 1.0,
+      "stub_zoning_rate": 0.0,
+      "synthetic_dataset_rate": 0.0,
+      "total": 21,
+      "zoning_success_rate": 1.0
+    },
+    "before_mixed_matrix": {
+      "district_accuracy": 1.0,
+      "fallback_usage_rate": 0.0,
+      "parcel_usability_rate": 0.8695652173913043,
+      "partial_rule_usable_rate": 0.0,
+      "pipeline_success_rate": 0.8695652173913043,
+      "rule_completeness_rate": 1.0,
+      "stub_zoning_rate": 0.0,
+      "synthetic_dataset_rate": 0.8695652173913043,
+      "total": 23,
+      "zoning_success_rate": 1.0
+    }
+  },
+  "source_report": "bedrock/benchmarks/po2_stabilization_latest.json"
+}

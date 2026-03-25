@@ -1,0 +1,8 @@
+{
+  "construction_cost_per_home": 265000,
+  "average_home_sale_price": 410000,
+  "road_cost_per_linear_ft": 475,
+  "utility_cost_per_lot": 20000,
+  "soft_cost_percent": 0.2,
+  "developer_margin_target": 0.2
+}

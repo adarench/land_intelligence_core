@@ -1,0 +1,12 @@
+{
+  "city": "BenchmarkCounty_UT",
+  "city_slug": "benchmarkcounty-ut",
+  "county_name": "Benchmark",
+  "feature_count": 1,
+  "layer_sources": [
+    {
+      "source_layer": "zoning",
+      "name": "Benchmark Zoning"
+    }
+  ]
+}

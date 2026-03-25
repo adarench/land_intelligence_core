@@ -1,0 +1,15 @@
+{
+  "parcel_id": "parcel_test_001",
+  "district": "R-1",
+  "min_lot_size_sqft": 6000,
+  "max_units_per_acre": 5,
+  "setbacks": {
+    "front": 25,
+    "side": 8,
+    "rear": 20
+  },
+  "height_limit_ft": 35,
+  "lot_coverage_max": 0.45,
+  "min_frontage_ft": 50,
+  "road_right_of_way_ft": 50
+}

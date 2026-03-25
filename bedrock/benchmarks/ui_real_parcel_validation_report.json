@@ -1,0 +1,427 @@
+{
+  "generated_at": "2026-03-20T21:25:37Z",
+  "source": "UI /api/parcels/in-bounds",
+  "raw_counts": {
+    "Provo": {
+      "status": 200,
+      "raw": 300
+    },
+    "Murray": {
+      "status": 200,
+      "raw": 300
+    },
+    "Cottonwood Heights": {
+      "status": 200,
+      "raw": 300
+    }
+  },
+  "selected_counts": {
+    "Provo": 10,
+    "Murray": 10,
+    "Cottonwood Heights": 10
+  },
+  "metrics": {
+    "overall_pipeline_success_rate": 0.0,
+    "stage_failure_breakdown": {
+      "zoning.lookup": 30
+    },
+    "runtime": {
+      "avg": 0.9203136611333339,
+      "p95": 0.028144500000003347,
+      "max": 27.264755582999996
+    },
+    "zoning_fallback_count": 0,
+    "zoning_stub_count": 0
+  },
+  "jurisdiction": {
+    "Provo": {
+      "parcels": 10,
+      "success_rate": 0.0,
+      "failure_count": 10,
+      "failure_type": "zoning.lookup",
+      "zoning_resolution_success": 0.0,
+      "layout_viability_rate": 0.0,
+      "feasibility_valid_rate": 0.0
+    },
+    "Murray": {
+      "parcels": 10,
+      "success_rate": 0.0,
+      "failure_count": 10,
+      "failure_type": "zoning.lookup",
+      "zoning_resolution_success": 0.0,
+      "layout_viability_rate": 0.0,
+      "feasibility_valid_rate": 0.0
+    },
+    "Cottonwood Heights": {
+      "parcels": 10,
+      "success_rate": 0.0,
+      "failure_count": 10,
+      "failure_type": "zoning.lookup",
+      "zoning_resolution_success": 0.0,
+      "layout_viability_rate": 0.0,
+      "feasibility_valid_rate": 0.0
+    }
+  },
+  "rows": [
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-520490059",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 27.264755582999996,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-521050018",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.011039916999997956,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-521050016",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.010734540999997932,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-410300029",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.009996291999996743,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-041090026",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.009843958000004704,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-540840850",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.010177875000003667,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-540840850",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.009497833000004618,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-050440024",
+      "pipeline_success": false,
+      "status_code": 422,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "invalid_zoning_rules",
+      "runtime_seconds": 0.0069644579999987855,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-664410003",
+      "pipeline_success": false,
+      "status_code": 422,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "invalid_zoning_rules",
+      "runtime_seconds": 0.006601416999998833,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Provo",
+      "source_parcel_id": "ut-Utah-460130078",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.010795082999997874,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-21242010370000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.01591475000000031,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-22063790220000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.028144500000003347,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-21241520680000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.023907125000000917,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-22071050250000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.02057583399999885,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-21014040800000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.013676457999999059,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-22083010500000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.012746375000006083,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-22171260110000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.011907540999999355,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-22074800110000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.011002208999997265,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-22064060380000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.010266874999999231,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Murray",
+      "source_parcel_id": "ut-SaltLake-21242010300000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.010286542000002896,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22351760450000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.010455499999999063,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22281260860000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.01037579199999783,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22274800660000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.010480000000001155,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22253560430000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.01007179199999797,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22264260140000",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.01015750000000537,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22264770351005",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.010438042000004089,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22332290211003",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.009828250000005312,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22332290211006",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.009529374999999618,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22332290211007",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.009482334000004755,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    },
+    {
+      "jurisdiction": "Cottonwood Heights",
+      "source_parcel_id": "ut-SaltLake-22264770351001",
+      "pipeline_success": false,
+      "status_code": 404,
+      "failed_stage": "zoning.lookup",
+      "failed_error": "no_district_match",
+      "runtime_seconds": 0.009756082999999194,
+      "zoning_result": {},
+      "layout_result": {},
+      "feasibility_result": {}
+    }
+  ]
+}

@@ -209,8 +209,7 @@ Output
 - project profit
 - ROI
 - risk score
-
-Definition of Done
+trfg4Definition of Done
 
 The feasibility report includes:
 
@@ -283,3 +282,8 @@ parcel
 Output:
 
 a development feasibility report.
+
+Current gate status:
+
+- not yet achieved under current PO-2 stabilization gate
+- evidence: `bedrock/benchmarks/po2_stabilization_latest.json` (`po2_gate_passed = false`)

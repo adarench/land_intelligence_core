@@ -1,0 +1,76 @@
+{
+  "parcel_id": "benchmark_case_001",
+  "jurisdiction": "BenchmarkCounty_UT",
+  "district": "R-1",
+  "district_id": "benchmark:R-1",
+  "description": "Benchmark single-family district.",
+  "setbacks": {
+    "front": 25,
+    "side": 8,
+    "rear": 20
+  },
+  "min_lot_size_sqft": 6000,
+  "max_units_per_acre": 5,
+  "height_limit_ft": 35,
+  "lot_coverage_max": 0.45,
+  "min_frontage_ft": 50,
+  "road_right_of_way_ft": 50,
+  "allowed_uses": ["single_family"],
+  "citations": ["benchmark_fixture"],
+  "standards": [
+    {
+      "id": "benchmark:R-1:min_lot_size_sqft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "min_lot_size_sqft",
+      "value": 6000,
+      "units": "sqft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:max_units_per_acre",
+      "district_id": "benchmark:R-1",
+      "standard_type": "max_units_per_acre",
+      "value": 5,
+      "units": "du/ac",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:front_setback_ft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "front_setback_ft",
+      "value": 25,
+      "units": "ft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:side_setback_ft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "side_setback_ft",
+      "value": 8,
+      "units": "ft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:rear_setback_ft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "rear_setback_ft",
+      "value": 20,
+      "units": "ft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:min_frontage_ft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "min_frontage_ft",
+      "value": 50,
+      "units": "ft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    }
+  ]
+}

@@ -1,0 +1,2069 @@
+{
+  "aggregate_metrics": {
+    "average_road_length": 1802.020833333333,
+    "average_unit_yield": 10.930555555555555,
+    "runtime_distribution": {
+      "avg_seconds": 0.07149864533333336,
+      "max_seconds": 0.852638208,
+      "median_seconds": 0.05500222900000029,
+      "p95_seconds": 0.0901155272999999
+    },
+    "solver_stability": {
+      "failure_count": 0,
+      "success_count": 72,
+      "success_rate": 1.0
+    }
+  },
+  "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+  "dataset": "layout_eval_v1",
+  "dataset_summary": {
+    "case_count": 72,
+    "parcel_count": 24,
+    "parcel_type_distribution": {
+      "internal_constraints": 4,
+      "irregular": 8,
+      "long_narrow": 4,
+      "rectangular": 8
+    },
+    "scenario_count": 3
+  },
+  "generated_at": "2026-03-17T00:49:39.162796+00:00",
+  "highlights": {
+    "failed_cases": [],
+    "low_yield_efficiency_cases": [
+      "layout_case_001:A",
+      "layout_case_001:B",
+      "layout_case_001:C",
+      "layout_case_002:A",
+      "layout_case_002:B",
+      "layout_case_002:C",
+      "layout_case_003:A",
+      "layout_case_003:B",
+      "layout_case_003:C",
+      "layout_case_004:A",
+      "layout_case_004:B",
+      "layout_case_004:C",
+      "layout_case_005:A",
+      "layout_case_005:B",
+      "layout_case_005:C",
+      "layout_case_006:A",
+      "layout_case_006:B",
+      "layout_case_006:C",
+      "layout_case_007:A",
+      "layout_case_007:B",
+      "layout_case_007:C",
+      "layout_case_008:A",
+      "layout_case_008:B",
+      "layout_case_008:C",
+      "layout_case_009:A",
+      "layout_case_009:B",
+      "layout_case_009:C",
+      "layout_case_010:A",
+      "layout_case_010:B",
+      "layout_case_010:C",
+      "layout_case_011:A",
+      "layout_case_011:B",
+      "layout_case_011:C",
+      "layout_case_012:A",
+      "layout_case_012:B",
+      "layout_case_012:C",
+      "layout_case_013:A",
+      "layout_case_013:B",
+      "layout_case_013:C",
+      "layout_case_014:A",
+      "layout_case_014:B",
+      "layout_case_014:C",
+      "layout_case_015:A",
+      "layout_case_015:B",
+      "layout_case_015:C",
+      "layout_case_016:A",
+      "layout_case_016:B",
+      "layout_case_016:C",
+      "layout_case_017:A",
+      "layout_case_017:B",
+      "layout_case_017:C",
+      "layout_case_018:A",
+      "layout_case_018:B",
+      "layout_case_018:C",
+      "layout_case_019:A",
+      "layout_case_019:B",
+      "layout_case_019:C",
+      "layout_case_020:A",
+      "layout_case_020:B",
+      "layout_case_020:C",
+      "layout_case_internal_001:A",
+      "layout_case_internal_001:B",
+      "layout_case_internal_001:C",
+      "layout_case_internal_002:A",
+      "layout_case_internal_002:B",
+      "layout_case_internal_002:C",
+      "layout_case_internal_003:A",
+      "layout_case_internal_003:B",
+      "layout_case_internal_003:C",
+      "layout_case_internal_004:A",
+      "layout_case_internal_004:B",
+      "layout_case_internal_004:C"
+    ],
+    "poor_road_efficiency_cases": [
+      "layout_case_001:C",
+      "layout_case_003:C",
+      "layout_case_007:C",
+      "layout_case_008:C",
+      "layout_case_011:C",
+      "layout_case_013:C",
+      "layout_case_015:C",
+      "layout_case_016:C",
+      "layout_case_018:C",
+      "layout_case_020:C",
+      "layout_case_internal_001:C",
+      "layout_case_internal_002:C"
+    ]
+  },
+  "records": [
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_001:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8104444444444444,
+        "lot_size_distribution": {
+          "max": 7310.0,
+          "mean": 6800.0,
+          "median": 6800.0,
+          "min": 6290.0,
+          "p25": 6290.0,
+          "p75": 7310.0
+        },
+        "road_efficiency": 108.125,
+        "road_length": 1730.0,
+        "solver_runtime": 0.852638208,
+        "theoretical_max_units": 31,
+        "unit_yield": 16,
+        "yield_efficiency": 0.5161290322580645
+      },
+      "parcel_id": "layout_case_001",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_001:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.745,
+        "lot_size_distribution": {
+          "max": 13333.0,
+          "mean": 13333.0,
+          "median": 13333.0,
+          "min": 13333.0,
+          "p25": 13333.0,
+          "p75": 13333.0
+        },
+        "road_efficiency": 216.25,
+        "road_length": 1730.0,
+        "solver_runtime": 0.03977462500000006,
+        "theoretical_max_units": 24,
+        "unit_yield": 8,
+        "yield_efficiency": 0.3333333333333333
+      },
+      "parcel_id": "layout_case_001",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_001:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.68125,
+        "lot_size_distribution": {
+          "max": 17437.992373973342,
+          "mean": 17437.992373973342,
+          "median": 17437.992373973342,
+          "min": 17437.992373973342,
+          "p25": 17437.992373973342,
+          "p75": 17437.992373973342
+        },
+        "road_efficiency": 358.6,
+        "road_length": 717.2,
+        "solver_runtime": 0.03878962499999994,
+        "theoretical_max_units": 18,
+        "unit_yield": 2,
+        "yield_efficiency": 0.1111111111111111
+      },
+      "parcel_id": "layout_case_001",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_002:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7715666666666667,
+        "lot_size_distribution": {
+          "max": 7990.0,
+          "mean": 7207.5,
+          "median": 6970.0,
+          "min": 6662.5,
+          "p25": 6662.5,
+          "p75": 7990.0
+        },
+        "road_efficiency": 152.5,
+        "road_length": 1830.0,
+        "solver_runtime": 0.051397499999999985,
+        "theoretical_max_units": 32,
+        "unit_yield": 12,
+        "yield_efficiency": 0.375
+      },
+      "parcel_id": "layout_case_002",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_002:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.745,
+        "lot_size_distribution": {
+          "max": 12663.0,
+          "mean": 12663.0,
+          "median": 12663.0,
+          "min": 12663.0,
+          "p25": 12663.0,
+          "p75": 12663.0
+        },
+        "road_efficiency": 213.75,
+        "road_length": 1710.0,
+        "solver_runtime": 0.04856041700000002,
+        "theoretical_max_units": 25,
+        "unit_yield": 8,
+        "yield_efficiency": 0.32
+      },
+      "parcel_id": "layout_case_002",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_002:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.745,
+        "lot_size_distribution": {
+          "max": 12281.25,
+          "mean": 12281.25,
+          "median": 12281.25,
+          "min": 12281.25,
+          "p25": 12281.25,
+          "p75": 12281.25
+        },
+        "road_efficiency": 213.75,
+        "road_length": 1710.0,
+        "solver_runtime": 0.041407541999999964,
+        "theoretical_max_units": 19,
+        "unit_yield": 8,
+        "yield_efficiency": 0.42105263157894735
+      },
+      "parcel_id": "layout_case_002",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_003:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7741888888888889,
+        "lot_size_distribution": {
+          "max": 8670.0,
+          "mean": 7502.5,
+          "median": 7650.0,
+          "min": 6187.5,
+          "p25": 6187.5,
+          "p75": 8670.0
+        },
+        "road_efficiency": 159.16666666666666,
+        "road_length": 1910.0,
+        "solver_runtime": 0.059389166000000104,
+        "theoretical_max_units": 31,
+        "unit_yield": 12,
+        "yield_efficiency": 0.3870967741935484
+      },
+      "parcel_id": "layout_case_003",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_003:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11055.0,
+          "mean": 10543.803536391844,
+          "median": 10543.803536391844,
+          "min": 10032.607072783689,
+          "p25": 10032.607072783689,
+          "p75": 11055.0
+        },
+        "road_efficiency": 177.85,
+        "road_length": 711.4,
+        "solver_runtime": 0.08874983400000014,
+        "theoretical_max_units": 25,
+        "unit_yield": 4,
+        "yield_efficiency": 0.16
+      },
+      "parcel_id": "layout_case_003",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_003:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.6383429319371726,
+        "lot_size_distribution": {
+          "max": 15556.25,
+          "mean": 15556.25,
+          "median": 15556.25,
+          "min": 15556.25,
+          "p25": 15556.25,
+          "p75": 15556.25
+        },
+        "road_efficiency": 477.5,
+        "road_length": 1910.0,
+        "solver_runtime": 0.07763041600000009,
+        "theoretical_max_units": 19,
+        "unit_yield": 4,
+        "yield_efficiency": 0.21052631578947367
+      },
+      "parcel_id": "layout_case_003",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_004:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7097997777777778,
+        "lot_size_distribution": {
+          "max": 7729.333333333333,
+          "mean": 7430.639150795609,
+          "median": 7729.33333333333,
+          "min": 6833.250785720162,
+          "p25": 7057.271422623455,
+          "p75": 7729.333333333332
+        },
+        "road_efficiency": 116.25,
+        "road_length": 697.5,
+        "solver_runtime": 0.06579299999999999,
+        "theoretical_max_units": 30,
+        "unit_yield": 6,
+        "yield_efficiency": 0.2
+      },
+      "parcel_id": "layout_case_004",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_004:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11423.5,
+          "mean": 10971.078039022419,
+          "median": 10971.078039022419,
+          "min": 10518.656078044838,
+          "p25": 10518.656078044838,
+          "p75": 11423.5
+        },
+        "road_efficiency": 174.375,
+        "road_length": 697.5,
+        "solver_runtime": 0.04739641700000008,
+        "theoretical_max_units": 24,
+        "unit_yield": 4,
+        "yield_efficiency": 0.16666666666666666
+      },
+      "parcel_id": "layout_case_004",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_004:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11167.75,
+          "mean": 10706.977250640455,
+          "median": 10706.977250640455,
+          "min": 10246.20450128091,
+          "p25": 10246.204501280912,
+          "p75": 11167.75
+        },
+        "road_efficiency": 174.375,
+        "road_length": 697.5,
+        "solver_runtime": 0.047711124999999965,
+        "theoretical_max_units": 18,
+        "unit_yield": 4,
+        "yield_efficiency": 0.2222222222222222
+      },
+      "parcel_id": "layout_case_004",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_005:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7123384444444445,
+        "lot_size_distribution": {
+          "max": 7978.666666666665,
+          "mean": 7716.200102347835,
+          "median": 7978.666666666665,
+          "min": 7191.266973710173,
+          "p25": 7388.116896949297,
+          "p75": 7978.666666666665
+        },
+        "road_efficiency": 113.95,
+        "road_length": 683.7,
+        "solver_runtime": 0.04633945900000014,
+        "theoretical_max_units": 29,
+        "unit_yield": 6,
+        "yield_efficiency": 0.20689655172413793
+      },
+      "parcel_id": "layout_case_005",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_005:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11792.0,
+          "mean": 11392.868720893019,
+          "median": 11392.86872089302,
+          "min": 10993.737441786036,
+          "p25": 10993.737441786037,
+          "p75": 11792.0
+        },
+        "road_efficiency": 170.925,
+        "road_length": 683.7,
+        "solver_runtime": 0.044541582999999996,
+        "theoretical_max_units": 23,
+        "unit_yield": 4,
+        "yield_efficiency": 0.17391304347826086
+      },
+      "parcel_id": "layout_case_005",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_005:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11528.0,
+          "mean": 11118.950281811352,
+          "median": 11118.950281811352,
+          "min": 10709.900563622703,
+          "p25": 10709.900563622705,
+          "p75": 11528.0
+        },
+        "road_efficiency": 170.925,
+        "road_length": 683.7,
+        "solver_runtime": 0.06471074999999993,
+        "theoretical_max_units": 17,
+        "unit_yield": 4,
+        "yield_efficiency": 0.23529411764705882
+      },
+      "parcel_id": "layout_case_005",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_006:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8526573333333333,
+        "lot_size_distribution": {
+          "max": 7310.0,
+          "mean": 6767.733333333334,
+          "median": 6477.333333333334,
+          "min": 6290.0,
+          "p25": 6290.0,
+          "p75": 7310.0
+        },
+        "road_efficiency": 114.0,
+        "road_length": 2280.0,
+        "solver_runtime": 0.05079558400000006,
+        "theoretical_max_units": 36,
+        "unit_yield": 20,
+        "yield_efficiency": 0.5555555555555556
+      },
+      "parcel_id": "layout_case_006",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_006:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8265013333333333,
+        "lot_size_distribution": {
+          "max": 9212.5,
+          "mean": 8606.416666666666,
+          "median": 8140.5,
+          "min": 8091.166666666664,
+          "p25": 8140.5,
+          "p75": 9212.5
+        },
+        "road_efficiency": 130.625,
+        "road_length": 2090.0,
+        "solver_runtime": 0.04887662500000012,
+        "theoretical_max_units": 29,
+        "unit_yield": 16,
+        "yield_efficiency": 0.5517241379310345
+      },
+      "parcel_id": "layout_case_006",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_006:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.76625,
+        "lot_size_distribution": {
+          "max": 12936.25,
+          "mean": 12871.716666666667,
+          "median": 12936.25,
+          "min": 12290.916666666668,
+          "p25": 12936.25,
+          "p75": 12936.25
+        },
+        "road_efficiency": 228.0,
+        "road_length": 2280.0,
+        "solver_runtime": 0.04627904100000002,
+        "theoretical_max_units": 22,
+        "unit_yield": 10,
+        "yield_efficiency": 0.45454545454545453
+      },
+      "parcel_id": "layout_case_006",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_007:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8330812222222223,
+        "lot_size_distribution": {
+          "max": 7310.0,
+          "mean": 6773.1578947368425,
+          "median": 6290.0,
+          "min": 6290.0,
+          "p25": 6290.0,
+          "p75": 7310.0
+        },
+        "road_efficiency": 118.94736842105263,
+        "road_length": 2260.0,
+        "solver_runtime": 0.06560204199999986,
+        "theoretical_max_units": 35,
+        "unit_yield": 19,
+        "yield_efficiency": 0.5428571428571428
+      },
+      "parcel_id": "layout_case_007",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_007:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11423.5,
+          "mean": 10783.9507133332,
+          "median": 10783.9507133332,
+          "min": 10144.401426666402,
+          "p25": 10144.401426666403,
+          "p75": 11423.5
+        },
+        "road_efficiency": 193.05,
+        "road_length": 772.2,
+        "solver_runtime": 0.04986849999999987,
+        "theoretical_max_units": 28,
+        "unit_yield": 4,
+        "yield_efficiency": 0.14285714285714285
+      },
+      "parcel_id": "layout_case_007",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_007:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.614955172413793,
+        "lot_size_distribution": {
+          "max": 16211.25,
+          "mean": 15747.539772727272,
+          "median": 16211.25,
+          "min": 14356.409090909088,
+          "p25": 15747.539772727272,
+          "p75": 16211.25
+        },
+        "road_efficiency": 507.5,
+        "road_length": 2030.0,
+        "solver_runtime": 0.049436333000000054,
+        "theoretical_max_units": 21,
+        "unit_yield": 4,
+        "yield_efficiency": 0.19047619047619047
+      },
+      "parcel_id": "layout_case_007",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_008:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8213244444444444,
+        "lot_size_distribution": {
+          "max": 8670.0,
+          "mean": 8024.0,
+          "median": 7650.0,
+          "min": 6587.973688765006,
+          "p25": 7650.0,
+          "p75": 8670.0
+        },
+        "road_efficiency": 122.95,
+        "road_length": 1967.2,
+        "solver_runtime": 0.05167287499999995,
+        "theoretical_max_units": 34,
+        "unit_yield": 16,
+        "yield_efficiency": 0.47058823529411764
+      },
+      "parcel_id": "layout_case_008",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_008:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11055.0,
+          "mean": 10415.4507133332,
+          "median": 10415.4507133332,
+          "min": 9775.901426666402,
+          "p25": 9775.901426666402,
+          "p75": 11055.0
+        },
+        "road_efficiency": 190.3,
+        "road_length": 761.2,
+        "solver_runtime": 0.04830924999999997,
+        "theoretical_max_units": 27,
+        "unit_yield": 4,
+        "yield_efficiency": 0.14814814814814814
+      },
+      "parcel_id": "layout_case_008",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_008:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.663425935339569,
+        "lot_size_distribution": {
+          "max": 15556.25,
+          "mean": 15105.388893202251,
+          "median": 15556.25,
+          "min": 13419.3125,
+          "p25": 15438.881966011251,
+          "p75": 15556.25
+        },
+        "road_efficiency": 393.44,
+        "road_length": 1967.2,
+        "solver_runtime": 0.04644387499999958,
+        "theoretical_max_units": 20,
+        "unit_yield": 5,
+        "yield_efficiency": 0.25
+      },
+      "parcel_id": "layout_case_008",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_009:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8556288888888889,
+        "lot_size_distribution": {
+          "max": 7650.0,
+          "mean": 7102.049572649573,
+          "median": 6760.495726495727,
+          "min": 6630.0,
+          "p25": 6630.0,
+          "p75": 7650.0
+        },
+        "road_efficiency": 119.0,
+        "road_length": 2380.0,
+        "solver_runtime": 0.05232349999999997,
+        "theoretical_max_units": 38,
+        "unit_yield": 20,
+        "yield_efficiency": 0.5263157894736842
+      },
+      "parcel_id": "layout_case_009",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_009:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8294364444444444,
+        "lot_size_distribution": {
+          "max": 9547.5,
+          "mean": 8936.57999465812,
+          "median": 8475.5,
+          "min": 8348.779914529916,
+          "p25": 8475.5,
+          "p75": 9547.5
+        },
+        "road_efficiency": 135.625,
+        "road_length": 2170.0,
+        "solver_runtime": 0.0477589169999999,
+        "theoretical_max_units": 30,
+        "unit_yield": 16,
+        "yield_efficiency": 0.5333333333333333
+      },
+      "parcel_id": "layout_case_009",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_009:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.76625,
+        "lot_size_distribution": {
+          "max": 13591.25,
+          "mean": 13515.349145299146,
+          "median": 13591.25,
+          "min": 12832.241452991455,
+          "p25": 13591.25,
+          "p75": 13591.25
+        },
+        "road_efficiency": 238.0,
+        "road_length": 2380.0,
+        "solver_runtime": 0.07142937500000013,
+        "theoretical_max_units": 23,
+        "unit_yield": 10,
+        "yield_efficiency": 0.43478260869565216
+      },
+      "parcel_id": "layout_case_009",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_010:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.851404711111111,
+        "lot_size_distribution": {
+          "max": 7990.0,
+          "mean": 7456.382633053221,
+          "median": 7215.492997198879,
+          "min": 6970.0,
+          "p25": 6970.0,
+          "p75": 7990.0
+        },
+        "road_efficiency": 125.0,
+        "road_length": 2500.0,
+        "solver_runtime": 0.06558200000000003,
+        "theoretical_max_units": 42,
+        "unit_yield": 20,
+        "yield_efficiency": 0.47619047619047616
+      },
+      "parcel_id": "layout_case_010",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_010:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.83,
+        "lot_size_distribution": {
+          "max": 10217.5,
+          "mean": 9618.4797188106,
+          "median": 9178.491596638656,
+          "min": 9145.5,
+          "p25": 9145.5,
+          "p75": 10217.5
+        },
+        "road_efficiency": 144.375,
+        "road_length": 2310.0,
+        "solver_runtime": 0.05679683400000002,
+        "theoretical_max_units": 34,
+        "unit_yield": 16,
+        "yield_efficiency": 0.47058823529411764
+      },
+      "parcel_id": "layout_case_010",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_010:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7485267999999999,
+        "lot_size_distribution": {
+          "max": 14246.25,
+          "mean": 14187.681932773108,
+          "median": 14246.25,
+          "min": 13660.56932773109,
+          "p25": 14246.25,
+          "p75": 14246.25
+        },
+        "road_efficiency": 250.0,
+        "road_length": 2500.0,
+        "solver_runtime": 0.075375792,
+        "theoretical_max_units": 25,
+        "unit_yield": 10,
+        "yield_efficiency": 0.4
+      },
+      "parcel_id": "layout_case_010",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_011:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8528644444444444,
+        "lot_size_distribution": {
+          "max": 7310.0,
+          "mean": 6791.0,
+          "median": 6710.0,
+          "min": 6290.0,
+          "p25": 6290.0,
+          "p75": 7310.0
+        },
+        "road_efficiency": 113.0,
+        "road_length": 2260.0,
+        "solver_runtime": 0.057319083999999965,
+        "theoretical_max_units": 35,
+        "unit_yield": 20,
+        "yield_efficiency": 0.5714285714285714
+      },
+      "parcel_id": "layout_case_011",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_011:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11423.5,
+          "mean": 10783.9507133332,
+          "median": 10783.9507133332,
+          "min": 10144.401426666402,
+          "p25": 10144.401426666403,
+          "p75": 11423.5
+        },
+        "road_efficiency": 193.05,
+        "road_length": 772.2,
+        "solver_runtime": 0.05309158300000005,
+        "theoretical_max_units": 28,
+        "unit_yield": 4,
+        "yield_efficiency": 0.14285714285714285
+      },
+      "parcel_id": "layout_case_011",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_011:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.6183364532019704,
+        "lot_size_distribution": {
+          "max": 16211.25,
+          "mean": 16109.670833333334,
+          "median": 16188.716666666667,
+          "min": 15850.0,
+          "p25": 16087.137499999999,
+          "p75": 16211.25
+        },
+        "road_efficiency": 507.5,
+        "road_length": 2030.0,
+        "solver_runtime": 0.04894012500000011,
+        "theoretical_max_units": 21,
+        "unit_yield": 4,
+        "yield_efficiency": 0.19047619047619047
+      },
+      "parcel_id": "layout_case_011",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_012:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8557488888888889,
+        "lot_size_distribution": {
+          "max": 7650.0,
+          "mean": 7115.521904761905,
+          "median": 6899.333333333334,
+          "min": 6630.0,
+          "p25": 6630.0,
+          "p75": 7650.0
+        },
+        "road_efficiency": 119.0,
+        "road_length": 2380.0,
+        "solver_runtime": 0.05220891700000019,
+        "theoretical_max_units": 38,
+        "unit_yield": 20,
+        "yield_efficiency": 0.5263157894736842
+      },
+      "parcel_id": "layout_case_012",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_012:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8295244444444445,
+        "lot_size_distribution": {
+          "max": 9547.5,
+          "mean": 8946.528273809523,
+          "median": 8543.333333333332,
+          "min": 8475.5,
+          "p25": 8475.5,
+          "p75": 9547.5
+        },
+        "road_efficiency": 135.625,
+        "road_length": 2170.0,
+        "solver_runtime": 0.04859241599999997,
+        "theoretical_max_units": 31,
+        "unit_yield": 16,
+        "yield_efficiency": 0.5161290322580645
+      },
+      "parcel_id": "layout_case_012",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_012:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.76625,
+        "lot_size_distribution": {
+          "max": 13591.25,
+          "mean": 13542.29380952381,
+          "median": 13591.25,
+          "min": 13109.916666666668,
+          "p25": 13591.25,
+          "p75": 13591.25
+        },
+        "road_efficiency": 238.0,
+        "road_length": 2380.0,
+        "solver_runtime": 0.07244966700000033,
+        "theoretical_max_units": 23,
+        "unit_yield": 10,
+        "yield_efficiency": 0.43478260869565216
+      },
+      "parcel_id": "layout_case_012",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_013:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7758795555555555,
+        "lot_size_distribution": {
+          "max": 8500.0,
+          "mean": 7692.663888888889,
+          "median": 7480.0,
+          "min": 7150.0,
+          "p25": 7150.0,
+          "p75": 8343.975
+        },
+        "road_efficiency": 160.0,
+        "road_length": 1920.0,
+        "solver_runtime": 0.05416158299999996,
+        "theoretical_max_units": 32,
+        "unit_yield": 12,
+        "yield_efficiency": 0.375
+      },
+      "parcel_id": "layout_case_013",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_013:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 10870.75,
+          "mean": 10275.207559150835,
+          "median": 10275.207559150835,
+          "min": 9679.665118301667,
+          "p25": 9679.66511830167,
+          "p75": 10870.75
+        },
+        "road_efficiency": 184.775,
+        "road_length": 739.1,
+        "solver_runtime": 0.04999504099999985,
+        "theoretical_max_units": 26,
+        "unit_yield": 4,
+        "yield_efficiency": 0.15384615384615385
+      },
+      "parcel_id": "layout_case_013",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_013:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.629625,
+        "lot_size_distribution": {
+          "max": 15228.75,
+          "mean": 15176.741666666667,
+          "median": 15228.75,
+          "min": 15020.716666666667,
+          "p25": 15176.741666666667,
+          "p75": 15228.75
+        },
+        "road_efficiency": 480.0,
+        "road_length": 1920.0,
+        "solver_runtime": 0.043845042000000056,
+        "theoretical_max_units": 19,
+        "unit_yield": 4,
+        "yield_efficiency": 0.21052631578947367
+      },
+      "parcel_id": "layout_case_013",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_014:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8163511111111111,
+        "lot_size_distribution": {
+          "max": 7990.0,
+          "mean": 7464.474131944445,
+          "median": 7378.326388888889,
+          "min": 6970.0,
+          "p25": 6970.0,
+          "p75": 7990.0
+        },
+        "road_efficiency": 115.625,
+        "road_length": 1850.0,
+        "solver_runtime": 0.04515799999999981,
+        "theoretical_max_units": 31,
+        "unit_yield": 16,
+        "yield_efficiency": 0.5161290322580645
+      },
+      "parcel_id": "layout_case_014",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_014:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.745,
+        "lot_size_distribution": {
+          "max": 13333.0,
+          "mean": 13333.0,
+          "median": 13333.0,
+          "min": 13333.0,
+          "p25": 13333.0,
+          "p75": 13333.0
+        },
+        "road_efficiency": 221.25,
+        "road_length": 1770.0,
+        "solver_runtime": 0.04220462500000011,
+        "theoretical_max_units": 25,
+        "unit_yield": 8,
+        "yield_efficiency": 0.32
+      },
+      "parcel_id": "layout_case_014",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_014:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.745,
+        "lot_size_distribution": {
+          "max": 12936.25,
+          "mean": 12936.25,
+          "median": 12936.25,
+          "min": 12936.25,
+          "p25": 12936.25,
+          "p75": 12936.25
+        },
+        "road_efficiency": 221.25,
+        "road_length": 1770.0,
+        "solver_runtime": 0.04164345899999988,
+        "theoretical_max_units": 19,
+        "unit_yield": 8,
+        "yield_efficiency": 0.42105263157894735
+      },
+      "parcel_id": "layout_case_014",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_015:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7971597777777778,
+        "lot_size_distribution": {
+          "max": 9656.0,
+          "mean": 7696.142857142857,
+          "median": 7480.0,
+          "min": 6800.0,
+          "p25": 6970.0,
+          "p75": 7990.0
+        },
+        "road_efficiency": 109.0,
+        "road_length": 1526.0,
+        "solver_runtime": 0.048153917000000046,
+        "theoretical_max_units": 31,
+        "unit_yield": 14,
+        "yield_efficiency": 0.45161290322580644
+      },
+      "parcel_id": "layout_case_015",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_015:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7343749999999999,
+        "lot_size_distribution": {
+          "max": 14673.0,
+          "mean": 13916.857142857143,
+          "median": 14673.0,
+          "min": 9380.0,
+          "p25": 14673.0,
+          "p75": 14673.0
+        },
+        "road_efficiency": 218.0,
+        "road_length": 1526.0,
+        "solver_runtime": 0.05744033299999973,
+        "theoretical_max_units": 24,
+        "unit_yield": 7,
+        "yield_efficiency": 0.2916666666666667
+      },
+      "parcel_id": "layout_case_015",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_015:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.72375,
+        "lot_size_distribution": {
+          "max": 14246.25,
+          "mean": 14246.25,
+          "median": 14246.25,
+          "min": 14246.25,
+          "p25": 14246.25,
+          "p75": 14246.25
+        },
+        "road_efficiency": 254.33333333333334,
+        "road_length": 1526.0,
+        "solver_runtime": 0.07072650000000014,
+        "theoretical_max_units": 18,
+        "unit_yield": 6,
+        "yield_efficiency": 0.3333333333333333
+      },
+      "parcel_id": "layout_case_015",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_016:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7859315555555556,
+        "lot_size_distribution": {
+          "max": 8330.0,
+          "mean": 7783.571428571428,
+          "median": 7820.0,
+          "min": 6800.0,
+          "p25": 7310.0,
+          "p75": 8330.0
+        },
+        "road_efficiency": 132.28571428571428,
+        "road_length": 1852.0,
+        "solver_runtime": 0.05290220899999998,
+        "theoretical_max_units": 34,
+        "unit_yield": 14,
+        "yield_efficiency": 0.4117647058823529
+      },
+      "parcel_id": "layout_case_016",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_016:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 10686.5,
+          "mean": 9907.59474709178,
+          "median": 9907.594747091782,
+          "min": 9128.68949418356,
+          "p25": 9128.689494183562,
+          "p75": 10686.5
+        },
+        "road_efficiency": 153.225,
+        "road_length": 612.9,
+        "solver_runtime": 0.07576720799999981,
+        "theoretical_max_units": 27,
+        "unit_yield": 4,
+        "yield_efficiency": 0.14814814814814814
+      },
+      "parcel_id": "layout_case_016",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_016:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.673713282937365,
+        "lot_size_distribution": {
+          "max": 14901.25,
+          "mean": 14901.25,
+          "median": 14901.25,
+          "min": 14901.25,
+          "p25": 14901.25,
+          "p75": 14901.25
+        },
+        "road_efficiency": 308.6666666666667,
+        "road_length": 1852.0,
+        "solver_runtime": 0.07388366700000004,
+        "theoretical_max_units": 20,
+        "unit_yield": 6,
+        "yield_efficiency": 0.3
+      },
+      "parcel_id": "layout_case_016",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_017:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7934842222222223,
+        "lot_size_distribution": {
+          "max": 8286.0,
+          "mean": 7282.571428571428,
+          "median": 7565.0,
+          "min": 6630.0,
+          "p25": 6630.0,
+          "p75": 7650.0
+        },
+        "road_efficiency": 104.0,
+        "road_length": 1456.0,
+        "solver_runtime": 0.04707675,
+        "theoretical_max_units": 28,
+        "unit_yield": 14,
+        "yield_efficiency": 0.5
+      },
+      "parcel_id": "layout_case_017",
+      "parcel_type": "long_narrow",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_017:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7343749999999999,
+        "lot_size_distribution": {
+          "max": 14003.0,
+          "mean": 13151.142857142857,
+          "median": 14003.0,
+          "min": 8040.0,
+          "p25": 14003.0,
+          "p75": 14003.0
+        },
+        "road_efficiency": 208.0,
+        "road_length": 1456.0,
+        "solver_runtime": 0.04487554199999977,
+        "theoretical_max_units": 22,
+        "unit_yield": 7,
+        "yield_efficiency": 0.3181818181818182
+      },
+      "parcel_id": "layout_case_017",
+      "parcel_type": "long_narrow",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_017:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.72375,
+        "lot_size_distribution": {
+          "max": 13591.25,
+          "mean": 13591.25,
+          "median": 13591.25,
+          "min": 13591.25,
+          "p25": 13591.25,
+          "p75": 13591.25
+        },
+        "road_efficiency": 242.66666666666666,
+        "road_length": 1456.0,
+        "solver_runtime": 0.0657302500000001,
+        "theoretical_max_units": 17,
+        "unit_yield": 6,
+        "yield_efficiency": 0.35294117647058826
+      },
+      "parcel_id": "layout_case_017",
+      "parcel_type": "long_narrow",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_018:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.792132111111111,
+        "lot_size_distribution": {
+          "max": 8956.0,
+          "mean": 8325.846153846154,
+          "median": 8670.0,
+          "min": 7650.0,
+          "p25": 7650.0,
+          "p75": 8670.0
+        },
+        "road_efficiency": 141.07692307692307,
+        "road_length": 1834.0,
+        "solver_runtime": 0.05696308399999994,
+        "theoretical_max_units": 36,
+        "unit_yield": 13,
+        "yield_efficiency": 0.3611111111111111
+      },
+      "parcel_id": "layout_case_018",
+      "parcel_type": "long_narrow",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_018:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7025,
+        "lot_size_distribution": {
+          "max": 11055.0,
+          "mean": 10227.197615415138,
+          "median": 10227.197615415138,
+          "min": 9399.395230830276,
+          "p25": 9399.395230830276,
+          "p75": 11055.0
+        },
+        "road_efficiency": 166.675,
+        "road_length": 666.7,
+        "solver_runtime": 0.0925979589999999,
+        "theoretical_max_units": 29,
+        "unit_yield": 4,
+        "yield_efficiency": 0.13793103448275862
+      },
+      "parcel_id": "layout_case_018",
+      "parcel_type": "long_narrow",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_018:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7116937435633367,
+        "lot_size_distribution": {
+          "max": 15556.25,
+          "mean": 14831.07142857143,
+          "median": 15556.25,
+          "min": 10480.0,
+          "p25": 15556.25,
+          "p75": 15556.25
+        },
+        "road_efficiency": 277.42857142857144,
+        "road_length": 1942.0,
+        "solver_runtime": 0.0816616670000001,
+        "theoretical_max_units": 22,
+        "unit_yield": 7,
+        "yield_efficiency": 0.3181818181818182
+      },
+      "parcel_id": "layout_case_018",
+      "parcel_type": "long_narrow",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_019:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8581257777777778,
+        "lot_size_distribution": {
+          "max": 7990.0,
+          "mean": 7382.857995337995,
+          "median": 6970.0,
+          "min": 6611.426573426573,
+          "p25": 6970.0,
+          "p75": 7990.0
+        },
+        "road_efficiency": 122.5,
+        "road_length": 2450.0,
+        "solver_runtime": 0.05094450000000039,
+        "theoretical_max_units": 38,
+        "unit_yield": 20,
+        "yield_efficiency": 0.5263157894736842
+      },
+      "parcel_id": "layout_case_019",
+      "parcel_type": "long_narrow",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_019:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.806101,
+        "lot_size_distribution": {
+          "max": 9380.0,
+          "mean": 8772.266666666666,
+          "median": 8308.0,
+          "min": 8308.0,
+          "p25": 8308.0,
+          "p75": 9380.0
+        },
+        "road_efficiency": 144.0,
+        "road_length": 2160.0,
+        "solver_runtime": 0.0549855000000008,
+        "theoretical_max_units": 30,
+        "unit_yield": 15,
+        "yield_efficiency": 0.5
+      },
+      "parcel_id": "layout_case_019",
+      "parcel_type": "long_narrow",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_019:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.76625,
+        "lot_size_distribution": {
+          "max": 14246.25,
+          "mean": 14051.96599067599,
+          "median": 14246.25,
+          "min": 12867.676573426572,
+          "p25": 14246.25,
+          "p75": 14246.25
+        },
+        "road_efficiency": 245.0,
+        "road_length": 2450.0,
+        "solver_runtime": 0.06897670900000019,
+        "theoretical_max_units": 23,
+        "unit_yield": 10,
+        "yield_efficiency": 0.43478260869565216
+      },
+      "parcel_id": "layout_case_019",
+      "parcel_type": "long_narrow",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_020:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8482160167084378,
+        "lot_size_distribution": {
+          "max": 8670.0,
+          "mean": 8017.313553113553,
+          "median": 7650.0,
+          "min": 6204.66666666667,
+          "p25": 7650.0,
+          "p75": 8670.0
+        },
+        "road_efficiency": 133.0,
+        "road_length": 2660.0,
+        "solver_runtime": 0.05489112500000015,
+        "theoretical_max_units": 44,
+        "unit_yield": 20,
+        "yield_efficiency": 0.45454545454545453
+      },
+      "parcel_id": "layout_case_020",
+      "parcel_type": "long_narrow",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_020:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7966734077247729,
+        "lot_size_distribution": {
+          "max": 10217.5,
+          "mean": 9615.814541178634,
+          "median": 9145.5,
+          "min": 9002.69064515203,
+          "p25": 9145.5,
+          "p75": 10217.5
+        },
+        "road_efficiency": 156.38,
+        "road_length": 2345.7,
+        "solver_runtime": 0.0864984170000005,
+        "theoretical_max_units": 35,
+        "unit_yield": 15,
+        "yield_efficiency": 0.42857142857142855
+      },
+      "parcel_id": "layout_case_020",
+      "parcel_type": "long_narrow",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_020:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7409748120300751,
+        "lot_size_distribution": {
+          "max": 15556.25,
+          "mean": 15270.877106227106,
+          "median": 15556.25,
+          "min": 13090.91666666667,
+          "p25": 15556.25,
+          "p75": 15556.25
+        },
+        "road_efficiency": 266.0,
+        "road_length": 2660.0,
+        "solver_runtime": 0.07717266699999925,
+        "theoretical_max_units": 26,
+        "unit_yield": 10,
+        "yield_efficiency": 0.38461538461538464
+      },
+      "parcel_id": "layout_case_020",
+      "parcel_type": "long_narrow",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_001:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7845453270082227,
+        "lot_size_distribution": {
+          "max": 7548.0,
+          "mean": 7266.933333333333,
+          "median": 7412.0,
+          "min": 6913.33333333333,
+          "p25": 6913.333333333333,
+          "p75": 7548.0
+        },
+        "road_efficiency": 105.4,
+        "road_length": 2108.0,
+        "solver_runtime": 0.057217875000000085,
+        "theoretical_max_units": 52,
+        "unit_yield": 20,
+        "yield_efficiency": 0.38461538461538464
+      },
+      "parcel_id": "layout_case_internal_001",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_001:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7091660341555978,
+        "lot_size_distribution": {
+          "max": 14740.0,
+          "mean": 11367.666666666666,
+          "median": 10217.5,
+          "min": 9145.5,
+          "p25": 9145.5,
+          "p75": 14740.0
+        },
+        "road_efficiency": 175.66666666666666,
+        "road_length": 2108.0,
+        "solver_runtime": 0.055018957999999785,
+        "theoretical_max_units": 42,
+        "unit_yield": 12,
+        "yield_efficiency": 0.2857142857142857
+      },
+      "parcel_id": "layout_case_internal_001",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_001:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.5815308550475893,
+        "lot_size_distribution": {
+          "max": 13362.0,
+          "mean": 13362.0,
+          "median": 13362.0,
+          "min": 13362.0,
+          "p25": 13362.0,
+          "p75": 13362.0
+        },
+        "road_efficiency": 320.45,
+        "road_length": 640.9,
+        "solver_runtime": 0.08805591600000007,
+        "theoretical_max_units": 31,
+        "unit_yield": 2,
+        "yield_efficiency": 0.06451612903225806
+      },
+      "parcel_id": "layout_case_internal_001",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_002:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.6601773104148535,
+        "lot_size_distribution": {
+          "max": 7593.3333333333385,
+          "mean": 7162.400000000001,
+          "median": 7593.33333333333,
+          "min": 6073.333333333333,
+          "p25": 6800.0,
+          "p75": 7593.333333333333
+        },
+        "road_efficiency": 153.2,
+        "road_length": 2298.0,
+        "solver_runtime": 0.07799025000000004,
+        "theoretical_max_units": 52,
+        "unit_yield": 15,
+        "yield_efficiency": 0.28846153846153844
+      },
+      "parcel_id": "layout_case_internal_002",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_002:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.6514196428571428,
+        "lot_size_distribution": {
+          "max": 9882.5,
+          "mean": 9346.5,
+          "median": 9346.5,
+          "min": 8810.5,
+          "p25": 8810.5,
+          "p75": 9882.5
+        },
+        "road_efficiency": 224.0,
+        "road_length": 2688.0,
+        "solver_runtime": 0.07404275000000027,
+        "theoretical_max_units": 42,
+        "unit_yield": 12,
+        "yield_efficiency": 0.2857142857142857
+      },
+      "parcel_id": "layout_case_internal_002",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_002:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.5753794642857143,
+        "lot_size_distribution": {
+          "max": 18176.25,
+          "mean": 18176.25,
+          "median": 18176.25,
+          "min": 18176.25,
+          "p25": 18176.25,
+          "p75": 18176.25
+        },
+        "road_efficiency": 448.0,
+        "road_length": 2688.0,
+        "solver_runtime": 0.08194183300000013,
+        "theoretical_max_units": 31,
+        "unit_yield": 6,
+        "yield_efficiency": 0.1935483870967742
+      },
+      "parcel_id": "layout_case_internal_002",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_003:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.9256589885566631,
+        "lot_size_distribution": {
+          "max": 8160.0,
+          "mean": 6715.0,
+          "median": 6482.666666666668,
+          "min": 6375.0,
+          "p25": 6375.0,
+          "p75": 6618.666666666667
+        },
+        "road_efficiency": 86.0,
+        "road_length": 2408.0,
+        "solver_runtime": 0.0917847079999996,
+        "theoretical_max_units": 56,
+        "unit_yield": 28,
+        "yield_efficiency": 0.5
+      },
+      "parcel_id": "layout_case_internal_003",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_003:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8251745283018866,
+        "lot_size_distribution": {
+          "max": 10854.0,
+          "mean": 9409.777777777777,
+          "median": 9212.5,
+          "min": 8140.5,
+          "p25": 8777.0,
+          "p75": 10720.0
+        },
+        "road_efficiency": 129.55555555555554,
+        "road_length": 2332.0,
+        "solver_runtime": 0.06553812500000067,
+        "theoretical_max_units": 45,
+        "unit_yield": 18,
+        "yield_efficiency": 0.4
+      },
+      "parcel_id": "layout_case_internal_003",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_003:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7555780730897009,
+        "lot_size_distribution": {
+          "max": 18995.0,
+          "mean": 14137.083333333334,
+          "median": 12281.25,
+          "min": 11135.0,
+          "p25": 11135.0,
+          "p75": 18995.0
+        },
+        "road_efficiency": 200.66666666666666,
+        "road_length": 2408.0,
+        "solver_runtime": 0.07848120900000044,
+        "theoretical_max_units": 34,
+        "unit_yield": 12,
+        "yield_efficiency": 0.35294117647058826
+      },
+      "parcel_id": "layout_case_internal_003",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_004:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.8740235035624879,
+        "lot_size_distribution": {
+          "max": 8908.0,
+          "mean": 7352.5,
+          "median": 7012.5,
+          "min": 6205.0,
+          "p25": 6205.0,
+          "p75": 8772.0
+        },
+        "road_efficiency": 96.16666666666667,
+        "road_length": 2308.0,
+        "solver_runtime": 0.07100254199999956,
+        "theoretical_max_units": 52,
+        "unit_yield": 24,
+        "yield_efficiency": 0.46153846153846156
+      },
+      "parcel_id": "layout_case_internal_004",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_004:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7366284860388985,
+        "lot_size_distribution": {
+          "max": 8777.0,
+          "mean": 8430.833333333334,
+          "median": 8397.333333333336,
+          "min": 8151.666666666664,
+          "p25": 8151.666666666666,
+          "p75": 8676.5
+        },
+        "road_efficiency": 144.25,
+        "road_length": 2308.0,
+        "solver_runtime": 0.08624795900000048,
+        "theoretical_max_units": 42,
+        "unit_yield": 16,
+        "yield_efficiency": 0.38095238095238093
+      },
+      "parcel_id": "layout_case_internal_004",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "layout_case_internal_004:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.7653856152512998,
+        "lot_size_distribution": {
+          "max": 17030.0,
+          "mean": 13263.75,
+          "median": 11953.75,
+          "min": 10807.5,
+          "p25": 10807.5,
+          "p75": 17030.0
+        },
+        "road_efficiency": 192.33333333333334,
+        "road_length": 2308.0,
+        "solver_runtime": 0.10834258299999977,
+        "theoretical_max_units": 31,
+        "unit_yield": 12,
+        "yield_efficiency": 0.3870967741935484
+      },
+      "parcel_id": "layout_case_internal_004",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "C",
+      "status": "success"
+    }
+  ],
+  "run_id": "layout-eval-f68b1f7c-26e1-4b51-a52e-fd314b5aebfd"
+}

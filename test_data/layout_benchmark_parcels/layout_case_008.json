@@ -1,0 +1,68 @@
+{
+  "parcel_id": "layout_case_008",
+  "jurisdiction": "BenchmarkCounty_UT",
+  "area_sqft": 297600.0,
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          480.0
+        ],
+        [
+          240.0,
+          600.0
+        ],
+        [
+          520.0,
+          600.0
+        ],
+        [
+          520.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    ]
+  },
+  "centroid": [
+    256.0,
+    336.0
+  ],
+  "bounding_box": [
+    0,
+    0,
+    520,
+    600
+  ],
+  "land_use": "residential",
+  "slope_percent": 3.2,
+  "flood_zone": "X",
+  "zoning_district": "R-1",
+  "utilities": [
+    "water",
+    "sewer",
+    "power"
+  ],
+  "access_points": [
+    {
+      "type": "Point",
+      "coordinates": [
+        260.0,
+        0.0
+      ]
+    }
+  ],
+  "topography": {
+    "slope_percent": 3.2
+  },
+  "existing_structures": []
+}

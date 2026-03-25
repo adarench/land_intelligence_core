@@ -1,0 +1,52 @@
+{
+  "dataset_root": "/Users/arench/Desktop/land-intelligence-workspace/test_data",
+  "experiment_run": {
+    "algorithm_variant": "gis_layout_runtime.prior_guided",
+    "dataset": "layout_benchmark_v1",
+    "metrics": {
+      "avg_layout_score": 0.0,
+      "avg_lot_yield_per_acre": 0.0,
+      "avg_road_length": 0.0,
+      "avg_runtime": 0.0,
+      "avg_units": 0.0,
+      "dataset_size": 1,
+      "failure_count": 1,
+      "success_count": 0,
+      "total_invalid_lot_count": 0
+    },
+    "run_id": "layout-benchmark-c5b59173-d33f-4726-9848-9e8f2a861a02",
+    "timestamp": "2026-03-19T21:52:19.659512+00:00"
+  },
+  "manifest_path": "/Users/arench/Desktop/land-intelligence-workspace/test_data/layout_benchmark_manifest.json",
+  "records": [
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided",
+      "case_id": "layout_case_001",
+      "error": "_validate_candidate_constraints() missing 1 required positional argument: 'parcel_polygon'",
+      "layout_id": null,
+      "metrics": {
+        "algorithm_variant": "gis_layout_runtime.prior_guided",
+        "candidate_result_count": 0,
+        "candidate_search_count": 24,
+        "constraint_violations": [
+          "_validate_candidate_constraints() missing 1 required positional argument: 'parcel_polygon'"
+        ],
+        "disconnected_road_segments": 0,
+        "invalid_lot_count": 0,
+        "layout_score": 0.0,
+        "lot_yield_per_acre": 0.0,
+        "parcel_area": 270400.0,
+        "parcel_area_acres": 6.2075298438934805,
+        "parcel_compactness": 0.7853981633974483,
+        "road_length": 0.0,
+        "road_length_ft": 0.0,
+        "runtime": 0.7337592909999999,
+        "runtime_seconds": 0.7337592909999999,
+        "units": 0,
+        "units_generated": 0
+      },
+      "notes": "LI-5 benchmark parcel 001",
+      "status": "failure"
+    }
+  ]
+}

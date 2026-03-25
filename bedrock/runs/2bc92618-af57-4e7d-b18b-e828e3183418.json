@@ -1,0 +1,693 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "2bc92618-af57-4e7d-b18b-e828e3183418",
+  "parcel_id": "ui-cottonwood-heights-237889",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ui-cottonwood-heights-237889",
+    "jurisdiction": "Cottonwood Heights",
+    "district": "RM",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "RM:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 10000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+          "observed_at": "2026-03-20T22:43:46.372811Z"
+        }
+      },
+      {
+        "id": "RM:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 8.71,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+          "observed_at": "2026-03-20T22:43:46.372811Z"
+        }
+      },
+      {
+        "id": "RM:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+          "observed_at": "2026-03-20T22:43:46.372811Z"
+        }
+      },
+      {
+        "id": "RM:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.5,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+          "observed_at": "2026-03-20T22:43:46.372811Z"
+        }
+      },
+      {
+        "id": "RM:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 65.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+          "observed_at": "2026-03-20T22:43:46.372811Z"
+        }
+      },
+      {
+        "id": "RM:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 30.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+          "observed_at": "2026-03-20T22:43:46.372811Z"
+        }
+      },
+      {
+        "id": "RM:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 10.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+          "observed_at": "2026-03-20T22:43:46.372811Z"
+        }
+      },
+      {
+        "id": "RM:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 30.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+          "observed_at": "2026-03-20T22:43:46.372811Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 30.0,
+      "side": 10.0,
+      "rear": 30.0
+    },
+    "min_lot_size_sqft": 10000.0,
+    "max_units_per_acre": 8.71,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.5,
+    "min_frontage_ft": 65.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential",
+      "two_family_residential",
+      "multifamily_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/cottonwood-heights",
+      "observed_at": "2026-03-20T22:43:46.372811Z"
+    }
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-ui-cottonwood-heights-237889-2f83c7b720f6",
+    "parcel_id": "ui-cottonwood-heights-237889",
+    "unit_count": 6,
+    "road_length_ft": 896.7,
+    "lot_geometries": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.86004142041224,
+              40.629140244002855
+            ],
+            [
+              -111.86004142041224,
+              40.62933804620066
+            ],
+            [
+              -111.85934900418535,
+              40.62933804620066
+            ],
+            [
+              -111.85934900418535,
+              40.629140244002855
+            ],
+            [
+              -111.86004142041224,
+              40.629140244002855
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85934900418535,
+              40.62905233191494
+            ],
+            [
+              -111.85934900418535,
+              40.62885452971714
+            ],
+            [
+              -111.86004142041224,
+              40.62885452971714
+            ],
+            [
+              -111.86004142041224,
+              40.62905233191494
+            ],
+            [
+              -111.85934900418535,
+              40.62905233191494
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.86072963666584,
+              40.629140244002855
+            ],
+            [
+              -111.86073383663914,
+              40.629200778045
+            ],
+            [
+              -111.86073383663914,
+              40.62933804620066
+            ],
+            [
+              -111.86004142041224,
+              40.62933804620066
+            ],
+            [
+              -111.86004142041224,
+              40.629140244002855
+            ],
+            [
+              -111.86072963666584,
+              40.629140244002855
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.86072353714877,
+              40.62905233191494
+            ],
+            [
+              -111.86004142041224,
+              40.62905233191494
+            ],
+            [
+              -111.86004142041224,
+              40.62885452971714
+            ],
+            [
+              -111.86070981323539,
+              40.62885452971714
+            ],
+            [
+              -111.86072353714877,
+              40.62905233191494
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85870881262188,
+              40.629233282193674
+            ],
+            [
+              -111.85867663531901,
+              40.629196734078846
+            ],
+            [
+              -111.85872479205591,
+              40.62922115474843
+            ],
+            [
+              -111.85876536578486,
+              40.629175069676876
+            ],
+            [
+              -111.85871720904798,
+              40.629150649007286
+            ],
+            [
+              -111.85877401379224,
+              40.62915922440606
+            ],
+            [
+              -111.85877898840513,
+              40.629140244002855
+            ],
+            [
+              -111.85934900418535,
+              40.629140244002855
+            ],
+            [
+              -111.85934900418535,
+              40.62933804620066
+            ],
+            [
+              -111.85865658795844,
+              40.62933804620066
+            ],
+            [
+              -111.85865658795844,
+              40.629259765741615
+            ],
+            [
+              -111.85870881262188,
+              40.629233282193674
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.85877898840513,
+              40.62905233191494
+            ],
+            [
+              -111.85877401379224,
+              40.62903335151174
+            ],
+            [
+              -111.85871720904798,
+              40.62904192691051
+            ],
+            [
+              -111.85876536578486,
+              40.62901750624092
+            ],
+            [
+              -111.85872479205591,
+              40.62897142116937
+            ],
+            [
+              -111.85867663531901,
+              40.62899584183895
+            ],
+            [
+              -111.85870881262188,
+              40.62895929372412
+            ],
+            [
+              -111.85865658795844,
+              40.62893281017618
+            ],
+            [
+              -111.85865658795844,
+              40.62885452971714
+            ],
+            [
+              -111.85934900418535,
+              40.62885452971714
+            ],
+            [
+              -111.85934900418535,
+              40.62905233191494
+            ],
+            [
+              -111.85877898840513,
+              40.62905233191494
+            ]
+          ]
+        ]
+      }
+    ],
+    "road_geometries": [
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.86073383663914,
+            40.6290962879589
+          ],
+          [
+            -111.85865658795844,
+            40.6290962879589
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85835711320466,
+            40.6290962879589
+          ],
+          [
+            -111.85837136080357,
+            40.629150649007286
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85837136080357,
+            40.629150649007286
+          ],
+          [
+            -111.85841193453253,
+            40.629196734078846
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85841193453253,
+            40.629196734078846
+          ],
+          [
+            -111.8584726574091,
+            40.629227527139186
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.8584726574091,
+            40.629227527139186
+          ],
+          [
+            -111.85854428492577,
+            40.62923834022402
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85854428492577,
+            40.62923834022402
+          ],
+          [
+            -111.85861591244245,
+            40.629227527139186
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85861591244245,
+            40.629227527139186
+          ],
+          [
+            -111.85867663531901,
+            40.629196734078846
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85867663531901,
+            40.629196734078846
+          ],
+          [
+            -111.85871720904798,
+            40.629150649007286
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85871720904798,
+            40.629150649007286
+          ],
+          [
+            -111.8587314566469,
+            40.6290962879589
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.8587314566469,
+            40.6290962879589
+          ],
+          [
+            -111.85871720904798,
+            40.62904192691051
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85871720904798,
+            40.62904192691051
+          ],
+          [
+            -111.85867663531901,
+            40.62899584183895
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85867663531901,
+            40.62899584183895
+          ],
+          [
+            -111.85861591244245,
+            40.62896504877861
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85861591244245,
+            40.62896504877861
+          ],
+          [
+            -111.85854428492577,
+            40.628954235693776
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85854428492577,
+            40.628954235693776
+          ],
+          [
+            -111.8584726574091,
+            40.62896504877861
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.8584726574091,
+            40.62896504877861
+          ],
+          [
+            -111.85841193453253,
+            40.62899584183895
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85841193453253,
+            40.62899584183895
+          ],
+          [
+            -111.85837136080357,
+            40.62904192691051
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.85837136080357,
+            40.62904192691051
+          ],
+          [
+            -111.85835711320466,
+            40.629096287958895
+          ]
+        ]
+      }
+    ],
+    "open_space_area_sqft": 373528.30999919894,
+    "utility_length_ft": 0.0,
+    "score": null,
+    "buildable_area_sqft": null,
+    "metadata": {
+      "source_engine": "bedrock.layout_service",
+      "source_run_id": null,
+      "observed_at": "2026-03-20T22:43:46.434275Z"
+    }
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "495c52bc-f960-54bf-bbf9-5381acfd8810",
+    "layout_id": "layout-ui-cottonwood-heights-237889-2f83c7b720f6",
+    "parcel_id": "ui-cottonwood-heights-237889",
+    "units": 6,
+    "estimated_home_price": 480000.0,
+    "construction_cost_per_home": 416000.0,
+    "development_cost_total": 471261.54132231406,
+    "projected_revenue": 2880000.0,
+    "projected_cost": 2967261.541322314,
+    "projected_profit": -87261.54132231418,
+    "ROI": -0.029408105792867664,
+    "profit_margin": -0.0302991462924702,
+    "revenue_per_unit": 480000.0,
+    "cost_per_unit": 494543.5902203857,
+    "rank": null,
+    "risk_score": 0.7055871254238365,
+    "requested_units": null,
+    "constraint_violations": [
+      "projected_profit_negative"
+    ],
+    "confidence": 0.9,
+    "status": "constrained",
+    "financial_summary": {
+      "units": 6,
+      "estimated_home_price": 480000.0,
+      "construction_cost_per_home": 416000.0,
+      "road_cost_per_ft": 300.0,
+      "road_length": 896.7,
+      "land_cost": 0.0,
+      "projected_revenue": 2880000.0,
+      "development_cost_total": 471261.54132231406,
+      "projected_cost": 2967261.541322314,
+      "projected_profit": -87261.54132231418,
+      "ROI": -0.029408105792867664,
+      "development_cost_breakdown": {
+        "roads": 269010.0,
+        "utilities": 0.0,
+        "grading": 26901.0,
+        "sitework": 154350.54132231403,
+        "permitting": 21000.0
+      },
+      "profit_margin": -0.0302991462924702,
+      "revenue_per_unit": 480000.0,
+      "cost_per_unit": 494543.5902203857
+    },
+    "explanation": {
+      "primary_driver": "home_price",
+      "cost_breakdown": {
+        "construction": 2496000.0,
+        "development": 471261.54132231406
+      },
+      "revenue_breakdown": {
+        "units": 6,
+        "price_per_home": 480000.0
+      }
+    },
+    "assumptions": {
+      "used_default_estimated_home_price": true,
+      "used_default_construction_cost_per_home": true,
+      "used_default_road_cost_per_ft": true,
+      "used_default_land_price": true,
+      "used_default_soft_cost_factor": true
+    },
+    "metadata": null
+  },
+  "timestamp": "2026-03-20T22:43:46.434559Z",
+  "git_commit": "ceaa51d8bb6aa1d29cf293e8e9dd47cbc86f6c8e",
+  "input_hash": "983d0443342f42a6c33e1efc646d046e261535ad1cbe2140bdf1f6657a2d1c92",
+  "stage_runtimes": {
+    "parcel.load": 0.000015,
+    "zoning.lookup": 0.018739,
+    "layout.search": 0.061229,
+    "feasibility.evaluate": 0.000228
+  }
+}

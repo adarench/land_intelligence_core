@@ -2,179 +2,346 @@
 
 ## Purpose
 
-This document reconciles the governance-approved canonical contracts with the public APIs that are implemented for Milestone 2.
+This document describes the active Bedrock API surface and its current implementation behavior for Parcel, Zoning, Layout, Feasibility, and Pipeline services.
 
-It specifically documents:
-
-- zoning overlay implementation
-- zoning rule normalization behavior
-- supported jurisdiction coverage
-
-## Canonical Target Pipeline
-
-Governance-approved contract chain:
+Canonical pipeline contract chain:
 
 `Parcel -> ZoningRules -> LayoutResult -> FeasibilityResult`
 
-## Current Implemented Public APIs
-
-Implemented Bedrock APIs:
-
-- `POST /parcel/load`
-- `POST /zoning/lookup`
-- `POST /layout/search`
-- `POST /feasibility/evaluate`
-
-Important current-state note:
-
-- the first three stage APIs now emit canonical contract models directly
-- the feasibility API still returns a response wrapper containing canonical results
-
 ## Interface Topology
 
-```mermaid
-flowchart LR
-    Client[Client] --> ParcelAPI[POST /parcel/load]
-    Client --> ZoningAPI[POST /zoning/lookup]
-    Client --> LayoutAPI[POST /layout/search]
-    Client --> FeasibilityAPI[POST /feasibility/evaluate]
+```text
+Client
+  -> POST /parcel/load
+  -> GET  /parcel/{id}
+  -> POST /zoning/lookup
+  -> POST /layout/search
+  -> POST /feasibility/evaluate
+  -> POST /pipeline/run
 
-    ParcelAPI --> ParcelService[bedrock.services.parcel_service]
-    ZoningAPI --> ZoningService[bedrock.services.zoning_service]
-    LayoutAPI --> LayoutService[bedrock.services.layout_service]
-    FeasibilityAPI --> FeasibilityService[bedrock.services.feasibility_service]
-
-    ZoningService --> OverlayLookup[zoning_overlay.lookup_zoning_district]
-    ZoningService --> RuleNorm[rule_normalization.normalize_zoning_rules]
-    LayoutService --> GISLayout[GIS layout runtime]
+Service chain:
+ParcelService -> ZoningService -> LayoutService -> FeasibilityService
 ```
 
-## 1. `POST /zoning/lookup`
+## 1. Parcel API
 
-Defined in `bedrock/api/zoning_api.py`.
+### `POST /parcel/load`
 
-### Request
+Purpose:
+
+- normalize and persist parcel geometry as canonical `Parcel`
+
+Input schema (`ParcelLoadRequest`):
+
+- `parcel_id?: string`
+- `geometry: GeoJSON Polygon|MultiPolygon`
+- `jurisdiction?: string`
+
+Output schema:
+
+- `Parcel`
+
+Example request:
 
 ```json
 {
-  "parcel": { "...canonical Parcel..." }
+  "parcel_id": "parcel-001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[[-111.9, 40.7], [-111.899, 40.7], [-111.899, 40.701], [-111.9, 40.701], [-111.9, 40.7]]]
+  },
+  "jurisdiction": "Salt Lake City"
 }
 ```
 
-### Response
+Example response:
 
-- response model: canonical `ZoningRules`
+```json
+{
+  "schema_name": "Parcel",
+  "schema_version": "1.0.0",
+  "parcel_id": "parcel-001",
+  "geometry": { "type": "Polygon", "coordinates": [[[-111.9, 40.7], [-111.899, 40.7], [-111.899, 40.701], [-111.9, 40.701], [-111.9, 40.7]]] },
+  "jurisdiction": "Salt Lake City",
+  "area_sqft": 5234.2,
+  "centroid": [-111.8995, 40.7005],
+  "bounding_box": [-111.9, 40.7, -111.899, 40.701]
+}
+```
 
-### Implemented behavior
+### `GET /parcel/{id}`
 
-`bedrock.services.zoning_service.ZoningService.lookup(...)`:
+Purpose:
 
-1. resolves the best jurisdiction dataset from parcel geometry and optional jurisdiction hint
-2. resolves the best zoning district by parcel geometry overlap
-3. resolves intersecting overlay labels when overlay geometry exists
-4. normalizes rule fields into Bedrock’s canonical zoning shape
-5. binds the normalized rules to the input parcel and returns canonical `ZoningRules`
+- retrieve a persisted canonical parcel by `parcel_id`
 
-### Zoning overlay implementation
+Input schema:
 
-Overlay behavior is implemented in `zoning_data_scraper.services.zoning_overlay`:
+- path param `id: string` (maps to `parcel_id`)
 
-- district geometry comes from `normalized_zoning.json`
-- overlay geometry comes from `overlay_layers.geojson`
-- overlays are matched by parcel geometry intersection
-- overlay labels are deduplicated while preserving order
-- resulting labels are emitted through `ZoningRules.overlays`
+Output schema:
 
-### Rule normalization behavior
+- `Parcel`
 
-Rule normalization is implemented in `zoning_data_scraper.services.rule_normalization.normalize_zoning_rules(...)` and finalized in `bedrock.contracts.validators.build_zoning_rules_from_lookup(...)`.
+Example request:
 
-Normalization currently:
+```text
+GET /parcel/parcel-001
+```
 
-- matches district rules using normalized district code or district name
-- loads rules from `district_rules.json`, `zoning_rules.json`, `rules.json`, or `development_standards.json`
-- coerces numeric fields from string input
-- normalizes setbacks from flat or nested fields
-- normalizes lot coverage percentages into fractions
-- carries overlays into the canonical contract
-- maps milestone field names into canonical Bedrock field names
+Example response:
 
-### Supported jurisdictions
+```json
+{
+  "schema_name": "Parcel",
+  "schema_version": "1.0.0",
+  "parcel_id": "parcel-001",
+  "geometry": { "type": "Polygon", "coordinates": [[[-111.9, 40.7], [-111.899, 40.7], [-111.899, 40.701], [-111.9, 40.701], [-111.9, 40.7]]] },
+  "jurisdiction": "Salt Lake City",
+  "area_sqft": 5234.2
+}
+```
 
-Minimum milestone coverage is implemented for:
+## 2. Zoning API
 
-- Salt Lake City
-- Lehi
-- Draper
+### `POST /zoning/lookup`
 
-These jurisdictions are represented in the zoning datasets consumed by the overlay lookup layer.
+Purpose:
 
-## 2. `POST /layout/search`
+- resolve district and normalized zoning development rules for a parcel
 
-Defined in `bedrock/api/layout_api.py`.
+Input schema (`ZoningLookupRequest`):
 
-### Request
+- `parcel: Parcel`
+
+Output schema:
+
+- `ZoningRules`
+
+Example request:
+
+```json
+{
+  "parcel": {
+    "schema_name": "Parcel",
+    "schema_version": "1.0.0",
+    "parcel_id": "parcel-001",
+    "geometry": { "type": "Polygon", "coordinates": [[[-111.9, 40.7], [-111.899, 40.7], [-111.899, 40.701], [-111.9, 40.701], [-111.9, 40.7]]] },
+    "jurisdiction": "Salt Lake City",
+    "area_sqft": 5234.2
+  }
+}
+```
+
+Example response:
+
+```json
+{
+  "schema_name": "ZoningRules",
+  "schema_version": "1.0.0",
+  "parcel_id": "parcel-001",
+  "jurisdiction": "Salt Lake City",
+  "district": "R-1-7000",
+  "overlays": ["Hillside Overlay"],
+  "setbacks": { "front": 20.0, "side": 8.0, "rear": 25.0 },
+  "min_lot_size_sqft": 7000.0,
+  "max_units_per_acre": 6.0
+}
+```
+
+## 3. Layout API
+
+### `POST /layout/search`
+
+Purpose:
+
+- generate a zoning-constrained subdivision layout
+
+Input schema (`LayoutSearchRequest`):
 
 - `parcel: Parcel`
 - `zoning: ZoningRules`
-- `max_candidates`
+- `max_candidates: int` (1..250, default 50)
 
-### Response
+Output schema:
 
-- response model: canonical `LayoutResult`
+- `LayoutResult`
 
-### Implemented behavior
+Example request:
 
-`bedrock.services.layout_service.search_layout(...)`:
+```json
+{
+  "parcel": { "schema_name": "Parcel", "schema_version": "1.0.0", "parcel_id": "parcel-001", "geometry": { "type": "Polygon", "coordinates": [[[-111.9, 40.7], [-111.899, 40.7], [-111.899, 40.701], [-111.9, 40.701], [-111.9, 40.7]]] }, "jurisdiction": "Salt Lake City", "area_sqft": 5234.2 },
+  "zoning": { "schema_name": "ZoningRules", "schema_version": "1.0.0", "parcel_id": "parcel-001", "district": "R-1-7000", "setbacks": { "front": 20.0, "side": 8.0, "rear": 25.0 }, "min_lot_size_sqft": 7000.0, "max_units_per_acre": 6.0 },
+  "max_candidates": 50
+}
+```
 
-- reads canonical zoning fields directly
-- falls back to `standards` when scalar zoning fields are absent
-- derives frontage and depth from normalized setbacks and lot size
-- delegates candidate generation to the GIS layout runtime
-- returns canonical `LayoutResult`
+Example response:
 
-### LayoutResult alias rules
+```json
+{
+  "schema_name": "LayoutResult",
+  "schema_version": "1.0.0",
+  "layout_id": "layout-parcel-001-abc123",
+  "parcel_id": "parcel-001",
+  "unit_count": 8,
+  "road_length_ft": 420.5,
+  "lot_geometries": [],
+  "road_geometries": [],
+  "open_space_area_sqft": 0.0,
+  "utility_length_ft": 0.0,
+  "score": 0.87
+}
+```
 
-Canonical alias behavior from `bedrock/contracts/layout_result.py`:
+## 4. Feasibility API
 
-- `unit_count` accepts `units` and `lot_count`
-- `road_length_ft` accepts `road_length`
-- `road_geometries` accepts `street_network`
-- `open_space_area_sqft` accepts `open_space_area`
-- `utility_length_ft` accepts `utility_length`
+### `POST /feasibility/evaluate`
 
-Compatibility shim:
+Purpose:
 
-- `build_layout_result(...)` still exists to normalize legacy layout outputs and enforce `parcel_id`
+- evaluate a layout using deterministic feasibility modeling
 
-## 3. `POST /feasibility/evaluate`
-
-Defined in `bedrock/api/feasibility_api.py`.
-
-### Request
+Input schema (`FeasibilityEvaluateRequest`):
 
 - `parcel: Parcel`
-- either `layout` or `layouts`
-- `market_context: MarketData`
+- `layout: SubdivisionLayout` (`LayoutResult` compatible)
+- `market_context?: MarketData`
 
-### Response
+Output schema:
 
-- response model: `FeasibilityEvaluationResponse`
+- `PipelineRun`
 
-Current state:
+Example request:
 
-- response wrapper contains canonical `FeasibilityResult`
-- multi-layout requests also include `ScenarioEvaluation`
+```json
+{
+  "parcel": { "schema_name": "Parcel", "schema_version": "1.0.0", "parcel_id": "parcel-001", "geometry": { "type": "Polygon", "coordinates": [[[-111.9, 40.7], [-111.899, 40.7], [-111.899, 40.701], [-111.9, 40.701], [-111.9, 40.7]]] }, "jurisdiction": "Salt Lake City", "area_sqft": 5234.2 },
+  "layout": { "layout_id": "layout-parcel-001-abc123", "parcel_id": "parcel-001", "lot_count": 8, "lot_geometries": [], "street_network": [], "road_length": 420.5, "open_space_area": 0.0, "utility_length": 0.0 },
+  "market_context": { "estimated_home_price": 520000, "construction_cost_per_home": 290000, "road_cost_per_ft": 325 }
+}
+```
 
-## Current State vs Target Interface Model
+Example response:
 
-| Interface | Current public API | Canonical target |
-| --- | --- | --- |
-| Parcel | `Parcel` | `Parcel` |
-| Zoning | `ZoningRules` | `ZoningRules` |
-| Layout | `LayoutResult` | `LayoutResult` |
-| Feasibility | `FeasibilityEvaluationResponse` containing `FeasibilityResult` | `FeasibilityResult` remains the canonical stage result |
+```json
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "run-123",
+  "status": "completed",
+  "parcel_id": "parcel-001",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "parcel-001",
+    "district": "R-1-7000",
+    "setbacks": { "front": 20.0, "side": 8.0, "rear": 25.0 },
+    "min_lot_size_sqft": 7000.0,
+    "max_units_per_acre": 6.0
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-parcel-001-abc123",
+    "parcel_id": "parcel-001",
+    "unit_count": 8,
+    "road_length_ft": 420.5,
+    "lot_geometries": [],
+    "road_geometries": [],
+    "open_space_area_sqft": 0.0,
+    "utility_length_ft": 0.0,
+    "score": 0.87,
+    "buildable_area_sqft": null,
+    "metadata": null
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "scenario-123",
+    "layout_id": "layout-parcel-001-abc123",
+    "parcel_id": "parcel-001",
+    "units": 8,
+    "projected_revenue": 4160000.0,
+    "projected_cost": 2450000.0,
+    "projected_profit": 1710000.0,
+    "ROI": 0.698,
+    "risk_score": 0.22,
+    "constraint_violations": [],
+    "confidence": 0.9,
+    "status": "feasible"
+  },
+  "timestamp": "2026-03-20T00:00:00Z",
+  "git_commit": null,
+  "input_hash": null,
+  "stage_runtimes": {},
+  "zoning_bypassed": false,
+  "bypass_reason": null
+}
+```
 
-## Remaining interface discrepancy
+## 5. Pipeline API
 
-- the feasibility API still uses a wrapper response rather than returning a bare `FeasibilityResult`
+### `POST /pipeline/run`
+
+Purpose:
+
+- execute parcel -> zoning -> layout -> feasibility in one API call
+
+Input schema (`PipelineRunRequest`):
+
+- `parcel_geometry: GeoJSON Polygon|MultiPolygon`
+- `parcel_id?: string`
+- `jurisdiction?: string`
+- `max_candidates: int` (1..250, default 50)
+- `market_context?: MarketData`
+
+Output schema:
+
+- `PipelineRun`
+
+Example request:
+
+```json
+{
+  "parcel_geometry": {
+    "type": "Polygon",
+    "coordinates": [[[-111.9, 40.7], [-111.899, 40.7], [-111.899, 40.701], [-111.9, 40.701], [-111.9, 40.7]]]
+  },
+  "parcel_id": "parcel-001",
+  "jurisdiction": "Salt Lake City",
+  "max_candidates": 50,
+  "market_context": {
+    "estimated_home_price": 520000,
+    "construction_cost_per_home": 290000,
+    "road_cost_per_ft": 325
+  }
+}
+```
+
+Example response:
+
+```json
+{
+  "schema_name": "FeasibilityResult",
+  "schema_version": "1.0.0",
+  "scenario_id": "scenario-123",
+  "layout_id": "layout-parcel-001-abc123",
+  "parcel_id": "parcel-001",
+  "units": 8,
+  "projected_revenue": 4160000.0,
+  "projected_cost": 2450000.0,
+  "projected_profit": 1710000.0,
+  "ROI": 0.698,
+  "risk_score": 0.22,
+  "constraint_violations": [],
+  "confidence": 0.9,
+  "status": "feasible"
+}
+```
+
+## Integration Status Note
+
+- API endpoints exist for all five services.
+- Full pipeline orchestration is not yet operational as a validated production workflow.

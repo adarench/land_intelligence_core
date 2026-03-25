@@ -2,19 +2,34 @@
 
 Status:
 
-`Foundation implemented, integration validation pending`
+`Foundation achieved, stabilization and integration validation pending`
 
-### Implemented
+Canonical status source:
 
-- governance-approved canonical contract models exist in `bedrock/contracts/*`
-- public Bedrock APIs exist for parcel, zoning, layout, and feasibility
-- parcel ingestion returns canonical `Parcel`
-- zoning district lookup is implemented as a milestone API
-- layout search is implemented and backed by the GIS runtime
-- feasibility evaluation is implemented with deterministic financial outputs
+- `docs/system_state/status_truth_matrix.md`
 
-### Pending integration validation
+### Operational
 
-- canonical contract alignment across all public APIs
-- end-to-end confirmation that zoning and layout APIs emit the intended final boundary models
-- reconciliation between Bedrock public APIs and the Bedrock orchestration pipeline
+- core stage APIs are implemented:
+  - `POST /parcel/load`
+  - `POST /zoning/lookup`
+  - `POST /layout/search`
+  - `POST /feasibility/evaluate`
+  - `POST /pipeline/run`
+
+### Partially implemented
+
+- milestone-level validation remains partial across M1-M4 and PO-2
+- PO-2 stabilization gate is currently failing:
+  - `pipeline_success_rate = 0.1304` (target `>= 0.80`)
+  - `zoning_success_rate = 0.1304` (target `>= 0.90`)
+  - source: `bedrock/benchmarks/po2_stabilization_latest.json`
+
+### Missing / not yet operational
+
+- full end-to-end pipeline is not yet validated as a production workflow
+
+### Notes
+
+- governance-approved canonical contracts exist in `bedrock/contracts/*`
+- service endpoints are present, but system-level integration validation is still pending

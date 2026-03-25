@@ -26,6 +26,7 @@ Implemented public Bedrock APIs:
 - `POST /zoning/lookup`
 - `POST /layout/search`
 - `POST /feasibility/evaluate`
+- `POST /pipeline/run`
 
 ```mermaid
 flowchart LR
@@ -35,7 +36,10 @@ flowchart LR
     D --> E[POST /layout/search]
     E --> F[LayoutResult]
     F --> G[POST /feasibility/evaluate]
-    G --> H[FeasibilityEvaluationResponse]
+    G --> H[FeasibilityResult]
+
+    A --> I[POST /pipeline/run]
+    I --> J[FeasibilityResult]
 ```
 
 ## Zoning Stage Architecture
@@ -124,8 +128,34 @@ Behavior:
 
 - evaluates one layout or ranks many
 - computes deterministic revenue, cost, profit, ROI, and risk
-- returns `FeasibilityEvaluationResponse`
-- wrapper contains canonical `FeasibilityResult` plus optional `ScenarioEvaluation`
+- returns canonical `FeasibilityResult`
+
+### 5. Pipeline orchestration
+
+Runtime path:
+
+- `bedrock.api.pipeline_api`
+- `bedrock.services.pipeline_service`
+
+Behavior:
+
+- accepts `parcel_geometry` plus optional `parcel_id`, `jurisdiction`, `max_candidates`, and `market_context`
+- performs parcel normalization, zoning lookup, layout search, and feasibility evaluation in sequence
+- persists run metadata through the pipeline run store
+- returns canonical `FeasibilityResult`
+
+### 6. Layout benchmarking
+
+Runtime path:
+
+- `bedrock.services.layout_benchmark_service`
+- `bedrock.services.benchmark_harness`
+
+Behavior:
+
+- runs repeatable benchmark cases for layout quality and stability
+- tracks units, road length, runtime, and failures
+- writes benchmark artifacts in `bedrock/benchmarks/`
 
 ## Normalization Layers
 
@@ -159,6 +189,7 @@ Behavior:
 - Overlay matching is implemented through `overlay_layers.geojson` when present.
 - Jurisdiction selection and district selection are geometry-driven, not district-code-only.
 - Minimum milestone jurisdiction coverage includes Salt Lake City, Lehi, and Draper.
+- Pipeline orchestration endpoint `POST /pipeline/run` exists, but full end-to-end operational validation is still pending.
 
 ### Target state
 

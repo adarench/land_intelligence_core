@@ -1,0 +1,185 @@
+{
+  "dataset": "layout_benchmark_v1",
+  "cases": [
+    {
+      "case_id": "layout_case_001",
+      "parcel_file": "layout_benchmark_parcels/layout_case_001.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 001"
+    },
+    {
+      "case_id": "layout_case_002",
+      "parcel_file": "layout_benchmark_parcels/layout_case_002.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 002"
+    },
+    {
+      "case_id": "layout_case_003",
+      "parcel_file": "layout_benchmark_parcels/layout_case_003.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 003"
+    },
+    {
+      "case_id": "layout_case_004",
+      "parcel_file": "layout_benchmark_parcels/layout_case_004.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 004"
+    },
+    {
+      "case_id": "layout_case_005",
+      "parcel_file": "layout_benchmark_parcels/layout_case_005.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 005"
+    },
+    {
+      "case_id": "layout_case_006",
+      "parcel_file": "layout_benchmark_parcels/layout_case_006.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 006"
+    },
+    {
+      "case_id": "layout_case_007",
+      "parcel_file": "layout_benchmark_parcels/layout_case_007.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 007"
+    },
+    {
+      "case_id": "layout_case_008",
+      "parcel_file": "layout_benchmark_parcels/layout_case_008.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 008"
+    },
+    {
+      "case_id": "layout_case_009",
+      "parcel_file": "layout_benchmark_parcels/layout_case_009.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 009"
+    },
+    {
+      "case_id": "layout_case_010",
+      "parcel_file": "layout_benchmark_parcels/layout_case_010.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 010"
+    },
+    {
+      "case_id": "layout_case_011",
+      "parcel_file": "layout_benchmark_parcels/layout_case_011.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 011"
+    },
+    {
+      "case_id": "layout_case_012",
+      "parcel_file": "layout_benchmark_parcels/layout_case_012.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 012"
+    },
+    {
+      "case_id": "layout_case_013",
+      "parcel_file": "layout_benchmark_parcels/layout_case_013.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 013"
+    },
+    {
+      "case_id": "layout_case_014",
+      "parcel_file": "layout_benchmark_parcels/layout_case_014.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 014"
+    },
+    {
+      "case_id": "layout_case_015",
+      "parcel_file": "layout_benchmark_parcels/layout_case_015.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 015"
+    },
+    {
+      "case_id": "layout_case_016",
+      "parcel_file": "layout_benchmark_parcels/layout_case_016.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 016"
+    },
+    {
+      "case_id": "layout_case_017",
+      "parcel_file": "layout_benchmark_parcels/layout_case_017.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 017"
+    },
+    {
+      "case_id": "layout_case_018",
+      "parcel_file": "layout_benchmark_parcels/layout_case_018.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 018"
+    },
+    {
+      "case_id": "layout_case_019",
+      "parcel_file": "layout_benchmark_parcels/layout_case_019.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 019"
+    },
+    {
+      "case_id": "layout_case_020",
+      "parcel_file": "layout_benchmark_parcels/layout_case_020.json",
+      "zoning_file": "layout_benchmark_zoning/default_r1.json",
+      "layout": {
+        "max_candidates": 24
+      },
+      "notes": "LI-5 benchmark parcel 020"
+    }
+  ]
+}

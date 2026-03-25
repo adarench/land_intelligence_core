@@ -1,0 +1,48 @@
+{
+  "dataset": "layout_eval_v1",
+  "parcels_file": "layout_evaluation_parcels.json",
+  "scenarios": [
+    {
+      "scenario_id": "A",
+      "name": "Scenario A",
+      "min_lot_size_sqft": 6000,
+      "max_units_per_acre": 5,
+      "setbacks": {
+        "front": 20,
+        "side": 8,
+        "rear": 15
+      },
+      "min_frontage_ft": 50,
+      "road_right_of_way_ft": 40,
+      "max_candidates": 50
+    },
+    {
+      "scenario_id": "B",
+      "name": "Scenario B",
+      "min_lot_size_sqft": 8000,
+      "max_units_per_acre": 4,
+      "setbacks": {
+        "front": 22,
+        "side": 10,
+        "rear": 20
+      },
+      "min_frontage_ft": 55,
+      "road_right_of_way_ft": 42,
+      "max_candidates": 50
+    },
+    {
+      "scenario_id": "C",
+      "name": "Scenario C",
+      "min_lot_size_sqft": 10000,
+      "max_units_per_acre": 3,
+      "setbacks": {
+        "front": 25,
+        "side": 12,
+        "rear": 22
+      },
+      "min_frontage_ft": 60,
+      "road_right_of_way_ft": 45,
+      "max_candidates": 50
+    }
+  ]
+}

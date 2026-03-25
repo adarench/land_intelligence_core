@@ -1,0 +1,65 @@
+{
+  "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+  "benchmark_name": "layout_search_benchmark",
+  "dataset_root": "/Users/arench/Desktop/land-intelligence-workspace/test_data",
+  "generated_at": "2026-03-16T23:34:35.844403+00:00",
+  "manifest_path": "/Users/arench/Desktop/land-intelligence-workspace/test_data/benchmark_manifest.json",
+  "records": [
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "benchmark_case_001",
+      "layout_id": "layout-benchmark_case_001-48e9e81e-4728-4b2f-9b6d-54c35248615e",
+      "metrics": {
+        "candidate_result_count": 24,
+        "candidate_search_count": 24,
+        "constraint_violations": [],
+        "disconnected_road_segments": 1,
+        "invalid_lot_count": 0,
+        "layout_score": 0.7359113333333335,
+        "lot_yield_per_acre": 1.2,
+        "parcel_area_acres": 10.0,
+        "parcel_compactness": 0.7853981633974483,
+        "parcel_perimeter_ft": 2640.0,
+        "parcel_vertex_count": 4,
+        "road_length_ft": 910.0,
+        "runtime_seconds": 0.732134042,
+        "units_generated": 12
+      },
+      "notes": "Baseline rectangular parcel with moderate R-1 density.",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "gis_layout_runtime.prior_guided.v1",
+      "case_id": "benchmark_case_002",
+      "layout_id": "layout-benchmark_case_002-f957e8d5-10c1-4e76-8d93-828a85560247",
+      "metrics": {
+        "candidate_result_count": 24,
+        "candidate_search_count": 24,
+        "constraint_violations": [],
+        "disconnected_road_segments": 8,
+        "invalid_lot_count": 0,
+        "layout_score": 0.709406029298381,
+        "lot_yield_per_acre": 1.8333333333333333,
+        "parcel_area_acres": 11.999965564738291,
+        "parcel_compactness": 0.8617985088241011,
+        "parcel_perimeter_ft": 2760.8066876777193,
+        "parcel_vertex_count": 6,
+        "road_length_ft": 3891.0,
+        "runtime_seconds": 0.091751417,
+        "units_generated": 22
+      },
+      "notes": "Irregular parcel with slightly tighter frontage and lower density.",
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "avg_layout_score": 0.7226586813158573,
+    "avg_lot_yield_per_acre": 1.5166666666666666,
+    "avg_road_length_ft": 2400.5,
+    "avg_runtime_seconds": 0.4119427295,
+    "avg_units_generated": 17.0,
+    "dataset_size": 2,
+    "failure_count": 0,
+    "success_count": 2
+  }
+}

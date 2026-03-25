@@ -1,0 +1,53 @@
+{
+  "parcel_id": "parcel_test_002",
+  "jurisdiction": "SampleCounty_CA",
+  "area_sqft": 522720,
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          125,
+          752
+        ],
+        [
+          546,
+          805
+        ],
+        [
+          815,
+          555
+        ],
+        [
+          755,
+          180
+        ],
+        [
+          360,
+          -60
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "centroid": [
+    394.98,
+    375.0
+  ],
+  "bounding_box": [
+    0,
+    -60,
+    815,
+    805
+  ],
+  "land_use": "residential",
+  "slope_percent": 3.8,
+  "flood_zone": "X"
+}

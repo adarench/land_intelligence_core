@@ -1,0 +1,107 @@
+{
+  "dataset": "runtime_viable_parcels_v1",
+  "records": [
+    {
+      "jurisdiction": "Salt Lake City",
+      "parcel_id": "runtime-slc-r1-7000-viable",
+      "expected_district": "R-1-7000",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ],
+            [
+              -111.94150957366566,
+              40.79273689547184
+            ],
+            [
+              -111.93850957366567,
+              40.79273689547184
+            ],
+            [
+              -111.93850957366567,
+              40.78973689547184
+            ],
+            [
+              -111.94150957366566,
+              40.78973689547184
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Representative viable parcel in R-1-7000 at delta=0.0015"
+    },
+    {
+      "jurisdiction": "Lehi",
+      "parcel_id": "runtime-lehi-th5-viable",
+      "expected_district": "TH-5",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.91947050646571,
+              40.43075861712976
+            ],
+            [
+              -111.91947050646571,
+              40.43375861712976
+            ],
+            [
+              -111.91647050646573,
+              40.43375861712976
+            ],
+            [
+              -111.91647050646573,
+              40.43075861712976
+            ],
+            [
+              -111.91947050646571,
+              40.43075861712976
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Representative viable parcel in TH-5 at delta=0.0015"
+    },
+    {
+      "jurisdiction": "Draper",
+      "parcel_id": "runtime-draper-r3-viable",
+      "expected_district": "R3",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.87572936864271,
+              40.517175817639746
+            ],
+            [
+              -111.87572936864271,
+              40.520175817639746
+            ],
+            [
+              -111.87272936864272,
+              40.520175817639746
+            ],
+            [
+              -111.87272936864272,
+              40.517175817639746
+            ],
+            [
+              -111.87572936864271,
+              40.517175817639746
+            ]
+          ]
+        ]
+      },
+      "area_sqft": 100000.0,
+      "notes": "Representative viable parcel in R3 at delta=0.0015"
+    }
+  ]
+}

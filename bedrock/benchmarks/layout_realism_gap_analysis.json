@@ -1,0 +1,95 @@
+{
+  "analysis": "layout_realism_gap_analysis",
+  "sample_sizes": {
+    "current_layouts": 20,
+    "real_layouts": 13
+  },
+  "current_means": {
+    "unit_count": 13.2,
+    "road_density_ft_per_acre": 336.17,
+    "dev_area_ratio": 0.38275,
+    "leftover_ratio": 0.6172501518115381,
+    "lot_compactness_mean": 0.6623405272129785,
+    "irregular_lot_share": 0.22047008547008548,
+    "frontage_cv": 0.020738274946584343,
+    "depth_cv": 0.0981715374087245
+  },
+  "real_means": {
+    "unit_count": 694.4615384615385,
+    "road_density_ft_per_acre": 28.330546153846154,
+    "dev_area_ratio": 0.13776102425234169,
+    "leftover_ratio": 0.8622389757476583,
+    "lot_compactness_mean": 0.7197907563410836,
+    "irregular_lot_share": 0.0,
+    "frontage_cv": 0.010153342404544036,
+    "depth_cv": 3.224336427162612e-17
+  },
+  "gaps_current_minus_real": {
+    "unit_count": -681.2615384615384,
+    "road_density_ft_per_acre": 307.83945384615384,
+    "dev_area_ratio": 0.2449889757476583,
+    "leftover_ratio": -0.2449888239361202,
+    "lot_compactness_mean": -0.057450229128105046,
+    "irregular_lot_share": 0.22047008547008548,
+    "frontage_cv": 0.010584932542040307,
+    "depth_cv": 0.09817153740872447
+  },
+  "ranked_heuristics": [
+    {
+      "heuristic": "Improve Road Placement Logic",
+      "targets": [
+        "road_density_ft_per_acre",
+        "leftover_ratio",
+        "depth_cv"
+      ],
+      "rationale": "Optimize spacing/offset of primary roads to avoid under-served blocks and leftover slivers.",
+      "impact_score": 6.2841,
+      "gap_signals": {
+        "road_density_ft_per_acre": 307.8395,
+        "leftover_ratio": -0.245,
+        "depth_cv": 0.0982
+      }
+    },
+    {
+      "heuristic": "Enforce Consistent Block Depth Bands",
+      "targets": [
+        "depth_cv",
+        "dev_area_ratio",
+        "leftover_ratio"
+      ],
+      "rationale": "Reduce depth variance by snapping road offsets/block slicing to target depth bands (e.g., 95-120 ft).",
+      "impact_score": 5.0625,
+      "gap_signals": {
+        "depth_cv": 0.0982,
+        "dev_area_ratio": 0.245,
+        "leftover_ratio": -0.245
+      }
+    },
+    {
+      "heuristic": "Enforce Realistic Frontage Distributions",
+      "targets": [
+        "frontage_cv",
+        "irregular_lot_share"
+      ],
+      "rationale": "Apply frontage band priors (district-specific p10-p90) and penalize outliers.",
+      "impact_score": 4.0425,
+      "gap_signals": {
+        "frontage_cv": 0.0106,
+        "irregular_lot_share": 0.2205
+      }
+    },
+    {
+      "heuristic": "Penalize Irregular Lot Geometry",
+      "targets": [
+        "lot_compactness_mean",
+        "irregular_lot_share"
+      ],
+      "rationale": "Add shape regularity penalty using compactness and minimum-angle checks during candidate scoring.",
+      "impact_score": 3.0798,
+      "gap_signals": {
+        "lot_compactness_mean": -0.0575,
+        "irregular_lot_share": 0.2205
+      }
+    }
+  ]
+}

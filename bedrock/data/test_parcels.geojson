@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "parcel_id": "test_parcel_001",
+        "area_sqft": 435600
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-111.9, 40.7],
+            [-111.9, 40.701],
+            [-111.899, 40.701],
+            [-111.899, 40.7],
+            [-111.9, 40.7]
+          ]
+        ]
+      }
+    }
+  ]
+}

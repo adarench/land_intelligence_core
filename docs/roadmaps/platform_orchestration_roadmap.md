@@ -198,12 +198,27 @@ Input
 Output
 
 
-FeasibilityResult
+PipelineRunResult
+
+Current implementation note:
+
+- `POST /pipeline/run` currently orchestrates parcel -> zoning -> layout -> feasibility and returns canonical `FeasibilityResult`.
+- This milestone is implemented but not gate-validated for stabilization progression.
+- Gate evidence (`2026-03-19`):
+  - `bedrock/benchmarks/po2_stabilization_latest.json`
+  - `po2_gate_passed = false`
+  - `pipeline_success_rate = 0.13043478260869565` vs target `0.80`
+  - `zoning_success_rate = 0.13043478260869565` vs target `0.90`
 
 
 Definition of Done
 
 The pipeline can run end-to-end through a single API call.
+
+Current status against this DoD:
+
+- not yet achieved for stabilization progression while `po2_gate_passed = false`
+- evidence: `bedrock/benchmarks/po2_stabilization_latest.json:3037`
 
 ---
 
@@ -323,6 +338,11 @@ The platform orchestration layer is considered complete when:
 - service contracts remain stable
 - execution logs capture every run
 - agents can safely modify allowed parts of the system
+
+Current measured status (2026-03-19):
+
+- success criteria not yet met because `po2_gate_passed = false`
+- evidence: `bedrock/benchmarks/po2_stabilization_latest.json:3037`
 
 ---
 

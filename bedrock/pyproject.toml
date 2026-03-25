@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bedrock"
+version = "0.1.0"
+description = "Modular orchestration platform for land intelligence engines."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110,<1.0",
+  "pydantic>=2.6,<3.0",
+  "PyYAML>=6.0,<7.0",
+  "shapely>=2.0,<3.0",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["contracts*", "pipelines*", "engines*", "orchestration*", "services*", "api*", "models*", "utils*"]

@@ -1,0 +1,88 @@
+system:
+  name: bedrock
+  environment: development
+
+parcel_data_source:
+  type: geojson
+  path: data/test_parcels.geojson
+
+zoning_data_source:
+  type: local_json
+  path: data/zoning_rules.json
+
+engines:
+  parcel_engine:
+    repo_path: ../GIS_lot_layout_optimizer
+    module: services.parcel_service
+    function: ParcelService.get_parcel
+    layout_module: services.layout_engine.layout_search
+    layout_function: run_layout_search
+    geometry_module: services.parcel_adapter
+    geometry_function: adapt_parcel_geometry
+    projection_function: to_lnglat
+  zoning_engine:
+    repo_path: ../zoning_data_scraper
+    module: zoning.db.session
+    function: get_session
+    models_module: zoning.models.entities
+    discovered_services_module: zoning.services
+    discovered_services_function: extract_jurisdiction
+  plan_engine:
+    repo_path: ../takeoff_archive
+    module: null
+    function: null
+    note: no stable Python plan-intelligence entrypoint was detected; repository appears TypeScript-first
+
+database:
+  driver: postgresql+psycopg
+  host: localhost
+  port: 5432
+  database: bedrock
+  user: bedrock
+  password_env: BEDROCK_DB_PASSWORD
+
+pipelines:
+  parcel_feasibility:
+    module: pipelines.parcel_feasibility_pipeline
+    class: ParcelFeasibilityPipeline
+    enabled: true
+    concurrency: 4
+
+agents:
+  orchestrator_agent:
+    permissions:
+      - contracts:read
+      - contracts:propose
+      - pipelines:review
+      - orchestration:review
+      - docs:write
+  parcel_agent:
+    permissions:
+      - contracts:read
+      - pipelines:write
+      - parcel-adapter:review
+  zoning_agent:
+    permissions:
+      - contracts:read
+      - pipelines:write
+      - zoning-adapter:review
+  layout_agent:
+    permissions:
+      - contracts:read
+      - pipelines:write
+      - parcel-adapter:review
+  plan_agent:
+    permissions:
+      - contracts:read
+      - plan-adapter:review
+      - docs:write
+  feasibility_agent:
+    permissions:
+      - contracts:read
+      - pipelines:write
+      - scoring:propose
+  data_governance_agent:
+    permissions:
+      - database:write
+      - contracts:read
+      - docs:write

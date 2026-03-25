@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "case_id": "benchmark_case_001",
+      "parcel_file": "benchmark_parcels/benchmark_case_001.json",
+      "zoning_file": "benchmark_zoning/benchmark_case_001.json",
+      "financial_assumptions": {
+        "estimated_home_price": 410000,
+        "cost_per_home": 255000,
+        "road_cost_per_ft": 425,
+        "utility_cost_per_lot": 18000,
+        "soft_cost_percent": 0.16,
+        "land_cost": 650000
+      },
+      "notes": "Baseline rectangular parcel with moderate R-1 density."
+    },
+    {
+      "case_id": "benchmark_case_002",
+      "parcel_file": "benchmark_parcels/benchmark_case_002.json",
+      "zoning_file": "benchmark_zoning/benchmark_case_002.json",
+      "financial_assumptions": {
+        "estimated_home_price": 435000,
+        "cost_per_home": 262000,
+        "road_cost_per_ft": 440,
+        "utility_cost_per_lot": 19500,
+        "soft_cost_percent": 0.17,
+        "land_cost": 720000
+      },
+      "notes": "Irregular parcel with slightly tighter frontage and lower density."
+    }
+  ]
+}

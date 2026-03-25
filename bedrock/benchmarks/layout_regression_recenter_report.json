@@ -1,0 +1,295 @@
+{
+  "before_after": {
+    "baseline_v1": {
+      "average_layout_score": 0.7511920399071589,
+      "average_unit_yield": 10.930555555555555,
+      "explicit_range_checks": false,
+      "runtime_p95_seconds": 0.0901155272999999,
+      "solver_success_rate": 1.0
+    },
+    "current_actual": {
+      "average_layout_score": 0.7511920399071589,
+      "average_unit_yield": 10.930555555555555,
+      "runtime_p95_seconds": 0.13799346875000013,
+      "solver_success_rate": 1.0
+    },
+    "recentered_v2_target": {
+      "average_layout_score_min": 0.77,
+      "average_unit_yield_min": 11.5,
+      "explicit_range_checks": true,
+      "runtime_p95_seconds_max": 0.15,
+      "solver_success_rate_min": 1.0
+    }
+  },
+  "evaluated_at": "2026-03-20T00:00:00Z",
+  "layout_benchmark_checks": {
+    "avg_layout_score": {
+      "actual": 0.7979464694047014,
+      "passed": false,
+      "threshold_min": 0.81
+    },
+    "avg_runtime_seconds": {
+      "actual": 0.07898735624999999,
+      "passed": true,
+      "threshold_max": 0.1
+    },
+    "avg_units": {
+      "actual": 15.95,
+      "passed": false,
+      "threshold_min": 16.5
+    },
+    "failure_count": {
+      "actual": 0,
+      "passed": true,
+      "threshold_max": 0
+    },
+    "total_invalid_lot_count": {
+      "actual": 0,
+      "passed": true,
+      "threshold_max": 0
+    }
+  },
+  "layout_evaluation_checks": {
+    "average_layout_score": {
+      "actual": 0.7511920399071589,
+      "passed": false,
+      "threshold_min": 0.77
+    },
+    "average_unit_yield": {
+      "actual": 10.930555555555555,
+      "passed": false,
+      "threshold_min": 11.5
+    },
+    "average_yield_efficiency": {
+      "actual": 0.35006319312072665,
+      "passed": false,
+      "threshold_min": 0.37
+    },
+    "constraint_violation_count": {
+      "actual": 0,
+      "passed": true,
+      "threshold_max": 0
+    },
+    "range_checks": {
+      "actual_failures": 25,
+      "passed": false,
+      "threshold_max": 0
+    },
+    "runtime_max_seconds": {
+      "actual": 0.841425208,
+      "passed": true,
+      "threshold_max": 0.95
+    },
+    "runtime_p95_seconds": {
+      "actual": 0.13799346875000013,
+      "passed": true,
+      "threshold_max": 0.15
+    },
+    "solver_failure_count": {
+      "actual": 0,
+      "passed": true,
+      "threshold_max": 0
+    },
+    "solver_success_rate": {
+      "actual": 1.0,
+      "passed": true,
+      "threshold_min": 1.0
+    }
+  },
+  "regressions_detected": {
+    "layout_benchmark": [
+      "avg_units",
+      "avg_layout_score"
+    ],
+    "layout_evaluation": [
+      "average_unit_yield",
+      "average_layout_score",
+      "average_yield_efficiency",
+      "range_checks"
+    ],
+    "range_failures_count": 25,
+    "range_failures_sample": [
+      {
+        "case_id": "layout_case_001:C",
+        "metric": "unit_yield",
+        "range": {
+          "max": 14,
+          "min": 3
+        },
+        "value": 2
+      },
+      {
+        "case_id": "layout_case_003:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_004:A",
+        "metric": "unit_yield",
+        "range": {
+          "max": 30,
+          "min": 8
+        },
+        "value": 6
+      },
+      {
+        "case_id": "layout_case_004:A",
+        "metric": "layout_score",
+        "range": {
+          "max": 0.95,
+          "min": 0.72
+        },
+        "value": 0.7097997777777778
+      },
+      {
+        "case_id": "layout_case_004:A",
+        "metric": "road_length_ft",
+        "range": {
+          "max": 2600.0,
+          "min": 750.0
+        },
+        "value": 697.5
+      },
+      {
+        "case_id": "layout_case_004:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_005:A",
+        "metric": "unit_yield",
+        "range": {
+          "max": 30,
+          "min": 8
+        },
+        "value": 6
+      },
+      {
+        "case_id": "layout_case_005:A",
+        "metric": "layout_score",
+        "range": {
+          "max": 0.95,
+          "min": 0.72
+        },
+        "value": 0.7123384444444445
+      },
+      {
+        "case_id": "layout_case_005:A",
+        "metric": "road_length_ft",
+        "range": {
+          "max": 2600.0,
+          "min": 750.0
+        },
+        "value": 683.7
+      },
+      {
+        "case_id": "layout_case_005:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_007:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_008:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_011:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_013:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_016:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_016:B",
+        "metric": "road_length_ft",
+        "range": {
+          "max": 2500.0,
+          "min": 650.0
+        },
+        "value": 612.9
+      },
+      {
+        "case_id": "layout_case_018:B",
+        "metric": "unit_yield",
+        "range": {
+          "max": 20,
+          "min": 5
+        },
+        "value": 4
+      },
+      {
+        "case_id": "layout_case_020:A",
+        "metric": "road_length_ft",
+        "range": {
+          "max": 2600.0,
+          "min": 750.0
+        },
+        "value": 2660.0
+      },
+      {
+        "case_id": "layout_case_internal_001:C",
+        "metric": "unit_yield",
+        "range": {
+          "max": 14,
+          "min": 3
+        },
+        "value": 2
+      },
+      {
+        "case_id": "layout_case_internal_001:C",
+        "metric": "layout_score",
+        "range": {
+          "max": 0.8,
+          "min": 0.6
+        },
+        "value": 0.5815308550475893
+      }
+    ]
+  },
+  "spec_name": "layout_regression_baseline_v2"
+}

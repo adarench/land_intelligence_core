@@ -1,0 +1,778 @@
+{
+  "dataset": "phase1_parcel_zoning_v1",
+  "description": "Phase 1 evaluation dataset for parcel normalization and zoning lookup.",
+  "records": [
+    {
+      "parcel_id": "layout_case_001",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              520.0
+            ],
+            [
+              520.0,
+              520.0
+            ],
+            [
+              520.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_002",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              560.0
+            ],
+            [
+              500.0,
+              560.0
+            ],
+            [
+              500.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_003",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              600.0
+            ],
+            [
+              460.0,
+              600.0
+            ],
+            [
+              460.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_004",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              620.0
+            ],
+            [
+              430.0,
+              620.0
+            ],
+            [
+              430.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_005",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              640.0
+            ],
+            [
+              400.0,
+              640.0
+            ],
+            [
+              400.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_006",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              520.0
+            ],
+            [
+              180.0,
+              640.0
+            ],
+            [
+              520.0,
+              640.0
+            ],
+            [
+              520.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_007",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              500.0
+            ],
+            [
+              220.0,
+              620.0
+            ],
+            [
+              520.0,
+              620.0
+            ],
+            [
+              520.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_008",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              480.0
+            ],
+            [
+              240.0,
+              600.0
+            ],
+            [
+              520.0,
+              600.0
+            ],
+            [
+              520.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_009",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              530.0
+            ],
+            [
+              180.0,
+              660.0
+            ],
+            [
+              540.0,
+              620.0
+            ],
+            [
+              540.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_010",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              560.0
+            ],
+            [
+              170.0,
+              700.0
+            ],
+            [
+              560.0,
+              650.0
+            ],
+            [
+              560.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_011",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              540.0
+            ],
+            [
+              150.0,
+              620.0
+            ],
+            [
+              360.0,
+              620.0
+            ],
+            [
+              520.0,
+              520.0
+            ],
+            [
+              520.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_012",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              560.0
+            ],
+            [
+              140.0,
+              660.0
+            ],
+            [
+              360.0,
+              660.0
+            ],
+            [
+              540.0,
+              540.0
+            ],
+            [
+              540.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_013",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              520.0
+            ],
+            [
+              130.0,
+              590.0
+            ],
+            [
+              350.0,
+              590.0
+            ],
+            [
+              500.0,
+              500.0
+            ],
+            [
+              500.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_014",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              480.0
+            ],
+            [
+              150.0,
+              560.0
+            ],
+            [
+              360.0,
+              560.0
+            ],
+            [
+              520.0,
+              470.0
+            ],
+            [
+              520.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_015",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              560.0
+            ],
+            [
+              180.0,
+              560.0
+            ],
+            [
+              180.0,
+              380.0
+            ],
+            [
+              420.0,
+              380.0
+            ],
+            [
+              420.0,
+              560.0
+            ],
+            [
+              560.0,
+              560.0
+            ],
+            [
+              560.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_016",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              580.0
+            ],
+            [
+              190.0,
+              580.0
+            ],
+            [
+              190.0,
+              420.0
+            ],
+            [
+              440.0,
+              420.0
+            ],
+            [
+              440.0,
+              580.0
+            ],
+            [
+              580.0,
+              580.0
+            ],
+            [
+              580.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_017",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              540.0
+            ],
+            [
+              160.0,
+              540.0
+            ],
+            [
+              160.0,
+              360.0
+            ],
+            [
+              390.0,
+              360.0
+            ],
+            [
+              390.0,
+              540.0
+            ],
+            [
+              540.0,
+              540.0
+            ],
+            [
+              540.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_018",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              600.0
+            ],
+            [
+              200.0,
+              600.0
+            ],
+            [
+              200.0,
+              450.0
+            ],
+            [
+              460.0,
+              450.0
+            ],
+            [
+              460.0,
+              600.0
+            ],
+            [
+              600.0,
+              600.0
+            ],
+            [
+              600.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_019",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              520.0
+            ],
+            [
+              120.0,
+              620.0
+            ],
+            [
+              340.0,
+              650.0
+            ],
+            [
+              560.0,
+              520.0
+            ],
+            [
+              560.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "parcel_id": "layout_case_020",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "zoning_district": "R-1",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              560.0
+            ],
+            [
+              140.0,
+              690.0
+            ],
+            [
+              360.0,
+              700.0
+            ],
+            [
+              600.0,
+              540.0
+            ],
+            [
+              600.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

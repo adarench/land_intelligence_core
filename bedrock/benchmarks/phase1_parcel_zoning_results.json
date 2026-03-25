@@ -1,0 +1,323 @@
+{
+  "dataset": "phase1_parcel_zoning_v1",
+  "generated_at": "2026-03-17T00:17:18.576064+00:00",
+  "metrics": {
+    "parcel_normalization_success_rate": 1.0,
+    "pipeline_runtime": {
+      "avg_seconds": 0.0008796541999999949,
+      "p95_seconds": 0.0011592443500000008,
+      "total_seconds": 0.017593083999999898
+    },
+    "rule_extraction_failure_count": 0,
+    "schema_violation_count": 0,
+    "zoning_lookup_success_rate": 1.0,
+    "zoning_rule_completeness": 1.0
+  },
+  "quality_gate": {
+    "rule_completeness_passed": true,
+    "rule_completeness_target": 0.8
+  },
+  "record_count": 20,
+  "records": [
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_001",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.00023462499999998832,
+        "pipeline_seconds": 0.0012834159999999817,
+        "zoning_seconds": 0.0010466670000000011
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_002",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0001544579999999962,
+        "pipeline_seconds": 0.0005140829999999985,
+        "zoning_seconds": 0.00035758299999999466
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_003",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.00013762500000000233,
+        "pipeline_seconds": 0.0004977079999999856,
+        "zoning_seconds": 0.0003579159999999859
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_004",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.00014708399999999178,
+        "pipeline_seconds": 0.0006338749999999782,
+        "zoning_seconds": 0.00048454200000000447
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_005",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0008074580000000109,
+        "pipeline_seconds": 0.0011527090000000018,
+        "zoning_seconds": 0.0003431249999999997
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_006",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0005747500000000128,
+        "pipeline_seconds": 0.0009160000000000001,
+        "zoning_seconds": 0.0003392499999999854
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_007",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.000535332999999999,
+        "pipeline_seconds": 0.0009332920000000022,
+        "zoning_seconds": 0.0003961249999999972
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_008",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0005323750000000016,
+        "pipeline_seconds": 0.0008893339999999916,
+        "zoning_seconds": 0.00035508300000000603
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_009",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0006867910000000199,
+        "pipeline_seconds": 0.0010436249999999925,
+        "zoning_seconds": 0.0003551249999999839
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_010",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.00052295799999999,
+        "pipeline_seconds": 0.0008978329999999868,
+        "zoning_seconds": 0.0003730829999999963
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_011",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0006345000000000101,
+        "pipeline_seconds": 0.000993624999999998,
+        "zoning_seconds": 0.00035745899999997666
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_012",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0005524590000000051,
+        "pipeline_seconds": 0.0008962500000000151,
+        "zoning_seconds": 0.00034191699999999714
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_013",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.00047766700000001494,
+        "pipeline_seconds": 0.0008059170000000171,
+        "zoning_seconds": 0.00032645799999997394
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_014",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.000493290999999979,
+        "pipeline_seconds": 0.0008604160000000027,
+        "zoning_seconds": 0.0003652919999999893
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_015",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0005305840000000006,
+        "pipeline_seconds": 0.0009335419999999817,
+        "zoning_seconds": 0.000400874999999995
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_016",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0005394579999999927,
+        "pipeline_seconds": 0.0008947079999999941,
+        "zoning_seconds": 0.00035304199999999786
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_017",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0005288330000000063,
+        "pipeline_seconds": 0.0008644999999999903,
+        "zoning_seconds": 0.0003337089999999876
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_018",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0005337499999999995,
+        "pipeline_seconds": 0.000865624999999981,
+        "zoning_seconds": 0.0003299579999999913
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_019",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0004699580000000203,
+        "pipeline_seconds": 0.0008042090000000002,
+        "zoning_seconds": 0.000332542000000019
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    },
+    {
+      "errors": [],
+      "jurisdiction": "BenchmarkCounty_UT",
+      "parcel_id": "layout_case_020",
+      "parcel_normalization_success": true,
+      "rule_extraction_success": true,
+      "runtime": {
+        "parcel_seconds": 0.0005599999999999772,
+        "pipeline_seconds": 0.0009124169999999987,
+        "zoning_seconds": 0.00035066699999999895
+      },
+      "schema_valid": true,
+      "zoning_district": "R-1",
+      "zoning_rule_completeness": 1.0
+    }
+  ]
+}

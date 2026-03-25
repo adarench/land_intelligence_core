@@ -1,0 +1,1411 @@
+{
+  "generated_at": "2026-03-17T22:38:46Z",
+  "summary": {
+    "total_test_cases": 10,
+    "success_count": 1,
+    "failure_count": 9,
+    "success_rate": 0.1,
+    "failure_rate": 0.9,
+    "avg_runtime_seconds": 0.18856165010000012,
+    "pipeline_success_rate": 0.1
+  },
+  "test_suite": [
+    {
+      "parcel_id": "eval-draper-rect-small",
+      "jurisdiction": "Draper",
+      "expected": "success",
+      "note": "Simple rectangular parcel in Draper (small/typical)."
+    },
+    {
+      "parcel_id": "eval-draper-rect-large",
+      "jurisdiction": "Draper",
+      "expected": "success",
+      "note": "Large rectangular parcel in Draper."
+    },
+    {
+      "parcel_id": "eval-draper-irregular",
+      "jurisdiction": "Draper",
+      "expected": "success",
+      "note": "Irregular polygon parcel in Draper."
+    },
+    {
+      "parcel_id": "eval-herriman-rect",
+      "jurisdiction": "Herriman",
+      "expected": "success",
+      "note": "Medium rectangular parcel in Herriman."
+    },
+    {
+      "parcel_id": "eval-herriman-irregular",
+      "jurisdiction": "Herriman",
+      "expected": "success",
+      "note": "Irregular polygon in Herriman."
+    },
+    {
+      "parcel_id": "eval-heber-rect",
+      "jurisdiction": "Heber City",
+      "expected": "success",
+      "note": "Rectangular parcel in Heber City."
+    },
+    {
+      "parcel_id": "eval-annabella-tiny",
+      "jurisdiction": "Annabella",
+      "expected": "fail",
+      "note": "Tiny edge-case parcel expected to fail zoning/layout constraints."
+    },
+    {
+      "parcel_id": "layout_case_001",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "expected": "fail",
+      "note": "Benchmark fixture jurisdiction expected to fail live zoning lookup (integration gap)."
+    },
+    {
+      "parcel_id": "layout_case_015",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "expected": "fail",
+      "note": "Irregular benchmark fixture expected to fail live zoning lookup (integration gap)."
+    },
+    {
+      "parcel_id": "eval-invalid-linestring",
+      "jurisdiction": "Draper",
+      "expected": "fail",
+      "note": "Invalid geometry type should fail parcel stage."
+    }
+  ],
+  "results": [
+    {
+      "parcel_id": "eval-draper-rect-small",
+      "jurisdiction": "Draper",
+      "expected_outcome": "success",
+      "notes": "Simple rectangular parcel in Draper (small/typical).",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.0009972080000011374
+        },
+        "zoning": {
+          "ok": true,
+          "runtime": 0.4353798330000025,
+          "issues": [],
+          "district": "OS"
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 0.06569008299999979,
+          "stage": "layout.search",
+          "error": "no_viable_layout",
+          "message": "No viable layouts generated for parcel eval-draper-rect-small-pipe",
+          "details": {}
+        }
+      },
+      "runtime_seconds": 1.5422130420000002,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "LayoutSearchError",
+          "message": "No viable layouts generated for parcel eval-draper-rect-small"
+        }
+      ],
+      "zoning_rules": {
+        "schema_name": "ZoningRules",
+        "schema_version": "1.0.0",
+        "parcel_id": "eval-draper-rect-small",
+        "jurisdiction": "Draper",
+        "district": "OS",
+        "district_id": null,
+        "description": null,
+        "overlays": [],
+        "standards": [
+          {
+            "id": "OS:min_lot_size_sqft",
+            "district_id": null,
+            "standard_type": "min_lot_size_sqft",
+            "value": 13000.0,
+            "units": "sqft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:45.201611Z"
+            }
+          },
+          {
+            "id": "OS:max_units_per_acre",
+            "district_id": null,
+            "standard_type": "max_units_per_acre",
+            "value": 4.0,
+            "units": "du/ac",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:45.201611Z"
+            }
+          },
+          {
+            "id": "OS:height_limit_ft",
+            "district_id": null,
+            "standard_type": "height_limit_ft",
+            "value": 35.0,
+            "units": "ft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:45.201611Z"
+            }
+          },
+          {
+            "id": "OS:lot_coverage_max",
+            "district_id": null,
+            "standard_type": "lot_coverage_max",
+            "value": 0.45,
+            "units": null,
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:45.201611Z"
+            }
+          },
+          {
+            "id": "OS:front_setback_ft",
+            "district_id": null,
+            "standard_type": "front_setback_ft",
+            "value": 25.0,
+            "units": "ft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:45.201611Z"
+            }
+          },
+          {
+            "id": "OS:side_setback_ft",
+            "district_id": null,
+            "standard_type": "side_setback_ft",
+            "value": 10.0,
+            "units": "ft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:45.201611Z"
+            }
+          },
+          {
+            "id": "OS:rear_setback_ft",
+            "district_id": null,
+            "standard_type": "rear_setback_ft",
+            "value": 20.0,
+            "units": "ft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:45.201611Z"
+            }
+          }
+        ],
+        "setbacks": {
+          "front": 25.0,
+          "side": 10.0,
+          "rear": 20.0
+        },
+        "min_lot_size_sqft": 13000.0,
+        "max_units_per_acre": 4.0,
+        "height_limit_ft": 35.0,
+        "lot_coverage_max": 0.45,
+        "min_frontage_ft": null,
+        "road_right_of_way_ft": null,
+        "allowed_uses": [
+          "single_family_residential"
+        ],
+        "citations": [],
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+          "observed_at": "2026-03-17T22:38:45.201611Z"
+        }
+      },
+      "layout_result": null,
+      "feasibility_result": null
+    },
+    {
+      "parcel_id": "eval-draper-rect-large",
+      "jurisdiction": "Draper",
+      "expected_outcome": "success",
+      "notes": "Large rectangular parcel in Draper.",
+      "status": "SUCCESS",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.0013627919999983362
+        },
+        "zoning": {
+          "ok": true,
+          "runtime": 0.002797208000000495,
+          "issues": [],
+          "district": "OS"
+        },
+        "layout": {
+          "ok": true,
+          "runtime": 0.03891562500000134,
+          "issues": [],
+          "units": 10,
+          "score": 0.76625
+        },
+        "feasibility": {
+          "ok": true,
+          "runtime": 0.00014462500000078649,
+          "issues": [],
+          "ROI": 0.34352170627256695,
+          "profit": 1227300.0
+        },
+        "pipeline": {
+          "ok": true,
+          "runtime": 0.04330670799999936,
+          "roi": 0.34352170627256695,
+          "units": 10
+        }
+      },
+      "runtime_seconds": 0.08653037500000238,
+      "errors": [],
+      "zoning_rules": {
+        "schema_name": "ZoningRules",
+        "schema_version": "1.0.0",
+        "parcel_id": "eval-draper-rect-large",
+        "jurisdiction": "Draper",
+        "district": "OS",
+        "district_id": null,
+        "description": null,
+        "overlays": [],
+        "standards": [
+          {
+            "id": "OS:min_lot_size_sqft",
+            "district_id": null,
+            "standard_type": "min_lot_size_sqft",
+            "value": 13000.0,
+            "units": "sqft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:46.311643Z"
+            }
+          },
+          {
+            "id": "OS:max_units_per_acre",
+            "district_id": null,
+            "standard_type": "max_units_per_acre",
+            "value": 4.0,
+            "units": "du/ac",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:46.311643Z"
+            }
+          },
+          {
+            "id": "OS:height_limit_ft",
+            "district_id": null,
+            "standard_type": "height_limit_ft",
+            "value": 35.0,
+            "units": "ft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:46.311643Z"
+            }
+          },
+          {
+            "id": "OS:lot_coverage_max",
+            "district_id": null,
+            "standard_type": "lot_coverage_max",
+            "value": 0.45,
+            "units": null,
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:46.311643Z"
+            }
+          },
+          {
+            "id": "OS:front_setback_ft",
+            "district_id": null,
+            "standard_type": "front_setback_ft",
+            "value": 25.0,
+            "units": "ft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:46.311643Z"
+            }
+          },
+          {
+            "id": "OS:side_setback_ft",
+            "district_id": null,
+            "standard_type": "side_setback_ft",
+            "value": 10.0,
+            "units": "ft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:46.311643Z"
+            }
+          },
+          {
+            "id": "OS:rear_setback_ft",
+            "district_id": null,
+            "standard_type": "rear_setback_ft",
+            "value": 20.0,
+            "units": "ft",
+            "conditions": [],
+            "citation": null,
+            "metadata": {
+              "source_engine": "zoning_data_scraper",
+              "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+              "observed_at": "2026-03-17T22:38:46.311643Z"
+            }
+          }
+        ],
+        "setbacks": {
+          "front": 25.0,
+          "side": 10.0,
+          "rear": 20.0
+        },
+        "min_lot_size_sqft": 13000.0,
+        "max_units_per_acre": 4.0,
+        "height_limit_ft": 35.0,
+        "lot_coverage_max": 0.45,
+        "min_frontage_ft": null,
+        "road_right_of_way_ft": null,
+        "allowed_uses": [
+          "single_family_residential"
+        ],
+        "citations": [],
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v7/draper",
+          "observed_at": "2026-03-17T22:38:46.311643Z"
+        }
+      },
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-eval-draper-rect-large-ff6a76455071",
+        "parcel_id": "eval-draper-rect-large",
+        "unit_count": 10,
+        "road_length_ft": 2290.0,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.82636903159506,
+                  40.49516554395605
+                ],
+                [
+                  -111.82610892306954,
+                  40.49516554395605
+                ],
+                [
+                  -111.82610892306954,
+                  40.4946051043956
+                ],
+                [
+                  -111.82636903159506,
+                  40.4946051043956
+                ],
+                [
+                  -111.82636903159506,
+                  40.49516554395605
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.82636903159506,
+                  40.495253456043955
+                ],
+                [
+                  -111.82636903159506,
+                  40.4958138956044
+                ],
+                [
+                  -111.82610892306954,
+                  40.4958138956044
+                ],
+                [
+                  -111.82610892306954,
+                  40.495253456043955
+                ],
+                [
+                  -111.82636903159506,
+                  40.495253456043955
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.82595719309633,
+                  40.49516554395605
+                ],
+                [
+                  -111.8256970845708,
+                  40.49516554395605
+                ],
+                [
+                  -111.8256970845708,
+                  40.4946051043956
+                ],
+                [
+                  -111.82595719309633,
+                  40.4946051043956
+                ],
+                [
+                  -111.82595719309633,
+                  40.49516554395605
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.82595719309633,
+                  40.495253456043955
+                ],
+                [
+                  -111.82595719309633,
+                  40.4958138956044
+                ],
+                [
+                  -111.8256970845708,
+                  40.4958138956044
+                ],
+                [
+                  -111.8256970845708,
+                  40.495253456043955
+                ],
+                [
+                  -111.82595719309633,
+                  40.495253456043955
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.8255453545976,
+                  40.49516554395605
+                ],
+                [
+                  -111.82528524607207,
+                  40.49516554395605
+                ],
+                [
+                  -111.82528524607207,
+                  40.4946051043956
+                ],
+                [
+                  -111.8255453545976,
+                  40.4946051043956
+                ],
+                [
+                  -111.8255453545976,
+                  40.49516554395605
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.8255453545976,
+                  40.495253456043955
+                ],
+                [
+                  -111.8255453545976,
+                  40.4958138956044
+                ],
+                [
+                  -111.82528524607207,
+                  40.4958138956044
+                ],
+                [
+                  -111.82528524607207,
+                  40.495253456043955
+                ],
+                [
+                  -111.8255453545976,
+                  40.495253456043955
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.82513351609884,
+                  40.49516554395605
+                ],
+                [
+                  -111.82487340757332,
+                  40.49516554395605
+                ],
+                [
+                  -111.82487340757332,
+                  40.4946051043956
+                ],
+                [
+                  -111.82513351609884,
+                  40.4946051043956
+                ],
+                [
+                  -111.82513351609884,
+                  40.49516554395605
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.82513351609884,
+                  40.495253456043955
+                ],
+                [
+                  -111.82513351609884,
+                  40.4958138956044
+                ],
+                [
+                  -111.82487340757332,
+                  40.4958138956044
+                ],
+                [
+                  -111.82487340757332,
+                  40.495253456043955
+                ],
+                [
+                  -111.82513351609884,
+                  40.495253456043955
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.82648463538419,
+                  40.49516554395605
+                ],
+                [
+                  -111.82648463538419,
+                  40.4946051043956
+                ],
+                [
+                  -111.82674474390971,
+                  40.4946051043956
+                ],
+                [
+                  -111.82674474390971,
+                  40.49516554395605
+                ],
+                [
+                  -111.82648463538419,
+                  40.49516554395605
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.82648463538419,
+                  40.495253456043955
+                ],
+                [
+                  -111.82674474390971,
+                  40.495253456043955
+                ],
+                [
+                  -111.82674474390971,
+                  40.4958138956044
+                ],
+                [
+                  -111.82648463538419,
+                  40.4958138956044
+                ],
+                [
+                  -111.82648463538419,
+                  40.495253456043955
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82683867198837,
+                40.4952095
+              ],
+              [
+                -111.82477947949467,
+                40.4952095
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82642683348962,
+                40.4946051043956
+              ],
+              [
+                -111.82642683348962,
+                40.49519576373626
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82642683348962,
+                40.49522323626374
+              ],
+              [
+                -111.82642683348962,
+                40.4958138956044
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82601499499089,
+                40.4946051043956
+              ],
+              [
+                -111.82601499499089,
+                40.49519576373626
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82601499499089,
+                40.49522323626374
+              ],
+              [
+                -111.82601499499089,
+                40.4958138956044
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82560315649215,
+                40.4946051043956
+              ],
+              [
+                -111.82560315649215,
+                40.49519576373626
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82560315649215,
+                40.49522323626374
+              ],
+              [
+                -111.82560315649215,
+                40.4958138956044
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82519131799341,
+                40.4946051043956
+              ],
+              [
+                -111.82519131799341,
+                40.49519576373626
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.82519131799341,
+                40.49522323626374
+              ],
+              [
+                -111.82519131799341,
+                40.4958138956044
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 0.76625,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.layout_service",
+          "source_run_id": null,
+          "observed_at": "2026-03-17T22:38:46.350606Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "3940c41a-10a1-505c-a062-1a6ec182ca8c",
+        "layout_id": "layout-eval-draper-rect-large-ff6a76455071",
+        "parcel_id": "eval-draper-rect-large",
+        "units": 10,
+        "estimated_home_price": 480000.0,
+        "construction_cost_per_home": 278200.0,
+        "development_cost_total": 790700.0,
+        "projected_revenue": 4800000.0,
+        "projected_cost": 3572700.0,
+        "projected_profit": 1227300.0,
+        "ROI": 0.34352170627256695,
+        "profit_margin": 0.2556875,
+        "revenue_per_unit": 480000.0,
+        "cost_per_unit": 357270.0,
+        "rank": null,
+        "risk_score": 0.5415805973073585,
+        "requested_units": null,
+        "constraint_violations": [],
+        "confidence": 0.9,
+        "status": "feasible",
+        "financial_summary": {
+          "units": 10,
+          "estimated_home_price": 480000.0,
+          "construction_cost_per_home": 278200.0,
+          "road_cost_per_ft": 300.0,
+          "road_length": 2290.0,
+          "land_cost": 0.0,
+          "projected_revenue": 4800000.0,
+          "development_cost_total": 790700.0,
+          "projected_cost": 3572700.0,
+          "projected_profit": 1227300.0,
+          "ROI": 0.34352170627256695,
+          "development_cost_breakdown": {
+            "roads": 687000.0,
+            "utilities": 0.0,
+            "grading": 68700.0,
+            "permitting": 35000.0
+          },
+          "profit_margin": 0.2556875,
+          "revenue_per_unit": 480000.0,
+          "cost_per_unit": 357270.0
+        },
+        "explanation": {
+          "primary_driver": "road_cost",
+          "cost_breakdown": {
+            "construction": 2782000.0,
+            "development": 790700.0
+          },
+          "revenue_breakdown": {
+            "units": 10,
+            "price_per_home": 480000.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": true,
+          "used_default_construction_cost_per_home": true,
+          "used_default_road_cost_per_ft": true,
+          "used_default_land_price": true,
+          "used_default_soft_cost_factor": true
+        },
+        "metadata": {
+          "source_engine": "bedrock.services.feasibility_service",
+          "source_run_id": null,
+          "observed_at": "2026-03-17T22:38:46.350773Z"
+        }
+      }
+    },
+    {
+      "parcel_id": "eval-draper-irregular",
+      "jurisdiction": "Draper",
+      "expected_outcome": "success",
+      "notes": "Irregular polygon parcel in Draper.",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.0011381670000005784
+        },
+        "zoning": {
+          "ok": false
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 0.004144249999999516,
+          "error": "GEOSException",
+          "message": "TopologyException: side location conflict at -111.910359 40.542909000000002. This can occur if the input geometry is invalid."
+        }
+      },
+      "runtime_seconds": 0.009377624999999057,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "GEOSException",
+          "message": "TopologyException: side location conflict at -111.910359 40.542909000000002. This can occur if the input geometry is invalid.",
+          "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 168, in <module>\nshapely.errors.GEOSException: TopologyException: side location conflict at -111.910359 40.542909000000002. This can occur if the input geometry is invalid.\n"
+        }
+      ],
+      "zoning_rules": null,
+      "layout_result": null,
+      "feasibility_result": null
+    },
+    {
+      "parcel_id": "eval-herriman-rect",
+      "jurisdiction": "Herriman",
+      "expected_outcome": "success",
+      "notes": "Medium rectangular parcel in Herriman.",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.0009704160000012507
+        },
+        "zoning": {
+          "ok": false
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 0.003888124999999576,
+          "error": "ValueError",
+          "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+        }
+      },
+      "runtime_seconds": 0.09793054200000029,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "ValueError",
+          "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+        }
+      ],
+      "zoning_rules": null,
+      "layout_result": null,
+      "feasibility_result": null
+    },
+    {
+      "parcel_id": "eval-herriman-irregular",
+      "jurisdiction": "Herriman",
+      "expected_outcome": "success",
+      "notes": "Irregular polygon in Herriman.",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.0010521250000010696
+        },
+        "zoning": {
+          "ok": false
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 0.003315166000000147,
+          "error": "ValueError",
+          "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+        }
+      },
+      "runtime_seconds": 0.006843040999999772,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "ValueError",
+          "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+        }
+      ],
+      "zoning_rules": null,
+      "layout_result": null,
+      "feasibility_result": null
+    },
+    {
+      "parcel_id": "eval-heber-rect",
+      "jurisdiction": "Heber City",
+      "expected_outcome": "success",
+      "notes": "Rectangular parcel in Heber City.",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.0009622080000006861
+        },
+        "zoning": {
+          "ok": false
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 0.0037605419999984235,
+          "error": "ValueError",
+          "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+        }
+      },
+      "runtime_seconds": 0.061336915999998354,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "ValueError",
+          "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+        }
+      ],
+      "zoning_rules": null,
+      "layout_result": null,
+      "feasibility_result": null
+    },
+    {
+      "parcel_id": "eval-annabella-tiny",
+      "jurisdiction": "Annabella",
+      "expected_outcome": "fail",
+      "notes": "Tiny edge-case parcel expected to fail zoning/layout constraints.",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.0009049579999995672
+        },
+        "zoning": {
+          "ok": false
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 0.003938125000001236,
+          "error": "ValueError",
+          "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+        }
+      },
+      "runtime_seconds": 0.06407254200000168,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "ValueError",
+          "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+        }
+      ],
+      "zoning_rules": null,
+      "layout_result": null,
+      "feasibility_result": null
+    },
+    {
+      "parcel_id": "layout_case_001",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "expected_outcome": "fail",
+      "notes": "Benchmark fixture jurisdiction expected to fail live zoning lookup (integration gap).",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.00011495900000113579
+        },
+        "zoning": {
+          "ok": false
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 0.004912665999999177,
+          "stage": "zoning.lookup",
+          "error": "no_district_match",
+          "message": "No zoning district intersects the parcel geometry.",
+          "details": {}
+        }
+      },
+      "runtime_seconds": 0.00871533399999791,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "NoZoningMatchError",
+          "message": "No zoning district intersects the parcel geometry."
+        }
+      ],
+      "zoning_rules": null,
+      "layout_result": null,
+      "feasibility_result": null
+    },
+    {
+      "parcel_id": "layout_case_015",
+      "jurisdiction": "BenchmarkCounty_UT",
+      "expected_outcome": "fail",
+      "notes": "Irregular benchmark fixture expected to fail live zoning lookup (integration gap).",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": true,
+          "runtime": 0.0001064580000011972
+        },
+        "zoning": {
+          "ok": false
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 0.004504582999999229,
+          "stage": "zoning.lookup",
+          "error": "no_district_match",
+          "message": "No zoning district intersects the parcel geometry.",
+          "details": {}
+        }
+      },
+      "runtime_seconds": 0.008442459000001179,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "NoZoningMatchError",
+          "message": "No zoning district intersects the parcel geometry."
+        }
+      ],
+      "zoning_rules": null,
+      "layout_result": null,
+      "feasibility_result": null
+    },
+    {
+      "parcel_id": "eval-invalid-linestring",
+      "jurisdiction": "Draper",
+      "expected_outcome": "fail",
+      "notes": "Invalid geometry type should fail parcel stage.",
+      "status": "FAILURE",
+      "stages": {
+        "parcel": {
+          "ok": false
+        },
+        "zoning": {
+          "ok": false
+        },
+        "layout": {
+          "ok": false
+        },
+        "feasibility": {
+          "ok": false
+        },
+        "pipeline": {
+          "ok": false,
+          "runtime": 6.937499999892793e-05,
+          "stage": "parcel.load",
+          "error": "invalid_parcel_input",
+          "message": "geometry.type must be 'Polygon' or 'MultiPolygon'",
+          "details": {}
+        }
+      },
+      "runtime_seconds": 0.0001546250000004079,
+      "errors": [
+        {
+          "stage": "runtime",
+          "error": "ValueError",
+          "message": "geometry.type must be 'Polygon' or 'MultiPolygon'"
+        }
+      ],
+      "zoning_rules": null,
+      "layout_result": null,
+      "feasibility_result": null
+    }
+  ],
+  "layer_issues": {
+    "zoning": [
+      {
+        "parcel_id": "eval-herriman-rect",
+        "stage": "runtime",
+        "error": "ValueError",
+        "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+      },
+      {
+        "parcel_id": "eval-herriman-irregular",
+        "stage": "runtime",
+        "error": "ValueError",
+        "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+      },
+      {
+        "parcel_id": "eval-heber-rect",
+        "stage": "runtime",
+        "error": "ValueError",
+        "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+      },
+      {
+        "parcel_id": "eval-annabella-tiny",
+        "stage": "runtime",
+        "error": "ValueError",
+        "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear"
+      },
+      {
+        "parcel_id": "layout_case_001",
+        "stage": "runtime",
+        "error": "NoZoningMatchError",
+        "message": "No zoning district intersects the parcel geometry."
+      },
+      {
+        "parcel_id": "layout_case_015",
+        "stage": "runtime",
+        "error": "NoZoningMatchError",
+        "message": "No zoning district intersects the parcel geometry."
+      }
+    ],
+    "layout": [],
+    "feasibility": [],
+    "pipeline": [
+      {
+        "parcel_id": "eval-draper-rect-small",
+        "stage": "runtime",
+        "error": "LayoutSearchError",
+        "message": "No viable layouts generated for parcel eval-draper-rect-small"
+      },
+      {
+        "parcel_id": "eval-draper-rect-small",
+        "stage": "pipeline",
+        "error": "no_viable_layout",
+        "message": "No viable layouts generated for parcel eval-draper-rect-small-pipe",
+        "failed_stage": "layout.search"
+      },
+      {
+        "parcel_id": "eval-draper-irregular",
+        "stage": "runtime",
+        "error": "GEOSException",
+        "message": "TopologyException: side location conflict at -111.910359 40.542909000000002. This can occur if the input geometry is invalid.",
+        "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 168, in <module>\nshapely.errors.GEOSException: TopologyException: side location conflict at -111.910359 40.542909000000002. This can occur if the input geometry is invalid.\n"
+      },
+      {
+        "parcel_id": "eval-draper-irregular",
+        "stage": "pipeline",
+        "error": "GEOSException",
+        "message": "TopologyException: side location conflict at -111.910359 40.542909000000002. This can occur if the input geometry is invalid.",
+        "failed_stage": null
+      },
+      {
+        "parcel_id": "eval-herriman-rect",
+        "stage": "pipeline",
+        "error": "ValueError",
+        "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear",
+        "failed_stage": null
+      },
+      {
+        "parcel_id": "eval-herriman-irregular",
+        "stage": "pipeline",
+        "error": "ValueError",
+        "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear",
+        "failed_stage": null
+      },
+      {
+        "parcel_id": "eval-heber-rect",
+        "stage": "pipeline",
+        "error": "ValueError",
+        "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear",
+        "failed_stage": null
+      },
+      {
+        "parcel_id": "eval-annabella-tiny",
+        "stage": "pipeline",
+        "error": "ValueError",
+        "message": "ZoningRules is incomplete for layout compatibility: min_lot_size_sqft, max_units_per_acre, setbacks.front, setbacks.side, setbacks.rear",
+        "failed_stage": null
+      },
+      {
+        "parcel_id": "layout_case_001",
+        "stage": "pipeline",
+        "error": "no_district_match",
+        "message": "No zoning district intersects the parcel geometry.",
+        "failed_stage": "zoning.lookup"
+      },
+      {
+        "parcel_id": "layout_case_015",
+        "stage": "pipeline",
+        "error": "no_district_match",
+        "message": "No zoning district intersects the parcel geometry.",
+        "failed_stage": "zoning.lookup"
+      },
+      {
+        "parcel_id": "eval-invalid-linestring",
+        "stage": "runtime",
+        "error": "ValueError",
+        "message": "geometry.type must be 'Polygon' or 'MultiPolygon'"
+      },
+      {
+        "parcel_id": "eval-invalid-linestring",
+        "stage": "pipeline",
+        "error": "invalid_parcel_input",
+        "message": "geometry.type must be 'Polygon' or 'MultiPolygon'",
+        "failed_stage": "parcel.load"
+      }
+    ],
+    "parcel": []
+  },
+  "determinism": {
+    "case": "eval-draper-rect-large",
+    "consistent": true,
+    "runs": [
+      {
+        "ok": true,
+        "signature": {
+          "district": "OS",
+          "min_lot_size_sqft": 13000.0,
+          "max_units_per_acre": 4.0,
+          "setbacks": {
+            "front": 25.0,
+            "side": 10.0,
+            "rear": 20.0
+          },
+          "layout_units": 10,
+          "layout_score": 0.76625,
+          "road_length": 2290.0,
+          "roi": 0.34352171,
+          "profit": 1227300.0
+        }
+      },
+      {
+        "ok": true,
+        "signature": {
+          "district": "OS",
+          "min_lot_size_sqft": 13000.0,
+          "max_units_per_acre": 4.0,
+          "setbacks": {
+            "front": 25.0,
+            "side": 10.0,
+            "rear": 20.0
+          },
+          "layout_units": 10,
+          "layout_score": 0.76625,
+          "road_length": 2290.0,
+          "roi": 0.34352171,
+          "profit": 1227300.0
+        }
+      },
+      {
+        "ok": true,
+        "signature": {
+          "district": "OS",
+          "min_lot_size_sqft": 13000.0,
+          "max_units_per_acre": 4.0,
+          "setbacks": {
+            "front": 25.0,
+            "side": 10.0,
+            "rear": 20.0
+          },
+          "layout_units": 10,
+          "layout_score": 0.76625,
+          "road_length": 2290.0,
+          "roi": 0.34352171,
+          "profit": 1227300.0
+        }
+      }
+    ],
+    "notes": []
+  },
+  "regression": {
+    "checked_cases": [],
+    "regressions": [],
+    "improvements": [],
+    "notes": [
+      "No overlapping successful cases with historical baseline records."
+    ]
+  }
+}

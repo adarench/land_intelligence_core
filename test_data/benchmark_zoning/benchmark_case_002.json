@@ -1,0 +1,76 @@
+{
+  "parcel_id": "benchmark_case_002",
+  "jurisdiction": "BenchmarkCounty_UT",
+  "district": "R-1",
+  "district_id": "benchmark:R-1-irregular",
+  "description": "Benchmark irregular single-family district.",
+  "setbacks": {
+    "front": 25,
+    "side": 10,
+    "rear": 25
+  },
+  "min_lot_size_sqft": 7200,
+  "max_units_per_acre": 4.5,
+  "height_limit_ft": 35,
+  "lot_coverage_max": 0.4,
+  "min_frontage_ft": 60,
+  "road_right_of_way_ft": 50,
+  "allowed_uses": ["single_family"],
+  "citations": ["benchmark_fixture"],
+  "standards": [
+    {
+      "id": "benchmark:R-1-irregular:min_lot_size_sqft",
+      "district_id": "benchmark:R-1-irregular",
+      "standard_type": "min_lot_size_sqft",
+      "value": 7200,
+      "units": "sqft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1-irregular:max_units_per_acre",
+      "district_id": "benchmark:R-1-irregular",
+      "standard_type": "max_units_per_acre",
+      "value": 4.5,
+      "units": "du/ac",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1-irregular:front_setback_ft",
+      "district_id": "benchmark:R-1-irregular",
+      "standard_type": "front_setback_ft",
+      "value": 25,
+      "units": "ft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1-irregular:side_setback_ft",
+      "district_id": "benchmark:R-1-irregular",
+      "standard_type": "side_setback_ft",
+      "value": 10,
+      "units": "ft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1-irregular:rear_setback_ft",
+      "district_id": "benchmark:R-1-irregular",
+      "standard_type": "rear_setback_ft",
+      "value": 25,
+      "units": "ft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1-irregular:min_frontage_ft",
+      "district_id": "benchmark:R-1-irregular",
+      "standard_type": "min_frontage_ft",
+      "value": 60,
+      "units": "ft",
+      "conditions": [],
+      "citation": "benchmark_fixture"
+    }
+  ]
+}

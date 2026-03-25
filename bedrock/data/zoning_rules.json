@@ -1,0 +1,9 @@
+{
+  "R-1": {
+    "min_lot_size_sqft": 8000,
+    "max_units_per_acre": 5,
+    "front_setback_ft": 25,
+    "side_setback_ft": 8,
+    "rear_setback_ft": 20
+  }
+}

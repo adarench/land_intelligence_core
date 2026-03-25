@@ -34,8 +34,12 @@ Service flow:
 2. Identify the best jurisdiction dataset from `zoning_data_scraper`
 3. Resolve the top zoning district by parcel geometry overlap
 4. Resolve overlay labels from overlay geometry when available
-5. Normalize rule records into canonical zoning fields
-6. Return parcel-scoped `ZoningRules`
+5. Canonicalize district code to stable output form
+6. Sanitize raw rule values (reject/clear unsafe values such as zero setbacks)
+7. Apply deterministic jurisdiction-level conservative fallback defaults
+8. Normalize rule records into canonical zoning fields
+9. Validate layout-safe zoning contract before returning
+10. Return parcel-scoped `ZoningRules` or fail closed
 
 Errors surfaced by the service:
 
@@ -43,6 +47,8 @@ Errors surfaced by the service:
 - `NoZoningMatchError`
 - `AmbiguousJurisdictionMatchError`
 - `AmbiguousZoningMatchError`
+- `IncompleteZoningRulesError`
+- `InvalidZoningRulesError`
 
 ## Module Boundaries
 

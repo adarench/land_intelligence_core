@@ -9,6 +9,7 @@ Core capabilities:
 - parcel ingestion and normalization
 - zoning district lookup
 - layout generation through the GIS runtime
+- layout benchmarking and regression measurement
 - deterministic financial feasibility evaluation
 - pipeline orchestration and telemetry
 
@@ -35,12 +36,41 @@ These endpoints are part of the active platform surface.
 
 `Parcel -> ZoningRules -> LayoutResult -> FeasibilityResult`
 
+## Architecture Diagram (Text)
+
+```
+UI
+↓
+Feasibility API
+↓
+Pipeline Orchestrator
+↓
+Parcel Service -> Zoning Service -> Layout Service -> Feasibility Service
+```
+
 ## Current Implemented Pipeline
 
 1. Parcel load and normalization inside Bedrock.
 2. Zoning lookup inside Bedrock backed by `zoning_data_scraper`.
 3. Layout search inside Bedrock backed by the GIS layout runtime.
 4. Feasibility evaluation inside Bedrock with deterministic economics.
+5. Pipeline orchestration API for end-to-end parcel-to-feasibility execution.
+
+## Current System Status
+
+Operational:
+
+- layout generation API is operational (`POST /layout/search`)
+
+Partially implemented:
+
+- parcel ingestion layer is partially implemented
+- zoning intelligence system is under development
+- feasibility modeling is partially implemented
+
+Missing / not yet operational:
+
+- full pipeline orchestration is not yet operational as a validated production flow
 
 ## External Dependencies
 

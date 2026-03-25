@@ -1,0 +1,80 @@
+{
+  "parcel_id": "template",
+  "jurisdiction": "BenchmarkCounty_UT",
+  "district": "R-1",
+  "district_id": "benchmark:R-1",
+  "description": "Benchmark district for LI-5 layout evaluation.",
+  "setbacks": {
+    "front": 20,
+    "side": 8,
+    "rear": 15
+  },
+  "min_lot_size_sqft": 5500,
+  "max_units_per_acre": 6.0,
+  "height_limit_ft": 35,
+  "lot_coverage_max": 0.5,
+  "min_frontage_ft": 45,
+  "road_right_of_way_ft": 40,
+  "allowed_uses": [
+    "single_family"
+  ],
+  "citations": [
+    "layout_benchmark_fixture"
+  ],
+  "standards": [
+    {
+      "id": "benchmark:R-1:min_lot_size_sqft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "min_lot_size_sqft",
+      "value": 5500,
+      "units": "sqft",
+      "conditions": [],
+      "citation": "layout_benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:max_units_per_acre",
+      "district_id": "benchmark:R-1",
+      "standard_type": "max_units_per_acre",
+      "value": 6.0,
+      "units": "du/ac",
+      "conditions": [],
+      "citation": "layout_benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:front_setback_ft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "front_setback_ft",
+      "value": 20,
+      "units": "ft",
+      "conditions": [],
+      "citation": "layout_benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:side_setback_ft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "side_setback_ft",
+      "value": 8,
+      "units": "ft",
+      "conditions": [],
+      "citation": "layout_benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:rear_setback_ft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "rear_setback_ft",
+      "value": 15,
+      "units": "ft",
+      "conditions": [],
+      "citation": "layout_benchmark_fixture"
+    },
+    {
+      "id": "benchmark:R-1:min_frontage_ft",
+      "district_id": "benchmark:R-1",
+      "standard_type": "min_frontage_ft",
+      "value": 45,
+      "units": "ft",
+      "conditions": [],
+      "citation": "layout_benchmark_fixture"
+    }
+  ]
+}
