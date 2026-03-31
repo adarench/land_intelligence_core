@@ -1,0 +1,84 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "d92789c2-f0ee-4b61-b2a0-cf31b905625b",
+  "status": "near_feasible",
+  "parcel_id": "ut-utah-3145",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-utah-3145",
+    "jurisdiction": "Provo",
+    "district": "RC",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [],
+    "setbacks": {
+      "front": null,
+      "side": null,
+      "rear": null
+    },
+    "min_lot_size_sqft": null,
+    "max_units_per_acre": null,
+    "height_limit_ft": null,
+    "lot_coverage_max": null,
+    "min_frontage_ft": null,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+      "observed_at": "2026-03-30T20:08:15.972649Z"
+    }
+  },
+  "layout_result": null,
+  "feasibility_result": null,
+  "near_feasible_result": {
+    "schema_name": "NearFeasibleResult",
+    "schema_version": "1.0.0",
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "limiting_constraints": {
+      "district": "RC",
+      "jurisdiction": "Provo",
+      "bypass_reason": "historical_constraint",
+      "status": "non_buildable"
+    },
+    "required_relaxation": {
+      "zoning_resolution": {
+        "required": true,
+        "reason": "historical_constraint"
+      }
+    },
+    "best_attempt_summary": {
+      "status": "non_buildable",
+      "bypass_reason": "historical_constraint"
+    },
+    "financial_upside": {
+      "relaxed_units": 1,
+      "projected_profit": 147634.98678520194,
+      "ROI": 0.33559979442979815,
+      "break_even_price": 439913.8176947981,
+      "estimated_home_price": 587548.80448,
+      "price_per_sqft": 233.60000000000002,
+      "assumptions": {
+        "zoning_relaxation_share": 0.15,
+        "utility_length_proxy": 0.0,
+        "road_length_proxy": 0.0
+      }
+    },
+    "attempted_strategies": [],
+    "attempted_repairs": []
+  },
+  "timestamp": "2026-03-30T20:08:15.972868Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "669f7afd838bd0476fb81b82a2d89dfe5b4adefd53b3f7e1813c890d0a1af684",
+  "stage_runtimes": {
+    "parcel.load": 0.000864,
+    "zoning.lookup": 0.011027
+  },
+  "zoning_bypassed": true,
+  "bypass_reason": "historical_constraint"
+}

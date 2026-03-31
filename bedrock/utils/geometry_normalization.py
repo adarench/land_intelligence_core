@@ -12,7 +12,14 @@ from shapely.ops import unary_union
 from shapely.validation import explain_validity
 from shapely.validation import make_valid
 
-from utils.geometry_validation import validate_coordinate_ranges, validate_geojson_polygon, validate_topology
+try:
+    from bedrock.utils.geometry_validation import (
+        validate_coordinate_ranges,
+        validate_geojson_polygon,
+        validate_topology,
+    )
+except ImportError:
+    from utils.geometry_validation import validate_coordinate_ranges, validate_geojson_polygon, validate_topology
 
 MAX_VERTEX_COUNT = 512
 SIMPLIFICATION_TOLERANCE = 1e-7

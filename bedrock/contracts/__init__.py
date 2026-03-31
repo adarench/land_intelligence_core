@@ -5,7 +5,14 @@ from .experiment_run import ExperimentRun
 from .feasibility_result import FeasibilityResult, FeasibilityScenario
 from .feasibility_validation import DealOutcomeMetrics, FeasibilityValidationRecord
 from .layout_result import LayoutResult
+from .layout_candidate_batch import LayoutCandidateBatch, LayoutSearchPlan
 from .market_data import MarketData
+from .optimization_run import (
+    OptimizationCandidate,
+    OptimizationDecision,
+    OptimizationObjective,
+    OptimizationRun,
+)
 from .parcel import Parcel
 from .pipeline_execution_result import PipelineExecutionResult
 from .pipeline_run import PipelineRun
@@ -24,8 +31,14 @@ __all__ = [
     "DealOutcomeMetrics",
     "FeasibilityValidationRecord",
     "Jurisdiction",
+    "LayoutCandidateBatch",
     "LayoutResult",
+    "LayoutSearchPlan",
     "MarketData",
+    "OptimizationCandidate",
+    "OptimizationDecision",
+    "OptimizationObjective",
+    "OptimizationRun",
     "Parcel",
     "PipelineExecutionResult",
     "PipelineRun",

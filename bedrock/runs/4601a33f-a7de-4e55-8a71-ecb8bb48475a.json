@@ -1,0 +1,218 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "4601a33f-a7de-4e55-8a71-ecb8bb48475a",
+  "status": "near_feasible",
+  "parcel_id": "ut-utah-14837",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-utah-14837",
+    "jurisdiction": "Draper",
+    "district": "C-3",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "C-3:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 13000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:42:13.821239Z"
+        }
+      },
+      {
+        "id": "C-3:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 4.0,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:42:13.821239Z"
+        }
+      },
+      {
+        "id": "C-3:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:42:13.821239Z"
+        }
+      },
+      {
+        "id": "C-3:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.45,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:42:13.821239Z"
+        }
+      },
+      {
+        "id": "C-3:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:42:13.821239Z"
+        }
+      },
+      {
+        "id": "C-3:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:42:13.821239Z"
+        }
+      },
+      {
+        "id": "C-3:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 10.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:42:13.821239Z"
+        }
+      },
+      {
+        "id": "C-3:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:42:13.821239Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 10.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 13000.0,
+    "max_units_per_acre": 4.0,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.45,
+    "min_frontage_ft": 35.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+      "observed_at": "2026-03-26T23:42:13.821239Z"
+    }
+  },
+  "layout_result": null,
+  "feasibility_result": null,
+  "near_feasible_result": {
+    "schema_name": "NearFeasibleResult",
+    "schema_version": "1.0.0",
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "limiting_constraints": {
+      "parcel_area_sqft": 105184.08,
+      "min_lot_area_sqft": 13000.0,
+      "max_units": 8,
+      "district": "C-3"
+    },
+    "required_relaxation": {
+      "min_lot_area_sqft": {
+        "current": 13000.0,
+        "needed": 13148.01,
+        "reduction_sqft": 0.0
+      }
+    },
+    "best_attempt_summary": {
+      "score": 0.947941,
+      "violation": "Layout produced out-of-bounds lot geometry for parcel ut-utah-14837",
+      "strategy": "t_junction",
+      "profile": "",
+      "lot_count": 4,
+      "avg_frontage_ft": 121.8,
+      "avg_depth_ft": 145.5,
+      "total_road_ft": 363.1,
+      "compliance_rate": 1.0
+    },
+    "financial_upside": {
+      "relaxed_units": 5,
+      "projected_profit": 2144054.405028335,
+      "ROI": 0.5185958347642752,
+      "break_even_price": 826869.1189943331,
+      "estimated_home_price": 1255680.0,
+      "price_per_sqft": 392.4,
+      "assumptions": {
+        "zoning_relaxation_share": 0.15,
+        "utility_length_proxy": 272.32500000000005,
+        "road_length_proxy": 363.1
+      }
+    },
+    "attempted_strategies": [
+      "default",
+      "default_dense",
+      "expanded_topologies",
+      "expanded_wide_spacing",
+      "loop_focus",
+      "loop_dense",
+      "grid_compact",
+      "grid_wide",
+      "culdesac_branching",
+      "compact_retry",
+      "compact_extreme"
+    ],
+    "attempted_repairs": []
+  },
+  "timestamp": "2026-03-26T23:42:24.747683Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "3ed69c0066e8f625643adcd9fc67b53d1b6cdece4a1a98d281967fd1b76f15ad",
+  "stage_runtimes": {
+    "parcel.load": 0.001087,
+    "zoning.lookup": 0.01777,
+    "layout.search": 10.92551
+  },
+  "zoning_bypassed": false,
+  "bypass_reason": null
+}

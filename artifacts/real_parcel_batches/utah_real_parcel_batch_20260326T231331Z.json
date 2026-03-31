@@ -1,0 +1,708 @@
+[
+  {
+    "parcel_id": "ut-utah-13631",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-utah-84832",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 144740.96,
+        "min_lot_area_sqft": 3600.0,
+        "max_units": 39,
+        "district": "RM"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 3600.0,
+          "needed": 3711.306667,
+          "reduction_sqft": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "expanded_topologies",
+        "loop_focus",
+        "compact_retry"
+      ],
+      "attempted_repairs": []
+    }
+  },
+  {
+    "parcel_id": "ut-utah-14978",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1
+  },
+  {
+    "parcel_id": "ut-utah-13598",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-utah-14547",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 17
+  },
+  {
+    "parcel_id": "ut-utah-14847",
+    "jurisdiction": "Draper",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 43000.0,
+    "approx_frontage_ft": 1738.361148,
+    "required_frontage_ft": 35.0
+  },
+  {
+    "parcel_id": "ut-utah-85641",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 107696.93,
+        "min_lot_area_sqft": 3600.0,
+        "max_units": 29,
+        "district": "RM"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 3600.0,
+          "needed": 3713.687241,
+          "reduction_sqft": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "expanded_topologies",
+        "loop_focus",
+        "compact_retry"
+      ],
+      "attempted_repairs": []
+    }
+  },
+  {
+    "parcel_id": "ut-utah-14927",
+    "jurisdiction": "Draper",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 43000.0,
+    "approx_frontage_ft": 2826.538697,
+    "required_frontage_ft": 35.0
+  },
+  {
+    "parcel_id": "ut-utah-85557",
+    "jurisdiction": "Draper",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 3600.0,
+    "approx_frontage_ft": 1754.361743,
+    "required_frontage_ft": 35.0
+  },
+  {
+    "parcel_id": "ut-utah-14935",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 7
+  },
+  {
+    "parcel_id": "ut-utah-14837",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 105184.08,
+        "min_lot_area_sqft": 13000.0,
+        "max_units": 8,
+        "district": "C-3"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 13000.0,
+          "needed": 13148.01,
+          "reduction_sqft": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "expanded_topologies",
+        "loop_focus",
+        "compact_retry"
+      ],
+      "attempted_repairs": []
+    }
+  },
+  {
+    "parcel_id": "ut-utah-14482",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 97773.16,
+        "min_lot_area_sqft": 22000.0,
+        "max_units": 4,
+        "district": "RR-22"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 22000.0,
+          "needed": 24443.29,
+          "reduction_sqft": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "expanded_topologies",
+        "loop_focus",
+        "rural_low_density"
+      ],
+      "attempted_repairs": []
+    }
+  },
+  {
+    "parcel_id": "ut-utah-85640",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "GEOMETRY_INVALID",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "GEOMETRY_INVALID",
+      "limiting_constraints": {
+        "parcel_id": "ut-utah-85640",
+        "geometry_validation": "failed_after_repair"
+      },
+      "required_relaxation": {
+        "geometry_recovery": {
+          "action": "manual_geometry_cleanup",
+          "attempted_repairs": []
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "expanded_topologies",
+        "loop_focus",
+        "compact_retry"
+      ],
+      "attempted_repairs": []
+    }
+  },
+  {
+    "parcel_id": "ut-utah-85511",
+    "jurisdiction": "Draper",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 22000.0,
+    "approx_frontage_ft": 1801.216411,
+    "required_frontage_ft": 35.0
+  },
+  {
+    "parcel_id": "ut-utah-13727",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 15
+  },
+  {
+    "parcel_id": "ut-utah-3466",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 9
+  },
+  {
+    "parcel_id": "ut-utah-3478",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 3
+  },
+  {
+    "parcel_id": "ut-utah-2402",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 11
+  },
+  {
+    "parcel_id": "ut-utah-2455",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "GEOMETRY_INVALID",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "GEOMETRY_INVALID",
+      "limiting_constraints": {
+        "parcel_id": "ut-utah-2455",
+        "geometry_validation": "failed_after_repair"
+      },
+      "required_relaxation": {
+        "geometry_recovery": {
+          "action": "manual_geometry_cleanup",
+          "attempted_repairs": []
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "expanded_topologies",
+        "loop_focus",
+        "compact_retry"
+      ],
+      "attempted_repairs": []
+    }
+  },
+  {
+    "parcel_id": "ut-utah-3680",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-utah-3534",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-utah-3644",
+    "jurisdiction": "Provo",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 8000.0,
+    "approx_frontage_ft": 201.215488,
+    "required_frontage_ft": 45.0
+  },
+  {
+    "parcel_id": "ut-utah-3550",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1
+  },
+  {
+    "parcel_id": "ut-utah-3653",
+    "jurisdiction": "Provo",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 8000.0,
+    "approx_frontage_ft": 198.482243,
+    "required_frontage_ft": 45.0
+  },
+  {
+    "parcel_id": "ut-utah-3392",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "non_buildable",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null
+  },
+  {
+    "parcel_id": "ut-utah-3128",
+    "jurisdiction": "Provo",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 8000.0,
+    "approx_frontage_ft": 398.947824,
+    "required_frontage_ft": 45.0
+  },
+  {
+    "parcel_id": "ut-utah-3674",
+    "jurisdiction": "Provo",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 8000.0,
+    "approx_frontage_ft": 150.052271,
+    "required_frontage_ft": 45.0
+  },
+  {
+    "parcel_id": "ut-utah-3123",
+    "jurisdiction": "Provo",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 8000.0,
+    "approx_frontage_ft": 198.936908,
+    "required_frontage_ft": 45.0
+  },
+  {
+    "parcel_id": "ut-utah-3080",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "non_buildable",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null
+  },
+  {
+    "parcel_id": "ut-utah-3058",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "non_buildable",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null
+  },
+  {
+    "parcel_id": "ut-salt-lake-141",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1
+  },
+  {
+    "parcel_id": "ut-salt-lake-85",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 129571.44,
+        "min_lot_area_sqft": 7000.0,
+        "max_units": 18,
+        "district": "R-1-7000"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 7000.0,
+          "needed": 7198.413333,
+          "reduction_sqft": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "expanded_topologies",
+        "loop_focus",
+        "compact_retry"
+      ],
+      "attempted_repairs": []
+    }
+  },
+  {
+    "parcel_id": "ut-salt-lake-76",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 6
+  },
+  {
+    "parcel_id": "ut-salt-lake-182",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 5
+  },
+  {
+    "parcel_id": "ut-salt-lake-158",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 5
+  },
+  {
+    "parcel_id": "ut-salt-lake-96",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 4
+  },
+  {
+    "parcel_id": "ut-salt-lake-84",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 6
+  },
+  {
+    "parcel_id": "ut-salt-lake-79",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 4
+  },
+  {
+    "parcel_id": "ut-salt-lake-156",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 3
+  },
+  {
+    "parcel_id": "ut-salt-lake-56",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 5
+  },
+  {
+    "parcel_id": "ut-salt-lake-40",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 6
+  },
+  {
+    "parcel_id": "ut-salt-lake-154",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 5
+  },
+  {
+    "parcel_id": "ut-salt-lake-63",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 3
+  },
+  {
+    "parcel_id": "ut-salt-lake-71",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 10
+  },
+  {
+    "parcel_id": "ut-salt-lake-22",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 422,
+    "status": "failed",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "error": "solver_fail",
+    "stage": "layout.search",
+    "min_lot_area_sqft": 7000.0,
+    "approx_frontage_ft": 1363.661811,
+    "required_frontage_ft": 50.0
+  },
+  {
+    "parcel_id": "ut-salt-lake-72083",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 10
+  },
+  {
+    "parcel_id": "ut-salt-lake-70058",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 7
+  },
+  {
+    "parcel_id": "ut-salt-lake-70996",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 10
+  },
+  {
+    "parcel_id": "ut-salt-lake-71957",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-salt-lake-70219",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-salt-lake-71622",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-salt-lake-72087",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-salt-lake-70215",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-salt-lake-70218",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 6
+  },
+  {
+    "parcel_id": "ut-salt-lake-72089",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-salt-lake-71942",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-salt-lake-70309",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1
+  },
+  {
+    "parcel_id": "ut-salt-lake-72088",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1
+  },
+  {
+    "parcel_id": "ut-salt-lake-71874",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2
+  },
+  {
+    "parcel_id": "ut-salt-lake-71003",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 13
+  }
+]

@@ -1,0 +1,207 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "911b52e0-97c8-4e15-89ac-b4920c5b2635",
+  "status": "near_feasible",
+  "parcel_id": "ut-salt-lake-85",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-85",
+    "jurisdiction": "Salt Lake City",
+    "district": "R-1-7000",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "R-1-7000:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 7000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:23:48.004640Z"
+        }
+      },
+      {
+        "id": "R-1-7000:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 6.22,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:23:48.004640Z"
+        }
+      },
+      {
+        "id": "R-1-7000:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:23:48.004640Z"
+        }
+      },
+      {
+        "id": "R-1-7000:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.45,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:23:48.004640Z"
+        }
+      },
+      {
+        "id": "R-1-7000:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 50.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:23:48.004640Z"
+        }
+      },
+      {
+        "id": "R-1-7000:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:23:48.004640Z"
+        }
+      },
+      {
+        "id": "R-1-7000:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:23:48.004640Z"
+        }
+      },
+      {
+        "id": "R-1-7000:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:23:48.004640Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 8.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 7000.0,
+    "max_units_per_acre": 6.22,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.45,
+    "min_frontage_ft": 50.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "jurisdiction_fallback",
+      "observed_at": "2026-03-26T23:23:48.004640Z"
+    }
+  },
+  "layout_result": null,
+  "feasibility_result": null,
+  "near_feasible_result": {
+    "schema_name": "NearFeasibleResult",
+    "schema_version": "1.0.0",
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "limiting_constraints": {
+      "parcel_area_sqft": 129571.44,
+      "min_lot_area_sqft": 7000.0,
+      "max_units": 18,
+      "district": "R-1-7000"
+    },
+    "required_relaxation": {
+      "min_lot_area_sqft": {
+        "current": 7000.0,
+        "needed": 7198.413333,
+        "reduction_sqft": 0.0
+      }
+    },
+    "best_attempt_summary": {
+      "score": 0.624724,
+      "violation": "Layout produced out-of-bounds lot geometry for parcel ut-salt-lake-85",
+      "strategy": "t_junction",
+      "profile": "",
+      "lot_count": 3,
+      "avg_frontage_ft": 95.9,
+      "avg_depth_ft": 109.8,
+      "total_road_ft": 287.7,
+      "compliance_rate": 0.75
+    },
+    "attempted_strategies": [
+      "default",
+      "default_dense",
+      "expanded_topologies",
+      "expanded_wide_spacing",
+      "loop_focus",
+      "loop_dense",
+      "grid_compact",
+      "grid_wide",
+      "culdesac_branching",
+      "compact_retry",
+      "compact_extreme"
+    ],
+    "attempted_repairs": []
+  },
+  "timestamp": "2026-03-26T23:23:56.604318Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "b0afe8afc40314dbb217ac2d3dad78632bfae6afe7bd26b54d8d1add127db765",
+  "stage_runtimes": {
+    "parcel.load": 0.001527,
+    "zoning.lookup": 0.017235,
+    "layout.search": 8.599274
+  },
+  "zoning_bypassed": false,
+  "bypass_reason": null
+}

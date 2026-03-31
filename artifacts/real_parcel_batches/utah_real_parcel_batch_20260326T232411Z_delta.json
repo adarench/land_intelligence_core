@@ -1,0 +1,93 @@
+{
+  "baseline_metrics_path": "artifacts/real_parcel_batches/utah_real_parcel_batch_20260326T231331Z_metrics.json",
+  "solver_capability_metrics_path": "artifacts/real_parcel_batches/utah_real_parcel_batch_20260326T232411Z_metrics.json",
+  "baseline_metrics": {
+    "overall_success_rate": 0.6666666666666666,
+    "overall_actionable_rate": 0.7833333333333333,
+    "success_rate_by_jurisdiction": {
+      "Draper": {
+        "count": 15,
+        "success_rate": 0.4,
+        "actionable_rate": 0.7333333333333333
+      },
+      "Provo": {
+        "count": 15,
+        "success_rate": 0.4,
+        "actionable_rate": 0.4666666666666667
+      },
+      "Salt Lake City": {
+        "count": 15,
+        "success_rate": 0.8666666666666667,
+        "actionable_rate": 0.9333333333333333
+      },
+      "West Valley City": {
+        "count": 15,
+        "success_rate": 1.0,
+        "actionable_rate": 1.0
+      }
+    },
+    "failure_distribution": {
+      "SOLVER_FAIL": 10
+    },
+    "near_feasible_distribution": {
+      "ZONING_CONSTRAINT_FAIL": 5,
+      "GEOMETRY_INVALID": 2
+    }
+  },
+  "solver_capability_metrics": {
+    "overall_success_rate": 0.6833333333333333,
+    "overall_actionable_rate": 1.0,
+    "success_rate_by_jurisdiction": {
+      "Draper": {
+        "count": 15,
+        "success_rate": 0.4,
+        "actionable_rate": 1.0
+      },
+      "Provo": {
+        "count": 15,
+        "success_rate": 0.4,
+        "actionable_rate": 1.0
+      },
+      "Salt Lake City": {
+        "count": 15,
+        "success_rate": 0.9333333333333333,
+        "actionable_rate": 1.0
+      },
+      "West Valley City": {
+        "count": 15,
+        "success_rate": 1.0,
+        "actionable_rate": 1.0
+      }
+    },
+    "failure_distribution": {},
+    "near_feasible_distribution": {
+      "ZONING_CONSTRAINT_FAIL": 9,
+      "SOLVER_FAIL": 8,
+      "GEOMETRY_INVALID": 2
+    }
+  },
+  "delta_baseline_to_solver_capability": {
+    "overall_success_rate_delta": 0.01666666666666672,
+    "overall_actionable_rate_delta": 0.21666666666666667,
+    "failure_distribution_delta": {
+      "SOLVER_FAIL": -10
+    },
+    "near_feasible_distribution_delta": {
+      "GEOMETRY_INVALID": 0,
+      "SOLVER_FAIL": 8,
+      "ZONING_CONSTRAINT_FAIL": 4
+    },
+    "success_rate_by_jurisdiction_delta": {
+      "Draper": 0.0,
+      "Provo": 0.0,
+      "Salt Lake City": 0.06666666666666665,
+      "West Valley City": 0.0
+    },
+    "actionable_rate_by_jurisdiction_delta": {
+      "Draper": 0.2666666666666667,
+      "Provo": 0.5333333333333333,
+      "Salt Lake City": 0.06666666666666665,
+      "West Valley City": 0.0
+    }
+  }
+}

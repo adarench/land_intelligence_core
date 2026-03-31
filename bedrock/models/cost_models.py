@@ -25,6 +25,18 @@ REGIONAL_CONSTRUCTION_MULTIPLIERS: dict[str, float] = {
     "salt lake county": 1.06,
     "lehi": 1.05,
     "draper": 1.07,
+    "south jordan": 1.06,
+    "sandy": 1.06,
+    "herriman": 1.05,
+    "riverton": 1.05,
+    "murray": 1.06,
+    "west valley city": 1.04,
+    "eagle mountain": 1.03,
+    "saratoga springs": 1.04,
+    "orem": 1.03,
+    "provo": 1.03,
+    "american fork": 1.03,
+    "utah county": 1.03,
 }
 DEFAULT_UTILITY_COST_FACTOR = 0.55
 DEFAULT_GRADING_COST_FACTOR = 0.10

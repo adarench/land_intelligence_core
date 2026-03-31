@@ -1,0 +1,71 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "c289d6ed-3865-4f64-9917-2ab333ef81fb",
+  "status": "near_feasible",
+  "parcel_id": "ut-utah-3392",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-utah-3392",
+    "jurisdiction": "Provo",
+    "district": "RC",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [],
+    "setbacks": {
+      "front": null,
+      "side": null,
+      "rear": null
+    },
+    "min_lot_size_sqft": null,
+    "max_units_per_acre": null,
+    "height_limit_ft": null,
+    "lot_coverage_max": null,
+    "min_frontage_ft": null,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+      "observed_at": "2026-03-26T23:23:24.908172Z"
+    }
+  },
+  "layout_result": null,
+  "feasibility_result": null,
+  "near_feasible_result": {
+    "schema_name": "NearFeasibleResult",
+    "schema_version": "1.0.0",
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "limiting_constraints": {
+      "district": "RC",
+      "jurisdiction": "Provo",
+      "bypass_reason": "historical_constraint",
+      "status": "non_buildable"
+    },
+    "required_relaxation": {
+      "zoning_resolution": {
+        "required": true,
+        "reason": "historical_constraint"
+      }
+    },
+    "best_attempt_summary": {
+      "status": "non_buildable",
+      "bypass_reason": "historical_constraint"
+    },
+    "attempted_strategies": [],
+    "attempted_repairs": []
+  },
+  "timestamp": "2026-03-26T23:23:24.908270Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "3a97113ccf9a9c31eea68d49238b9ce93474fede62fcfef2b38380cb7835bc84",
+  "stage_runtimes": {
+    "parcel.load": 0.002417,
+    "zoning.lookup": 0.022131
+  },
+  "zoning_bypassed": true,
+  "bypass_reason": "historical_constraint"
+}

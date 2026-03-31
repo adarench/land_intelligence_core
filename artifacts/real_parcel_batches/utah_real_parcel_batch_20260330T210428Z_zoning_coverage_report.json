@@ -1,0 +1,47 @@
+{
+  "batch_timestamp": "20260330T210428Z",
+  "artifact": "artifacts/real_parcel_batches/utah_real_parcel_batch_20260330T210428Z.json",
+  "parcel_count": 60,
+  "persisted_runs": 24,
+  "real_lookup_actionable_runs": 24,
+  "legal_valid_parcels": 24,
+  "legal_valid_pct": 40.0,
+  "jurisdictions": {
+    "Draper": {
+      "parcel_count": 15,
+      "actionable_count": 13,
+      "decision_grade_count": 13,
+      "decision_grade_pct": 86.7,
+      "actionable_pct": 86.7,
+      "real_lookup_actionable_pct": 100.0,
+      "invalid_zoning_source_count": 2
+    },
+    "Provo": {
+      "parcel_count": 15,
+      "actionable_count": 1,
+      "decision_grade_count": 1,
+      "decision_grade_pct": 6.7,
+      "actionable_pct": 6.7,
+      "real_lookup_actionable_pct": 100.0,
+      "invalid_zoning_source_count": 14
+    },
+    "Salt Lake City": {
+      "parcel_count": 15,
+      "actionable_count": 0,
+      "decision_grade_count": 0,
+      "decision_grade_pct": 0.0,
+      "actionable_pct": 0.0,
+      "real_lookup_actionable_pct": 0.0,
+      "invalid_zoning_source_count": 15
+    },
+    "West Valley City": {
+      "parcel_count": 15,
+      "actionable_count": 10,
+      "decision_grade_count": 10,
+      "decision_grade_pct": 66.7,
+      "actionable_pct": 66.7,
+      "real_lookup_actionable_pct": 100.0,
+      "invalid_zoning_source_count": 5
+    }
+  }
+}

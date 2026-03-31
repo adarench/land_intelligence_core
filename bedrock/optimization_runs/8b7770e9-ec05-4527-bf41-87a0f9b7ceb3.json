@@ -1,0 +1,98 @@
+{
+  "schema_name": "OptimizationRun",
+  "schema_version": "1.0.0",
+  "optimization_run_id": "8b7770e9-ec05-4527-bf41-87a0f9b7ceb3",
+  "parcel_id": "ut-utah-3058",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-utah-3058",
+    "jurisdiction": "Provo",
+    "district": "RC",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [],
+    "setbacks": {
+      "front": null,
+      "side": null,
+      "rear": null
+    },
+    "min_lot_size_sqft": null,
+    "max_units_per_acre": null,
+    "height_limit_ft": null,
+    "lot_coverage_max": null,
+    "min_frontage_ft": null,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+      "source_type": "real_lookup",
+      "rule_completeness": 0.0,
+      "legal_reliability": false,
+      "observed_at": "2026-03-31T20:57:22.801660Z"
+    }
+  },
+  "layout_candidates": [],
+  "best_candidate": null,
+  "ranking_metrics": {
+    "candidate_count": 0
+  },
+  "objective": {
+    "roi_weight": 0.45,
+    "profit_weight": 0.25,
+    "risk_weight": 0.2,
+    "confidence_weight": 0.1,
+    "min_roi": null,
+    "max_risk": null,
+    "improvement_epsilon": 0.01,
+    "target_score": 0.5
+  },
+  "scenario_evaluation": null,
+  "iterations": [],
+  "convergence_metrics": {
+    "iteration_count": 0,
+    "plateau_reached": false,
+    "stopped_reason": "zoning_degraded",
+    "improvement_curve": [],
+    "candidate_score_distribution": {
+      "count": 0,
+      "min_score": null,
+      "p25_score": null,
+      "median_score": null,
+      "p75_score": null,
+      "max_score": null
+    }
+  },
+  "sensitivity_analysis": [],
+  "economic_scenarios": [],
+  "decision": {
+    "recommendation": "abandon",
+    "action": "abandon",
+    "best_layout_id": null,
+    "expected_roi_base": null,
+    "expected_roi_best_case": null,
+    "expected_roi_worst_case": null,
+    "sensitivity": [
+      "zoning_data_insufficient"
+    ],
+    "key_risks": [
+      "zoning_data_insufficient"
+    ],
+    "breakpoints": [],
+    "target_price": null,
+    "reason": "Zoning data insufficient for optimization (historical_constraint). Basic pipeline ran instead.",
+    "alternative": null,
+    "rationale": "No optimization was attempted because zoning data does not meet decision-grade requirements. The basic pipeline produced a near-feasible or fallback result."
+  },
+  "selected_pipeline_run_id": "5ddbe59b-a72e-4e90-a05e-c6b1c6ced367",
+  "timestamp": "2026-03-31T20:57:22.832247+00:00",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "9835136d354ddd4f9395ba7c571aa3a7d024277c9b199e2a5f71aa510c18c841",
+  "stage_runtimes": {
+    "parcel.load": 0.000532,
+    "zoning.lookup": 1.303639
+  }
+}

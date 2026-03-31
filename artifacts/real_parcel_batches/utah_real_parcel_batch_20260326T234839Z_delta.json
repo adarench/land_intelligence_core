@@ -1,0 +1,63 @@
+{
+  "baseline_metrics_file": "artifacts/real_parcel_batches/utah_real_parcel_batch_20260326T232411Z_metrics.json",
+  "current_metrics_file": "artifacts/real_parcel_batches/utah_real_parcel_batch_20260326T234839Z_metrics.json",
+  "delta": {
+    "overall_success_rate": 0.0,
+    "overall_actionable_rate": 0.0,
+    "profitable_share": 0.26666666666666666,
+    "near_feasible_profitable_share": 0.8421052631578947,
+    "roi_distribution": {
+      "count": 41,
+      "min": -0.3249604481365004,
+      "max": 2.2457347474720217,
+      "avg": 0.020812560942758202
+    },
+    "top_5_highest_value_parcels": [
+      {
+        "parcel_id": "ut-utah-14547",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": 7287188.529060153,
+        "upside_projected_profit": null,
+        "ROI": 2.2457347474720217,
+        "upside_ROI": null
+      },
+      {
+        "parcel_id": "ut-utah-13727",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": 7270571.786565289,
+        "upside_projected_profit": null,
+        "ROI": 0.6286904907257644,
+        "upside_ROI": null
+      },
+      {
+        "parcel_id": "ut-utah-84832",
+        "jurisdiction": "Draper",
+        "status": "near_feasible",
+        "projected_profit": null,
+        "upside_projected_profit": 3982842.215666062,
+        "ROI": null,
+        "upside_ROI": 0.5442321722457758
+      },
+      {
+        "parcel_id": "ut-utah-14935",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": 2761722.6595249586,
+        "upside_projected_profit": null,
+        "ROI": 0.4581462428876262,
+        "upside_ROI": null
+      },
+      {
+        "parcel_id": "ut-utah-85511",
+        "jurisdiction": "Draper",
+        "status": "near_feasible",
+        "projected_profit": null,
+        "upside_projected_profit": 2395372.859907438,
+        "ROI": null,
+        "upside_ROI": 0.6168828528585402
+      }
+    ]
+  }
+}

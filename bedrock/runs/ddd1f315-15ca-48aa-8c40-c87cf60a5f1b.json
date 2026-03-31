@@ -1,0 +1,189 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "ddd1f315-15ca-48aa-8c40-c87cf60a5f1b",
+  "status": "near_feasible",
+  "parcel_id": "ut-utah-14482",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-utah-14482",
+    "jurisdiction": "Draper",
+    "district": "RR-22",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "RR-22:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 22000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:13:01.317584Z"
+        }
+      },
+      {
+        "id": "RR-22:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 1.98,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:13:01.317584Z"
+        }
+      },
+      {
+        "id": "RR-22:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:13:01.317584Z"
+        }
+      },
+      {
+        "id": "RR-22:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.32,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:13:01.317584Z"
+        }
+      },
+      {
+        "id": "RR-22:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:13:01.317584Z"
+        }
+      },
+      {
+        "id": "RR-22:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 30.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:13:01.317584Z"
+        }
+      },
+      {
+        "id": "RR-22:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 12.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:13:01.317584Z"
+        }
+      },
+      {
+        "id": "RR-22:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-26T23:13:01.317584Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 30.0,
+      "side": 12.0,
+      "rear": 25.0
+    },
+    "min_lot_size_sqft": 22000.0,
+    "max_units_per_acre": 1.98,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.32,
+    "min_frontage_ft": 35.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+      "observed_at": "2026-03-26T23:13:01.317584Z"
+    }
+  },
+  "layout_result": null,
+  "feasibility_result": null,
+  "near_feasible_result": {
+    "schema_name": "NearFeasibleResult",
+    "schema_version": "1.0.0",
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "limiting_constraints": {
+      "parcel_area_sqft": 97773.16,
+      "min_lot_area_sqft": 22000.0,
+      "max_units": 4,
+      "district": "RR-22"
+    },
+    "required_relaxation": {
+      "min_lot_area_sqft": {
+        "current": 22000.0,
+        "needed": 24443.29,
+        "reduction_sqft": 0.0
+      }
+    },
+    "attempted_strategies": [
+      "default",
+      "expanded_topologies",
+      "loop_focus",
+      "rural_low_density"
+    ],
+    "attempted_repairs": []
+  },
+  "timestamp": "2026-03-26T23:13:03.103152Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "6f815ef237b427529c8437c76745614707c3ac21ef69844cb46cfa8181806989",
+  "stage_runtimes": {
+    "parcel.load": 0.001858,
+    "zoning.lookup": 0.013949,
+    "layout.search": 1.784755
+  },
+  "zoning_bypassed": false,
+  "bypass_reason": null
+}

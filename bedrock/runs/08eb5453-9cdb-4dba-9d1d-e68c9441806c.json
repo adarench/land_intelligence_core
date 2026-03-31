@@ -1,0 +1,405 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "08eb5453-9cdb-4dba-9d1d-e68c9441806c",
+  "status": "completed",
+  "parcel_id": "ut-salt-lake-72087",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-72087",
+    "jurisdiction": "West Valley City",
+    "district": "R-1-7000",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "R-1-7000:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 7000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:48:36.263378Z"
+        }
+      },
+      {
+        "id": "R-1-7000:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 6.22,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:48:36.263378Z"
+        }
+      },
+      {
+        "id": "R-1-7000:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:48:36.263378Z"
+        }
+      },
+      {
+        "id": "R-1-7000:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.45,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:48:36.263378Z"
+        }
+      },
+      {
+        "id": "R-1-7000:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 50.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:48:36.263378Z"
+        }
+      },
+      {
+        "id": "R-1-7000:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:48:36.263378Z"
+        }
+      },
+      {
+        "id": "R-1-7000:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:48:36.263378Z"
+        }
+      },
+      {
+        "id": "R-1-7000:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:48:36.263378Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 8.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 7000.0,
+    "max_units_per_acre": 6.22,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.45,
+    "min_frontage_ft": 50.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "jurisdiction_fallback",
+      "observed_at": "2026-03-26T23:48:36.263378Z"
+    }
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-ut-salt-lake-72087-fdeee6e53de2",
+    "parcel_id": "ut-salt-lake-72087",
+    "unit_count": 2,
+    "road_length_ft": 264.1,
+    "lot_geometries": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.939836,
+              40.686112
+            ],
+            [
+              -111.939836,
+              40.686356
+            ],
+            [
+              -111.939535,
+              40.686357
+            ],
+            [
+              -111.939535,
+              40.686112
+            ],
+            [
+              -111.939836,
+              40.686112
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.939535,
+              40.686112
+            ],
+            [
+              -111.939535,
+              40.686357
+            ],
+            [
+              -111.939234,
+              40.686357
+            ],
+            [
+              -111.939234,
+              40.686112
+            ],
+            [
+              -111.939234,
+              40.686112
+            ],
+            [
+              -111.939535,
+              40.686112
+            ]
+          ]
+        ]
+      }
+    ],
+    "road_geometries": [
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.939836,
+            40.686068
+          ],
+          [
+            -111.939234,
+            40.686068
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.939535,
+            40.685799
+          ],
+          [
+            -111.939535,
+            40.685889
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.939535,
+            40.685889
+          ],
+          [
+            -111.939535,
+            40.686068
+          ]
+        ]
+      }
+    ],
+    "open_space_area_sqft": 49981.58999985266,
+    "utility_length_ft": 0.0,
+    "score": null,
+    "buildable_area_sqft": null,
+    "metadata": {
+      "source_engine": "bedrock.layout_service",
+      "source_run_id": null,
+      "observed_at": "2026-03-26T23:48:36.583570Z"
+    }
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "d5ce0442-2f75-560a-bf03-409da3362b29",
+    "layout_id": "layout-ut-salt-lake-72087-fdeee6e53de2",
+    "parcel_id": "ut-salt-lake-72087",
+    "units": 2,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "estimated_home_size_sqft": 3200.0,
+    "construction_cost_per_sqft": 131.1284,
+    "construction_cost_per_home": 671377.408,
+    "development_cost_total": 115563.03762677687,
+    "projected_revenue": 1341120.0,
+    "projected_cost": 1596812.295735868,
+    "projected_profit": -255692.29573586793,
+    "ROI": -0.1601267077030089,
+    "ROI_base": -0.1601267077030089,
+    "ROI_best_case": -0.003320526870557797,
+    "ROI_worst_case": -0.2965288793040092,
+    "break_even_price": 798406.147867934,
+    "profit_margin": -0.1906557919767567,
+    "revenue_per_unit": 670560.0,
+    "cost_per_unit": 798406.147867934,
+    "rank": null,
+    "risk_score": 0.7340098795840826,
+    "requested_units": null,
+    "constraint_violations": [
+      "projected_profit_negative"
+    ],
+    "confidence": 0.78,
+    "confidence_score": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ],
+    "status": "constrained",
+    "financial_summary": {
+      "units": 2,
+      "estimated_home_price": 670560.0,
+      "construction_cost_per_home": 671377.408,
+      "road_cost_per_ft": 302.604,
+      "road_length": 264.1,
+      "land_cost": 138494.4421090909,
+      "projected_revenue": 1341120.0,
+      "development_cost_total": 115563.03762677687,
+      "projected_cost": 1596812.295735868,
+      "projected_profit": -255692.29573586793,
+      "ROI": -0.1601267077030089,
+      "price_per_sqft": 209.55,
+      "estimated_home_size_sqft": 3200.0,
+      "construction_cost_per_sqft": 131.1284,
+      "ROI_base": -0.1601267077030089,
+      "ROI_best_case": -0.003320526870557797,
+      "ROI_worst_case": -0.2965288793040092,
+      "break_even_price": 798406.147867934,
+      "confidence_score": 0.78,
+      "key_risk_factors": [
+        "above_national_cost_region",
+        "negative_or_unknown_base_roi"
+      ],
+      "market_context": {
+        "jurisdiction": "West Valley City",
+        "county_name": "Salt Lake County, Utah",
+        "median_home_value": 419100.0,
+        "rpp_all_items": 100.868,
+        "reference_home_size_sqft": 2000.0,
+        "baseline_cost_per_sqft": 130.0,
+        "baseline_road_cost_per_ft": 300.0,
+        "land_value_share_of_home_value": 0.18,
+        "price_reference_date": "2024-01-01",
+        "msa_name": "Salt Lake City MSA",
+        "sources": {
+          "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+          "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+          "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+          "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+        },
+        "used_county_fallback": false,
+        "estimated_home_size_sqft": 3200.0,
+        "price_per_sqft": 209.55,
+        "construction_cost_per_sqft": 131.1284,
+        "road_cost_per_ft": 302.604,
+        "land_price_estimate": 138494.4421090909,
+        "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+        "cost_proxy": "bea_rpp_scaled_baseline_costs"
+      },
+      "development_cost_breakdown": {
+        "roads": 79917.7164,
+        "utilities": 0.0,
+        "grading": 7991.771640000001,
+        "sitework": 20653.54958677686,
+        "permitting": 7000.0
+      },
+      "profit_margin": -0.1906557919767567,
+      "revenue_per_unit": 670560.0,
+      "cost_per_unit": 798406.147867934
+    },
+    "explanation": {
+      "primary_driver": "home_price",
+      "cost_breakdown": {
+        "construction": 1342754.816,
+        "development": 115563.03762677687
+      },
+      "revenue_breakdown": {
+        "units": 2,
+        "price_per_home": 670560.0
+      }
+    },
+    "assumptions": {
+      "used_default_estimated_home_price": false,
+      "used_default_construction_cost_per_home": false,
+      "used_default_road_cost_per_ft": false,
+      "used_default_land_price": false,
+      "used_default_soft_cost_factor": false,
+      "market_sources": {
+        "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+        "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+        "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+        "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+      }
+    },
+    "metadata": null
+  },
+  "near_feasible_result": null,
+  "timestamp": "2026-03-26T23:48:36.583890Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "b2384b48e19af0e11fbde4c30177c6cee82b1b674a0c2520af2c57e4a32b250e",
+  "stage_runtimes": {
+    "parcel.load": 0.001423,
+    "zoning.lookup": 0.020719,
+    "layout.search": 0.319919,
+    "feasibility.evaluate": 0.000268
+  },
+  "zoning_bypassed": false,
+  "bypass_reason": null
+}

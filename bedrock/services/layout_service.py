@@ -16,6 +16,7 @@ from shapely.geometry import LineString, MultiLineString, Polygon, shape
 from shapely.geometry.base import BaseGeometry
 
 from bedrock.contracts.base import EngineMetadata, Geometry
+from bedrock.contracts.layout_candidate_batch import LayoutCandidateBatch, LayoutSearchPlan
 from bedrock.contracts.layout import SubdivisionLayout
 from bedrock.contracts.layout_result import LayoutResult
 from bedrock.contracts.parcel import Parcel
@@ -34,20 +35,23 @@ if GIS_LAYOUT_ENGINE_PACKAGE not in sys.modules:
 
 run_layout_search = importlib.import_module(f"{GIS_LAYOUT_ENGINE_PACKAGE}.layout_search").run_layout_search
 
-PRODUCTION_STRATEGIES = ("grid", "spine-road", "cul-de-sac")
+PRODUCTION_STRATEGIES = ("grid", "spine-road", "cul-de-sac", "herringbone", "t_junction", "loop_custom")
 DEFAULT_RUNTIME_BUDGET_SECONDS = 55.0
 MIN_FEASIBLE_LOT_DEPTH_FT = 40.0
 CANONICAL_PRECISION = 6
 MAX_CANDIDATE_CAP = 48
 MAX_REPAIR_AREA_CHANGE_RATIO = 0.01
 MIN_REPAIR_DISTANCE = 1e-6
+SIMPLIFICATION_TOLERANCE_RATIO = 0.0005
+MAX_SIMPLIFICATION_AREA_CHANGE_RATIO = 0.005
 
 
 class LayoutSearchError(RuntimeError):
-    def __init__(self, code: str, message: str):
+    def __init__(self, code: str, message: str, details: dict | None = None):
         super().__init__(message)
         self.code = code
         self.message = message
+        self.details = dict(details or {})
 
 
 class LayoutConstraintViolationError(RuntimeError):
@@ -79,6 +83,50 @@ class SearchHeuristics:
     frontage_hint_ft: float
     strategies: tuple[str, ...]
     runtime_budget_seconds: float
+
+
+@dataclass(frozen=True)
+class SearchAttemptProfile:
+    label: str
+    strategies: tuple[str, ...]
+    max_candidates: int
+    lot_depth_factor: float = 1.0
+    frontage_hint_factor: float = 1.0
+    road_width_factor: float = 1.0
+    runtime_budget_factor: float = 1.0
+
+
+def _record_partial_candidate(
+    debug_metrics: dict[str, object],
+    candidate,
+    *,
+    violation: str,
+    strategy: str,
+    profile_label: str | None = None,
+) -> None:
+    result = getattr(candidate, "result", None)
+    metrics = getattr(result, "metrics", {}) if result is not None else {}
+    summary = {
+        "score": round(float(getattr(candidate, "score", 0.0) or 0.0), CANONICAL_PRECISION),
+        "violation": violation,
+        "strategy": strategy,
+        "profile": profile_label,
+        "lot_count": int(metrics.get("lot_count", 0) or 0),
+        "avg_frontage_ft": round(float(metrics.get("avg_frontage_ft", 0.0) or 0.0), CANONICAL_PRECISION),
+        "avg_depth_ft": round(float(metrics.get("avg_depth_ft", 0.0) or 0.0), CANONICAL_PRECISION),
+        "total_road_ft": round(float(metrics.get("total_road_ft", 0.0) or 0.0), CANONICAL_PRECISION),
+        "compliance_rate": round(float(metrics.get("compliance_rate", 0.0) or 0.0), CANONICAL_PRECISION),
+    }
+    partials = list(debug_metrics.get("partial_candidates", []))
+    partials.append(summary)
+    partials.sort(
+        key=lambda item: (
+            -float(item.get("score", 0.0) or 0.0),
+            -int(item.get("lot_count", 0) or 0),
+            float(item.get("total_road_ft", 0.0) or 0.0),
+        )
+    )
+    debug_metrics["partial_candidates"] = partials[:5]
 
 
 def _geometry_to_local_feet(geometry: Geometry) -> tuple[Polygon, dict[str, float]]:
@@ -288,6 +336,55 @@ def _repair_geometry_with_limits(geometry: BaseGeometry) -> tuple[BaseGeometry |
     return repaired, "buffer0"
 
 
+def _simplify_geometry_with_limits(geometry: BaseGeometry) -> tuple[BaseGeometry | None, str | None]:
+    if geometry.is_empty:
+        return None, None
+    diagonal = math.hypot(geometry.bounds[2] - geometry.bounds[0], geometry.bounds[3] - geometry.bounds[1])
+    tolerance = max(MIN_REPAIR_DISTANCE, diagonal * SIMPLIFICATION_TOLERANCE_RATIO)
+    try:
+        simplified = geometry.simplify(tolerance, preserve_topology=True)
+    except Exception:
+        return None, None
+    if simplified.is_empty or not simplified.is_valid:
+        return None, None
+    original_area = max(float(getattr(geometry, "area", 0.0) or 0.0), 0.0)
+    simplified_area = max(float(getattr(simplified, "area", 0.0) or 0.0), 0.0)
+    if original_area > 0.0:
+        area_change_ratio = abs(simplified_area - original_area) / original_area
+        if area_change_ratio > MAX_SIMPLIFICATION_AREA_CHANGE_RATIO:
+            return None, None
+    return simplified, "simplify"
+
+
+def _preprocess_parcel_polygon(parcel_polygon: Polygon, debug_metrics: dict | None = None) -> Polygon:
+    processed: BaseGeometry = parcel_polygon
+    if not processed.is_valid:
+        repaired, repair_type = _repair_geometry_with_limits(processed)
+        if repaired is None:
+            raise LayoutSearchError(
+                "invalid_geometry",
+                "Parcel geometry could not be repaired for layout search",
+                details={"reason_category": "GEOMETRY_INVALID"},
+            )
+        processed = repaired
+        if debug_metrics is not None and repair_type is not None:
+            debug_metrics["parcel_preprocessing"] = list(debug_metrics.get("parcel_preprocessing", [])) + [repair_type]
+    simplified, simplify_type = _simplify_geometry_with_limits(processed)
+    if simplified is not None:
+        processed = simplified
+        if debug_metrics is not None and simplify_type is not None:
+            debug_metrics["parcel_preprocessing"] = list(debug_metrics.get("parcel_preprocessing", [])) + [simplify_type]
+    if processed.geom_type == "MultiPolygon":
+        processed = max(processed.geoms, key=lambda item: item.area)
+    if processed.geom_type != "Polygon" or processed.is_empty or not processed.is_valid:
+        raise LayoutSearchError(
+            "invalid_geometry",
+            "Parcel geometry is not solver-compatible after preprocessing",
+            details={"reason_category": "GEOMETRY_INVALID"},
+        )
+    return processed
+
+
 def _normalize_output_geometry(geometry: Geometry, debug_metrics: dict | None = None) -> Geometry | None:
     try:
         geom = shape(geometry)
@@ -362,6 +459,91 @@ def _max_units(parcel_area_sqft: float, zoning: ZoningRules, min_lot_size_sqft: 
     return min(by_density, by_lot_size)
 
 
+def _approx_max_frontage_ft(parcel_polygon: Polygon) -> float:
+    lengths = []
+    coords = list(parcel_polygon.exterior.coords)
+    for index in range(len(coords) - 1):
+        x1, y1 = coords[index]
+        x2, y2 = coords[index + 1]
+        lengths.append(math.hypot(x2 - x1, y2 - y1))
+    minx, miny, maxx, maxy = parcel_polygon.bounds
+    lengths.extend([maxx - minx, maxy - miny])
+    return max(lengths or [0.0])
+
+
+def _classified_layout_failure(
+    *,
+    parcel: Parcel,
+    parcel_polygon: Polygon,
+    constraints: SolverConstraints,
+    debug_metrics: dict[str, object],
+) -> LayoutSearchError:
+    parcel_area_sqft = float(parcel.area or parcel_polygon.area)
+    frontage_requirement = max(
+        float(constraints.min_frontage_ft or 0.0),
+        float(constraints.required_buildable_width_ft + (2.0 * constraints.side_setback_ft)),
+    )
+    approx_frontage_ft = _approx_max_frontage_ft(parcel_polygon)
+    rejected_invalid = int(debug_metrics.get("candidates_rejected_invalid_geometry", 0))
+    rejected_connectivity = int(debug_metrics.get("candidates_rejected_connectivity", 0))
+    generated = int(debug_metrics.get("total_candidates_generated", 0))
+
+    details = {
+        "parcel_id": parcel.parcel_id,
+        "parcel_area_sqft": round(parcel_area_sqft, CANONICAL_PRECISION),
+        "min_lot_area_sqft": round(float(constraints.min_lot_area_sqft), CANONICAL_PRECISION),
+        "max_units": int(constraints.max_units),
+        "required_frontage_ft": round(frontage_requirement, CANONICAL_PRECISION),
+        "approx_frontage_ft": round(approx_frontage_ft, CANONICAL_PRECISION),
+        "candidates_generated": generated,
+        "candidates_rejected_invalid_geometry": rejected_invalid,
+        "candidates_rejected_connectivity": rejected_connectivity,
+        "best_attempt_summary": dict((list(debug_metrics.get("partial_candidates", [])) or [{}])[0]) if debug_metrics.get("partial_candidates") else {},
+    }
+
+    if not parcel_polygon.is_valid:
+        return LayoutSearchError(
+            "invalid_geometry",
+            f"Parcel geometry is invalid for layout search: {parcel.parcel_id}",
+            details={"reason_category": "GEOMETRY_INVALID", **details},
+        )
+    if parcel_area_sqft + 1e-6 < float(constraints.min_lot_area_sqft):
+        return LayoutSearchError(
+            "too_small",
+            f"Parcel is smaller than the minimum lot size requirement: {parcel.parcel_id}",
+            details={"reason_category": "TOO_SMALL", **details},
+        )
+    if constraints.max_units <= 0:
+        return LayoutSearchError(
+            "zoning_constraint_fail",
+            f"Zoning constraints allow zero buildable units for parcel {parcel.parcel_id}",
+            details={"reason_category": "ZONING_CONSTRAINT_FAIL", **details},
+        )
+    if approx_frontage_ft + 1e-6 < frontage_requirement:
+        return LayoutSearchError(
+            "frontage_fail",
+            f"Parcel frontage cannot satisfy the required frontage envelope: {parcel.parcel_id}",
+            details={"reason_category": "FRONTAGE_FAIL", **details},
+        )
+    if rejected_invalid >= max(generated, 1):
+        return LayoutSearchError(
+            "invalid_geometry",
+            f"Generated candidates failed geometry validation for parcel {parcel.parcel_id}",
+            details={"reason_category": "GEOMETRY_INVALID", **details},
+        )
+    if generated > 0:
+        return LayoutSearchError(
+            "zoning_constraint_fail",
+            f"Generated candidates could not satisfy layout constraints for parcel {parcel.parcel_id}",
+            details={"reason_category": "ZONING_CONSTRAINT_FAIL", **details},
+        )
+    return LayoutSearchError(
+        "solver_fail",
+        f"Layout solver produced no viable candidates for parcel {parcel.parcel_id}",
+        details={"reason_category": "SOLVER_FAIL", **details},
+    )
+
+
 def _build_layout_parameters(
     parcel: Parcel,
     zoning: ZoningRules,
@@ -379,25 +561,20 @@ def _build_layout_parameters(
     front = _setback_value(zoning, "front")
     side = _setback_value(zoning, "side")
     rear = _setback_value(zoning, "rear")
-    derived_lot_depth_ft = max(MIN_FEASIBLE_LOT_DEPTH_FT, 110.0 - front - rear)
-    target_lot_depth_ft = explicit_block_depth_ft if explicit_block_depth_ft is not None else derived_lot_depth_ft
-    required_buildable_width_ft = min_lot_size_sqft / max(target_lot_depth_ft, 1.0)
-    derived_frontage_ft = _derive_min_frontage(min_lot_size_sqft, target_lot_depth_ft, side)
-    frontage_hint_ft = (
-        explicit_frontage_target_ft
-        if explicit_frontage_target_ft is not None
-        else (
-            float(zoning.min_frontage_ft)
-            if zoning.min_frontage_ft is not None
-            else derived_frontage_ft
-        )
-    )
+    base_lot_depth_ft = max(MIN_FEASIBLE_LOT_DEPTH_FT, 110.0 - front - rear)
+    derived_frontage_ft = _derive_min_frontage(min_lot_size_sqft, base_lot_depth_ft, side)
     road_width_ft = float(zoning.road_right_of_way_ft) if zoning.road_right_of_way_ft is not None else 32.0
     max_units = _max_units(parcel_area_sqft, zoning, min_lot_size_sqft)
     if max_units <= 0:
         raise LayoutSearchError(
-            "no_buildable_units",
+            "zoning_constraint_fail",
             f"Density/min-lot constraints allow zero units for parcel {parcel.parcel_id}",
+            details={
+                "reason_category": "ZONING_CONSTRAINT_FAIL",
+                "parcel_area_sqft": round(parcel_area_sqft, CANONICAL_PRECISION),
+                "min_lot_area_sqft": round(min_lot_size_sqft, CANONICAL_PRECISION),
+                "max_units": 0,
+            },
         )
     derived_min_frontage = bool(additional_constraints.get("derived_min_frontage_ft", False))
     configured_min_frontage = float(zoning.min_frontage_ft) if zoning.min_frontage_ft is not None else None
@@ -416,6 +593,16 @@ def _build_layout_parameters(
             if configured_min_frontage is not None
             else explicit_frontage_target_ft
         )
+    frontage_hint_ft = configured_min_frontage if configured_min_frontage is not None else derived_frontage_ft
+    if frontage_hint_ft <= 0.0:
+        frontage_hint_ft = derived_frontage_ft
+    area_compatible_depth_ft = min_lot_size_sqft / max(frontage_hint_ft, 1.0)
+    target_lot_depth_ft = (
+        explicit_block_depth_ft
+        if explicit_block_depth_ft is not None
+        else max(base_lot_depth_ft, area_compatible_depth_ft)
+    )
+    required_buildable_width_ft = max((min_lot_size_sqft / max(target_lot_depth_ft, 1.0)) - (2.0 * side), 0.0)
     max_frontage_from_agent = additional_constraints.get("frontage_max_ft")
     max_frontage_ft = float(max_frontage_from_agent) if isinstance(max_frontage_from_agent, (int, float)) else None
     road_access_required = bool(additional_constraints.get("road_access_required", False))
@@ -743,7 +930,15 @@ def _candidate_rank_key(candidate, constraints: SolverConstraints, parcel_polygo
     )
 
 
-def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int = 50, debug_metrics: dict | None = None):
+def generate_candidates(
+    parcel: Parcel,
+    zoning: ZoningRules,
+    max_candidates: int = 50,
+    debug_metrics: dict | None = None,
+    *,
+    strategies: tuple[str, ...] | None = None,
+    search_overrides: dict[str, float] | None = None,
+):
     if max_candidates < 1:
         raise ValueError("max_candidates must be >= 1")
     max_candidates = min(int(max_candidates), MAX_CANDIDATE_CAP)
@@ -754,6 +949,8 @@ def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int
     debug_metrics.setdefault("candidates_surviving", 0)
     debug_metrics.setdefault("final_selected_layout_index", None)
     debug_metrics.setdefault("repair_events", [])
+    debug_metrics.setdefault("parcel_preprocessing", [])
+    debug_metrics.setdefault("partial_candidates", [])
     translation = translate_zoning_for_layout(parcel, zoning)
     if translation.usability_class == "non_usable" or translation.zoning is None:
         raise LayoutSearchError(
@@ -773,6 +970,7 @@ def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int
     zoning = translation.zoning
     started = time.perf_counter()
     parcel_polygon_local, projection = _geometry_to_local_feet(parcel.geometry)
+    parcel_polygon_local = _preprocess_parcel_polygon(parcel_polygon_local, debug_metrics)
     parcel_area_sqft = float(parcel.area or parcel_polygon_local.area)
     solver_constraints, search_heuristics = _build_layout_parameters(
         parcel,
@@ -780,13 +978,46 @@ def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int
         parcel_area_sqft,
         additional_constraints=translation.additional_constraints,
     )
+    search_overrides = dict(search_overrides or {})
+    density_factor = min(1.0, max(0.25, float(search_overrides.get("density_factor", 1.0))))
+    density_capped_units = max(1, math.floor(solver_constraints.max_units * density_factor))
+    solver_constraints = SolverConstraints(
+        zoning_rules=solver_constraints.zoning_rules,
+        min_lot_area_sqft=solver_constraints.min_lot_area_sqft,
+        max_units=min(solver_constraints.max_units, density_capped_units),
+        min_frontage_ft=solver_constraints.min_frontage_ft,
+        max_frontage_ft=solver_constraints.max_frontage_ft,
+        required_buildable_width_ft=solver_constraints.required_buildable_width_ft,
+        side_setback_ft=solver_constraints.side_setback_ft,
+        max_buildable_depth_ft=solver_constraints.max_buildable_depth_ft,
+        setbacks=solver_constraints.setbacks,
+        road_right_of_way_ft=solver_constraints.road_right_of_way_ft,
+        road_access_required=solver_constraints.road_access_required,
+        max_block_length_ft=solver_constraints.max_block_length_ft,
+        easement_buffer_ft=solver_constraints.easement_buffer_ft,
+        additional_zoning_constraints=solver_constraints.additional_zoning_constraints,
+    )
+    strategy_tuple = tuple(strategies or PRODUCTION_STRATEGIES)
+    search_heuristics = SearchHeuristics(
+        road_width_ft=max(24.0, search_heuristics.road_width_ft * float(search_overrides.get("road_width_factor", 1.0))),
+        target_lot_depth_ft=max(
+            MIN_FEASIBLE_LOT_DEPTH_FT,
+            search_heuristics.target_lot_depth_ft * float(search_overrides.get("lot_depth_factor", 1.0)),
+        ),
+        frontage_hint_ft=max(35.0, search_heuristics.frontage_hint_ft * float(search_overrides.get("frontage_hint_factor", 1.0))),
+        strategies=tuple(strategy_tuple),
+        runtime_budget_seconds=max(
+            10.0,
+            search_heuristics.runtime_budget_seconds * float(search_overrides.get("runtime_budget_factor", 1.0)),
+        ),
+    )
 
-    strategy_count = len(PRODUCTION_STRATEGIES)
+    strategy_count = len(strategy_tuple)
     per_strategy_candidates = max(1, max_candidates // strategy_count)
     per_strategy_top = max(1, min(3, per_strategy_candidates))
 
     aggregated = []
-    for strategy in PRODUCTION_STRATEGIES:
+    for strategy in strategy_tuple:
         if (time.perf_counter() - started) > search_heuristics.runtime_budget_seconds:
             break
         strategy_candidates = []
@@ -831,6 +1062,13 @@ def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int
                 _validate_candidate_constraints(parcel.parcel_id, candidate, solver_constraints, parcel_polygon_local)
             except LayoutConstraintViolationError:
                 message = str(sys.exc_info()[1] or "")
+                _record_partial_candidate(
+                    debug_metrics,
+                    candidate,
+                    violation=message or "constraint_violation",
+                    strategy=strategy,
+                    profile_label=str(debug_metrics.get("attempt_profile") or ""),
+                )
                 if "disconnected road geometry" in message:
                     debug_metrics["candidates_rejected_connectivity"] = int(debug_metrics["candidates_rejected_connectivity"]) + 1
                 else:
@@ -847,8 +1085,9 @@ def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int
             raise LayoutSearchError(
                 "runtime_budget_exceeded",
                 f"Layout search exceeded runtime budget for parcel {parcel.parcel_id}",
+                details={"reason_category": "SOLVER_FAIL", "parcel_id": parcel.parcel_id},
             )
-        fallback_strategies = list(PRODUCTION_STRATEGIES)
+        fallback_strategies = list(strategy_tuple)
         fallback_candidates = _run_layout_search_safe(
             parcel_polygon=parcel_polygon_local,
             area_sqft=parcel_area_sqft,
@@ -874,6 +1113,13 @@ def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int
                 _validate_candidate_constraints(parcel.parcel_id, candidate, solver_constraints, parcel_polygon_local)
             except LayoutConstraintViolationError:
                 message = str(sys.exc_info()[1] or "")
+                _record_partial_candidate(
+                    debug_metrics,
+                    candidate,
+                    violation=message or "constraint_violation",
+                    strategy="fallback",
+                    profile_label=str(debug_metrics.get("attempt_profile") or ""),
+                )
                 if "disconnected road geometry" in message:
                     debug_metrics["candidates_rejected_connectivity"] = int(debug_metrics["candidates_rejected_connectivity"]) + 1
                 else:
@@ -886,7 +1132,12 @@ def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int
         )
 
     if not aggregated:
-        raise LayoutSearchError("no_viable_layout", f"No viable layouts generated for parcel {parcel.parcel_id}")
+        raise _classified_layout_failure(
+            parcel=parcel,
+            parcel_polygon=parcel_polygon_local,
+            constraints=solver_constraints,
+            debug_metrics=debug_metrics,
+        )
 
     aggregated.sort(key=lambda candidate: _candidate_rank_key(candidate, solver_constraints, parcel_polygon_local))
     selected = aggregated[: max(1, max_candidates)]
@@ -895,19 +1146,198 @@ def generate_candidates(parcel: Parcel, zoning: ZoningRules, max_candidates: int
     return selected
 
 
-def search_layout(parcel: Parcel, zoning: ZoningRules, max_candidates: int = 50) -> LayoutResult:
-    candidates = generate_candidates(parcel, zoning, max_candidates=max_candidates)
-    for candidate in candidates:
-        try:
-            return _normalize_candidate(parcel, candidate)
-        except LayoutConstraintViolationError:
-            continue
-    raise LayoutSearchError("no_viable_layout", f"No viable layouts generated for parcel {parcel.parcel_id}")
+def _retry_profiles(zoning: ZoningRules, max_candidates: int) -> tuple[SearchAttemptProfile, ...]:
+    low_density = bool(
+        (zoning.min_lot_size_sqft is not None and float(zoning.min_lot_size_sqft) >= 15000.0)
+        or (zoning.max_units_per_acre is not None and float(zoning.max_units_per_acre) <= 2.5)
+    )
+    return (
+        SearchAttemptProfile(
+            label="default",
+            strategies=PRODUCTION_STRATEGIES,
+            max_candidates=max_candidates,
+        ),
+        SearchAttemptProfile(
+            label="default_dense",
+            strategies=PRODUCTION_STRATEGIES,
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 8),
+            lot_depth_factor=0.92,
+            frontage_hint_factor=0.95,
+            road_width_factor=0.95,
+            runtime_budget_factor=1.05,
+        ),
+        SearchAttemptProfile(
+            label="expanded_topologies",
+            strategies=PRODUCTION_STRATEGIES + ("radial",),
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 12),
+            road_width_factor=0.95,
+            runtime_budget_factor=1.1,
+        ),
+        SearchAttemptProfile(
+            label="expanded_wide_spacing",
+            strategies=("loop_custom", "spine-road", "grid", "t_junction", "radial"),
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 16),
+            lot_depth_factor=1.1,
+            frontage_hint_factor=0.92,
+            road_width_factor=0.88,
+            runtime_budget_factor=1.15,
+        ),
+        SearchAttemptProfile(
+            label="loop_focus",
+            strategies=("loop_custom", "t_junction", "herringbone", "spine-road", "cul-de-sac"),
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 12),
+            lot_depth_factor=1.15 if low_density else 1.0,
+            road_width_factor=0.9,
+            runtime_budget_factor=1.15,
+        ),
+        SearchAttemptProfile(
+            label="loop_dense",
+            strategies=("loop_custom", "t_junction", "herringbone", "grid"),
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 18),
+            lot_depth_factor=0.9 if not low_density else 1.05,
+            frontage_hint_factor=0.9,
+            road_width_factor=0.85,
+            runtime_budget_factor=1.2,
+        ),
+        SearchAttemptProfile(
+            label="grid_compact",
+            strategies=("grid", "herringbone", "spine-road"),
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 10),
+            lot_depth_factor=0.85,
+            frontage_hint_factor=0.9,
+            road_width_factor=0.9,
+            runtime_budget_factor=1.0,
+        ),
+        SearchAttemptProfile(
+            label="grid_wide",
+            strategies=("grid", "loop_custom", "radial"),
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 14),
+            lot_depth_factor=1.18,
+            frontage_hint_factor=0.95,
+            road_width_factor=0.92,
+            runtime_budget_factor=1.1,
+        ),
+        SearchAttemptProfile(
+            label="culdesac_branching",
+            strategies=("cul-de-sac", "t_junction", "loop_custom"),
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 16),
+            lot_depth_factor=1.08,
+            frontage_hint_factor=0.94,
+            road_width_factor=0.9,
+            runtime_budget_factor=1.15,
+        ),
+        SearchAttemptProfile(
+            label="rural_low_density" if low_density else "compact_retry",
+            strategies=("loop_custom", "spine-road", "t_junction", "grid", "herringbone", "radial"),
+            max_candidates=min(MAX_CANDIDATE_CAP, max_candidates + 18),
+            lot_depth_factor=1.3 if low_density else 0.95,
+            frontage_hint_factor=1.0,
+            road_width_factor=0.9 if low_density else 1.0,
+            runtime_budget_factor=1.2,
+        ),
+        SearchAttemptProfile(
+            label="rural_extreme" if low_density else "compact_extreme",
+            strategies=("loop_custom", "spine-road", "radial", "t_junction", "grid"),
+            max_candidates=MAX_CANDIDATE_CAP,
+            lot_depth_factor=1.45 if low_density else 0.85,
+            frontage_hint_factor=0.88,
+            road_width_factor=0.82 if low_density else 0.9,
+            runtime_budget_factor=1.35,
+        ),
+    )
 
 
-def search_layout_debug(parcel: Parcel, zoning: ZoningRules, max_candidates: int = 50) -> tuple[LayoutResult, dict]:
-    debug_metrics: dict[str, object] = {}
-    candidates = generate_candidates(parcel, zoning, max_candidates=max_candidates, debug_metrics=debug_metrics)
+def _near_feasible_result(
+    parcel: Parcel,
+    zoning: ZoningRules,
+    error: LayoutSearchError,
+    attempted_profiles: list[str],
+    attempted_repairs: list[str],
+) -> dict | None:
+    details = dict(error.details or {})
+    reason_category = str(details.get("reason_category") or error.code).upper()
+    parcel_area_sqft = float(details.get("parcel_area_sqft") or parcel.area or 0.0)
+    min_lot_area_sqft = float(details.get("min_lot_area_sqft") or zoning.min_lot_size_sqft or 0.0)
+    approx_frontage_ft = float(details.get("approx_frontage_ft") or 0.0)
+    required_frontage_ft = float(details.get("required_frontage_ft") or zoning.min_frontage_ft or 0.0)
+    limiting_constraints: dict[str, object] = {}
+    required_relaxation: dict[str, object] = {}
+    best_attempt_summary = dict(details.get("best_attempt_summary") or {})
+
+    if reason_category == "ZONING_CONSTRAINT_FAIL":
+        max_units = int(details.get("max_units") or 0)
+        limiting_constraints = {
+            "parcel_area_sqft": round(parcel_area_sqft, CANONICAL_PRECISION),
+            "min_lot_area_sqft": round(min_lot_area_sqft, CANONICAL_PRECISION),
+            "max_units": max_units,
+            "district": zoning.district,
+        }
+        if parcel_area_sqft > 0.0 and min_lot_area_sqft > 0.0:
+            target_lot_area_sqft = parcel_area_sqft / max(max_units or 1, 1)
+            required_relaxation["min_lot_area_sqft"] = {
+                "current": round(min_lot_area_sqft, CANONICAL_PRECISION),
+                "needed": round(target_lot_area_sqft, CANONICAL_PRECISION),
+                "reduction_sqft": round(max(min_lot_area_sqft - target_lot_area_sqft, 0.0), CANONICAL_PRECISION),
+            }
+        if required_frontage_ft > 0.0 and approx_frontage_ft > 0.0 and approx_frontage_ft < required_frontage_ft:
+            required_relaxation["min_frontage_ft"] = {
+                "current": round(required_frontage_ft, CANONICAL_PRECISION),
+                "needed": round(approx_frontage_ft, CANONICAL_PRECISION),
+                "reduction_ft": round(required_frontage_ft - approx_frontage_ft, CANONICAL_PRECISION),
+            }
+    elif reason_category == "GEOMETRY_INVALID":
+        limiting_constraints = {
+            "parcel_id": parcel.parcel_id,
+            "geometry_validation": "failed_after_repair",
+        }
+        required_relaxation["geometry_recovery"] = {
+            "action": "manual_geometry_cleanup",
+            "attempted_repairs": list(attempted_repairs),
+        }
+    elif reason_category == "FRONTAGE_FAIL":
+        limiting_constraints = {
+            "approx_frontage_ft": round(approx_frontage_ft, CANONICAL_PRECISION),
+            "required_frontage_ft": round(required_frontage_ft, CANONICAL_PRECISION),
+        }
+        required_relaxation["min_frontage_ft"] = {
+            "current": round(required_frontage_ft, CANONICAL_PRECISION),
+            "needed": round(approx_frontage_ft, CANONICAL_PRECISION),
+            "reduction_ft": round(max(required_frontage_ft - approx_frontage_ft, 0.0), CANONICAL_PRECISION),
+        }
+    elif reason_category == "SOLVER_FAIL":
+        limiting_constraints = {
+            "parcel_area_sqft": round(parcel_area_sqft, CANONICAL_PRECISION),
+            "min_lot_area_sqft": round(min_lot_area_sqft, CANONICAL_PRECISION),
+            "required_frontage_ft": round(required_frontage_ft, CANONICAL_PRECISION),
+            "approx_frontage_ft": round(approx_frontage_ft, CANONICAL_PRECISION),
+            "max_units": int(details.get("max_units") or 0),
+            "district": zoning.district,
+            "candidates_generated": int(details.get("candidates_generated") or 0),
+        }
+        required_relaxation["search_budget"] = {
+            "attempted_profiles": list(attempted_profiles),
+            "candidate_budget_increase": 18,
+            "road_spacing_sweep_required": True,
+            "lot_depth_sweep_required": True,
+            "frontage_sweep_required": True,
+        }
+        if best_attempt_summary:
+            required_relaxation["best_partial_candidate"] = best_attempt_summary
+    else:
+        return None
+
+    return {
+        "status": "near_feasible",
+        "reason_category": reason_category,
+        "limiting_constraints": limiting_constraints,
+        "required_relaxation": required_relaxation,
+        "best_attempt_summary": best_attempt_summary,
+        "attempted_strategies": list(attempted_profiles),
+        "attempted_repairs": list(attempted_repairs),
+    }
+
+
+def _normalize_selected_candidate(parcel: Parcel, candidates, debug_metrics: dict) -> LayoutResult:
     for index, candidate in enumerate(candidates):
         try:
             layout = _normalize_candidate(parcel, candidate, debug_metrics=debug_metrics)
@@ -916,12 +1346,177 @@ def search_layout_debug(parcel: Parcel, zoning: ZoningRules, max_candidates: int
                 len(debug_metrics.get("repair_events", [])) / max(int(debug_metrics.get("total_candidates_generated", 0)), 1),
                 CANONICAL_PRECISION,
             )
-            return layout, debug_metrics
+            return layout
         except LayoutConstraintViolationError:
             debug_metrics["candidates_rejected_invalid_geometry"] = int(debug_metrics.get("candidates_rejected_invalid_geometry", 0)) + 1
             continue
-    raise LayoutSearchError("no_viable_layout", f"No viable layouts generated for parcel {parcel.parcel_id}")
+    raise LayoutSearchError(
+        "solver_fail",
+        f"No viable layouts generated for parcel {parcel.parcel_id}",
+        details={"reason_category": "SOLVER_FAIL", "parcel_id": parcel.parcel_id},
+    )
+
+
+def _normalize_candidate_batch(
+    parcel: Parcel,
+    candidates,
+    *,
+    max_layouts: int,
+    debug_metrics: dict[str, object],
+    search_plan: LayoutSearchPlan,
+) -> LayoutCandidateBatch:
+    normalized: list[LayoutResult] = []
+    seen_layout_ids: set[str] = set()
+    for candidate in candidates:
+        try:
+            layout = _normalize_candidate(parcel, candidate, debug_metrics=debug_metrics)
+        except LayoutConstraintViolationError:
+            debug_metrics["candidates_rejected_invalid_geometry"] = int(
+                debug_metrics.get("candidates_rejected_invalid_geometry", 0)
+            ) + 1
+            continue
+        if layout.layout_id in seen_layout_ids:
+            continue
+        seen_layout_ids.add(layout.layout_id)
+        normalized.append(
+            layout.model_copy(
+                update={
+                    "metadata": EngineMetadata(
+                        source_engine="bedrock.services.layout_service",
+                        source_type="candidate_search",
+                    )
+                }
+            )
+        )
+        if len(normalized) >= max_layouts:
+            break
+    return LayoutCandidateBatch(
+        parcel_id=parcel.parcel_id,
+        search_plan=search_plan,
+        candidate_count_generated=int(debug_metrics.get("total_candidates_generated", 0)),
+        candidate_count_valid=len(normalized),
+        layouts=normalized,
+        search_debug=dict(debug_metrics),
+    )
+
+
+def search_layout_candidates_debug(
+    parcel: Parcel,
+    zoning: ZoningRules,
+    *,
+    search_plan: LayoutSearchPlan,
+) -> LayoutCandidateBatch:
+    debug_metrics: dict[str, object] = {"attempt_profile": search_plan.label}
+    candidates = generate_candidates(
+        parcel,
+        zoning,
+        max_candidates=search_plan.max_candidates,
+        debug_metrics=debug_metrics,
+        strategies=tuple(search_plan.strategies) if search_plan.strategies else None,
+        search_overrides=search_plan.search_overrides(),
+    )
+    debug_metrics["attempt_profiles"] = [search_plan.label]
+    return _normalize_candidate_batch(
+        parcel,
+        candidates,
+        max_layouts=search_plan.max_layouts,
+        debug_metrics=debug_metrics,
+        search_plan=search_plan,
+    )
+
+
+def search_layout_candidates(
+    parcel: Parcel,
+    zoning: ZoningRules,
+    *,
+    search_plan: LayoutSearchPlan,
+) -> list[LayoutResult]:
+    return search_layout_candidates_debug(parcel, zoning, search_plan=search_plan).layouts
+
+
+def search_layout(parcel: Parcel, zoning: ZoningRules, max_candidates: int = 50) -> LayoutResult:
+    attempted_profiles: list[str] = []
+    last_error: LayoutSearchError | None = None
+    for profile in _retry_profiles(zoning, max_candidates):
+        attempted_profiles.append(profile.label)
+        try:
+            candidates = generate_candidates(
+                parcel,
+                zoning,
+                max_candidates=profile.max_candidates,
+                strategies=profile.strategies,
+                search_overrides={
+                    "lot_depth_factor": profile.lot_depth_factor,
+                    "frontage_hint_factor": profile.frontage_hint_factor,
+                    "road_width_factor": profile.road_width_factor,
+                    "runtime_budget_factor": profile.runtime_budget_factor,
+                },
+            )
+            return _normalize_selected_candidate(parcel, candidates, {"attempt_profiles": attempted_profiles})
+        except LayoutSearchError as exc:
+            last_error = exc
+            continue
+    if last_error is not None:
+        last_error.details = {
+            **dict(last_error.details),
+            "attempted_profiles": attempted_profiles,
+        }
+        raise last_error
+    raise LayoutSearchError(
+        "solver_fail",
+        f"No viable layouts generated for parcel {parcel.parcel_id}",
+        details={"reason_category": "SOLVER_FAIL", "parcel_id": parcel.parcel_id, "attempted_profiles": attempted_profiles},
+    )
+
+
+def search_layout_debug(parcel: Parcel, zoning: ZoningRules, max_candidates: int = 50) -> tuple[LayoutResult, dict]:
+    attempt_debug: list[dict[str, object]] = []
+    last_error: LayoutSearchError | None = None
+    for profile in _retry_profiles(zoning, max_candidates):
+        debug_metrics: dict[str, object] = {"attempt_profile": profile.label}
+        attempt_debug.append(debug_metrics)
+        try:
+            candidates = generate_candidates(
+                parcel,
+                zoning,
+                max_candidates=profile.max_candidates,
+                debug_metrics=debug_metrics,
+                strategies=profile.strategies,
+                search_overrides={
+                    "lot_depth_factor": profile.lot_depth_factor,
+                    "frontage_hint_factor": profile.frontage_hint_factor,
+                    "road_width_factor": profile.road_width_factor,
+                    "runtime_budget_factor": profile.runtime_budget_factor,
+                },
+            )
+            layout = _normalize_selected_candidate(parcel, candidates, debug_metrics)
+            debug_metrics["attempt_profiles"] = [entry.get("attempt_profile") for entry in attempt_debug]
+            return layout, debug_metrics
+        except LayoutSearchError as exc:
+            last_error = exc
+            debug_metrics["failure"] = dict(exc.details)
+            continue
+    if last_error is not None:
+        last_error.details = {**dict(last_error.details), "attempt_profiles": [entry.get("attempt_profile") for entry in attempt_debug]}
+        raise last_error
+    raise LayoutSearchError(
+        "solver_fail",
+        f"No viable layouts generated for parcel {parcel.parcel_id}",
+        details={"reason_category": "SOLVER_FAIL", "parcel_id": parcel.parcel_id, "attempt_profiles": [entry.get("attempt_profile") for entry in attempt_debug]},
+    )
 
 
 def search_subdivision_layout(parcel: Parcel, zoning: ZoningRules, max_candidates: int = 50) -> SubdivisionLayout:
     return _to_subdivision_layout(parcel, search_layout(parcel, zoning, max_candidates=max_candidates))
+
+
+def search_subdivision_layout_candidates(
+    parcel: Parcel,
+    zoning: ZoningRules,
+    *,
+    search_plan: LayoutSearchPlan,
+) -> list[SubdivisionLayout]:
+    return [
+        _to_subdivision_layout(parcel, layout)
+        for layout in search_layout_candidates(parcel, zoning, search_plan=search_plan)
+    ]

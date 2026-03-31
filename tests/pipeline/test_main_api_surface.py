@@ -24,5 +24,9 @@ def test_main_app_openapi_includes_layout_and_evaluation_routes() -> None:
     assert response.status_code == 200
     paths = response.json()["paths"]
     assert "/layout/search" in paths
+    assert "/layout/candidates" in paths
     assert "/layout/export" in paths
     assert "/evaluation/benchmark" in paths
+    assert "/pipeline/optimize" in paths
+    assert "/optimization/runs" in paths
+    assert "/optimization/runs/{optimization_run_id}" in paths

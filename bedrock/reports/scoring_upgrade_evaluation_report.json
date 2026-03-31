@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "old_baseline": "bedrock/benchmarks/layout_evaluation_baseline.json",
+    "new_reports": [
+      "bedrock/reports/layout_evaluation_new_scoring.json",
+      "bedrock/reports/layout_evaluation_new_scoring_run2.json",
+      "bedrock/reports/layout_evaluation_new_scoring_run3.json"
+    ]
+  },
+  "summary": {
+    "dataset_cases_total": 72,
+    "shared_success_cases_for_rank": 71,
+    "ranking_consistency": {
+      "spearman_rho_old_vs_new": 0.09691482226693493,
+      "top10_overlap": 0.3,
+      "top20_overlap": 0.3,
+      "top30_overlap": 0.4
+    },
+    "correlation": {
+      "old": {
+        "score_vs_unit_yield": 0.8651121986269718,
+        "score_vs_road_efficiency": -0.7567601267693932,
+        "score_vs_neg_road_efficiency": 0.7567601267693932,
+        "n": 72
+      },
+      "new": {
+        "score_vs_unit_yield": 0.40422050261533915,
+        "score_vs_road_efficiency": -0.6863298986790212,
+        "score_vs_neg_road_efficiency": 0.6863298986790212,
+        "n": 71
+      },
+      "delta": {
+        "score_vs_unit_yield": -0.4608916960116326,
+        "score_vs_neg_road_efficiency": -0.07043022809037203
+      }
+    },
+    "runtime_impact": {
+      "old_avg_seconds": 0.07149864533333336,
+      "new_avg_seconds": 0.11813011858333322,
+      "delta_avg_seconds": 0.04663147324999986,
+      "delta_avg_pct": 0.6522007939115431,
+      "old_p95_seconds": 0.0901155272999999,
+      "new_p95_seconds": 0.17376255654999967,
+      "delta_p95_seconds": 0.08364702924999977,
+      "delta_p95_pct": 0.9282199389627259
+    },
+    "stability": {
+      "runs_compared": 3,
+      "common_success_cases": 71,
+      "max_layout_score_span": 0.0,
+      "mean_layout_score_span": 0.0,
+      "rank_shift_max_positions": 0,
+      "rank_spearman_run1_vs_run2": 1.0,
+      "rank_spearman_run1_vs_run3": 1.0
+    },
+    "failures": {
+      "old_failures": [],
+      "new_failures": [
+        "layout_case_014:A"
+      ],
+      "new_failures_added": [
+        "layout_case_014:A"
+      ],
+      "old_failures_resolved": []
+    },
+    "regressions": {
+      "strict_worse_all_count": 51,
+      "strict_worse_all_examples": [
+        {
+          "case_id": "layout_case_001:A",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.8104444444444444,
+            "units": 16.0,
+            "road_eff": 108.125
+          },
+          "new": {
+            "score": 0.701779,
+            "units": 6.0,
+            "road_eff": 536.25
+          }
+        },
+        {
+          "case_id": "layout_case_001:B",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.745,
+            "units": 8.0,
+            "road_eff": 216.25
+          },
+          "new": {
+            "score": 0.692251,
+            "units": 6.0,
+            "road_eff": 529.1999999999999
+          }
+        },
+        {
+          "case_id": "layout_case_002:A",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.7715666666666667,
+            "units": 12.0,
+            "road_eff": 152.5
+          },
+          "new": {
+            "score": 0.523123,
+            "units": 8.0,
+            "road_eff": 469.0625
+          }
+        },
+        {
+          "case_id": "layout_case_002:C",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.745,
+            "units": 8.0,
+            "road_eff": 213.75
+          },
+          "new": {
+            "score": 0.719795,
+            "units": 6.0,
+            "road_eff": 528.8333333333334
+          }
+        },
+        {
+          "case_id": "layout_case_003:A",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.7741888888888889,
+            "units": 12.0,
+            "road_eff": 159.16666666666666
+          },
+          "new": {
+            "score": 0.62892,
+            "units": 4.0,
+            "road_eff": 227.4
+          }
+        },
+        {
+          "case_id": "layout_case_004:C",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.7025,
+            "units": 4.0,
+            "road_eff": 174.375
+          },
+          "new": {
+            "score": 0.576035,
+            "units": 2.0,
+            "road_eff": 472.2
+          }
+        },
+        {
+          "case_id": "layout_case_005:C",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.7025,
+            "units": 4.0,
+            "road_eff": 170.925
+          },
+          "new": {
+            "score": 0.582097,
+            "units": 2.0,
+            "road_eff": 477.7
+          }
+        },
+        {
+          "case_id": "layout_case_006:A",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.8526573333333333,
+            "units": 20.0,
+            "road_eff": 114.0
+          },
+          "new": {
+            "score": 0.675698,
+            "units": 6.0,
+            "road_eff": 161.86666666666667
+          }
+        },
+        {
+          "case_id": "layout_case_006:B",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.8265013333333333,
+            "units": 16.0,
+            "road_eff": 130.625
+          },
+          "new": {
+            "score": 0.616595,
+            "units": 4.0,
+            "road_eff": 242.825
+          }
+        },
+        {
+          "case_id": "layout_case_006:C",
+          "type": "strict_worse_all",
+          "old": {
+            "score": 0.76625,
+            "units": 10.0,
+            "road_eff": 228.0
+          },
+          "new": {
+            "score": 0.557937,
+            "units": 2.0,
+            "road_eff": 487.3
+          }
+        }
+      ],
+      "large_rank_shift_count": 53,
+      "large_rank_shift_examples": [
+        {
+          "case_id": "layout_case_001:A",
+          "old_rank": 17,
+          "new_rank": 6,
+          "shift": -11,
+          "old_score": 0.8104444444444444,
+          "new_score": 0.701779,
+          "units": 6.0,
+          "road_eff": 536.25
+        },
+        {
+          "case_id": "layout_case_001:B",
+          "old_rank": 35,
+          "new_rank": 7,
+          "shift": -28,
+          "old_score": 0.745,
+          "new_score": 0.692251,
+          "units": 6.0,
+          "road_eff": 529.1999999999999
+        },
+        {
+          "case_id": "layout_case_001:C",
+          "old_rank": 61,
+          "new_rank": 1,
+          "shift": -60,
+          "old_score": 0.68125,
+          "new_score": 0.731614,
+          "units": 6.0,
+          "road_eff": 522.1666666666666
+        },
+        {
+          "case_id": "layout_case_002:A",
+          "old_rank": 27,
+          "new_rank": 67,
+          "shift": 40,
+          "old_score": 0.7715666666666667,
+          "new_score": 0.523123,
+          "units": 8.0,
+          "road_eff": 469.0625
+        },
+        {
+          "case_id": "layout_case_002:B",
+          "old_rank": 36,
+          "new_rank": 17,
+          "shift": -19,
+          "old_score": 0.745,
+          "new_score": 0.653801,
+          "units": 8.0,
+          "road_eff": 462.975
+        },
+        {
+          "case_id": "layout_case_002:C",
+          "old_rank": 37,
+          "new_rank": 3,
+          "shift": -34,
+          "old_score": 0.745,
+          "new_score": 0.719795,
+          "units": 6.0,
+          "road_eff": 528.8333333333334
+        },
+        {
+          "case_id": "layout_case_003:B",
+          "old_rank": 50,
+          "new_rank": 12,
+          "shift": -38,
+          "old_score": 0.7025,
+          "new_score": 0.662122,
+          "units": 6.0,
+          "road_eff": 529.1999999999999
+        },
+        {
+          "case_id": "layout_case_003:C",
+          "old_rank": 66,
+          "new_rank": 4,
+          "shift": -62,
+          "old_score": 0.6383429319371726,
+          "new_score": 0.719304,
+          "units": 6.0,
+          "road_eff": 522.1666666666666
+        },
+        {
+          "case_id": "layout_case_004:A",
+          "old_rank": 48,
+          "new_rank": 5,
+          "shift": -43,
+          "old_score": 0.7097997777777778,
+          "new_score": 0.709375,
+          "units": 6.0,
+          "road_eff": 150.13333333333333
+        },
+        {
+          "case_id": "layout_case_004:B",
+          "old_rank": 51,
+          "new_rank": 13,
+          "shift": -38,
+          "old_score": 0.7025,
+          "new_score": 0.662044,
+          "units": 4.0,
+          "road_eff": 228.525
+        },
+        {
+          "case_id": "layout_case_005:A",
+          "old_rank": 46,
+          "new_rank": 2,
+          "shift": -44,
+          "old_score": 0.7123384444444445,
+          "new_score": 0.727494,
+          "units": 6.0,
+          "road_eff": 149.66666666666666
+        },
+        {
+          "case_id": "layout_case_005:B",
+          "old_rank": 53,
+          "new_rank": 14,
+          "shift": -39,
+          "old_score": 0.7025,
+          "new_score": 0.661599,
+          "units": 4.0,
+          "road_eff": 231.275
+        },
+        {
+          "case_id": "layout_case_006:B",
+          "old_rank": 14,
+          "new_rank": 28,
+          "shift": 14,
+          "old_score": 0.8265013333333333,
+          "new_score": 0.616595,
+          "units": 4.0,
+          "road_eff": 242.825
+        },
+        {
+          "case_id": "layout_case_006:C",
+          "old_rank": 28,
+          "new_rank": 57,
+          "shift": 29,
+          "old_score": 0.76625,
+          "new_score": 0.557937,
+          "units": 2.0,
+          "road_eff": 487.3
+        },
+        {
+          "case_id": "layout_case_007:A",
+          "old_rank": 10,
+          "new_rank": 34,
+          "shift": 24,
+          "old_score": 0.8330812222222223,
+          "new_score": 0.607209,
+          "units": 4.0,
+          "road_eff": 240.05
+        }
+      ]
+    },
+    "recommendation": {
+      "decision": "REJECT",
+      "reasons": [
+        "low_rank_consistency",
+        "unit_yield_correlation_dropped",
+        "road_efficiency_correlation_dropped",
+        "runtime_regression_over_15pct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "batch_id": "real-parcel-batch-20260330T195004Z",
+  "timestamp": "2026-03-30T19:50:04.442858+00:00",
+  "parcel_count": 5,
+  "runs": [
+    {
+      "parcel_id": "ut-utah-13631",
+      "run_id": "6cd87974-14ae-4bc3-bd12-4689b6435afc",
+      "status": "completed",
+      "units": 2,
+      "projected_revenue": 2511360.0,
+      "projected_cost": 2374824.434188099,
+      "roi": 0.057492909305769134,
+      "profit": 136535.5658119009
+    },
+    {
+      "parcel_id": "ut-utah-13598",
+      "run_id": "2efa1686-e972-4797-a7c8-77a49bd4fcbd",
+      "status": "completed",
+      "units": 2,
+      "projected_revenue": 2511360.0,
+      "projected_cost": 2663450.784767273,
+      "roi": -0.0571029078656553,
+      "profit": -152090.78476727288
+    },
+    {
+      "parcel_id": "ut-utah-14547",
+      "run_id": "eaeed2c8-368b-4dc6-846a-f6c40e87c2af",
+      "status": "completed",
+      "units": 18,
+      "projected_revenue": 10532090.24208,
+      "projected_cost": 3244901.7130198455,
+      "roi": 2.2457347474720217,
+      "profit": 7287188.529060153
+    },
+    {
+      "parcel_id": "ut-utah-14482",
+      "run_id": "2104802d-ed7a-468d-a9e6-10f4a47a96e8",
+      "status": "near_feasible",
+      "units": 1,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": -0.07618468522291379,
+      "profit": -103552.71666371077
+    },
+    {
+      "parcel_id": "ut-utah-13727",
+      "run_id": "d0080538-436f-4295-aaf8-309337f3614b",
+      "status": "completed",
+      "units": 15,
+      "projected_revenue": 18835200.0,
+      "projected_cost": 11564628.213434711,
+      "roi": 0.6286904907257644,
+      "profit": 7270571.786565289
+    }
+  ],
+  "metrics": {
+    "avg_roi": 0.5597261108829972,
+    "avg_profit": 2887730.476001272,
+    "pass_rate": 0.8,
+    "near_feasible_rate": 0.2
+  }
+}

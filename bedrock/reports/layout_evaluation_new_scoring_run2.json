@@ -1,0 +1,2112 @@
+{
+  "aggregate_metrics": {
+    "average_road_length": 2322.9873239436615,
+    "average_unit_yield": 4.76056338028169,
+    "runtime_distribution": {
+      "avg_seconds": 0.11114591258333334,
+      "max_seconds": 0.19826470799999996,
+      "median_seconds": 0.10468033300000013,
+      "p95_seconds": 0.17064305175000058
+    },
+    "solver_stability": {
+      "failure_count": 1,
+      "success_count": 71,
+      "success_rate": 0.9861111111111112
+    }
+  },
+  "algorithm_variant": "scoring_upgrade_candidate",
+  "dataset": "layout_eval_v1",
+  "dataset_summary": {
+    "case_count": 72,
+    "parcel_count": 24,
+    "parcel_type_distribution": {
+      "internal_constraints": 4,
+      "irregular": 8,
+      "long_narrow": 4,
+      "rectangular": 8
+    },
+    "scenario_count": 3
+  },
+  "generated_at": "2026-03-25T00:23:38.337271+00:00",
+  "highlights": {
+    "failed_cases": [
+      "layout_case_014:A"
+    ],
+    "low_yield_efficiency_cases": [
+      "layout_case_001:A",
+      "layout_case_001:B",
+      "layout_case_001:C",
+      "layout_case_002:A",
+      "layout_case_002:B",
+      "layout_case_002:C",
+      "layout_case_003:A",
+      "layout_case_003:B",
+      "layout_case_003:C",
+      "layout_case_004:A",
+      "layout_case_004:B",
+      "layout_case_004:C",
+      "layout_case_005:A",
+      "layout_case_005:B",
+      "layout_case_005:C",
+      "layout_case_006:A",
+      "layout_case_006:B",
+      "layout_case_006:C",
+      "layout_case_007:A",
+      "layout_case_007:B",
+      "layout_case_007:C",
+      "layout_case_008:A",
+      "layout_case_008:B",
+      "layout_case_008:C",
+      "layout_case_009:A",
+      "layout_case_009:B",
+      "layout_case_009:C",
+      "layout_case_010:A",
+      "layout_case_010:B",
+      "layout_case_010:C",
+      "layout_case_011:A",
+      "layout_case_011:B",
+      "layout_case_011:C",
+      "layout_case_012:A",
+      "layout_case_012:B",
+      "layout_case_012:C",
+      "layout_case_013:A",
+      "layout_case_013:B",
+      "layout_case_013:C",
+      "layout_case_014:B",
+      "layout_case_014:C",
+      "layout_case_015:A",
+      "layout_case_015:B",
+      "layout_case_015:C",
+      "layout_case_016:A",
+      "layout_case_016:B",
+      "layout_case_016:C",
+      "layout_case_017:A",
+      "layout_case_017:B",
+      "layout_case_017:C",
+      "layout_case_018:A",
+      "layout_case_018:B",
+      "layout_case_018:C",
+      "layout_case_019:A",
+      "layout_case_019:B",
+      "layout_case_019:C",
+      "layout_case_020:A",
+      "layout_case_020:B",
+      "layout_case_020:C",
+      "layout_case_internal_001:A",
+      "layout_case_internal_001:B",
+      "layout_case_internal_001:C",
+      "layout_case_internal_002:A",
+      "layout_case_internal_002:B",
+      "layout_case_internal_002:C",
+      "layout_case_internal_003:A",
+      "layout_case_internal_003:B",
+      "layout_case_internal_003:C",
+      "layout_case_internal_004:A",
+      "layout_case_internal_004:B",
+      "layout_case_internal_004:C"
+    ],
+    "poor_road_efficiency_cases": [
+      "layout_case_001:A",
+      "layout_case_001:B",
+      "layout_case_001:C",
+      "layout_case_002:A",
+      "layout_case_002:B",
+      "layout_case_002:C",
+      "layout_case_003:B",
+      "layout_case_003:C",
+      "layout_case_004:C",
+      "layout_case_005:C",
+      "layout_case_006:C",
+      "layout_case_007:C",
+      "layout_case_008:C",
+      "layout_case_009:C",
+      "layout_case_010:A",
+      "layout_case_010:B",
+      "layout_case_010:C",
+      "layout_case_011:C",
+      "layout_case_012:C",
+      "layout_case_013:C",
+      "layout_case_014:B",
+      "layout_case_014:C",
+      "layout_case_015:A",
+      "layout_case_015:B",
+      "layout_case_015:C",
+      "layout_case_016:A",
+      "layout_case_016:B",
+      "layout_case_016:C",
+      "layout_case_017:A",
+      "layout_case_017:B",
+      "layout_case_017:C",
+      "layout_case_018:A",
+      "layout_case_018:B",
+      "layout_case_018:C",
+      "layout_case_019:B",
+      "layout_case_019:C",
+      "layout_case_020:A",
+      "layout_case_020:B",
+      "layout_case_020:C",
+      "layout_case_internal_001:A",
+      "layout_case_internal_001:B",
+      "layout_case_internal_001:C",
+      "layout_case_internal_002:A",
+      "layout_case_internal_002:B",
+      "layout_case_internal_002:C",
+      "layout_case_internal_003:A",
+      "layout_case_internal_003:B",
+      "layout_case_internal_003:C",
+      "layout_case_internal_004:A",
+      "layout_case_internal_004:B",
+      "layout_case_internal_004:C"
+    ]
+  },
+  "records": [
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_001:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.701779,
+        "lot_size_distribution": {
+          "max": 12375.000000000005,
+          "mean": 12375.0,
+          "median": 12375.0,
+          "min": 12374.999999999995,
+          "p25": 12374.999999999998,
+          "p75": 12375.0
+        },
+        "road_efficiency": 536.25,
+        "road_length": 3217.5,
+        "solver_runtime": 0.09457250000000003,
+        "theoretical_max_units": 31,
+        "unit_yield": 6,
+        "yield_efficiency": 0.1935483870967742
+      },
+      "parcel_id": "layout_case_001",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_001:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.692251,
+        "lot_size_distribution": {
+          "max": 12747.694800000003,
+          "mean": 12747.694800000003,
+          "median": 12747.694800000003,
+          "min": 12747.694800000003,
+          "p25": 12747.694800000003,
+          "p75": 12747.694800000003
+        },
+        "road_efficiency": 529.1999999999999,
+        "road_length": 3175.2,
+        "solver_runtime": 0.085476791,
+        "theoretical_max_units": 24,
+        "unit_yield": 6,
+        "yield_efficiency": 0.25
+      },
+      "parcel_id": "layout_case_001",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_001:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.731614,
+        "lot_size_distribution": {
+          "max": 12087.080000000004,
+          "mean": 12087.080000000002,
+          "median": 12087.080000000002,
+          "min": 12087.079999999998,
+          "p25": 12087.079999999998,
+          "p75": 12087.080000000004
+        },
+        "road_efficiency": 522.1666666666666,
+        "road_length": 3133.0,
+        "solver_runtime": 0.084354875,
+        "theoretical_max_units": 18,
+        "unit_yield": 6,
+        "yield_efficiency": 0.3333333333333333
+      },
+      "parcel_id": "layout_case_001",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_002:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.523123,
+        "lot_size_distribution": {
+          "max": 8250.0,
+          "mean": 7920.0,
+          "median": 8250.0,
+          "min": 6930.0,
+          "p25": 7920.0,
+          "p75": 8250.0
+        },
+        "road_efficiency": 469.0625,
+        "road_length": 3752.5,
+        "solver_runtime": 0.11483479200000002,
+        "theoretical_max_units": 32,
+        "unit_yield": 8,
+        "yield_efficiency": 0.25
+      },
+      "parcel_id": "layout_case_002",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_002:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.653801,
+        "lot_size_distribution": {
+          "max": 8529.598179120003,
+          "mean": 8403.712358585,
+          "median": 8529.598110440002,
+          "min": 8026.055,
+          "p25": 8403.712332829999,
+          "p75": 8529.59817912
+        },
+        "road_efficiency": 462.975,
+        "road_length": 3703.8,
+        "solver_runtime": 0.09058191699999996,
+        "theoretical_max_units": 25,
+        "unit_yield": 8,
+        "yield_efficiency": 0.32
+      },
+      "parcel_id": "layout_case_002",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_002:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.719795,
+        "lot_size_distribution": {
+          "max": 11414.080000000004,
+          "mean": 11414.080000000002,
+          "median": 11414.080000000002,
+          "min": 11414.079999999994,
+          "p25": 11414.080000000002,
+          "p75": 11414.080000000004
+        },
+        "road_efficiency": 528.8333333333334,
+        "road_length": 3173.0,
+        "solver_runtime": 0.07768058300000003,
+        "theoretical_max_units": 19,
+        "unit_yield": 6,
+        "yield_efficiency": 0.3157894736842105
+      },
+      "parcel_id": "layout_case_002",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_003:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.62892,
+        "lot_size_distribution": {
+          "max": 6471.039999999999,
+          "mean": 6471.039999999999,
+          "median": 6471.039999999999,
+          "min": 6471.039999999998,
+          "p25": 6471.039999999998,
+          "p75": 6471.039999999999
+        },
+        "road_efficiency": 227.4,
+        "road_length": 909.6,
+        "solver_runtime": 0.09810912500000002,
+        "theoretical_max_units": 31,
+        "unit_yield": 4,
+        "yield_efficiency": 0.12903225806451613
+      },
+      "parcel_id": "layout_case_003",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_003:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.662122,
+        "lot_size_distribution": {
+          "max": 8373.750000000004,
+          "mean": 8373.75,
+          "median": 8373.75,
+          "min": 8373.75,
+          "p25": 8373.75,
+          "p75": 8373.75
+        },
+        "road_efficiency": 529.1999999999999,
+        "road_length": 3175.2,
+        "solver_runtime": 0.09066774999999994,
+        "theoretical_max_units": 25,
+        "unit_yield": 6,
+        "yield_efficiency": 0.24
+      },
+      "parcel_id": "layout_case_003",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_003:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.719304,
+        "lot_size_distribution": {
+          "max": 10068.080000000004,
+          "mean": 10068.080000000002,
+          "median": 10068.080000000004,
+          "min": 10068.079999999994,
+          "p25": 10068.080000000002,
+          "p75": 10068.080000000004
+        },
+        "road_efficiency": 522.1666666666666,
+        "road_length": 3133.0,
+        "solver_runtime": 0.08008095800000004,
+        "theoretical_max_units": 19,
+        "unit_yield": 6,
+        "yield_efficiency": 0.3157894736842105
+      },
+      "parcel_id": "layout_case_003",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_004:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.709375,
+        "lot_size_distribution": {
+          "max": 6847.680023199998,
+          "mean": 6667.180175185148,
+          "median": 6847.679953599998,
+          "min": 6306.1805487554475,
+          "p25": 6441.555399966586,
+          "p75": 6847.680005799998
+        },
+        "road_efficiency": 150.13333333333333,
+        "road_length": 900.8,
+        "solver_runtime": 0.09989837499999987,
+        "theoretical_max_units": 30,
+        "unit_yield": 6,
+        "yield_efficiency": 0.2
+      },
+      "parcel_id": "layout_case_004",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_004:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.662044,
+        "lot_size_distribution": {
+          "max": 9833.123046261551,
+          "mean": 9690.182123130777,
+          "median": 9690.182123130777,
+          "min": 9547.2412,
+          "p25": 9547.2412,
+          "p75": 9833.123046261551
+        },
+        "road_efficiency": 228.525,
+        "road_length": 914.1,
+        "solver_runtime": 0.09151041700000007,
+        "theoretical_max_units": 24,
+        "unit_yield": 4,
+        "yield_efficiency": 0.16666666666666666
+      },
+      "parcel_id": "layout_case_004",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_004:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.576035,
+        "lot_size_distribution": {
+          "max": 18259.034997020895,
+          "mean": 18259.03499702089,
+          "median": 18259.03499702089,
+          "min": 18259.03499702089,
+          "p25": 18259.03499702089,
+          "p75": 18259.034997020895
+        },
+        "road_efficiency": 472.2,
+        "road_length": 944.4,
+        "solver_runtime": 0.07589562500000002,
+        "theoretical_max_units": 18,
+        "unit_yield": 2,
+        "yield_efficiency": 0.1111111111111111
+      },
+      "parcel_id": "layout_case_004",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_005:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.727494,
+        "lot_size_distribution": {
+          "max": 7187.5199768,
+          "mean": 7007.020175185149,
+          "median": 7159.1467042,
+          "min": 6674.393844555446,
+          "p25": 6795.582059466586,
+          "p75": 7180.42665865
+        },
+        "road_efficiency": 149.66666666666666,
+        "road_length": 898.0,
+        "solver_runtime": 0.09771191700000004,
+        "theoretical_max_units": 29,
+        "unit_yield": 6,
+        "yield_efficiency": 0.20689655172413793
+      },
+      "parcel_id": "layout_case_005",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_005:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.661599,
+        "lot_size_distribution": {
+          "max": 10376.853046261553,
+          "mean": 10067.922123130777,
+          "median": 10067.922123130775,
+          "min": 9758.9912,
+          "p25": 9758.9912,
+          "p75": 10376.85304626155
+        },
+        "road_efficiency": 231.275,
+        "road_length": 925.1,
+        "solver_runtime": 0.09069066700000006,
+        "theoretical_max_units": 23,
+        "unit_yield": 4,
+        "yield_efficiency": 0.17391304347826086
+      },
+      "parcel_id": "layout_case_005",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_005:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.582097,
+        "lot_size_distribution": {
+          "max": 18999.334997020895,
+          "mean": 18999.334997020895,
+          "median": 18999.334997020895,
+          "min": 18999.334997020895,
+          "p25": 18999.334997020895,
+          "p75": 18999.334997020895
+        },
+        "road_efficiency": 477.7,
+        "road_length": 955.4,
+        "solver_runtime": 0.0761617080000001,
+        "theoretical_max_units": 17,
+        "unit_yield": 2,
+        "yield_efficiency": 0.11764705882352941
+      },
+      "parcel_id": "layout_case_005",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_006:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.675698,
+        "lot_size_distribution": {
+          "max": 6738.559976800002,
+          "mean": 6558.06017518515,
+          "median": 6697.1733668000015,
+          "min": 6238.447181955447,
+          "p25": 6353.128728166586,
+          "p75": 6728.213324300001
+        },
+        "road_efficiency": 161.86666666666667,
+        "road_length": 971.2,
+        "solver_runtime": 0.10555233299999989,
+        "theoretical_max_units": 36,
+        "unit_yield": 6,
+        "yield_efficiency": 0.16666666666666666
+      },
+      "parcel_id": "layout_case_006",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_006:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.616595,
+        "lot_size_distribution": {
+          "max": 10078.401046261552,
+          "mean": 9621.630123130777,
+          "median": 9621.630123130777,
+          "min": 9164.8592,
+          "p25": 9164.8592,
+          "p75": 10078.401046261552
+        },
+        "road_efficiency": 242.825,
+        "road_length": 971.3,
+        "solver_runtime": 0.10023991600000004,
+        "theoretical_max_units": 29,
+        "unit_yield": 4,
+        "yield_efficiency": 0.13793103448275862
+      },
+      "parcel_id": "layout_case_006",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_006:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.557937,
+        "lot_size_distribution": {
+          "max": 18601.8949970209,
+          "mean": 18601.8949970209,
+          "median": 18601.8949970209,
+          "min": 18601.894997020896,
+          "p25": 18601.894997020896,
+          "p75": 18601.8949970209
+        },
+        "road_efficiency": 487.3,
+        "road_length": 974.6,
+        "solver_runtime": 0.09539420899999995,
+        "theoretical_max_units": 22,
+        "unit_yield": 2,
+        "yield_efficiency": 0.09090909090909091
+      },
+      "parcel_id": "layout_case_006",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_007:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.607209,
+        "lot_size_distribution": {
+          "max": 6483.360023200001,
+          "mean": 6483.3599884,
+          "median": 6483.3599884,
+          "min": 6483.359953599998,
+          "p25": 6483.3599536,
+          "p75": 6483.360023199999
+        },
+        "road_efficiency": 240.05,
+        "road_length": 960.2,
+        "solver_runtime": 0.12023650000000008,
+        "theoretical_max_units": 35,
+        "unit_yield": 4,
+        "yield_efficiency": 0.11428571428571428
+      },
+      "parcel_id": "layout_case_007",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_007:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.626926,
+        "lot_size_distribution": {
+          "max": 9492.321046261552,
+          "mean": 9243.890123130775,
+          "median": 9243.890123130775,
+          "min": 8995.459200000001,
+          "p25": 8995.459200000001,
+          "p75": 9492.321046261552
+        },
+        "road_efficiency": 240.075,
+        "road_length": 960.3,
+        "solver_runtime": 0.099796,
+        "theoretical_max_units": 28,
+        "unit_yield": 4,
+        "yield_efficiency": 0.14285714285714285
+      },
+      "parcel_id": "layout_case_007",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_007:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.559629,
+        "lot_size_distribution": {
+          "max": 17861.594997020897,
+          "mean": 17861.594997020897,
+          "median": 17861.594997020897,
+          "min": 17861.594997020897,
+          "p25": 17861.594997020897,
+          "p75": 17861.594997020897
+        },
+        "road_efficiency": 481.8,
+        "road_length": 963.6,
+        "solver_runtime": 0.09217004200000023,
+        "theoretical_max_units": 21,
+        "unit_yield": 2,
+        "yield_efficiency": 0.09523809523809523
+      },
+      "parcel_id": "layout_case_007",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_008:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.608256,
+        "lot_size_distribution": {
+          "max": 6228.160000000002,
+          "mean": 6228.160000000001,
+          "median": 6228.160000000001,
+          "min": 6228.16,
+          "p25": 6228.16,
+          "p75": 6228.160000000002
+        },
+        "road_efficiency": 237.3,
+        "road_length": 949.2,
+        "solver_runtime": 0.10224791700000013,
+        "theoretical_max_units": 34,
+        "unit_yield": 4,
+        "yield_efficiency": 0.11764705882352941
+      },
+      "parcel_id": "layout_case_008",
+      "parcel_type": "rectangular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_008:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.638046,
+        "lot_size_distribution": {
+          "max": 8906.241046261552,
+          "mean": 8866.150123130776,
+          "median": 8866.150123130776,
+          "min": 8826.0592,
+          "p25": 8826.0592,
+          "p75": 8906.241046261552
+        },
+        "road_efficiency": 237.325,
+        "road_length": 949.3,
+        "solver_runtime": 0.09610558299999994,
+        "theoretical_max_units": 27,
+        "unit_yield": 4,
+        "yield_efficiency": 0.14814814814814814
+      },
+      "parcel_id": "layout_case_008",
+      "parcel_type": "rectangular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_008:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.561282,
+        "lot_size_distribution": {
+          "max": 17121.294997020897,
+          "mean": 17121.294997020894,
+          "median": 17121.294997020894,
+          "min": 17121.294997020894,
+          "p25": 17121.294997020894,
+          "p75": 17121.294997020897
+        },
+        "road_efficiency": 476.3,
+        "road_length": 952.6,
+        "solver_runtime": 0.10618483299999992,
+        "theoretical_max_units": 20,
+        "unit_yield": 2,
+        "yield_efficiency": 0.1
+      },
+      "parcel_id": "layout_case_008",
+      "parcel_type": "rectangular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_009:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.672765,
+        "lot_size_distribution": {
+          "max": 6912.800000000002,
+          "mean": 6732.30017518515,
+          "median": 6715.700525555449,
+          "min": 6568.4,
+          "p25": 6605.225131388864,
+          "p75": 6863.525131388861
+        },
+        "road_efficiency": 165.9,
+        "road_length": 995.4,
+        "solver_runtime": 0.11047745799999964,
+        "theoretical_max_units": 38,
+        "unit_yield": 6,
+        "yield_efficiency": 0.15789473684210525
+      },
+      "parcel_id": "layout_case_009",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_009:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.603261,
+        "lot_size_distribution": {
+          "max": 10375.678646261553,
+          "mean": 9871.858123130776,
+          "median": 9871.858123130776,
+          "min": 9368.0376,
+          "p25": 9368.037600000003,
+          "p75": 10375.678646261551
+        },
+        "road_efficiency": 248.875,
+        "road_length": 995.5,
+        "solver_runtime": 0.10117545799999972,
+        "theoretical_max_units": 30,
+        "unit_yield": 4,
+        "yield_efficiency": 0.13333333333333333
+      },
+      "parcel_id": "layout_case_009",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_009:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.631959,
+        "lot_size_distribution": {
+          "max": 10646.099999999973,
+          "mean": 10353.561962220443,
+          "median": 10269.980000000003,
+          "min": 10269.980000000001,
+          "p25": 10269.980000000003,
+          "p75": 10374.456867771558
+        },
+        "road_efficiency": 581.5714285714286,
+        "road_length": 4071.0,
+        "solver_runtime": 0.09876474999999996,
+        "theoretical_max_units": 23,
+        "unit_yield": 7,
+        "yield_efficiency": 0.30434782608695654
+      },
+      "parcel_id": "layout_case_009",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_010:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.594356,
+        "lot_size_distribution": {
+          "max": 6157.500525555449,
+          "mean": 6157.500525555448,
+          "median": 6157.500525555448,
+          "min": 6157.500525555447,
+          "p25": 6157.500525555448,
+          "p75": 6157.500525555448
+        },
+        "road_efficiency": 515.3,
+        "road_length": 1030.6,
+        "solver_runtime": 0.1260889169999997,
+        "theoretical_max_units": 42,
+        "unit_yield": 2,
+        "yield_efficiency": 0.047619047619047616
+      },
+      "parcel_id": "layout_case_010",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_010:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.591558,
+        "lot_size_distribution": {
+          "max": 11046.150646261553,
+          "mean": 10499.826123130775,
+          "median": 10499.826123130777,
+          "min": 9953.501599999998,
+          "p25": 9953.5016,
+          "p75": 11046.15064626155
+        },
+        "road_efficiency": 257.675,
+        "road_length": 1030.7,
+        "solver_runtime": 0.11239037500000038,
+        "theoretical_max_units": 34,
+        "unit_yield": 4,
+        "yield_efficiency": 0.11764705882352941
+      },
+      "parcel_id": "layout_case_010",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_010:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.531333,
+        "lot_size_distribution": {
+          "max": 10707.584997020895,
+          "mean": 10707.584997020895,
+          "median": 10707.584997020895,
+          "min": 10707.584997020895,
+          "p25": 10707.584997020895,
+          "p75": 10707.584997020895
+        },
+        "road_efficiency": 517.0,
+        "road_length": 1034.0,
+        "solver_runtime": 0.1078217079999999,
+        "theoretical_max_units": 25,
+        "unit_yield": 2,
+        "yield_efficiency": 0.08
+      },
+      "parcel_id": "layout_case_010",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_011:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.607244,
+        "lot_size_distribution": {
+          "max": 6483.360023200001,
+          "mean": 6483.3599884,
+          "median": 6483.3599884,
+          "min": 6483.359953599998,
+          "p25": 6483.3599536,
+          "p75": 6483.360023199999
+        },
+        "road_efficiency": 240.05,
+        "road_length": 960.2,
+        "solver_runtime": 0.1047977910000002,
+        "theoretical_max_units": 35,
+        "unit_yield": 4,
+        "yield_efficiency": 0.11428571428571428
+      },
+      "parcel_id": "layout_case_011",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_011:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.62698,
+        "lot_size_distribution": {
+          "max": 9492.321046261552,
+          "mean": 9243.890123130775,
+          "median": 9243.890123130775,
+          "min": 8995.459200000001,
+          "p25": 8995.459200000001,
+          "p75": 9492.321046261552
+        },
+        "road_efficiency": 240.075,
+        "road_length": 960.3,
+        "solver_runtime": 0.09783254199999991,
+        "theoretical_max_units": 28,
+        "unit_yield": 4,
+        "yield_efficiency": 0.14285714285714285
+      },
+      "parcel_id": "layout_case_011",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_011:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.559683,
+        "lot_size_distribution": {
+          "max": 17861.594997020897,
+          "mean": 17861.594997020897,
+          "median": 17861.594997020897,
+          "min": 17861.594997020897,
+          "p25": 17861.594997020897,
+          "p75": 17861.594997020897
+        },
+        "road_efficiency": 481.8,
+        "road_length": 963.6,
+        "solver_runtime": 0.10872875000000004,
+        "theoretical_max_units": 21,
+        "unit_yield": 2,
+        "yield_efficiency": 0.09523809523809523
+      },
+      "parcel_id": "layout_case_011",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_012:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.672694,
+        "lot_size_distribution": {
+          "max": 6912.800000000002,
+          "mean": 6732.30017518515,
+          "median": 6715.700525555449,
+          "min": 6568.4,
+          "p25": 6605.225131388864,
+          "p75": 6863.525131388861
+        },
+        "road_efficiency": 165.9,
+        "road_length": 995.4,
+        "solver_runtime": 0.11372262499999986,
+        "theoretical_max_units": 38,
+        "unit_yield": 6,
+        "yield_efficiency": 0.15789473684210525
+      },
+      "parcel_id": "layout_case_012",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_012:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.600954,
+        "lot_size_distribution": {
+          "max": 10375.678646261553,
+          "mean": 9871.858123130776,
+          "median": 9871.858123130776,
+          "min": 9368.0376,
+          "p25": 9368.037600000003,
+          "p75": 10375.678646261551
+        },
+        "road_efficiency": 248.875,
+        "road_length": 995.5,
+        "solver_runtime": 0.10197362500000029,
+        "theoretical_max_units": 31,
+        "unit_yield": 4,
+        "yield_efficiency": 0.12903225806451613
+      },
+      "parcel_id": "layout_case_012",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_012:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.626396,
+        "lot_size_distribution": {
+          "max": 10450.478424822126,
+          "mean": 10300.06307080369,
+          "median": 10269.980000000003,
+          "min": 10269.980000000001,
+          "p25": 10269.980000000003,
+          "p75": 10269.980000000003
+        },
+        "road_efficiency": 668.3166666666667,
+        "road_length": 4009.9,
+        "solver_runtime": 0.09918079099999977,
+        "theoretical_max_units": 23,
+        "unit_yield": 6,
+        "yield_efficiency": 0.2608695652173913
+      },
+      "parcel_id": "layout_case_012",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_013:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.61652,
+        "lot_size_distribution": {
+          "max": 6181.520023200001,
+          "mean": 6181.5199884,
+          "median": 6181.5199884,
+          "min": 6181.519953600001,
+          "p25": 6181.519953600002,
+          "p75": 6181.520023199999
+        },
+        "road_efficiency": 232.625,
+        "road_length": 930.5,
+        "solver_runtime": 0.10105629199999999,
+        "theoretical_max_units": 32,
+        "unit_yield": 4,
+        "yield_efficiency": 0.125
+      },
+      "parcel_id": "layout_case_013",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_013:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.644003,
+        "lot_size_distribution": {
+          "max": 8880.861200000001,
+          "mean": 8804.792123130776,
+          "median": 8804.792123130776,
+          "min": 8728.723046261552,
+          "p25": 8728.723046261552,
+          "p75": 8880.8612
+        },
+        "road_efficiency": 232.65,
+        "road_length": 930.6,
+        "solver_runtime": 0.09341933299999994,
+        "theoretical_max_units": 26,
+        "unit_yield": 4,
+        "yield_efficiency": 0.15384615384615385
+      },
+      "parcel_id": "layout_case_013",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_013:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.567754,
+        "lot_size_distribution": {
+          "max": 17024.384997020894,
+          "mean": 17024.384997020894,
+          "median": 17024.384997020894,
+          "min": 17024.384997020894,
+          "p25": 17024.384997020894,
+          "p75": 17024.384997020894
+        },
+        "road_efficiency": 466.95,
+        "road_length": 933.9,
+        "solver_runtime": 0.08151220900000045,
+        "theoretical_max_units": 19,
+        "unit_yield": 2,
+        "yield_efficiency": 0.10526315789473684
+      },
+      "parcel_id": "layout_case_013",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_014:A",
+      "error": "No viable layouts generated for parcel layout_case_014",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [
+          "No viable layouts generated for parcel layout_case_014"
+        ],
+        "layout_score": 0.0,
+        "lot_size_distribution": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p25": 0.0,
+          "p75": 0.0
+        },
+        "road_efficiency": Infinity,
+        "road_length": 0.0,
+        "solver_runtime": 0.185295333,
+        "theoretical_max_units": 31,
+        "unit_yield": 0,
+        "yield_efficiency": 0.0
+      },
+      "parcel_id": "layout_case_014",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "failure"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_014:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.596756,
+        "lot_size_distribution": {
+          "max": 8529.598179120003,
+          "mean": 8529.598137912,
+          "median": 8529.59811044,
+          "min": 8529.59811044,
+          "p25": 8529.59811044,
+          "p75": 8529.598179120003
+        },
+        "road_efficiency": 725.88,
+        "road_length": 3629.4,
+        "solver_runtime": 0.11403670799999954,
+        "theoretical_max_units": 25,
+        "unit_yield": 5,
+        "yield_efficiency": 0.2
+      },
+      "parcel_id": "layout_case_014",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_014:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.561753,
+        "lot_size_distribution": {
+          "max": 15640.694997020897,
+          "mean": 15640.694997020895,
+          "median": 15640.694997020895,
+          "min": 15640.694997020895,
+          "p25": 15640.694997020895,
+          "p75": 15640.694997020897
+        },
+        "road_efficiency": 465.3,
+        "road_length": 930.6,
+        "solver_runtime": 0.09662458399999974,
+        "theoretical_max_units": 19,
+        "unit_yield": 2,
+        "yield_efficiency": 0.10526315789473684
+      },
+      "parcel_id": "layout_case_014",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_015:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.574947,
+        "lot_size_distribution": {
+          "max": 8250.0,
+          "mean": 8250.0,
+          "median": 8250.0,
+          "min": 8250.0,
+          "p25": 8250.0,
+          "p75": 8250.0
+        },
+        "road_efficiency": 495.0625,
+        "road_length": 3960.5,
+        "solver_runtime": 0.11310054199999975,
+        "theoretical_max_units": 31,
+        "unit_yield": 8,
+        "yield_efficiency": 0.25806451612903225
+      },
+      "parcel_id": "layout_case_015",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_015:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.630546,
+        "lot_size_distribution": {
+          "max": 8579.26174426889,
+          "mean": 8423.21785351432,
+          "median": 8529.59817912,
+          "min": 8026.054999999976,
+          "p25": 8529.59811044,
+          "p75": 8529.598179120003
+        },
+        "road_efficiency": 380.35555555555555,
+        "road_length": 3423.2,
+        "solver_runtime": 0.0905901250000003,
+        "theoretical_max_units": 24,
+        "unit_yield": 9,
+        "yield_efficiency": 0.375
+      },
+      "parcel_id": "layout_case_015",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_015:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.549219,
+        "lot_size_distribution": {
+          "max": 15094.214997020896,
+          "mean": 15094.214997020894,
+          "median": 15094.214997020894,
+          "min": 15094.214997020892,
+          "p25": 15094.214997020892,
+          "p75": 15094.214997020896
+        },
+        "road_efficiency": 430.5,
+        "road_length": 861.0,
+        "solver_runtime": 0.11147916699999971,
+        "theoretical_max_units": 18,
+        "unit_yield": 2,
+        "yield_efficiency": 0.1111111111111111
+      },
+      "parcel_id": "layout_case_015",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_016:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.5535,
+        "lot_size_distribution": {
+          "max": 8690.000022000002,
+          "mean": 8689.999993714286,
+          "median": 8690.000022,
+          "min": 8689.999956,
+          "p25": 8689.999956,
+          "p75": 8690.000022
+        },
+        "road_efficiency": 595.7857142857143,
+        "road_length": 4170.5,
+        "solver_runtime": 0.12438116700000013,
+        "theoretical_max_units": 34,
+        "unit_yield": 7,
+        "yield_efficiency": 0.20588235294117646
+      },
+      "parcel_id": "layout_case_016",
+      "parcel_type": "irregular",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_016:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.622358,
+        "lot_size_distribution": {
+          "max": 9153.317300000002,
+          "mean": 8865.268455555553,
+          "median": 8987.464800000002,
+          "min": 8354.654999999975,
+          "p25": 8987.464799999994,
+          "p75": 8987.464800000002
+        },
+        "road_efficiency": 401.46666666666664,
+        "road_length": 3613.2,
+        "solver_runtime": 0.09998079200000021,
+        "theoretical_max_units": 27,
+        "unit_yield": 9,
+        "yield_efficiency": 0.3333333333333333
+      },
+      "parcel_id": "layout_case_016",
+      "parcel_type": "irregular",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_016:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.549043,
+        "lot_size_distribution": {
+          "max": 15561.274997020893,
+          "mean": 15561.274997020893,
+          "median": 15561.274997020893,
+          "min": 15561.274997020893,
+          "p25": 15561.274997020893,
+          "p75": 15561.274997020893
+        },
+        "road_efficiency": 490.6,
+        "road_length": 981.2,
+        "solver_runtime": 0.110452875,
+        "theoretical_max_units": 20,
+        "unit_yield": 2,
+        "yield_efficiency": 0.1
+      },
+      "parcel_id": "layout_case_016",
+      "parcel_type": "irregular",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_017:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.616324,
+        "lot_size_distribution": {
+          "max": 6348.9005255554475,
+          "mean": 6348.9005255554475,
+          "median": 6348.9005255554475,
+          "min": 6348.900525555447,
+          "p25": 6348.900525555447,
+          "p75": 6348.9005255554475
+        },
+        "road_efficiency": 349.05,
+        "road_length": 698.1,
+        "solver_runtime": 0.08740679100000026,
+        "theoretical_max_units": 28,
+        "unit_yield": 2,
+        "yield_efficiency": 0.07142857142857142
+      },
+      "parcel_id": "layout_case_017",
+      "parcel_type": "long_narrow",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_017:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.612923,
+        "lot_size_distribution": {
+          "max": 8071.731489560003,
+          "mean": 8071.731469937144,
+          "median": 8071.731489560001,
+          "min": 8071.731420879999,
+          "p25": 8071.731455219999,
+          "p75": 8071.731489560003
+        },
+        "road_efficiency": 467.59999999999997,
+        "road_length": 3273.2,
+        "solver_runtime": 0.08218679099999981,
+        "theoretical_max_units": 22,
+        "unit_yield": 7,
+        "yield_efficiency": 0.3181818181818182
+      },
+      "parcel_id": "layout_case_017",
+      "parcel_type": "long_narrow",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_017:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.583237,
+        "lot_size_distribution": {
+          "max": 16229.334997020895,
+          "mean": 16229.334997020895,
+          "median": 16229.334997020895,
+          "min": 16229.334997020893,
+          "p25": 16229.334997020893,
+          "p75": 16229.334997020895
+        },
+        "road_efficiency": 348.35,
+        "road_length": 696.7,
+        "solver_runtime": 0.09820841700000038,
+        "theoretical_max_units": 17,
+        "unit_yield": 2,
+        "yield_efficiency": 0.11764705882352941
+      },
+      "parcel_id": "layout_case_017",
+      "parcel_type": "long_narrow",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_018:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.523466,
+        "lot_size_distribution": {
+          "max": 9130.000044,
+          "mean": 8394.375,
+          "median": 9129.999978,
+          "min": 6187.499999999997,
+          "p25": 8394.3749835,
+          "p75": 9129.9999945
+        },
+        "road_efficiency": 545.0625,
+        "road_length": 4360.5,
+        "solver_runtime": 0.13509500000000063,
+        "theoretical_max_units": 36,
+        "unit_yield": 8,
+        "yield_efficiency": 0.2222222222222222
+      },
+      "parcel_id": "layout_case_018",
+      "parcel_type": "long_narrow",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_018:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.627991,
+        "lot_size_distribution": {
+          "max": 9445.331489560002,
+          "mean": 9292.916164175997,
+          "median": 9445.33142088,
+          "min": 8683.254999999974,
+          "p25": 9445.33142088,
+          "p75": 9445.33148956
+        },
+        "road_efficiency": 431.18,
+        "road_length": 4311.8,
+        "solver_runtime": 0.10398220800000058,
+        "theoretical_max_units": 29,
+        "unit_yield": 10,
+        "yield_efficiency": 0.3448275862068966
+      },
+      "parcel_id": "layout_case_018",
+      "parcel_type": "long_narrow",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_018:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.541539,
+        "lot_size_distribution": {
+          "max": 16028.334997020895,
+          "mean": 16028.334997020895,
+          "median": 16028.334997020895,
+          "min": 16028.334997020895,
+          "p25": 16028.334997020895,
+          "p75": 16028.334997020895
+        },
+        "road_efficiency": 502.7,
+        "road_length": 1005.4,
+        "solver_runtime": 0.109775709,
+        "theoretical_max_units": 22,
+        "unit_yield": 2,
+        "yield_efficiency": 0.09090909090909091
+      },
+      "parcel_id": "layout_case_018",
+      "parcel_type": "long_narrow",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_019:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.66793,
+        "lot_size_distribution": {
+          "max": 6704.240023200001,
+          "mean": 6523.74017518515,
+          "median": 6499.759968000002,
+          "min": 6367.220534355449,
+          "p25": 6400.355392766587,
+          "p75": 6653.1200094000005
+        },
+        "road_efficiency": 167.18333333333334,
+        "road_length": 1003.1,
+        "solver_runtime": 0.11015562499999998,
+        "theoretical_max_units": 38,
+        "unit_yield": 6,
+        "yield_efficiency": 0.15789473684210525
+      },
+      "parcel_id": "layout_case_019",
+      "parcel_type": "long_narrow",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_019:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.596436,
+        "lot_size_distribution": {
+          "max": 10101.800646261552,
+          "mean": 9555.476123130775,
+          "median": 9555.476123130775,
+          "min": 9009.151599999997,
+          "p25": 9009.151600000001,
+          "p75": 10101.80064626155
+        },
+        "road_efficiency": 250.8,
+        "road_length": 1003.2,
+        "solver_runtime": 0.10456287500000006,
+        "theoretical_max_units": 30,
+        "unit_yield": 4,
+        "yield_efficiency": 0.13333333333333333
+      },
+      "parcel_id": "layout_case_019",
+      "parcel_type": "long_narrow",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_019:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.549292,
+        "lot_size_distribution": {
+          "max": 18425.564997020894,
+          "mean": 18425.56499702089,
+          "median": 18425.56499702089,
+          "min": 18425.56499702089,
+          "p25": 18425.56499702089,
+          "p75": 18425.564997020894
+        },
+        "road_efficiency": 503.25,
+        "road_length": 1006.5,
+        "solver_runtime": 0.13970012500000006,
+        "theoretical_max_units": 23,
+        "unit_yield": 2,
+        "yield_efficiency": 0.08695652173913043
+      },
+      "parcel_id": "layout_case_019",
+      "parcel_type": "long_narrow",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_020:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.654447,
+        "lot_size_distribution": {
+          "max": 8500.108137324272,
+          "mean": 7544.432898344299,
+          "median": 6799.173744462976,
+          "min": 6747.720000000003,
+          "p25": 6747.720000000005,
+          "p75": 8487.720000000005
+        },
+        "road_efficiency": 495.8818181818182,
+        "road_length": 5454.7,
+        "solver_runtime": 0.13799291700000005,
+        "theoretical_max_units": 44,
+        "unit_yield": 11,
+        "yield_efficiency": 0.25
+      },
+      "parcel_id": "layout_case_020",
+      "parcel_type": "long_narrow",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_020:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.578149,
+        "lot_size_distribution": {
+          "max": 10876.134646261551,
+          "mean": 10244.802123130776,
+          "median": 10244.802123130776,
+          "min": 9613.4696,
+          "p25": 9613.4696,
+          "p75": 10876.134646261551
+        },
+        "road_efficiency": 264.275,
+        "road_length": 1057.1,
+        "solver_runtime": 0.11818445799999999,
+        "theoretical_max_units": 35,
+        "unit_yield": 4,
+        "yield_efficiency": 0.11428571428571428
+      },
+      "parcel_id": "layout_case_020",
+      "parcel_type": "long_narrow",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_020:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.524587,
+        "lot_size_distribution": {
+          "max": 10525.424997020895,
+          "mean": 10525.424997020895,
+          "median": 10525.424997020895,
+          "min": 10525.424997020895,
+          "p25": 10525.424997020895,
+          "p75": 10525.424997020895
+        },
+        "road_efficiency": 530.2,
+        "road_length": 1060.4,
+        "solver_runtime": 0.10568595799999958,
+        "theoretical_max_units": 26,
+        "unit_yield": 2,
+        "yield_efficiency": 0.07692307692307693
+      },
+      "parcel_id": "layout_case_020",
+      "parcel_type": "long_narrow",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_001:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.572016,
+        "lot_size_distribution": {
+          "max": 7837.5,
+          "mean": 7837.5,
+          "median": 7837.5,
+          "min": 7837.5,
+          "p25": 7837.5,
+          "p75": 7837.5
+        },
+        "road_efficiency": 1081.5833333333333,
+        "road_length": 6489.5,
+        "solver_runtime": 0.17170833300000066,
+        "theoretical_max_units": 52,
+        "unit_yield": 6,
+        "yield_efficiency": 0.11538461538461539
+      },
+      "parcel_id": "layout_case_internal_001",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_001:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.656126,
+        "lot_size_distribution": {
+          "max": 8137.549800000002,
+          "mean": 8137.549799999999,
+          "median": 8137.549800000002,
+          "min": 8137.549799999995,
+          "p25": 8137.549799999995,
+          "p75": 8137.549800000002
+        },
+        "road_efficiency": 663.2,
+        "road_length": 5968.8,
+        "solver_runtime": 0.12344045800000014,
+        "theoretical_max_units": 42,
+        "unit_yield": 9,
+        "yield_efficiency": 0.21428571428571427
+      },
+      "parcel_id": "layout_case_internal_001",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_001:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.395943,
+        "lot_size_distribution": {
+          "max": 11818.0,
+          "mean": 11818.0,
+          "median": 11818.0,
+          "min": 11818.0,
+          "p25": 11818.0,
+          "p75": 11818.0
+        },
+        "road_efficiency": 1969.0,
+        "road_length": 5907.0,
+        "solver_runtime": 0.12050499999999964,
+        "theoretical_max_units": 31,
+        "unit_yield": 3,
+        "yield_efficiency": 0.0967741935483871
+      },
+      "parcel_id": "layout_case_internal_001",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_002:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.592972,
+        "lot_size_distribution": {
+          "max": 6731.700525555449,
+          "mean": 6731.700525555449,
+          "median": 6731.700525555449,
+          "min": 6731.700525555448,
+          "p25": 6731.700525555448,
+          "p75": 6731.700525555449
+        },
+        "road_efficiency": 555.0,
+        "road_length": 1110.0,
+        "solver_runtime": 0.18388495900000024,
+        "theoretical_max_units": 52,
+        "unit_yield": 2,
+        "yield_efficiency": 0.038461538461538464
+      },
+      "parcel_id": "layout_case_internal_002",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_002:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.602662,
+        "lot_size_distribution": {
+          "max": 9028.363156701549,
+          "mean": 9028.363156701549,
+          "median": 9028.363156701549,
+          "min": 9028.363156701549,
+          "p25": 9028.363156701549,
+          "p75": 9028.363156701549
+        },
+        "road_efficiency": 538.65,
+        "road_length": 1077.3,
+        "solver_runtime": 0.15948516599999962,
+        "theoretical_max_units": 42,
+        "unit_yield": 2,
+        "yield_efficiency": 0.047619047619047616
+      },
+      "parcel_id": "layout_case_internal_002",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_002:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.532945,
+        "lot_size_distribution": {
+          "max": 11271.554997020896,
+          "mean": 11155.939997020894,
+          "median": 11155.939997020894,
+          "min": 11040.324997020894,
+          "p25": 11098.132497020895,
+          "p75": 11213.747497020895
+        },
+        "road_efficiency": 540.3,
+        "road_length": 1080.6,
+        "solver_runtime": 0.13345629200000086,
+        "theoretical_max_units": 31,
+        "unit_yield": 2,
+        "yield_efficiency": 0.06451612903225806
+      },
+      "parcel_id": "layout_case_internal_002",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_003:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.600709,
+        "lot_size_distribution": {
+          "max": 10778.720023200003,
+          "mean": 9308.084251218184,
+          "median": 8637.360000000004,
+          "min": 8226.720000000003,
+          "p25": 8443.151667650003,
+          "p75": 10778.7200232
+        },
+        "road_efficiency": 523.5,
+        "road_length": 5758.5,
+        "solver_runtime": 0.19826470799999996,
+        "theoretical_max_units": 56,
+        "unit_yield": 11,
+        "yield_efficiency": 0.19642857142857142
+      },
+      "parcel_id": "layout_case_internal_003",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_003:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.582895,
+        "lot_size_distribution": {
+          "max": 8778.640000000005,
+          "mean": 8778.64,
+          "median": 8778.640000000003,
+          "min": 8778.639999999987,
+          "p25": 8778.639999999998,
+          "p75": 8778.640000000005
+        },
+        "road_efficiency": 949.4666666666667,
+        "road_length": 5696.8,
+        "solver_runtime": 0.16977145800000049,
+        "theoretical_max_units": 45,
+        "unit_yield": 6,
+        "yield_efficiency": 0.13333333333333333
+      },
+      "parcel_id": "layout_case_internal_003",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_003:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.364535,
+        "lot_size_distribution": {
+          "max": 10678.0,
+          "mean": 10678.0,
+          "median": 10678.0,
+          "min": 10678.0,
+          "p25": 10678.0,
+          "p75": 10678.0
+        },
+        "road_efficiency": 2817.5,
+        "road_length": 5635.0,
+        "solver_runtime": 0.12547662500000012,
+        "theoretical_max_units": 34,
+        "unit_yield": 2,
+        "yield_efficiency": 0.058823529411764705
+      },
+      "parcel_id": "layout_case_internal_003",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "C",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_004:A",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.585588,
+        "lot_size_distribution": {
+          "max": 9817.5,
+          "mean": 9157.5,
+          "median": 9817.5,
+          "min": 6517.5,
+          "p25": 9817.5,
+          "p75": 9817.5
+        },
+        "road_efficiency": 615.05,
+        "road_length": 6150.5,
+        "solver_runtime": 0.16437041699999977,
+        "theoretical_max_units": 52,
+        "unit_yield": 10,
+        "yield_efficiency": 0.19230769230769232
+      },
+      "parcel_id": "layout_case_internal_004",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "A",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_004:B",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.483476,
+        "lot_size_distribution": {
+          "max": 8639.180000000004,
+          "mean": 8639.13642857143,
+          "median": 8639.18,
+          "min": 8638.875,
+          "p25": 8639.18,
+          "p75": 8639.180000000004
+        },
+        "road_efficiency": 869.8285714285714,
+        "road_length": 6088.8,
+        "solver_runtime": 0.13826437499999944,
+        "theoretical_max_units": 42,
+        "unit_yield": 7,
+        "yield_efficiency": 0.16666666666666666
+      },
+      "parcel_id": "layout_case_internal_004",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "B",
+      "status": "success"
+    },
+    {
+      "algorithm_variant": "scoring_upgrade_candidate",
+      "case_id": "layout_case_internal_004:C",
+      "max_candidates": 50,
+      "metrics": {
+        "constraint_violations": [],
+        "layout_score": 0.340704,
+        "lot_size_distribution": {
+          "max": 10298.0,
+          "mean": 10298.0,
+          "median": 10298.0,
+          "min": 10298.0,
+          "p25": 10298.0,
+          "p75": 10298.0
+        },
+        "road_efficiency": 5069.0,
+        "road_length": 5069.0,
+        "solver_runtime": 0.10990179100000042,
+        "theoretical_max_units": 31,
+        "unit_yield": 1,
+        "yield_efficiency": 0.03225806451612903
+      },
+      "parcel_id": "layout_case_internal_004",
+      "parcel_type": "internal_constraints",
+      "scenario_id": "C",
+      "status": "success"
+    }
+  ],
+  "run_id": "layout-eval-e848f5e8-e071-408e-b532-71a080c0917b"
+}

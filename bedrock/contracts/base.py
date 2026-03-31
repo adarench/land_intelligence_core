@@ -28,6 +28,9 @@ class EngineMetadata(BedrockModel):
 
     source_engine: Optional[str] = None
     source_run_id: Optional[str] = None
+    source_type: Optional[str] = None
+    rule_completeness: Optional[float] = Field(default=None, ge=0, le=1)
+    legal_reliability: Optional[bool] = None
     observed_at: datetime = Field(default_factory=utc_now)
 
 

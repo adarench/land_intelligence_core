@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-03-30T21:04:28.702552+00:00",
+  "metrics": {
+    "overall_success_rate": 0.2,
+    "overall_actionable_rate": 0.4,
+    "profitable_share": 0.16666666666666666,
+    "near_feasible_profitable_share": 0.5833333333333334,
+    "success_rate_by_jurisdiction": {
+      "Draper": {
+        "count": 15,
+        "success_rate": 0.3333333333333333,
+        "actionable_rate": 0.8666666666666667,
+        "profitable_share": 0.6666666666666666
+      },
+      "Provo": {
+        "count": 15,
+        "success_rate": 0.06666666666666667,
+        "actionable_rate": 0.06666666666666667,
+        "profitable_share": 0.0
+      },
+      "Salt Lake City": {
+        "count": 15,
+        "success_rate": 0.0,
+        "actionable_rate": 0.0,
+        "profitable_share": 0.0
+      },
+      "West Valley City": {
+        "count": 15,
+        "success_rate": 0.4,
+        "actionable_rate": 0.6666666666666666,
+        "profitable_share": 0.0
+      }
+    },
+    "failure_distribution": {},
+    "near_feasible_distribution": {
+      "ZONING_CONSTRAINT_FAIL": 4,
+      "SOLVER_FAIL": 7,
+      "GEOMETRY_INVALID": 1
+    },
+    "roi_distribution": {
+      "count": 24,
+      "min": -0.46718755979139587,
+      "max": 2.2457347474720217,
+      "avg": 0.10760924014443098
+    },
+    "top_5_highest_value_parcels": [
+      {
+        "parcel_id": "ut-utah-14547",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": 7287188.529060153,
+        "upside_projected_profit": null,
+        "ROI": 2.2457347474720217,
+        "upside_ROI": null
+      },
+      {
+        "parcel_id": "ut-utah-13727",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": 7270571.786565289,
+        "upside_projected_profit": null,
+        "ROI": 0.6286904907257644,
+        "upside_ROI": null
+      },
+      {
+        "parcel_id": "ut-utah-84832",
+        "jurisdiction": "Draper",
+        "status": "near_feasible",
+        "projected_profit": 3982842.215666062,
+        "upside_projected_profit": 3982842.215666062,
+        "ROI": 0.5442321722457758,
+        "upside_ROI": 0.5442321722457758
+      },
+      {
+        "parcel_id": "ut-utah-85511",
+        "jurisdiction": "Draper",
+        "status": "near_feasible",
+        "projected_profit": 2395372.859907438,
+        "upside_projected_profit": 2395372.859907438,
+        "ROI": 0.6168828528585402,
+        "upside_ROI": 0.6168828528585402
+      },
+      {
+        "parcel_id": "ut-utah-14847",
+        "jurisdiction": "Draper",
+        "status": "near_feasible",
+        "projected_profit": 1866354.4245421486,
+        "upside_projected_profit": 1866354.4245421486,
+        "ROI": 0.42301340560120376,
+        "upside_ROI": 0.42301340560120376
+      }
+    ]
+  }
+}

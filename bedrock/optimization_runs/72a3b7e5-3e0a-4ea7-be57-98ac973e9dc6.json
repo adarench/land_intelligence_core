@@ -1,0 +1,328 @@
+{
+  "schema_name": "OptimizationRun",
+  "schema_version": "1.0.0",
+  "optimization_run_id": "72a3b7e5-3e0a-4ea7-be57-98ac973e9dc6",
+  "parcel_id": "ut-salt-lake-113",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-113",
+    "jurisdiction": "Salt Lake City",
+    "district": "FR-2",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "FR-2:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 21780.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:57:40.751636Z"
+        }
+      },
+      {
+        "id": "FR-2:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 2.0,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:57:40.751636Z"
+        }
+      },
+      {
+        "id": "FR-2:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 28.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:57:40.751636Z"
+        }
+      },
+      {
+        "id": "FR-2:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.25,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:57:40.751636Z"
+        }
+      },
+      {
+        "id": "FR-2:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 100.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:57:40.751636Z"
+        }
+      },
+      {
+        "id": "FR-2:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:57:40.751636Z"
+        }
+      },
+      {
+        "id": "FR-2:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:57:40.751636Z"
+        }
+      },
+      {
+        "id": "FR-2:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 40.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:57:40.751636Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 20.0,
+      "side": 20.0,
+      "rear": 40.0
+    },
+    "min_lot_size_sqft": 21780.0,
+    "max_units_per_acre": 2.0,
+    "height_limit_ft": 28.0,
+    "lot_coverage_max": 0.25,
+    "min_frontage_ft": 100.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/salt-lake-city",
+      "source_type": "real_lookup",
+      "rule_completeness": 1.0,
+      "legal_reliability": true,
+      "observed_at": "2026-03-31T20:57:40.751636Z"
+    }
+  },
+  "layout_candidates": [],
+  "best_candidate": null,
+  "ranking_metrics": {
+    "rounds_executed": 1,
+    "candidate_count": 0,
+    "profitable_candidate_count": 0,
+    "best_objective_score": null,
+    "best_roi": null,
+    "best_profit": null,
+    "best_confidence": null
+  },
+  "objective": {
+    "roi_weight": 0.45,
+    "profit_weight": 0.25,
+    "risk_weight": 0.2,
+    "confidence_weight": 0.1,
+    "min_roi": null,
+    "max_risk": null,
+    "improvement_epsilon": 0.01,
+    "target_score": 0.5
+  },
+  "scenario_evaluation": {
+    "schema_name": "ScenarioEvaluation",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-113",
+    "layout_count": 0,
+    "best_layout_id": null,
+    "best_roi": null,
+    "best_profit": null,
+    "best_units": null,
+    "layouts_ranked": []
+  },
+  "iterations": [
+    {
+      "iteration_index": 1,
+      "search_plans": [
+        {
+          "label": "broad_sampling",
+          "strategies": [
+            "grid",
+            "spine-road",
+            "cul-de-sac",
+            "loop_custom",
+            "t_junction"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 1.0,
+          "lot_depth_factor": 1.0,
+          "frontage_hint_factor": 1.0,
+          "road_width_factor": 1.0,
+          "runtime_budget_factor": 1.0
+        },
+        {
+          "label": "compact_yield",
+          "strategies": [
+            "grid",
+            "spine-road",
+            "herringbone",
+            "loop_custom"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 1.0,
+          "lot_depth_factor": 0.92,
+          "frontage_hint_factor": 0.95,
+          "road_width_factor": 0.95,
+          "runtime_budget_factor": 1.0
+        },
+        {
+          "label": "hybrid_spacing",
+          "strategies": [
+            "loop_custom",
+            "spine-road",
+            "grid",
+            "t_junction"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 0.9,
+          "lot_depth_factor": 1.1,
+          "frontage_hint_factor": 0.92,
+          "road_width_factor": 0.9,
+          "runtime_budget_factor": 1.0
+        }
+      ],
+      "candidate_count": 0,
+      "best_layout_id": null,
+      "best_objective_score": null,
+      "best_roi": null,
+      "best_projected_profit": null,
+      "improvement_from_prior": null,
+      "score_distribution": {
+        "count": 0,
+        "min_score": null,
+        "p25_score": null,
+        "median_score": null,
+        "p75_score": null,
+        "max_score": null
+      }
+    }
+  ],
+  "convergence_metrics": {
+    "iteration_count": 1,
+    "plateau_reached": false,
+    "stopped_reason": "no_guided_plans",
+    "improvement_curve": [
+      0.0
+    ],
+    "candidate_score_distribution": {
+      "count": 0,
+      "min_score": null,
+      "p25_score": null,
+      "median_score": null,
+      "p75_score": null,
+      "max_score": null
+    }
+  },
+  "sensitivity_analysis": [],
+  "economic_scenarios": [],
+  "decision": {
+    "recommendation": "abandon",
+    "action": "abandon",
+    "best_layout_id": null,
+    "expected_roi_base": null,
+    "expected_roi_best_case": null,
+    "expected_roi_worst_case": null,
+    "sensitivity": [
+      "no_viable_candidate_found"
+    ],
+    "key_risks": [
+      "no_candidate"
+    ],
+    "breakpoints": [],
+    "target_price": null,
+    "reason": "No valid candidate layouts survived optimization.",
+    "alternative": null,
+    "rationale": "Optimization did not produce any valid financially ranked candidates."
+  },
+  "selected_pipeline_run_id": "c7060b57-197a-49ee-9b75-05d8ce064a32",
+  "timestamp": "2026-03-31T20:57:41.611865+00:00",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "d6366e743b725428eaa6337ecc30c7e26851448117fd931ee9020de3c654322a",
+  "stage_runtimes": {
+    "parcel.load": 0.002801,
+    "zoning.lookup": 0.432866,
+    "layout.search.broad_sampling": 0.296793,
+    "layout.search.compact_yield": 0.277581,
+    "layout.search.hybrid_spacing": 0.285143,
+    "optimization.total": 0.859683
+  }
+}

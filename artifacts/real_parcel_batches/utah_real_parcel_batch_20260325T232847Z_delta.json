@@ -1,0 +1,127 @@
+{
+  "baseline_metrics_path": "artifacts/real_parcel_batches/utah_real_parcel_batch_20260325T231933Z_metrics.json",
+  "first_optimization_metrics_path": "artifacts/real_parcel_batches/utah_real_parcel_batch_20260325T232655Z_metrics.json",
+  "second_optimization_metrics_path": "artifacts/real_parcel_batches/utah_real_parcel_batch_20260325T232847Z_metrics.json",
+  "baseline_metrics": {
+    "overall_success_rate": 0.5,
+    "success_rate_by_jurisdiction": {
+      "Draper": {
+        "count": 15,
+        "success_rate": 0.06666666666666667
+      },
+      "Provo": {
+        "count": 15,
+        "success_rate": 0.26666666666666666
+      },
+      "Salt Lake City": {
+        "count": 15,
+        "success_rate": 0.8666666666666667
+      },
+      "West Valley City": {
+        "count": 15,
+        "success_rate": 0.8
+      }
+    },
+    "failure_distribution": {
+      "SOLVER_FAIL": 18,
+      "ZONING_CONSTRAINT_FAIL": 11,
+      "FRONTAGE_FAIL": 1
+    }
+  },
+  "first_optimization_metrics": {
+    "overall_success_rate": 0.5666666666666667,
+    "success_rate_by_jurisdiction": {
+      "Draper": {
+        "count": 15,
+        "success_rate": 0.26666666666666666
+      },
+      "Provo": {
+        "count": 15,
+        "success_rate": 0.26666666666666666
+      },
+      "Salt Lake City": {
+        "count": 15,
+        "success_rate": 0.8666666666666667
+      },
+      "West Valley City": {
+        "count": 15,
+        "success_rate": 0.8666666666666667
+      }
+    },
+    "failure_distribution": {
+      "ZONING_CONSTRAINT_FAIL": 10,
+      "SOLVER_FAIL": 13,
+      "GEOMETRY_INVALID": 3
+    }
+  },
+  "second_optimization_metrics": {
+    "overall_success_rate": 0.6666666666666666,
+    "success_rate_by_jurisdiction": {
+      "Draper": {
+        "count": 15,
+        "success_rate": 0.4
+      },
+      "Provo": {
+        "count": 15,
+        "success_rate": 0.4
+      },
+      "Salt Lake City": {
+        "count": 15,
+        "success_rate": 0.8666666666666667
+      },
+      "West Valley City": {
+        "count": 15,
+        "success_rate": 1.0
+      }
+    },
+    "failure_distribution": {
+      "ZONING_CONSTRAINT_FAIL": 9,
+      "SOLVER_FAIL": 9,
+      "GEOMETRY_INVALID": 2
+    }
+  },
+  "delta_baseline_to_first": {
+    "overall_success_rate_delta": 0.06666666666666665,
+    "failure_distribution_delta": {
+      "FRONTAGE_FAIL": -1,
+      "GEOMETRY_INVALID": 3,
+      "SOLVER_FAIL": -5,
+      "ZONING_CONSTRAINT_FAIL": -1
+    },
+    "success_rate_by_jurisdiction_delta": {
+      "Draper": 0.2,
+      "Provo": 0.0,
+      "Salt Lake City": 0.0,
+      "West Valley City": 0.06666666666666665
+    }
+  },
+  "delta_first_to_second": {
+    "overall_success_rate_delta": 0.09999999999999998,
+    "failure_distribution_delta": {
+      "GEOMETRY_INVALID": -1,
+      "SOLVER_FAIL": -4,
+      "ZONING_CONSTRAINT_FAIL": -1
+    },
+    "success_rate_by_jurisdiction_delta": {
+      "Draper": 0.13333333333333336,
+      "Provo": 0.13333333333333336,
+      "Salt Lake City": 0.0,
+      "West Valley City": 0.1333333333333333
+    }
+  },
+  "delta_baseline_to_second": {
+    "overall_success_rate_delta": 0.16666666666666663,
+    "failure_distribution_delta": {
+      "FRONTAGE_FAIL": -1,
+      "GEOMETRY_INVALID": 2,
+      "SOLVER_FAIL": -9,
+      "ZONING_CONSTRAINT_FAIL": -2
+    },
+    "success_rate_by_jurisdiction_delta": {
+      "Draper": 0.33333333333333337,
+      "Provo": 0.13333333333333336,
+      "Salt Lake City": 0.0,
+      "West Valley City": 0.19999999999999996
+    }
+  }
+}

@@ -1,0 +1,640 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "46101ca8-14dd-4ef9-9ddb-de83ce9037f3",
+  "status": "completed",
+  "parcel_id": "ut-salt-lake-71003",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-71003",
+    "jurisdiction": "West Valley City",
+    "district": "R-1-7000",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "R-1-7000:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 7000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:09:31.823022Z"
+        }
+      },
+      {
+        "id": "R-1-7000:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 6.22,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:09:31.823022Z"
+        }
+      },
+      {
+        "id": "R-1-7000:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:09:31.823022Z"
+        }
+      },
+      {
+        "id": "R-1-7000:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.45,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:09:31.823022Z"
+        }
+      },
+      {
+        "id": "R-1-7000:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 50.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:09:31.823022Z"
+        }
+      },
+      {
+        "id": "R-1-7000:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:09:31.823022Z"
+        }
+      },
+      {
+        "id": "R-1-7000:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:09:31.823022Z"
+        }
+      },
+      {
+        "id": "R-1-7000:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "observed_at": "2026-03-26T23:09:31.823022Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 8.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 7000.0,
+    "max_units_per_acre": 6.22,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.45,
+    "min_frontage_ft": 50.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "jurisdiction_fallback",
+      "observed_at": "2026-03-26T23:09:31.823022Z"
+    }
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-ut-salt-lake-71003-c343d94c6d1a",
+    "parcel_id": "ut-salt-lake-71003",
+    "unit_count": 13,
+    "road_length_ft": 774.1,
+    "lot_geometries": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.936283,
+              40.689802
+            ],
+            [
+              -111.936283,
+              40.68944
+            ],
+            [
+              -111.936534,
+              40.68944
+            ],
+            [
+              -111.936534,
+              40.689802
+            ],
+            [
+              -111.936283,
+              40.689802
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.936534,
+              40.68989
+            ],
+            [
+              -111.936534,
+              40.690253
+            ],
+            [
+              -111.936283,
+              40.690253
+            ],
+            [
+              -111.936283,
+              40.68989
+            ],
+            [
+              -111.936534,
+              40.68989
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.936033,
+              40.689802
+            ],
+            [
+              -111.936033,
+              40.68944
+            ],
+            [
+              -111.936283,
+              40.68944
+            ],
+            [
+              -111.936283,
+              40.689802
+            ],
+            [
+              -111.936033,
+              40.689802
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.936283,
+              40.68989
+            ],
+            [
+              -111.936283,
+              40.690253
+            ],
+            [
+              -111.936033,
+              40.690253
+            ],
+            [
+              -111.936033,
+              40.68989
+            ],
+            [
+              -111.936283,
+              40.68989
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.936033,
+              40.68989
+            ],
+            [
+              -111.936033,
+              40.690253
+            ],
+            [
+              -111.935782,
+              40.690253
+            ],
+            [
+              -111.935782,
+              40.68989
+            ],
+            [
+              -111.936033,
+              40.68989
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.935464,
+              40.689802
+            ],
+            [
+              -111.935464,
+              40.68954
+            ],
+            [
+              -111.935942,
+              40.68954
+            ],
+            [
+              -111.935942,
+              40.689802
+            ],
+            [
+              -111.935464,
+              40.689802
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.935782,
+              40.68989
+            ],
+            [
+              -111.935782,
+              40.690253
+            ],
+            [
+              -111.935532,
+              40.690253
+            ],
+            [
+              -111.935532,
+              40.68989
+            ],
+            [
+              -111.935782,
+              40.68989
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.935532,
+              40.68989
+            ],
+            [
+              -111.935532,
+              40.690253
+            ],
+            [
+              -111.935281,
+              40.690253
+            ],
+            [
+              -111.935281,
+              40.68989
+            ],
+            [
+              -111.935532,
+              40.68989
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.935281,
+              40.68989
+            ],
+            [
+              -111.935281,
+              40.690253
+            ],
+            [
+              -111.93503,
+              40.690253
+            ],
+            [
+              -111.93503,
+              40.68989
+            ],
+            [
+              -111.935281,
+              40.68989
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.935348,
+              40.689802
+            ],
+            [
+              -111.93487,
+              40.689802
+            ],
+            [
+              -111.93487,
+              40.68954
+            ],
+            [
+              -111.935348,
+              40.68954
+            ],
+            [
+              -111.935348,
+              40.689802
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93503,
+              40.68989
+            ],
+            [
+              -111.93503,
+              40.690253
+            ],
+            [
+              -111.93478,
+              40.690253
+            ],
+            [
+              -111.93478,
+              40.68989
+            ],
+            [
+              -111.93503,
+              40.68989
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93478,
+              40.68989
+            ],
+            [
+              -111.93478,
+              40.690253
+            ],
+            [
+              -111.934529,
+              40.690253
+            ],
+            [
+              -111.934529,
+              40.68989
+            ],
+            [
+              -111.93478,
+              40.68989
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.934529,
+              40.68989
+            ],
+            [
+              -111.934529,
+              40.690253
+            ],
+            [
+              -111.934278,
+              40.690253
+            ],
+            [
+              -111.934278,
+              40.68989
+            ],
+            [
+              -111.934529,
+              40.68989
+            ]
+          ]
+        ]
+      }
+    ],
+    "road_geometries": [
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.936534,
+            40.689846
+          ],
+          [
+            -111.934278,
+            40.689846
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.935406,
+            40.68943
+          ],
+          [
+            -111.935406,
+            40.68954
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.935406,
+            40.68954
+          ],
+          [
+            -111.935406,
+            40.689846
+          ]
+        ]
+      }
+    ],
+    "open_space_area_sqft": 213679.31999874924,
+    "utility_length_ft": 0.0,
+    "score": null,
+    "buildable_area_sqft": null,
+    "metadata": {
+      "source_engine": "bedrock.layout_service",
+      "source_run_id": null,
+      "observed_at": "2026-03-26T23:09:32.152000Z"
+    }
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "3a72328b-d51f-5a91-811a-d43a8e0ecc4a",
+    "layout_id": "layout-ut-salt-lake-71003-c343d94c6d1a",
+    "parcel_id": "ut-salt-lake-71003",
+    "units": 13,
+    "estimated_home_price": 480000.0,
+    "construction_cost_per_home": 416000.0,
+    "development_cost_total": 389250.2396694215,
+    "projected_revenue": 6240000.0,
+    "projected_cost": 5797250.239669422,
+    "projected_profit": 442749.7603305783,
+    "ROI": 0.07637237345749377,
+    "profit_margin": 0.07095348723246447,
+    "revenue_per_unit": 480000.0,
+    "cost_per_unit": 445942.32612841704,
+    "rank": null,
+    "risk_score": 0.5544072866868535,
+    "requested_units": null,
+    "constraint_violations": [],
+    "confidence": 0.9,
+    "status": "feasible",
+    "financial_summary": {
+      "units": 13,
+      "estimated_home_price": 480000.0,
+      "construction_cost_per_home": 416000.0,
+      "road_cost_per_ft": 300.0,
+      "road_length": 774.1,
+      "land_cost": 0.0,
+      "projected_revenue": 6240000.0,
+      "development_cost_total": 389250.2396694215,
+      "projected_cost": 5797250.239669422,
+      "projected_profit": 442749.7603305783,
+      "ROI": 0.07637237345749377,
+      "development_cost_breakdown": {
+        "roads": 232230.0,
+        "utilities": 0.0,
+        "grading": 23223.0,
+        "sitework": 88297.2396694215,
+        "permitting": 45500.0
+      },
+      "profit_margin": 0.07095348723246447,
+      "revenue_per_unit": 480000.0,
+      "cost_per_unit": 445942.32612841704
+    },
+    "explanation": {
+      "primary_driver": "home_price",
+      "cost_breakdown": {
+        "construction": 5408000.0,
+        "development": 389250.2396694215
+      },
+      "revenue_breakdown": {
+        "units": 13,
+        "price_per_home": 480000.0
+      }
+    },
+    "assumptions": {
+      "used_default_estimated_home_price": true,
+      "used_default_construction_cost_per_home": true,
+      "used_default_road_cost_per_ft": true,
+      "used_default_land_price": true,
+      "used_default_soft_cost_factor": true
+    },
+    "metadata": null
+  },
+  "near_feasible_result": null,
+  "timestamp": "2026-03-26T23:09:32.152707Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "e22ced69077c5b68abfb800e184dbafce3285d77be8510e637a777d7b18f7cb7",
+  "stage_runtimes": {
+    "parcel.load": 0.002159,
+    "zoning.lookup": 0.020816,
+    "layout.search": 0.328525,
+    "feasibility.evaluate": 0.000601
+  },
+  "zoning_bypassed": false,
+  "bypass_reason": null
+}

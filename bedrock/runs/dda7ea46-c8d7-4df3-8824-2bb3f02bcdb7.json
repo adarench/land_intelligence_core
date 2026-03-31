@@ -1,0 +1,47 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "dda7ea46-c8d7-4df3-8824-2bb3f02bcdb7",
+  "status": "non_buildable",
+  "parcel_id": "ut-utah-3076",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-utah-3076",
+    "jurisdiction": "Provo",
+    "district": "RC",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [],
+    "setbacks": {
+      "front": null,
+      "side": null,
+      "rear": null
+    },
+    "min_lot_size_sqft": null,
+    "max_units_per_acre": null,
+    "height_limit_ft": null,
+    "lot_coverage_max": null,
+    "min_frontage_ft": null,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/provo",
+      "observed_at": "2026-03-25T22:39:12.391667Z"
+    }
+  },
+  "layout_result": null,
+  "feasibility_result": null,
+  "timestamp": "2026-03-25T22:39:12.391725Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "f553062eb50cac33a136d27ca31b0e5a4fa17680a4529d58ef7271e28609203c",
+  "stage_runtimes": {
+    "parcel.load": 0.001681,
+    "zoning.lookup": 0.013328
+  },
+  "zoning_bypassed": true,
+  "bypass_reason": "historical_constraint"
+}

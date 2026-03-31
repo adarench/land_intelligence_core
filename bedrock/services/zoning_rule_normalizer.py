@@ -256,6 +256,9 @@ def normalize_rules(
         "metadata": EngineMetadata(
             source_engine="zoning_data_scraper",
             source_run_id=str(raw_rules.get("dataset_path") or raw_rules.get("rule_source") or "unknown"),
+            source_type=raw_rules.get("source_type"),
+            rule_completeness=raw_rules.get("rule_completeness"),
+            legal_reliability=raw_rules.get("legal_reliability"),
         ),
     }
     return ZoningRules.model_validate(payload)

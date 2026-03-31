@@ -1,0 +1,2093 @@
+[
+  {
+    "parcel_id": "ut-utah-13631",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": 0.057492909305769134,
+    "projected_profit": 136535.5658119009,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "ROI_best_case": 0.2275907333303345,
+    "ROI_worst_case": -0.0972015538584128,
+    "break_even_price": 1187412.2170940496,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-84832",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 144740.96,
+        "min_lot_area_sqft": 3600.0,
+        "max_units": 39,
+        "district": "RM"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 3600.0,
+          "needed": 3711.306667,
+          "reduction_sqft": 0.0
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.601224,
+        "violation": "Layout produced out-of-bounds lot geometry for parcel ut-utah-84832",
+        "strategy": "loop_custom",
+        "profile": "",
+        "lot_count": 8,
+        "avg_frontage_ft": 66.0,
+        "avg_depth_ft": 66.4,
+        "total_road_ft": 922.1,
+        "compliance_rate": 0.4211
+      },
+      "financial_upside": {
+        "relaxed_units": 9,
+        "projected_profit": 3982842.215666062,
+        "ROI": 0.5442321722457758,
+        "break_even_price": 813141.9760371041,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 691.575,
+          "road_length_proxy": 922.1
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.5442321722457758,
+    "upside_projected_profit": 3982842.215666062,
+    "upside_relaxed_units": 9
+  },
+  {
+    "parcel_id": "ut-utah-14978",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1,
+    "ROI": -0.24197600938096858,
+    "projected_profit": -400837.4922426448,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "ROI_best_case": -0.1316359743153623,
+    "ROI_worst_case": -0.3450320436005707,
+    "break_even_price": 1656517.4922426448,
+    "confidence": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-13598",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.0571029078656553,
+    "projected_profit": -152090.78476727288,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "ROI_best_case": 0.09591010567950138,
+    "ROI_worst_case": -0.19707673838695103,
+    "break_even_price": 1331725.3923836364,
+    "confidence": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-14547",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 18,
+    "ROI": 2.2457347474720217,
+    "projected_profit": 7287188.529060153,
+    "estimated_home_price": 585116.1245599999,
+    "price_per_sqft": 392.3999999999999,
+    "ROI_best_case": 2.8503337363474945,
+    "ROI_worst_case": 1.7180258782458802,
+    "break_even_price": 180272.31738999143,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-14847",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "SOLVER_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 185230.56,
+        "min_lot_area_sqft": 43000.0,
+        "required_frontage_ft": 35.0,
+        "approx_frontage_ft": 1738.361148,
+        "max_units": 4,
+        "district": "RR-43",
+        "candidates_generated": 0
+      },
+      "required_relaxation": {
+        "search_budget": {
+          "attempted_profiles": [
+            "default",
+            "default_dense",
+            "expanded_topologies",
+            "expanded_wide_spacing",
+            "loop_focus",
+            "loop_dense",
+            "grid_compact",
+            "grid_wide",
+            "culdesac_branching",
+            "rural_low_density",
+            "rural_extreme"
+          ],
+          "candidate_budget_increase": 18,
+          "road_spacing_sweep_required": true,
+          "lot_depth_sweep_required": true,
+          "frontage_sweep_required": true
+        }
+      },
+      "best_attempt_summary": {},
+      "financial_upside": {
+        "relaxed_units": 5,
+        "projected_profit": 1866354.4245421486,
+        "ROI": 0.42301340560120376,
+        "break_even_price": 882409.1150915703,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "rural_low_density",
+        "rural_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.42301340560120376,
+    "upside_projected_profit": 1866354.4245421486,
+    "upside_relaxed_units": 5
+  },
+  {
+    "parcel_id": "ut-utah-85641",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 107696.93,
+        "min_lot_area_sqft": 3600.0,
+        "max_units": 29,
+        "district": "RM"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 3600.0,
+          "needed": 3713.687241,
+          "reduction_sqft": 0.0
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.474151,
+        "violation": "Layout produced out-of-bounds lot geometry for parcel ut-utah-85641",
+        "strategy": "t_junction",
+        "profile": "",
+        "lot_count": 2,
+        "avg_frontage_ft": 51.0,
+        "avg_depth_ft": 84.0,
+        "total_road_ft": 259.6,
+        "compliance_rate": 0.25
+      },
+      "financial_upside": {
+        "relaxed_units": 2,
+        "projected_profit": 436232.3797405455,
+        "ROI": 0.21021954287611627,
+        "break_even_price": 1037563.8101297272,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 194.70000000000002,
+          "road_length_proxy": 259.6
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.21021954287611627,
+    "upside_projected_profit": 436232.3797405455,
+    "upside_relaxed_units": 2
+  },
+  {
+    "parcel_id": "ut-utah-14927",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "SOLVER_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 107557.91,
+        "min_lot_area_sqft": 43000.0,
+        "required_frontage_ft": 35.0,
+        "approx_frontage_ft": 2826.538697,
+        "max_units": 2,
+        "district": "RR-43",
+        "candidates_generated": 0
+      },
+      "required_relaxation": {
+        "search_budget": {
+          "attempted_profiles": [
+            "default",
+            "default_dense",
+            "expanded_topologies",
+            "expanded_wide_spacing",
+            "loop_focus",
+            "loop_dense",
+            "grid_compact",
+            "grid_wide",
+            "culdesac_branching",
+            "rural_low_density",
+            "rural_extreme"
+          ],
+          "candidate_budget_increase": 18,
+          "road_spacing_sweep_required": true,
+          "lot_depth_sweep_required": true,
+          "frontage_sweep_required": true
+        }
+      },
+      "best_attempt_summary": {},
+      "financial_upside": {
+        "relaxed_units": 2,
+        "projected_profit": 559067.5499966941,
+        "ROI": 0.2863646529984518,
+        "break_even_price": 976146.225001653,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "rural_low_density",
+        "rural_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.2863646529984518,
+    "upside_projected_profit": 559067.5499966941,
+    "upside_relaxed_units": 2
+  },
+  {
+    "parcel_id": "ut-utah-85557",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 106642.12,
+        "min_lot_area_sqft": 3600.0,
+        "max_units": 29,
+        "district": "RM"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 3600.0,
+          "needed": 3677.314483,
+          "reduction_sqft": 0.0
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.413818,
+        "violation": "Layout produced disconnected road geometry for parcel ut-utah-85557",
+        "strategy": "radial",
+        "profile": "",
+        "lot_count": 2,
+        "avg_frontage_ft": 49.3,
+        "avg_depth_ft": 78.8,
+        "total_road_ft": 345.2,
+        "compliance_rate": 0.4
+      },
+      "financial_upside": {
+        "relaxed_units": 2,
+        "projected_profit": 401894.77332166955,
+        "ROI": 0.1905197432216094,
+        "break_even_price": 1054732.6133391652,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 258.9,
+          "road_length_proxy": 345.2
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.1905197432216094,
+    "upside_projected_profit": 401894.77332166955,
+    "upside_relaxed_units": 2
+  },
+  {
+    "parcel_id": "ut-utah-14935",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 7,
+    "ROI": 0.4581462428876262,
+    "projected_profit": 2761722.6595249586,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "ROI_best_case": 0.7179355516363228,
+    "ROI_worst_case": 0.22953778223438212,
+    "break_even_price": 861148.1914964345,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-14837",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 105184.08,
+        "min_lot_area_sqft": 13000.0,
+        "max_units": 8,
+        "district": "C-3"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 13000.0,
+          "needed": 13148.01,
+          "reduction_sqft": 0.0
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.947941,
+        "violation": "Layout produced out-of-bounds lot geometry for parcel ut-utah-14837",
+        "strategy": "t_junction",
+        "profile": "",
+        "lot_count": 4,
+        "avg_frontage_ft": 121.8,
+        "avg_depth_ft": 145.5,
+        "total_road_ft": 363.1,
+        "compliance_rate": 1.0
+      },
+      "financial_upside": {
+        "relaxed_units": 5,
+        "projected_profit": 2144054.405028335,
+        "ROI": 0.5185958347642752,
+        "break_even_price": 826869.1189943331,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 272.32500000000005,
+          "road_length_proxy": 363.1
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.5185958347642752,
+    "upside_projected_profit": 2144054.405028335,
+    "upside_relaxed_units": 5
+  },
+  {
+    "parcel_id": "ut-utah-14482",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 97773.16,
+        "min_lot_area_sqft": 22000.0,
+        "max_units": 4,
+        "district": "RR-22"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 22000.0,
+          "needed": 24443.29,
+          "reduction_sqft": 0.0
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.537528,
+        "violation": "Layout produced disconnected road geometry for parcel ut-utah-14482",
+        "strategy": "t_junction",
+        "profile": "",
+        "lot_count": 1,
+        "avg_frontage_ft": 169.2,
+        "avg_depth_ft": 166.0,
+        "total_road_ft": 290.6,
+        "compliance_rate": 0.5
+      },
+      "financial_upside": {
+        "relaxed_units": 1,
+        "projected_profit": -103552.71666371077,
+        "ROI": -0.07618468522291379,
+        "break_even_price": 1359232.7166637108,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 217.95000000000002,
+          "road_length_proxy": 290.6
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "rural_low_density",
+        "rural_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": -0.07618468522291379,
+    "upside_projected_profit": -103552.71666371077,
+    "upside_relaxed_units": 1
+  },
+  {
+    "parcel_id": "ut-utah-85640",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "GEOMETRY_INVALID",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "GEOMETRY_INVALID",
+      "limiting_constraints": {
+        "parcel_id": "ut-utah-85640",
+        "geometry_validation": "failed_after_repair"
+      },
+      "required_relaxation": {
+        "geometry_recovery": {
+          "action": "manual_geometry_cleanup",
+          "attempted_repairs": []
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.454951,
+        "violation": "Layout produced out-of-bounds lot geometry for parcel ut-utah-85640",
+        "strategy": "t_junction",
+        "profile": "",
+        "lot_count": 2,
+        "avg_frontage_ft": 97.3,
+        "avg_depth_ft": 46.6,
+        "total_road_ft": 170.2,
+        "compliance_rate": 0.5
+      },
+      "financial_upside": {
+        "relaxed_units": 2,
+        "projected_profit": 550278.3212346858,
+        "ROI": 0.2805993892009322,
+        "break_even_price": 980540.8393826571,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 127.64999999999999,
+          "road_length_proxy": 170.2
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.2805993892009322,
+    "upside_projected_profit": 550278.3212346858,
+    "upside_relaxed_units": 2
+  },
+  {
+    "parcel_id": "ut-utah-85511",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "SOLVER_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 90796.43,
+        "min_lot_area_sqft": 22000.0,
+        "required_frontage_ft": 35.0,
+        "approx_frontage_ft": 1801.216411,
+        "max_units": 4,
+        "district": "RR-22",
+        "candidates_generated": 0
+      },
+      "required_relaxation": {
+        "search_budget": {
+          "attempted_profiles": [
+            "default",
+            "default_dense",
+            "expanded_topologies",
+            "expanded_wide_spacing",
+            "loop_focus",
+            "loop_dense",
+            "grid_compact",
+            "grid_wide",
+            "culdesac_branching",
+            "rural_low_density",
+            "rural_extreme"
+          ],
+          "candidate_budget_increase": 18,
+          "road_spacing_sweep_required": true,
+          "lot_depth_sweep_required": true,
+          "frontage_sweep_required": true
+        }
+      },
+      "best_attempt_summary": {},
+      "financial_upside": {
+        "relaxed_units": 5,
+        "projected_profit": 2395372.859907438,
+        "ROI": 0.6168828528585402,
+        "break_even_price": 776605.4280185124,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "rural_low_density",
+        "rural_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.6168828528585402,
+    "upside_projected_profit": 2395372.859907438,
+    "upside_relaxed_units": 5
+  },
+  {
+    "parcel_id": "ut-utah-13727",
+    "jurisdiction": "Draper",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 15,
+    "ROI": 0.6286904907257644,
+    "projected_profit": 7270571.786565289,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "ROI_best_case": 0.9307216662331768,
+    "ROI_worst_case": 0.36650278213380494,
+    "break_even_price": 770975.2142289807,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-3466",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 9,
+    "ROI": 0.012990763753095675,
+    "projected_profit": 86276.89867834654,
+    "estimated_home_price": 747520.0,
+    "price_per_sqft": 233.6,
+    "ROI_best_case": 0.20344439184914956,
+    "ROI_worst_case": -0.1518223174312602,
+    "break_even_price": 737933.6779246281,
+    "confidence": 0.88,
+    "key_risk_factors": []
+  },
+  {
+    "parcel_id": "ut-utah-3478",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 3,
+    "ROI": -0.055813129848083204,
+    "projected_profit": -132563.05126545439,
+    "estimated_home_price": 747520.0,
+    "price_per_sqft": 233.6,
+    "ROI_best_case": 0.11925464781592815,
+    "ROI_worst_case": -0.2084525659801448,
+    "break_even_price": 791707.6837551515,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-2402",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 11,
+    "ROI": -0.009697204110485823,
+    "projected_profit": -80518.19556033053,
+    "estimated_home_price": 747520.0,
+    "price_per_sqft": 233.6,
+    "ROI_best_case": 0.17515084930384406,
+    "ROI_worst_case": -0.17010645335972419,
+    "break_even_price": 754839.8359600301,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-2455",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "GEOMETRY_INVALID",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "GEOMETRY_INVALID",
+      "limiting_constraints": {
+        "parcel_id": "ut-utah-2455",
+        "geometry_validation": "failed_after_repair"
+      },
+      "required_relaxation": {
+        "geometry_recovery": {
+          "action": "manual_geometry_cleanup",
+          "attempted_repairs": []
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.847215,
+        "violation": "Layout produced out-of-bounds lot geometry for parcel ut-utah-2455",
+        "strategy": "t_junction",
+        "profile": "",
+        "lot_count": 3,
+        "avg_frontage_ft": 114.6,
+        "avg_depth_ft": 103.7,
+        "total_road_ft": 327.5,
+        "compliance_rate": 0.75
+      },
+      "financial_upside": {
+        "relaxed_units": 3,
+        "projected_profit": -93087.14426053734,
+        "ROI": -0.03985496888486921,
+        "break_even_price": 778549.0480868458,
+        "estimated_home_price": 747520.0,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 245.625,
+          "road_length_proxy": 327.5
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": -0.03985496888486921,
+    "upside_projected_profit": -93087.14426053734,
+    "upside_relaxed_units": 3
+  },
+  {
+    "parcel_id": "ut-utah-3680",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.1111375987001138,
+    "projected_profit": -186930.1202499175,
+    "estimated_home_price": 747520.0,
+    "price_per_sqft": 233.6,
+    "ROI_best_case": 0.0525532970923349,
+    "ROI_worst_case": -0.2546490704094147,
+    "break_even_price": 840985.0601249587,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-3534",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.06756415291888326,
+    "projected_profit": -108330.3602023141,
+    "estimated_home_price": 747520.0,
+    "price_per_sqft": 233.6,
+    "ROI_best_case": 0.10784612273041753,
+    "ROI_worst_case": -0.22037028568045772,
+    "break_even_price": 801685.180101157,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-3644",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "SOLVER_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 27421.92,
+        "min_lot_area_sqft": 8000.0,
+        "required_frontage_ft": 45.0,
+        "approx_frontage_ft": 201.215488,
+        "max_units": 3,
+        "district": "ITOD",
+        "candidates_generated": 0
+      },
+      "required_relaxation": {
+        "search_budget": {
+          "attempted_profiles": [
+            "default",
+            "default_dense",
+            "expanded_topologies",
+            "expanded_wide_spacing",
+            "loop_focus",
+            "loop_dense",
+            "grid_compact",
+            "grid_wide",
+            "culdesac_branching",
+            "compact_retry",
+            "compact_extreme"
+          ],
+          "candidate_budget_increase": 18,
+          "road_spacing_sweep_required": true,
+          "lot_depth_sweep_required": true,
+          "frontage_sweep_required": true
+        }
+      },
+      "best_attempt_summary": {},
+      "financial_upside": {
+        "relaxed_units": 3,
+        "projected_profit": 559590.6922896102,
+        "ROI": 0.658592550256174,
+        "break_even_price": 283225.54011679656,
+        "estimated_home_price": 469755.77087999997,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.658592550256174,
+    "upside_projected_profit": 559590.6922896102,
+    "upside_relaxed_units": 3
+  },
+  {
+    "parcel_id": "ut-utah-3550",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1,
+    "ROI": -0.16453873441558872,
+    "projected_profit": -147219.2665500827,
+    "estimated_home_price": 747520.0,
+    "price_per_sqft": 233.6,
+    "ROI_best_case": -0.007045948001573327,
+    "ROI_worst_case": -0.30279728213528745,
+    "break_even_price": 894739.2665500827,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-3653",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "SOLVER_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 19885.87,
+        "min_lot_area_sqft": 8000.0,
+        "required_frontage_ft": 45.0,
+        "approx_frontage_ft": 198.482243,
+        "max_units": 2,
+        "district": "ITOD",
+        "candidates_generated": 0
+      },
+      "required_relaxation": {
+        "search_budget": {
+          "attempted_profiles": [
+            "default",
+            "default_dense",
+            "expanded_topologies",
+            "expanded_wide_spacing",
+            "loop_focus",
+            "loop_dense",
+            "grid_compact",
+            "grid_wide",
+            "culdesac_branching",
+            "compact_retry",
+            "compact_extreme"
+          ],
+          "candidate_budget_increase": 18,
+          "road_spacing_sweep_required": true,
+          "lot_depth_sweep_required": true,
+          "frontage_sweep_required": true
+        }
+      },
+      "best_attempt_summary": {},
+      "financial_upside": {
+        "relaxed_units": 2,
+        "projected_profit": 353726.18762263434,
+        "ROI": 0.5293333506528033,
+        "break_even_price": 334124.2217086828,
+        "estimated_home_price": 510987.31551999995,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.5293333506528033,
+    "upside_projected_profit": 353726.18762263434,
+    "upside_relaxed_units": 2
+  },
+  {
+    "parcel_id": "ut-utah-3392",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "district": "RC",
+        "jurisdiction": "Provo",
+        "bypass_reason": "historical_constraint",
+        "status": "non_buildable"
+      },
+      "required_relaxation": {
+        "zoning_resolution": {
+          "required": true,
+          "reason": "historical_constraint"
+        }
+      },
+      "best_attempt_summary": {
+        "status": "non_buildable",
+        "bypass_reason": "historical_constraint"
+      },
+      "financial_upside": {
+        "relaxed_units": 1,
+        "projected_profit": 24315.82192396687,
+        "ROI": 0.03362234713391058,
+        "break_even_price": 723204.1780760331,
+        "estimated_home_price": 747520.0,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.03362234713391058,
+    "upside_projected_profit": 24315.82192396687,
+    "upside_relaxed_units": 1
+  },
+  {
+    "parcel_id": "ut-utah-3128",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "SOLVER_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 17460.53,
+        "min_lot_area_sqft": 8000.0,
+        "required_frontage_ft": 45.0,
+        "approx_frontage_ft": 398.947824,
+        "max_units": 2,
+        "district": "DT2",
+        "candidates_generated": 0
+      },
+      "required_relaxation": {
+        "search_budget": {
+          "attempted_profiles": [
+            "default",
+            "default_dense",
+            "expanded_topologies",
+            "expanded_wide_spacing",
+            "loop_focus",
+            "loop_dense",
+            "grid_compact",
+            "grid_wide",
+            "culdesac_branching",
+            "compact_retry",
+            "compact_extreme"
+          ],
+          "candidate_budget_increase": 18,
+          "road_spacing_sweep_required": true,
+          "lot_depth_sweep_required": true,
+          "frontage_sweep_required": true
+        }
+      },
+      "best_attempt_summary": {},
+      "financial_upside": {
+        "relaxed_units": 2,
+        "projected_profit": 379662.75347497786,
+        "ROI": 0.733408600889808,
+        "break_even_price": 258834.402142511,
+        "estimated_home_price": 448665.77887999994,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.733408600889808,
+    "upside_projected_profit": 379662.75347497786,
+    "upside_relaxed_units": 2
+  },
+  {
+    "parcel_id": "ut-utah-3674",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "SOLVER_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 17322.29,
+        "min_lot_area_sqft": 8000.0,
+        "required_frontage_ft": 45.0,
+        "approx_frontage_ft": 150.052271,
+        "max_units": 1,
+        "district": "DT1",
+        "candidates_generated": 0
+      },
+      "required_relaxation": {
+        "search_budget": {
+          "attempted_profiles": [
+            "default",
+            "default_dense",
+            "expanded_topologies",
+            "expanded_wide_spacing",
+            "loop_focus",
+            "loop_dense",
+            "grid_compact",
+            "grid_wide",
+            "culdesac_branching",
+            "compact_retry",
+            "compact_extreme"
+          ],
+          "candidate_budget_increase": 18,
+          "road_spacing_sweep_required": true,
+          "lot_depth_sweep_required": true,
+          "frontage_sweep_required": true
+        }
+      },
+      "best_attempt_summary": {},
+      "financial_upside": {
+        "relaxed_units": 1,
+        "projected_profit": 29522.57155041315,
+        "ROI": 0.0411179349404676,
+        "break_even_price": 717997.4284495868,
+        "estimated_home_price": 747520.0,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.0411179349404676,
+    "upside_projected_profit": 29522.57155041315,
+    "upside_relaxed_units": 1
+  },
+  {
+    "parcel_id": "ut-utah-3123",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "SOLVER_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "SOLVER_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 15887.45,
+        "min_lot_area_sqft": 8000.0,
+        "required_frontage_ft": 45.0,
+        "approx_frontage_ft": 198.936908,
+        "max_units": 1,
+        "district": "DT2",
+        "candidates_generated": 0
+      },
+      "required_relaxation": {
+        "search_budget": {
+          "attempted_profiles": [
+            "default",
+            "default_dense",
+            "expanded_topologies",
+            "expanded_wide_spacing",
+            "loop_focus",
+            "loop_dense",
+            "grid_compact",
+            "grid_wide",
+            "culdesac_branching",
+            "compact_retry",
+            "compact_extreme"
+          ],
+          "candidate_budget_increase": 18,
+          "road_spacing_sweep_required": true,
+          "lot_depth_sweep_required": true,
+          "frontage_sweep_required": true
+        }
+      },
+      "best_attempt_summary": {},
+      "financial_upside": {
+        "relaxed_units": 1,
+        "projected_profit": 34547.59467768599,
+        "ROI": 0.04845572482159114,
+        "break_even_price": 712972.405322314,
+        "estimated_home_price": 747520.0,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.04845572482159114,
+    "upside_projected_profit": 34547.59467768599,
+    "upside_relaxed_units": 1
+  },
+  {
+    "parcel_id": "ut-utah-3080",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "district": "RC",
+        "jurisdiction": "Provo",
+        "bypass_reason": "historical_constraint",
+        "status": "non_buildable"
+      },
+      "required_relaxation": {
+        "zoning_resolution": {
+          "required": true,
+          "reason": "historical_constraint"
+        }
+      },
+      "best_attempt_summary": {
+        "status": "non_buildable",
+        "bypass_reason": "historical_constraint"
+      },
+      "financial_upside": {
+        "relaxed_units": 1,
+        "projected_profit": 38709.02294214873,
+        "ROI": 0.0546112069296994,
+        "break_even_price": 708810.9770578513,
+        "estimated_home_price": 747520.0,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.0546112069296994,
+    "upside_projected_profit": 38709.02294214873,
+    "upside_relaxed_units": 1
+  },
+  {
+    "parcel_id": "ut-utah-3058",
+    "jurisdiction": "Provo",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "district": "RC",
+        "jurisdiction": "Provo",
+        "bypass_reason": "historical_constraint",
+        "status": "non_buildable"
+      },
+      "required_relaxation": {
+        "zoning_resolution": {
+          "required": true,
+          "reason": "historical_constraint"
+        }
+      },
+      "best_attempt_summary": {
+        "status": "non_buildable",
+        "bypass_reason": "historical_constraint"
+      },
+      "financial_upside": {
+        "relaxed_units": 1,
+        "projected_profit": 58851.9698782278,
+        "ROI": 0.088423592770017,
+        "break_even_price": 665568.6342817722,
+        "estimated_home_price": 724420.60416,
+        "price_per_sqft": 233.6,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 0.0,
+          "road_length_proxy": 0.0
+        }
+      },
+      "attempted_strategies": [],
+      "attempted_repairs": []
+    },
+    "upside_ROI": 0.088423592770017,
+    "upside_projected_profit": 58851.9698782278,
+    "upside_relaxed_units": 1
+  },
+  {
+    "parcel_id": "ut-salt-lake-141",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1,
+    "ROI": -0.3249604481365004,
+    "projected_profit": -415539.88659933885,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": -0.21458488060096478,
+    "ROI_worst_case": -0.42562329010091066,
+    "break_even_price": 1278739.8865993388,
+    "confidence": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-85",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": null,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 129571.44,
+        "min_lot_area_sqft": 7000.0,
+        "max_units": 18,
+        "district": "R-1-7000"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 7000.0,
+          "needed": 7198.413333,
+          "reduction_sqft": 0.0
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.624724,
+        "violation": "Layout produced out-of-bounds lot geometry for parcel ut-salt-lake-85",
+        "strategy": "t_junction",
+        "profile": "",
+        "lot_count": 3,
+        "avg_frontage_ft": 95.9,
+        "avg_depth_ft": 109.8,
+        "total_road_ft": 287.7,
+        "compliance_rate": 0.75
+      },
+      "financial_upside": {
+        "relaxed_units": 3,
+        "projected_profit": -86016.15859744232,
+        "ROI": -0.03214816830921367,
+        "break_even_price": 891872.0528658141,
+        "estimated_home_price": 863200.0,
+        "price_per_sqft": 269.75,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 215.77499999999998,
+          "road_length_proxy": 287.7
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "compact_retry",
+        "compact_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "upside_ROI": -0.03214816830921367,
+    "upside_projected_profit": -86016.15859744232,
+    "upside_relaxed_units": 3
+  },
+  {
+    "parcel_id": "ut-salt-lake-76",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 7,
+    "ROI": 0.13555755944886216,
+    "projected_profit": 721313.4996092562,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.3490433719869441,
+    "ROI_worst_case": -0.049238051642216604,
+    "break_even_price": 760155.2143415349,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-182",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 5,
+    "ROI": 0.10460996866273058,
+    "projected_profit": 408738.5027811569,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.3102201916930797,
+    "ROI_worst_case": -0.0739984250508967,
+    "break_even_price": 781452.2994437686,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-158",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 5,
+    "ROI": 0.10262811426633271,
+    "projected_profit": 401715.62419140525,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.30789070407950053,
+    "ROI_worst_case": -0.07570259535736415,
+    "break_even_price": 782856.8751617189,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-96",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 4,
+    "ROI": 0.05979898089645629,
+    "projected_profit": 194823.66463933885,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.2551671327919603,
+    "ROI_worst_case": -0.11068681948385323,
+    "break_even_price": 814494.0838401653,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-84",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 6,
+    "ROI": 0.12305798090163544,
+    "projected_profit": 567505.7793312389,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.33392292964238374,
+    "ROI_worst_case": -0.059667950889997386,
+    "break_even_price": 768615.7034447935,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-79",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 4,
+    "ROI": 0.07219060070235726,
+    "projected_profit": 232477.0483361981,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.2699946728585544,
+    "ROI_worst_case": -0.10024314164038746,
+    "break_even_price": 805080.7379159505,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-156",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 3,
+    "ROI": -0.078148032254012,
+    "projected_profit": -219527.8107609921,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.08441419591263719,
+    "ROI_worst_case": -0.22227252721768936,
+    "break_even_price": 936375.9369203307,
+    "confidence": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-56",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 5,
+    "ROI": 0.11190813745432922,
+    "projected_profit": 434384.3749166946,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.3198228221758358,
+    "ROI_worst_case": -0.06850273327148902,
+    "break_even_price": 776323.1250166611,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-40",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 8,
+    "ROI": 0.0666609598477151,
+    "projected_profit": 431565.36299041286,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.26619218520514865,
+    "ROI_worst_case": -0.10705218252678685,
+    "break_even_price": 809254.3296261984,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-154",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 5,
+    "ROI": 0.12053697406332547,
+    "projected_profit": 464275.24668892566,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.33040572804747537,
+    "ROI_worst_case": -0.06141575979422799,
+    "break_even_price": 770344.9506622149,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-63",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 3,
+    "ROI": 0.034285282274207164,
+    "projected_profit": 85842.04812628124,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.22419575756929835,
+    "ROI_worst_case": -0.13183839224989383,
+    "break_even_price": 834585.9839579063,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-71",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 10,
+    "ROI": 0.13222820036726673,
+    "projected_profit": 1008095.2101352066,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": 0.344951350302086,
+    "ROI_worst_case": -0.05196750044139336,
+    "break_even_price": 762390.4789864793,
+    "confidence": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-22",
+    "jurisdiction": "Salt Lake City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 3,
+    "ROI": -0.2103233034952849,
+    "projected_profit": -689716.7272912399,
+    "estimated_home_price": 863200.0,
+    "price_per_sqft": 269.75,
+    "ROI_best_case": -0.06302357311602914,
+    "ROI_worst_case": -0.3412507872335733,
+    "break_even_price": 1093105.5757637466,
+    "confidence": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-72083",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 10,
+    "ROI": -0.035586372256847985,
+    "projected_profit": -230167.3937613247,
+    "estimated_home_price": 623768.474076,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": 0.14772179403812524,
+    "ROI_worst_case": -0.19381657419432752,
+    "break_even_price": 646785.2134521325,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-70058",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 7,
+    "ROI": -0.12059790132928765,
+    "projected_profit": -643706.5613821493,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": 0.04492567410322257,
+    "ROI_worst_case": -0.26389346149711596,
+    "break_even_price": 762518.0801974499,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-70996",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 10,
+    "ROI": -0.1058941653918019,
+    "projected_profit": -794183.2923642974,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": 0.06325456712951448,
+    "ROI_worst_case": -0.2520301104369617,
+    "break_even_price": 749978.3292364298,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-71957",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 3,
+    "ROI": -0.15144492566576467,
+    "projected_profit": -359032.3566238014,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": 0.007245944776004927,
+    "ROI_worst_case": -0.28934279716991823,
+    "break_even_price": 790237.4522079338,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-70219",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.1844009108919432,
+    "projected_profit": -303217.29501421517,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": -0.033579128737729835,
+    "ROI_worst_case": -0.3160618092791872,
+    "break_even_price": 822168.6475071076,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-71622",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.19307854999537608,
+    "projected_profit": -320900.5101652893,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": -0.04305035109148114,
+    "ROI_worst_case": -0.32406750595223827,
+    "break_even_price": 831010.2550826446,
+    "confidence": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-72087",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.1601267077030089,
+    "projected_profit": -255692.29573586793,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": -0.003320526870557797,
+    "ROI_worst_case": -0.2965288793040092,
+    "break_even_price": 798406.147867934,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-70215",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.16021925942496204,
+    "projected_profit": -255868.2794426449,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": -0.0028867838572278013,
+    "ROI_worst_case": -0.29702085761204067,
+    "break_even_price": 798494.1397213225,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-70218",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 6,
+    "ROI": -0.1619548491391675,
+    "projected_profit": -777526.9162565293,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": -0.007789025014412137,
+    "ROI_worst_case": -0.2963259035249817,
+    "break_even_price": 800147.8193760882,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-72089",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.16738259068308173,
+    "projected_profit": -269607.7904509092,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": -0.010984576495673058,
+    "ROI_worst_case": -0.3034194096507885,
+    "break_even_price": 805363.8952254546,
+    "confidence": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-71942",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.140245932308216,
+    "projected_profit": -218767.93818743806,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": 0.021671574173060038,
+    "ROI_worst_case": -0.2806729503689346,
+    "break_even_price": 779943.969093719,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-70309",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1,
+    "ROI": -0.2921603812056614,
+    "projected_profit": -276773.24074479344,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": -0.16785739604192157,
+    "ROI_worst_case": -0.4025097628052051,
+    "break_even_price": 947333.2407447934,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-72088",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 1,
+    "ROI": -0.20420697830630163,
+    "projected_profit": -172071.16378280998,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": -0.05729120617952827,
+    "ROI_worst_case": -0.3327308848740219,
+    "break_even_price": 842631.16378281,
+    "confidence": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-71874",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.11850622174147785,
+    "projected_profit": -180297.4314985124,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": 0.04862298665834919,
+    "ROI_worst_case": -0.26303059722663263,
+    "break_even_price": 760708.7157492562,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  },
+  {
+    "parcel_id": "ut-salt-lake-71003",
+    "jurisdiction": "West Valley City",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 14,
+    "ROI": -0.09613564720793427,
+    "projected_profit": -998497.2540366966,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "ROI_best_case": 0.07537666757430725,
+    "ROI_worst_case": -0.24412016623786684,
+    "break_even_price": 741881.2324311926,
+    "confidence": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ]
+  }
+]

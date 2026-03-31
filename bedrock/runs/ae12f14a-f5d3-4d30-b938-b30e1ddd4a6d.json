@@ -1,0 +1,363 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "ae12f14a-f5d3-4d30-b938-b30e1ddd4a6d",
+  "status": "completed",
+  "parcel_id": "ut-utah-85541",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-utah-85541",
+    "jurisdiction": "Draper",
+    "district": "RR-22",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "RR-22:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 22000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-30T20:06:21.253846Z"
+        }
+      },
+      {
+        "id": "RR-22:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 1.98,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-30T20:06:21.253846Z"
+        }
+      },
+      {
+        "id": "RR-22:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-30T20:06:21.253846Z"
+        }
+      },
+      {
+        "id": "RR-22:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.32,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-30T20:06:21.253846Z"
+        }
+      },
+      {
+        "id": "RR-22:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-30T20:06:21.253846Z"
+        }
+      },
+      {
+        "id": "RR-22:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 30.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-30T20:06:21.253846Z"
+        }
+      },
+      {
+        "id": "RR-22:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 12.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-30T20:06:21.253846Z"
+        }
+      },
+      {
+        "id": "RR-22:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+          "observed_at": "2026-03-30T20:06:21.253846Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 30.0,
+      "side": 12.0,
+      "rear": 25.0
+    },
+    "min_lot_size_sqft": 22000.0,
+    "max_units_per_acre": 1.98,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.32,
+    "min_frontage_ft": 35.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v4/draper",
+      "observed_at": "2026-03-30T20:06:21.253846Z"
+    }
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-ut-utah-85541-323d3a308983",
+    "parcel_id": "ut-utah-85541",
+    "unit_count": 1,
+    "road_length_ft": 457.8,
+    "lot_geometries": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.822427,
+              40.473531
+            ],
+            [
+              -111.822427,
+              40.473664
+            ],
+            [
+              -111.8223,
+              40.473857
+            ],
+            [
+              -111.821102,
+              40.473556
+            ],
+            [
+              -111.821102,
+              40.473531
+            ],
+            [
+              -111.822427,
+              40.473531
+            ]
+          ]
+        ]
+      }
+    ],
+    "road_geometries": [
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.822427,
+            40.473485
+          ],
+          [
+            -111.821102,
+            40.473485
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.821764,
+            40.473235
+          ],
+          [
+            -111.821764,
+            40.473485
+          ]
+        ]
+      }
+    ],
+    "open_space_area_sqft": 68952.5099997606,
+    "utility_length_ft": 0.0,
+    "score": null,
+    "buildable_area_sqft": null,
+    "metadata": {
+      "source_engine": "bedrock.layout_service",
+      "source_run_id": null,
+      "observed_at": "2026-03-30T20:06:21.537800Z"
+    }
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "3868d750-9b91-513b-a265-b29782a4ee7e",
+    "layout_id": "layout-ut-utah-85541-323d3a308983",
+    "parcel_id": "ut-utah-85541",
+    "units": 1,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "estimated_home_size_sqft": 3200.0,
+    "construction_cost_per_sqft": 131.1284,
+    "construction_cost_per_home": 671377.408,
+    "development_cost_total": 184378.0950472727,
+    "projected_revenue": 1255680.0,
+    "projected_cost": 1213533.551629091,
+    "projected_profit": 42146.448370909085,
+    "ROI": 0.034730352790271174,
+    "ROI_base": 0.034730352790271174,
+    "ROI_best_case": 0.20625310844035674,
+    "ROI_worst_case": -0.12100162230466788,
+    "break_even_price": 1213533.551629091,
+    "profit_margin": 0.033564640968167914,
+    "revenue_per_unit": 1255680.0,
+    "cost_per_unit": 1213533.551629091,
+    "rank": null,
+    "risk_score": 0.6531746257162254,
+    "requested_units": null,
+    "constraint_violations": [],
+    "confidence": 0.78,
+    "confidence_score": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "high_road_length_per_unit"
+    ],
+    "status": "feasible",
+    "financial_summary": {
+      "units": 1,
+      "estimated_home_price": 1255680.0,
+      "construction_cost_per_home": 671377.408,
+      "road_cost_per_ft": 302.604,
+      "road_length": 457.8,
+      "land_cost": 357778.0485818182,
+      "projected_revenue": 1255680.0,
+      "development_cost_total": 184378.0950472727,
+      "projected_cost": 1213533.551629091,
+      "projected_profit": 42146.448370909085,
+      "ROI": 0.034730352790271174,
+      "price_per_sqft": 392.4,
+      "estimated_home_size_sqft": 3200.0,
+      "construction_cost_per_sqft": 131.1284,
+      "ROI_base": 0.034730352790271174,
+      "ROI_best_case": 0.20625310844035674,
+      "ROI_worst_case": -0.12100162230466788,
+      "break_even_price": 1213533.551629091,
+      "confidence_score": 0.78,
+      "key_risk_factors": [
+        "above_national_cost_region",
+        "high_road_length_per_unit"
+      ],
+      "market_context": {
+        "jurisdiction": "Draper",
+        "county_name": "Salt Lake County, Utah",
+        "median_home_value": 784800.0,
+        "rpp_all_items": 100.868,
+        "reference_home_size_sqft": 2000.0,
+        "baseline_cost_per_sqft": 130.0,
+        "baseline_road_cost_per_ft": 300.0,
+        "land_value_share_of_home_value": 0.18,
+        "price_reference_date": "2024-01-01",
+        "msa_name": "Salt Lake City MSA",
+        "sources": {
+          "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+          "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+          "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+          "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+        },
+        "used_county_fallback": false,
+        "estimated_home_size_sqft": 3200.0,
+        "price_per_sqft": 392.4,
+        "construction_cost_per_sqft": 131.1284,
+        "road_cost_per_ft": 302.604,
+        "land_price_estimate": 357778.0485818182,
+        "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+        "cost_proxy": "bea_rpp_scaled_baseline_costs"
+      },
+      "development_cost_breakdown": {
+        "roads": 138532.11119999998,
+        "utilities": 0.0,
+        "grading": 13853.21112,
+        "sitework": 28492.772727272728,
+        "permitting": 3500.0
+      },
+      "profit_margin": 0.033564640968167914,
+      "revenue_per_unit": 1255680.0,
+      "cost_per_unit": 1213533.551629091
+    },
+    "explanation": {
+      "primary_driver": "home_price",
+      "cost_breakdown": {
+        "construction": 671377.408,
+        "development": 184378.0950472727
+      },
+      "revenue_breakdown": {
+        "units": 1,
+        "price_per_home": 1255680.0
+      }
+    },
+    "assumptions": {
+      "used_default_estimated_home_price": false,
+      "used_default_construction_cost_per_home": false,
+      "used_default_road_cost_per_ft": false,
+      "used_default_land_price": false,
+      "used_default_soft_cost_factor": false,
+      "market_sources": {
+        "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+        "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+        "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+        "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+      }
+    },
+    "metadata": null
+  },
+  "near_feasible_result": null,
+  "timestamp": "2026-03-30T20:06:21.538148Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "1c39bed49e98efd87f271322d3ba493f6f19b39c8a1e1b577f31263cef973814",
+  "stage_runtimes": {
+    "parcel.load": 0.001103,
+    "zoning.lookup": 0.009726,
+    "layout.search": 0.283466,
+    "feasibility.evaluate": 0.000303
+  },
+  "zoning_bypassed": false,
+  "bypass_reason": null
+}

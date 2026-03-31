@@ -100,10 +100,101 @@ _JURISDICTION_FALLBACK_DEFAULTS: dict[str, dict[str, Any]] = {
         "allowed_uses": ["single_family_residential"],
     },
     "Salt Lake City": {
+        "district": "R-1-7000",
         "min_lot_size_sqft": 7000.0,
         "max_units_per_acre": 6.22,
         "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
         "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.45,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "West Valley City": {
+        "district": "R-1-7000",
+        "min_lot_size_sqft": 7000.0,
+        "max_units_per_acre": 6.22,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.45,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Provo": {
+        "district": "R1.8",
+        "min_lot_size_sqft": 8000.0,
+        "max_units_per_acre": 5.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 45.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.45,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "South Jordan": {
+        "district": "R-1-8",
+        "min_lot_size_sqft": 8000.0,
+        "max_units_per_acre": 5.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.45,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Herriman": {
+        "district": "R-1-10",
+        "min_lot_size_sqft": 10000.0,
+        "max_units_per_acre": 4.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Eagle Mountain": {
+        "district": "R-1-10",
+        "min_lot_size_sqft": 10000.0,
+        "max_units_per_acre": 4.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Saratoga Springs": {
+        "district": "R-1-10",
+        "min_lot_size_sqft": 10000.0,
+        "max_units_per_acre": 4.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Riverton": {
+        "district": "R-1-8",
+        "min_lot_size_sqft": 8000.0,
+        "max_units_per_acre": 5.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.45,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Sandy": {
+        "district": "R-1-8",
+        "min_lot_size_sqft": 8000.0,
+        "max_units_per_acre": 5.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
         "lot_coverage_max": 0.45,
         "allowed_uses": ["single_family_residential"],
     },
@@ -183,7 +274,10 @@ class ZoningService:
         jurisdiction = parcel.jurisdiction or "unknown"
         try:
             parcel_geometry = shape(parcel.geometry)
-            raw = self._resolve_raw_rules(parcel, parcel_geometry)
+            try:
+                raw = self._resolve_raw_rules(parcel, parcel_geometry)
+            except (IncompleteZoningRulesError, NoJurisdictionMatchError, NoZoningMatchError):
+                raw = self._build_jurisdiction_fallback_raw(parcel)
             normalized_raw = self._normalize_raw_input(parcel_geometry, raw)
             enriched_raw = self._apply_rule_fallbacks(normalized_raw)
             rules = normalize_zoning_rules(
@@ -257,21 +351,37 @@ class ZoningService:
                 raise IncompleteZoningRulesError(parcel.jurisdiction or "unknown", list(_LAYOUT_REQUIRED_FIELDS))
             raise
 
+    def _build_jurisdiction_fallback_raw(self, parcel: Parcel) -> dict[str, Any]:
+        defaults = self._jurisdiction_fallback_defaults(parcel.jurisdiction)
+        if not defaults:
+            raise IncompleteZoningRulesError(parcel.jurisdiction or "unknown", list(_LAYOUT_REQUIRED_FIELDS))
+        source_type = self._fallback_source_type(parcel.jurisdiction)
+        district = (
+            (parcel.zoning_district or "").strip()
+            or str(defaults.get("district") or "").strip()
+            or "RESIDENTIAL"
+        )
+        return {
+            "jurisdiction": parcel.jurisdiction,
+            "district": district,
+            "setbacks": dict(defaults.get("setbacks") or {}),
+            "min_lot_size_sqft": defaults.get("min_lot_size_sqft"),
+            "max_units_per_acre": defaults.get("max_units_per_acre"),
+            "height_limit_ft": defaults.get("height_limit_ft"),
+            "min_frontage_ft": defaults.get("min_frontage_ft"),
+            "road_right_of_way_ft": defaults.get("road_right_of_way_ft"),
+            "lot_coverage_max": defaults.get("lot_coverage_max"),
+            "allowed_uses": defaults.get("allowed_uses"),
+            "rule_source": "jurisdiction_fallback",
+            "source_layer": "jurisdiction_fallback",
+            "source_type": source_type,
+            "rule_completeness": self._rule_completeness_score(defaults),
+            "legal_reliability": False,
+        }
+
     def _apply_rule_fallbacks(self, raw: dict[str, Any]) -> dict[str, Any]:
         payload = self._sanitize_rule_values(raw)
-        if self._jurisdiction_uses_real_data_path(payload.get("jurisdiction")):
-            for key in (
-                "district",
-                "min_lot_size_sqft",
-                "max_units_per_acre",
-                "height_limit_ft",
-                "min_frontage_ft",
-                "road_right_of_way_ft",
-                "lot_coverage_max",
-                "allowed_uses",
-            ):
-                payload.setdefault(key, None)
-            return payload
+        core_fields_complete_before_fallback = self._has_core_layout_fields(payload)
         jurisdiction_defaults = self._sanitize_rule_values(
             {
                 "setbacks": dict(self._jurisdiction_fallback_defaults(payload.get("jurisdiction")).get("setbacks") or {}),
@@ -279,11 +389,15 @@ class ZoningService:
                 "max_units_per_acre": self._jurisdiction_fallback_defaults(payload.get("jurisdiction")).get("max_units_per_acre"),
                 "height_limit_ft": self._jurisdiction_fallback_defaults(payload.get("jurisdiction")).get("height_limit_ft"),
                 "lot_coverage_max": self._jurisdiction_fallback_defaults(payload.get("jurisdiction")).get("lot_coverage_max"),
+                "min_frontage_ft": self._jurisdiction_fallback_defaults(payload.get("jurisdiction")).get("min_frontage_ft"),
+                "road_right_of_way_ft": self._jurisdiction_fallback_defaults(payload.get("jurisdiction")).get("road_right_of_way_ft"),
+                "allowed_uses": self._jurisdiction_fallback_defaults(payload.get("jurisdiction")).get("allowed_uses"),
             }
         )
         safe_minimum_defaults = self._sanitize_rule_values(_SAFE_MINIMUM_VIABLE_RULES)
         used_jurisdiction_fallback = False
         used_safe_minimum = False
+        preserves_real_lookup = payload.get("source_type") == "real_lookup" and core_fields_complete_before_fallback
 
         def _select_fallback_value(primary: Any, secondary: Any) -> tuple[Any, bool, bool]:
             if primary is not None:
@@ -308,6 +422,8 @@ class ZoningService:
             "min_lot_size_sqft",
             "max_units_per_acre",
             "height_limit_ft",
+            "min_frontage_ft",
+            "road_right_of_way_ft",
             "lot_coverage_max",
         ):
             if payload.get(field_name) is None:
@@ -332,15 +448,62 @@ class ZoningService:
             payload.setdefault(key, None)
         if used_safe_minimum:
             payload["rule_source"] = "safe_minimum_viable"
+            if not preserves_real_lookup:
+                payload["source_type"] = "fallback"
+                payload["legal_reliability"] = False
         elif used_jurisdiction_fallback:
             payload["rule_source"] = "jurisdiction_fallback"
+            payload.setdefault("source_type", self._fallback_source_type(payload.get("jurisdiction")))
+            if payload.get("source_type") != "real_lookup" and not preserves_real_lookup:
+                payload["legal_reliability"] = False
+        else:
+            payload.setdefault("source_type", "real_lookup")
+        existing_rule_completeness = payload.get("rule_completeness")
+        computed_rule_completeness = self._rule_completeness_score(payload)
+        if isinstance(existing_rule_completeness, (int, float)):
+            payload["rule_completeness"] = min(float(existing_rule_completeness), computed_rule_completeness)
+        else:
+            payload["rule_completeness"] = computed_rule_completeness
+        payload.setdefault("legal_reliability", payload.get("source_type") == "real_lookup")
         return payload
 
     @staticmethod
     def _jurisdiction_fallback_defaults(jurisdiction: Optional[str]) -> dict[str, Any]:
         if not jurisdiction:
             return {}
-        return dict(_JURISDICTION_FALLBACK_DEFAULTS.get(jurisdiction, {}))
+        direct = _JURISDICTION_FALLBACK_DEFAULTS.get(jurisdiction)
+        if direct is not None:
+            return dict(direct)
+
+        normalized = jurisdiction.strip().lower()
+        salt_lake_family = {
+            "salt lake city",
+            "west valley city",
+            "murray",
+            "midvale",
+            "cottonwood heights",
+            "south salt lake",
+            "millcreek",
+            "taylorsville",
+            "holladay",
+        }
+        utah_county_family = {
+            "provo",
+            "orem",
+            "pleasant grove",
+            "american fork",
+            "lindon",
+            "orem city",
+            "spanish fork",
+            "saratoga springs",
+            "eagle mountain",
+            "orem, ut",
+        }
+        if normalized in salt_lake_family:
+            return dict(_JURISDICTION_FALLBACK_DEFAULTS["Salt Lake City"])
+        if normalized in utah_county_family:
+            return dict(_JURISDICTION_FALLBACK_DEFAULTS["Provo"])
+        return dict(_JURISDICTION_FALLBACK_DEFAULTS["BenchmarkCounty_UT"])
 
     def _jurisdiction_uses_real_data_path(self, jurisdiction: Optional[str]) -> bool:
         if not jurisdiction:
@@ -527,6 +690,44 @@ class ZoningService:
         if not reports:
             return False
         return all(not report.has_clean_zoning_features for report in reports)
+
+    @staticmethod
+    def _rule_completeness_score(raw: dict[str, Any]) -> float:
+        setbacks = dict(raw.get("setbacks") or {})
+        present = [
+            raw.get("min_lot_size_sqft") is not None,
+            raw.get("max_units_per_acre") is not None,
+            setbacks.get("front") is not None,
+            setbacks.get("side") is not None,
+            setbacks.get("rear") is not None,
+            raw.get("lot_coverage_max") is not None,
+        ]
+        return sum(1 for item in present if item) / len(present)
+
+    @staticmethod
+    def _has_core_layout_fields(raw: dict[str, Any]) -> bool:
+        setbacks = dict(raw.get("setbacks") or {})
+        return (
+            raw.get("min_lot_size_sqft") is not None
+            and raw.get("max_units_per_acre") is not None
+            and setbacks.get("front") is not None
+            and setbacks.get("side") is not None
+            and setbacks.get("rear") is not None
+        )
+
+    def _fallback_source_type(self, jurisdiction: Optional[str]) -> str:
+        if not jurisdiction:
+            return "fallback"
+        defaults = self._jurisdiction_fallback_defaults(jurisdiction)
+        if not defaults:
+            return "fallback"
+        normalized = jurisdiction.strip().lower()
+        if normalized == "benchmarkcounty_ut":
+            return "fallback"
+        benchmark_defaults = _JURISDICTION_FALLBACK_DEFAULTS["BenchmarkCounty_UT"]
+        if defaults == benchmark_defaults:
+            return "fallback"
+        return "inferred"
 
 
 def _bounded_violation(

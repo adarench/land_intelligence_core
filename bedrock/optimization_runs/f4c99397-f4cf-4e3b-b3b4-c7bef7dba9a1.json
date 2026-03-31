@@ -1,0 +1,5199 @@
+{
+  "schema_name": "OptimizationRun",
+  "schema_version": "1.0.0",
+  "optimization_run_id": "f4c99397-f4cf-4e3b-b3b4-c7bef7dba9a1",
+  "parcel_id": "ut-salt-lake-71874",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-71874",
+    "jurisdiction": "West Valley City",
+    "district": "R-1-8DP",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "R-1-8DP:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 8000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 0.8333333333333334,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:53:48.243883Z"
+        }
+      },
+      {
+        "id": "R-1-8DP:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 5.45,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 0.8333333333333334,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:53:48.243883Z"
+        }
+      },
+      {
+        "id": "R-1-8DP:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 30.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 0.8333333333333334,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:53:48.243883Z"
+        }
+      },
+      {
+        "id": "R-1-8DP:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.45,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 0.8333333333333334,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:53:48.243883Z"
+        }
+      },
+      {
+        "id": "R-1-8DP:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 80.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 0.8333333333333334,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:53:48.243883Z"
+        }
+      },
+      {
+        "id": "R-1-8DP:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 0.8333333333333334,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:53:48.243883Z"
+        }
+      },
+      {
+        "id": "R-1-8DP:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 0.8333333333333334,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:53:48.243883Z"
+        }
+      },
+      {
+        "id": "R-1-8DP:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 0.8333333333333334,
+          "legal_reliability": true,
+          "observed_at": "2026-03-31T20:53:48.243883Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 8.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 8000.0,
+    "max_units_per_acre": 5.45,
+    "height_limit_ft": 30.0,
+    "lot_coverage_max": 0.45,
+    "min_frontage_ft": 80.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+      "source_type": "real_lookup",
+      "rule_completeness": 0.8333333333333334,
+      "legal_reliability": true,
+      "observed_at": "2026-03-31T20:53:48.243883Z"
+    }
+  },
+  "layout_candidates": [
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 2,
+        "road_length_ft": 132.9,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947052,
+                  40.68723
+                ],
+                [
+                  -111.947051,
+                  40.686987
+                ],
+                [
+                  -111.947409,
+                  40.686987
+                ],
+                [
+                  -111.947409,
+                  40.68723
+                ],
+                [
+                  -111.947052,
+                  40.68723
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947052,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.68732
+                ],
+                [
+                  -111.947409,
+                  40.68732
+                ],
+                [
+                  -111.947409,
+                  40.687563
+                ],
+                [
+                  -111.947044,
+                  40.687563
+                ],
+                [
+                  -111.947044,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687536
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947526,
+                40.687275
+              ],
+              [
+                -111.947409,
+                40.687275
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947409,
+                40.687275
+              ],
+              [
+                -111.947044,
+                40.687275
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 1.091721,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.752523Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "4a86a839-dbe6-548c-9f1e-9a04db6fe7e2",
+        "layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 64517.23661123967,
+        "projected_revenue": 1341120.0,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562,
+        "rank": 1,
+        "risk_score": 0.5537710507293973,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.78,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 2,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 132.9,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 1341120.0,
+          "development_cost_total": 64517.23661123967,
+          "projected_cost": 1496319.4557385123,
+          "projected_profit": -155199.45573851233,
+          "ROI": -0.10372080316359533,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.10372080316359533,
+          "ROI_best_case": 0.0661211362749303,
+          "ROI_worst_case": -0.25039478129414605,
+          "break_even_price": 748159.7278692562,
+          "confidence_score": 0.78,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 40216.0716,
+            "utilities": 0.0,
+            "grading": 4021.6071600000005,
+            "sitework": 13279.55785123967,
+            "permitting": 7000.0
+          },
+          "profit_margin": -0.11572376501618971,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 748159.7278692562
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 1342754.816,
+            "development": 64517.23661123967
+          },
+          "revenue_breakdown": {
+            "units": 2,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "refine_1_mutated",
+        "strategies": [
+          "t_junction",
+          "loop_custom",
+          "cul-de-sac",
+          "spine-road",
+          "grid"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 2,
+        "density_factor": 1.0,
+        "lot_depth_factor": 0.97,
+        "frontage_hint_factor": 1.05,
+        "road_width_factor": 1.03,
+        "runtime_budget_factor": 1.08
+      },
+      "objective_score": -0.06387,
+      "optimization_rank": 1
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-c49a9268cfc4",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 2,
+        "road_length_ft": 132.9,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947052,
+                  40.687229
+                ],
+                [
+                  -111.947051,
+                  40.686984
+                ],
+                [
+                  -111.947409,
+                  40.686984
+                ],
+                [
+                  -111.947409,
+                  40.687229
+                ],
+                [
+                  -111.947052,
+                  40.687229
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947052,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687321
+                ],
+                [
+                  -111.947409,
+                  40.687321
+                ],
+                [
+                  -111.947409,
+                  40.687566
+                ],
+                [
+                  -111.947044,
+                  40.687566
+                ],
+                [
+                  -111.947044,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687536
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947526,
+                40.687275
+              ],
+              [
+                -111.947409,
+                40.687275
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947409,
+                40.687275
+              ],
+              [
+                -111.947044,
+                40.687275
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 1.238936,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.680840Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "38f82615-8a16-5aca-b953-d86c391b7220",
+        "layout_id": "layout-ut-salt-lake-71874-c49a9268cfc4",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 64517.23661123967,
+        "projected_revenue": 1341120.0,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562,
+        "rank": 1,
+        "risk_score": 0.5537710507293973,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.78,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 2,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 132.9,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 1341120.0,
+          "development_cost_total": 64517.23661123967,
+          "projected_cost": 1496319.4557385123,
+          "projected_profit": -155199.45573851233,
+          "ROI": -0.10372080316359533,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.10372080316359533,
+          "ROI_best_case": 0.0661211362749303,
+          "ROI_worst_case": -0.25039478129414605,
+          "break_even_price": 748159.7278692562,
+          "confidence_score": 0.78,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 40216.0716,
+            "utilities": 0.0,
+            "grading": 4021.6071600000005,
+            "sitework": 13279.55785123967,
+            "permitting": 7000.0
+          },
+          "profit_margin": -0.11572376501618971,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 748159.7278692562
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 1342754.816,
+            "development": 64517.23661123967
+          },
+          "revenue_breakdown": {
+            "units": 2,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "refine_1_conservative",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "cul-de-sac",
+          "loop_custom",
+          "t_junction"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 0.87,
+        "lot_depth_factor": 0.98,
+        "frontage_hint_factor": 1.02,
+        "road_width_factor": 1.05,
+        "runtime_budget_factor": 1.05
+      },
+      "objective_score": -0.06387,
+      "optimization_rank": 2
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-bc83dccaa2b0",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 2,
+        "road_length_ft": 132.9,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947052,
+                  40.687231
+                ],
+                [
+                  -111.947051,
+                  40.686978
+                ],
+                [
+                  -111.947409,
+                  40.686978
+                ],
+                [
+                  -111.947409,
+                  40.687231
+                ],
+                [
+                  -111.947052,
+                  40.687231
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947052,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687319
+                ],
+                [
+                  -111.947409,
+                  40.687319
+                ],
+                [
+                  -111.947409,
+                  40.687572
+                ],
+                [
+                  -111.947044,
+                  40.687572
+                ],
+                [
+                  -111.947044,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687536
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947526,
+                40.687275
+              ],
+              [
+                -111.947409,
+                40.687275
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947409,
+                40.687275
+              ],
+              [
+                -111.947044,
+                40.687275
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 1.08328,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.311492Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "d712c5a4-4aa7-5ca7-8477-1b61b4d81e1d",
+        "layout_id": "layout-ut-salt-lake-71874-bc83dccaa2b0",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 64517.23661123967,
+        "projected_revenue": 1341120.0,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562,
+        "rank": 1,
+        "risk_score": 0.5537710507293973,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.78,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 2,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 132.9,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 1341120.0,
+          "development_cost_total": 64517.23661123967,
+          "projected_cost": 1496319.4557385123,
+          "projected_profit": -155199.45573851233,
+          "ROI": -0.10372080316359533,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.10372080316359533,
+          "ROI_best_case": 0.0661211362749303,
+          "ROI_worst_case": -0.25039478129414605,
+          "break_even_price": 748159.7278692562,
+          "confidence_score": 0.78,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 40216.0716,
+            "utilities": 0.0,
+            "grading": 4021.6071600000005,
+            "sitework": 13279.55785123967,
+            "permitting": 7000.0
+          },
+          "profit_margin": -0.11572376501618971,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 748159.7278692562
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 1342754.816,
+            "development": 64517.23661123967
+          },
+          "revenue_breakdown": {
+            "units": 2,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "broad_sampling",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "cul-de-sac",
+          "loop_custom",
+          "t_junction"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 1.0,
+        "lot_depth_factor": 1.0,
+        "frontage_hint_factor": 1.0,
+        "road_width_factor": 1.0,
+        "runtime_budget_factor": 1.0
+      },
+      "objective_score": -0.06387,
+      "optimization_rank": 3
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-25bc525a17da",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 2,
+        "road_length_ft": 132.9,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947409,
+                  40.686958
+                ],
+                [
+                  -111.947409,
+                  40.687233
+                ],
+                [
+                  -111.947052,
+                  40.687233
+                ],
+                [
+                  -111.947051,
+                  40.686959
+                ],
+                [
+                  -111.947409,
+                  40.686958
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947193,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687317
+                ],
+                [
+                  -111.947409,
+                  40.687317
+                ],
+                [
+                  -111.947409,
+                  40.687591
+                ],
+                [
+                  -111.947193,
+                  40.687591
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947526,
+                40.687275
+              ],
+              [
+                -111.947409,
+                40.687275
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947409,
+                40.687275
+              ],
+              [
+                -111.947044,
+                40.687275
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 1.073544,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.608855Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "e8a65235-6cc1-5bca-9a1d-f932406b6f57",
+        "layout_id": "layout-ut-salt-lake-71874-25bc525a17da",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 64517.23661123967,
+        "projected_revenue": 1341120.0,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562,
+        "rank": 1,
+        "risk_score": 0.5537710507293973,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.78,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 2,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 132.9,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 1341120.0,
+          "development_cost_total": 64517.23661123967,
+          "projected_cost": 1496319.4557385123,
+          "projected_profit": -155199.45573851233,
+          "ROI": -0.10372080316359533,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.10372080316359533,
+          "ROI_best_case": 0.0661211362749303,
+          "ROI_worst_case": -0.25039478129414605,
+          "break_even_price": 748159.7278692562,
+          "confidence_score": 0.78,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 40216.0716,
+            "utilities": 0.0,
+            "grading": 4021.6071600000005,
+            "sitework": 13279.55785123967,
+            "permitting": 7000.0
+          },
+          "profit_margin": -0.11572376501618971,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 748159.7278692562
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 1342754.816,
+            "development": 64517.23661123967
+          },
+          "revenue_breakdown": {
+            "units": 2,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "refine_1_dense",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "cul-de-sac",
+          "loop_custom",
+          "t_junction"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 1.0,
+        "lot_depth_factor": 1.08,
+        "frontage_hint_factor": 0.95,
+        "road_width_factor": 0.95,
+        "runtime_budget_factor": 1.05
+      },
+      "objective_score": -0.06387,
+      "optimization_rank": 4
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-bbb0e991666c",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 1,
+        "road_length_ft": 208.3,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947193,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687317
+                ],
+                [
+                  -111.947381,
+                  40.687317
+                ],
+                [
+                  -111.947381,
+                  40.687591
+                ],
+                [
+                  -111.947193,
+                  40.687591
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947381,
+                40.687275
+              ],
+              [
+                -111.947044,
+                40.687275
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.686958
+              ],
+              [
+                -111.947071,
+                40.687068
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687068
+              ],
+              [
+                -111.947071,
+                40.687275
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 0.689378,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.609226Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "c4f48f24-24a9-5aa1-affb-951968f02686",
+        "layout_id": "layout-ut-salt-lake-71874-bbb0e991666c",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 86115.21237123969,
+        "projected_revenue": 670560.0,
+        "projected_cost": 846540.0234985125,
+        "projected_profit": -175980.02349851246,
+        "ROI": -0.20788151606965538,
+        "ROI_base": -0.20788151606965538,
+        "ROI_best_case": -0.06148634262700075,
+        "ROI_worst_case": -0.33597820748551416,
+        "break_even_price": 846540.0234985125,
+        "profit_margin": -0.26243740082693934,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 846540.0234985125,
+        "rank": 2,
+        "risk_score": 0.5742841338782453,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 208.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 86115.21237123969,
+          "projected_cost": 846540.0234985125,
+          "projected_profit": -175980.02349851246,
+          "ROI": -0.20788151606965538,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.20788151606965538,
+          "ROI_best_case": -0.06148634262700075,
+          "ROI_worst_case": -0.33597820748551416,
+          "break_even_price": 846540.0234985125,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 63032.4132,
+            "utilities": 0.0,
+            "grading": 6303.241320000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.26243740082693934,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 846540.0234985125
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 86115.21237123969
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "refine_1_dense",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "cul-de-sac",
+          "loop_custom",
+          "t_junction"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 1.0,
+        "lot_depth_factor": 1.08,
+        "frontage_hint_factor": 0.95,
+        "road_width_factor": 0.95,
+        "runtime_budget_factor": 1.05
+      },
+      "objective_score": -0.104221,
+      "optimization_rank": 5
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-4fcda98ba303",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 1,
+        "road_length_ft": 208.3,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947193,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687317
+                ],
+                [
+                  -111.947381,
+                  40.687317
+                ],
+                [
+                  -111.947381,
+                  40.687591
+                ],
+                [
+                  -111.947193,
+                  40.687591
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947381,
+                40.687275
+              ],
+              [
+                -111.947044,
+                40.687275
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.686958
+              ],
+              [
+                -111.947071,
+                40.687068
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687068
+              ],
+              [
+                -111.947071,
+                40.687275
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 0.638727,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.312051Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "a8f34318-15f4-5780-bbf9-cc3397395f11",
+        "layout_id": "layout-ut-salt-lake-71874-4fcda98ba303",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 86115.21237123969,
+        "projected_revenue": 670560.0,
+        "projected_cost": 846540.0234985125,
+        "projected_profit": -175980.02349851246,
+        "ROI": -0.20788151606965538,
+        "ROI_base": -0.20788151606965538,
+        "ROI_best_case": -0.06148634262700075,
+        "ROI_worst_case": -0.33597820748551416,
+        "break_even_price": 846540.0234985125,
+        "profit_margin": -0.26243740082693934,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 846540.0234985125,
+        "rank": 2,
+        "risk_score": 0.5742841338782453,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 208.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 86115.21237123969,
+          "projected_cost": 846540.0234985125,
+          "projected_profit": -175980.02349851246,
+          "ROI": -0.20788151606965538,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.20788151606965538,
+          "ROI_best_case": -0.06148634262700075,
+          "ROI_worst_case": -0.33597820748551416,
+          "break_even_price": 846540.0234985125,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 63032.4132,
+            "utilities": 0.0,
+            "grading": 6303.241320000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.26243740082693934,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 846540.0234985125
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 86115.21237123969
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "broad_sampling",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "cul-de-sac",
+          "loop_custom",
+          "t_junction"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 1.0,
+        "lot_depth_factor": 1.0,
+        "frontage_hint_factor": 1.0,
+        "road_width_factor": 1.0,
+        "runtime_budget_factor": 1.0
+      },
+      "objective_score": -0.104221,
+      "optimization_rank": 6
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-3ad12d63609f",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 1,
+        "road_length_ft": 208.3,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947193,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.68731
+                ],
+                [
+                  -111.947381,
+                  40.68731
+                ],
+                [
+                  -111.947381,
+                  40.687591
+                ],
+                [
+                  -111.947193,
+                  40.687591
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947381,
+                40.687275
+              ],
+              [
+                -111.947044,
+                40.687275
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.686958
+              ],
+              [
+                -111.947071,
+                40.687068
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687068
+              ],
+              [
+                -111.947071,
+                40.687275
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 0.638999,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.311875Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "d7abd11c-a037-51c9-a85c-f27f6a7233a7",
+        "layout_id": "layout-ut-salt-lake-71874-3ad12d63609f",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 86115.21237123969,
+        "projected_revenue": 670560.0,
+        "projected_cost": 846540.0234985125,
+        "projected_profit": -175980.02349851246,
+        "ROI": -0.20788151606965538,
+        "ROI_base": -0.20788151606965538,
+        "ROI_best_case": -0.06148634262700075,
+        "ROI_worst_case": -0.33597820748551416,
+        "break_even_price": 846540.0234985125,
+        "profit_margin": -0.26243740082693934,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 846540.0234985125,
+        "rank": 3,
+        "risk_score": 0.5742841338782453,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 208.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 86115.21237123969,
+          "projected_cost": 846540.0234985125,
+          "projected_profit": -175980.02349851246,
+          "ROI": -0.20788151606965538,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.20788151606965538,
+          "ROI_best_case": -0.06148634262700075,
+          "ROI_worst_case": -0.33597820748551416,
+          "break_even_price": 846540.0234985125,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 63032.4132,
+            "utilities": 0.0,
+            "grading": 6303.241320000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.26243740082693934,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 846540.0234985125
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 86115.21237123969
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "broad_sampling",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "cul-de-sac",
+          "loop_custom",
+          "t_junction"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 1.0,
+        "lot_depth_factor": 1.0,
+        "frontage_hint_factor": 1.0,
+        "road_width_factor": 1.0,
+        "runtime_budget_factor": 1.0
+      },
+      "objective_score": -0.104221,
+      "optimization_rank": 7
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-0bb0d2ce1bc4",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 1,
+        "road_length_ft": 208.3,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947193,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687591
+                ],
+                [
+                  -111.947044,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687536
+                ],
+                [
+                  -111.947052,
+                  40.687315
+                ],
+                [
+                  -111.947381,
+                  40.687315
+                ],
+                [
+                  -111.947381,
+                  40.687591
+                ],
+                [
+                  -111.947193,
+                  40.687591
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947381,
+                40.687275
+              ],
+              [
+                -111.947044,
+                40.687275
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.686958
+              ],
+              [
+                -111.947071,
+                40.687068
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687068
+              ],
+              [
+                -111.947071,
+                40.687275
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 0.676784,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.752893Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "75fe4035-f445-5cf6-b8e8-0f0032981db3",
+        "layout_id": "layout-ut-salt-lake-71874-0bb0d2ce1bc4",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 86115.21237123969,
+        "projected_revenue": 670560.0,
+        "projected_cost": 846540.0234985125,
+        "projected_profit": -175980.02349851246,
+        "ROI": -0.20788151606965538,
+        "ROI_base": -0.20788151606965538,
+        "ROI_best_case": -0.06148634262700075,
+        "ROI_worst_case": -0.33597820748551416,
+        "break_even_price": 846540.0234985125,
+        "profit_margin": -0.26243740082693934,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 846540.0234985125,
+        "rank": 2,
+        "risk_score": 0.5742841338782453,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 208.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 86115.21237123969,
+          "projected_cost": 846540.0234985125,
+          "projected_profit": -175980.02349851246,
+          "ROI": -0.20788151606965538,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.20788151606965538,
+          "ROI_best_case": -0.06148634262700075,
+          "ROI_worst_case": -0.33597820748551416,
+          "break_even_price": 846540.0234985125,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 63032.4132,
+            "utilities": 0.0,
+            "grading": 6303.241320000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.26243740082693934,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 846540.0234985125
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 86115.21237123969
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "refine_1_mutated",
+        "strategies": [
+          "t_junction",
+          "loop_custom",
+          "cul-de-sac",
+          "spine-road",
+          "grid"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 2,
+        "density_factor": 1.0,
+        "lot_depth_factor": 0.97,
+        "frontage_hint_factor": 1.05,
+        "road_width_factor": 1.03,
+        "runtime_budget_factor": 1.08
+      },
+      "objective_score": -0.104221,
+      "optimization_rank": 8
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-964019efab01",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 1,
+        "road_length_ft": 373.8,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947119,
+                  40.687427
+                ],
+                [
+                  -111.9473,
+                  40.687507
+                ],
+                [
+                  -111.947348,
+                  40.687443
+                ],
+                [
+                  -111.947119,
+                  40.687343
+                ],
+                [
+                  -111.947119,
+                  40.68725
+                ],
+                [
+                  -111.9473,
+                  40.687329
+                ],
+                [
+                  -111.947348,
+                  40.687265
+                ],
+                [
+                  -111.947119,
+                  40.687165
+                ],
+                [
+                  -111.947119,
+                  40.687009
+                ],
+                [
+                  -111.947493,
+                  40.687009
+                ],
+                [
+                  -111.947493,
+                  40.68752
+                ],
+                [
+                  -111.94749,
+                  40.687541
+                ],
+                [
+                  -111.947119,
+                  40.687541
+                ],
+                [
+                  -111.947119,
+                  40.687427
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687186
+              ],
+              [
+                -111.947324,
+                40.687297
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687364
+              ],
+              [
+                -111.947324,
+                40.687475
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.686958
+              ],
+              [
+                -111.947071,
+                40.687009
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687009
+              ],
+              [
+                -111.947071,
+                40.687541
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 0.542004,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.416788Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "669d5fff-3104-59b1-8a88-e846a6895186",
+        "layout_id": "layout-ut-salt-lake-71874-964019efab01",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 141204.27057123967,
+        "projected_revenue": 670560.0,
+        "projected_cost": 901629.0816985124,
+        "projected_profit": -231069.08169851243,
+        "ROI": -0.25627953488724925,
+        "ROI_base": -0.25627953488724925,
+        "ROI_best_case": -0.11834075918582737,
+        "ROI_worst_case": -0.37748418100185677,
+        "break_even_price": 901629.0816985124,
+        "profit_margin": -0.34459120988205744,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 901629.0816985124,
+        "rank": 1,
+        "risk_score": 0.5934935543796263,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 373.8,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 141204.27057123967,
+          "projected_cost": 901629.0816985124,
+          "projected_profit": -231069.08169851243,
+          "ROI": -0.25627953488724925,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.25627953488724925,
+          "ROI_best_case": -0.11834075918582737,
+          "ROI_worst_case": -0.37748418100185677,
+          "break_even_price": 901629.0816985124,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 113113.3752,
+            "utilities": 0.0,
+            "grading": 11311.337520000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.34459120988205744,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 901629.0816985124
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 141204.27057123967
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "compact_yield",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "herringbone",
+          "loop_custom"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 1.0,
+        "lot_depth_factor": 0.92,
+        "frontage_hint_factor": 0.95,
+        "road_width_factor": 0.95,
+        "runtime_budget_factor": 1.0
+      },
+      "objective_score": -0.122583,
+      "optimization_rank": 9
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-7af7b9d6407f",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 1,
+        "road_length_ft": 373.8,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947119,
+                  40.687438
+                ],
+                [
+                  -111.947273,
+                  40.687528
+                ],
+                [
+                  -111.947332,
+                  40.68747
+                ],
+                [
+                  -111.947119,
+                  40.687346
+                ],
+                [
+                  -111.947119,
+                  40.687261
+                ],
+                [
+                  -111.947273,
+                  40.68735
+                ],
+                [
+                  -111.947332,
+                  40.687292
+                ],
+                [
+                  -111.947119,
+                  40.687168
+                ],
+                [
+                  -111.947119,
+                  40.687009
+                ],
+                [
+                  -111.947493,
+                  40.687009
+                ],
+                [
+                  -111.947493,
+                  40.68752
+                ],
+                [
+                  -111.94749,
+                  40.687541
+                ],
+                [
+                  -111.947119,
+                  40.687541
+                ],
+                [
+                  -111.947119,
+                  40.687438
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687186
+              ],
+              [
+                -111.947303,
+                40.687321
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687364
+              ],
+              [
+                -111.947303,
+                40.687499
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.686958
+              ],
+              [
+                -111.947071,
+                40.687009
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687009
+              ],
+              [
+                -111.947071,
+                40.687541
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 0.542839,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.416094Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "8b1e7714-7aa5-57b5-9037-0904f51d60e4",
+        "layout_id": "layout-ut-salt-lake-71874-7af7b9d6407f",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 141204.27057123967,
+        "projected_revenue": 670560.0,
+        "projected_cost": 901629.0816985124,
+        "projected_profit": -231069.08169851243,
+        "ROI": -0.25627953488724925,
+        "ROI_base": -0.25627953488724925,
+        "ROI_best_case": -0.11834075918582737,
+        "ROI_worst_case": -0.37748418100185677,
+        "break_even_price": 901629.0816985124,
+        "profit_margin": -0.34459120988205744,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 901629.0816985124,
+        "rank": 2,
+        "risk_score": 0.5934935543796263,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 373.8,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 141204.27057123967,
+          "projected_cost": 901629.0816985124,
+          "projected_profit": -231069.08169851243,
+          "ROI": -0.25627953488724925,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.25627953488724925,
+          "ROI_best_case": -0.11834075918582737,
+          "ROI_worst_case": -0.37748418100185677,
+          "break_even_price": 901629.0816985124,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 113113.3752,
+            "utilities": 0.0,
+            "grading": 11311.337520000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.34459120988205744,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 901629.0816985124
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 141204.27057123967
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "compact_yield",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "herringbone",
+          "loop_custom"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 1.0,
+        "lot_depth_factor": 0.92,
+        "frontage_hint_factor": 0.95,
+        "road_width_factor": 0.95,
+        "runtime_budget_factor": 1.0
+      },
+      "objective_score": -0.122583,
+      "optimization_rank": 10
+    },
+    {
+      "layout_result": {
+        "schema_name": "LayoutResult",
+        "schema_version": "1.0.0",
+        "layout_id": "layout-ut-salt-lake-71874-1139d9622993",
+        "parcel_id": "ut-salt-lake-71874",
+        "unit_count": 1,
+        "road_length_ft": 394.3,
+        "lot_geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -111.947309,
+                  40.687497
+                ],
+                [
+                  -111.947115,
+                  40.68735
+                ],
+                [
+                  -111.947115,
+                  40.687267
+                ],
+                [
+                  -111.947247,
+                  40.687367
+                ],
+                [
+                  -111.947309,
+                  40.68732
+                ],
+                [
+                  -111.947115,
+                  40.687172
+                ],
+                [
+                  -111.947115,
+                  40.687009
+                ],
+                [
+                  -111.947526,
+                  40.687009
+                ],
+                [
+                  -111.947526,
+                  40.687325
+                ],
+                [
+                  -111.94749,
+                  40.687541
+                ],
+                [
+                  -111.94725,
+                  40.687541
+                ],
+                [
+                  -111.947309,
+                  40.687497
+                ]
+              ]
+            ]
+          }
+        ],
+        "road_geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687186
+              ],
+              [
+                -111.947278,
+                40.687343
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687364
+              ],
+              [
+                -111.947278,
+                40.687521
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.686958
+              ],
+              [
+                -111.947071,
+                40.687009
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687009
+              ],
+              [
+                -111.947071,
+                40.687541
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687186
+              ],
+              [
+                -111.947044,
+                40.687206
+              ]
+            ]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -111.947071,
+                40.687364
+              ],
+              [
+                -111.947045,
+                40.687384
+              ]
+            ]
+          }
+        ],
+        "open_space_area_sqft": 0.0,
+        "utility_length_ft": 0.0,
+        "score": 0.542835,
+        "buildable_area_sqft": null,
+        "metadata": {
+          "source_engine": "bedrock.services.layout_service",
+          "source_run_id": null,
+          "source_type": "candidate_search",
+          "rule_completeness": null,
+          "legal_reliability": null,
+          "observed_at": "2026-03-31T20:53:48.416559Z"
+        }
+      },
+      "feasibility_result": {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "64e7c51a-1944-54d3-b909-2692cb347859",
+        "layout_id": "layout-ut-salt-lake-71874-1139d9622993",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 148027.99077123965,
+        "projected_revenue": 670560.0,
+        "projected_cost": 908452.8018985124,
+        "projected_profit": -237892.8018985124,
+        "ROI": -0.26186589044731523,
+        "ROI_base": -0.26186589044731523,
+        "ROI_best_case": -0.12490725327029002,
+        "ROI_worst_case": -0.3822670108371941,
+        "break_even_price": 908452.8018985124,
+        "profit_margin": -0.35476736145686055,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 908452.8018985124,
+        "rank": 3,
+        "risk_score": 0.5957108073921509,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 394.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 148027.99077123965,
+          "projected_cost": 908452.8018985124,
+          "projected_profit": -237892.8018985124,
+          "ROI": -0.26186589044731523,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.26186589044731523,
+          "ROI_best_case": -0.12490725327029002,
+          "ROI_worst_case": -0.3822670108371941,
+          "break_even_price": 908452.8018985124,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 119316.7572,
+            "utilities": 0.0,
+            "grading": 11931.67572,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.35476736145686055,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 908452.8018985124
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 148027.99077123965
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      "strategy_parameters": {
+        "label": "compact_yield",
+        "strategies": [
+          "grid",
+          "spine-road",
+          "herringbone",
+          "loop_custom"
+        ],
+        "max_candidates": 12,
+        "max_layouts": 3,
+        "density_factor": 1.0,
+        "lot_depth_factor": 0.92,
+        "frontage_hint_factor": 0.95,
+        "road_width_factor": 0.95,
+        "runtime_budget_factor": 1.0
+      },
+      "objective_score": -0.124702,
+      "optimization_rank": 11
+    }
+  ],
+  "best_candidate": {
+    "layout_result": {
+      "schema_name": "LayoutResult",
+      "schema_version": "1.0.0",
+      "layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+      "parcel_id": "ut-salt-lake-71874",
+      "unit_count": 2,
+      "road_length_ft": 132.9,
+      "lot_geometries": [
+        {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -111.947052,
+                40.68723
+              ],
+              [
+                -111.947051,
+                40.686987
+              ],
+              [
+                -111.947409,
+                40.686987
+              ],
+              [
+                -111.947409,
+                40.68723
+              ],
+              [
+                -111.947052,
+                40.68723
+              ]
+            ]
+          ]
+        },
+        {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -111.947052,
+                40.687536
+              ],
+              [
+                -111.947052,
+                40.68732
+              ],
+              [
+                -111.947409,
+                40.68732
+              ],
+              [
+                -111.947409,
+                40.687563
+              ],
+              [
+                -111.947044,
+                40.687563
+              ],
+              [
+                -111.947044,
+                40.687536
+              ],
+              [
+                -111.947052,
+                40.687536
+              ]
+            ]
+          ]
+        }
+      ],
+      "road_geometries": [
+        {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -111.947526,
+              40.687275
+            ],
+            [
+              -111.947409,
+              40.687275
+            ]
+          ]
+        },
+        {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -111.947409,
+              40.687275
+            ],
+            [
+              -111.947044,
+              40.687275
+            ]
+          ]
+        }
+      ],
+      "open_space_area_sqft": 0.0,
+      "utility_length_ft": 0.0,
+      "score": 1.091721,
+      "buildable_area_sqft": null,
+      "metadata": {
+        "source_engine": "bedrock.services.layout_service",
+        "source_run_id": null,
+        "source_type": "candidate_search",
+        "rule_completeness": null,
+        "legal_reliability": null,
+        "observed_at": "2026-03-31T20:53:48.752523Z"
+      }
+    },
+    "feasibility_result": {
+      "schema_name": "FeasibilityResult",
+      "schema_version": "1.0.0",
+      "scenario_id": "4a86a839-dbe6-548c-9f1e-9a04db6fe7e2",
+      "layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+      "parcel_id": "ut-salt-lake-71874",
+      "units": 2,
+      "estimated_home_price": 670560.0,
+      "price_per_sqft": 209.55,
+      "estimated_home_size_sqft": 3200.0,
+      "construction_cost_per_sqft": 131.1284,
+      "construction_cost_per_home": 671377.408,
+      "development_cost_total": 64517.23661123967,
+      "projected_revenue": 1341120.0,
+      "projected_cost": 1496319.4557385123,
+      "projected_profit": -155199.45573851233,
+      "ROI": -0.10372080316359533,
+      "ROI_base": -0.10372080316359533,
+      "ROI_best_case": 0.0661211362749303,
+      "ROI_worst_case": -0.25039478129414605,
+      "break_even_price": 748159.7278692562,
+      "profit_margin": -0.11572376501618971,
+      "revenue_per_unit": 670560.0,
+      "cost_per_unit": 748159.7278692562,
+      "rank": 1,
+      "risk_score": 0.5537710507293973,
+      "requested_units": null,
+      "constraint_violations": [
+        "projected_profit_negative"
+      ],
+      "confidence": 0.78,
+      "confidence_score": 0.78,
+      "key_risk_factors": [
+        "above_national_cost_region",
+        "negative_or_unknown_base_roi"
+      ],
+      "status": "constrained",
+      "financial_summary": {
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "construction_cost_per_home": 671377.408,
+        "road_cost_per_ft": 302.604,
+        "road_length": 132.9,
+        "land_cost": 89047.40312727272,
+        "projected_revenue": 1341120.0,
+        "development_cost_total": 64517.23661123967,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "market_context": {
+          "jurisdiction": "West Valley City",
+          "county_name": "Salt Lake County, Utah",
+          "median_home_value": 419100.0,
+          "rpp_all_items": 100.868,
+          "reference_home_size_sqft": 2000.0,
+          "baseline_cost_per_sqft": 130.0,
+          "baseline_road_cost_per_ft": 300.0,
+          "land_value_share_of_home_value": 0.18,
+          "price_reference_date": "2024-01-01",
+          "msa_name": "Salt Lake City MSA",
+          "sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          },
+          "used_county_fallback": false,
+          "estimated_home_size_sqft": 3200.0,
+          "price_per_sqft": 209.55,
+          "construction_cost_per_sqft": 131.1284,
+          "road_cost_per_ft": 302.604,
+          "land_price_estimate": 89047.40312727272,
+          "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+          "cost_proxy": "bea_rpp_scaled_baseline_costs"
+        },
+        "development_cost_breakdown": {
+          "roads": 40216.0716,
+          "utilities": 0.0,
+          "grading": 4021.6071600000005,
+          "sitework": 13279.55785123967,
+          "permitting": 7000.0
+        },
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562
+      },
+      "explanation": {
+        "primary_driver": "home_price",
+        "cost_breakdown": {
+          "construction": 1342754.816,
+          "development": 64517.23661123967
+        },
+        "revenue_breakdown": {
+          "units": 2,
+          "price_per_home": 670560.0
+        }
+      },
+      "assumptions": {
+        "used_default_estimated_home_price": false,
+        "used_default_construction_cost_per_home": false,
+        "used_default_road_cost_per_ft": false,
+        "used_default_land_price": false,
+        "used_default_soft_cost_factor": false,
+        "market_sources": {
+          "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+          "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+          "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+          "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+        }
+      },
+      "metadata": null
+    },
+    "strategy_parameters": {
+      "label": "refine_1_mutated",
+      "strategies": [
+        "t_junction",
+        "loop_custom",
+        "cul-de-sac",
+        "spine-road",
+        "grid"
+      ],
+      "max_candidates": 12,
+      "max_layouts": 2,
+      "density_factor": 1.0,
+      "lot_depth_factor": 0.97,
+      "frontage_hint_factor": 1.05,
+      "road_width_factor": 1.03,
+      "runtime_budget_factor": 1.08
+    },
+    "objective_score": -0.06387,
+    "optimization_rank": 1
+  },
+  "ranking_metrics": {
+    "rounds_executed": 2,
+    "candidate_count": 11,
+    "profitable_candidate_count": 0,
+    "best_objective_score": -0.06387,
+    "best_roi": -0.10372080316359533,
+    "best_profit": -155199.45573851233,
+    "best_confidence": 0.78
+  },
+  "objective": {
+    "roi_weight": 0.45,
+    "profit_weight": 0.25,
+    "risk_weight": 0.2,
+    "confidence_weight": 0.1,
+    "min_roi": null,
+    "max_risk": null,
+    "improvement_epsilon": 0.01,
+    "target_score": 0.5
+  },
+  "scenario_evaluation": {
+    "schema_name": "ScenarioEvaluation",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-71874",
+    "layout_count": 11,
+    "best_layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+    "best_roi": -0.10372080316359533,
+    "best_profit": -155199.45573851233,
+    "best_units": 2,
+    "layouts_ranked": [
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "4a86a839-dbe6-548c-9f1e-9a04db6fe7e2",
+        "layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 64517.23661123967,
+        "projected_revenue": 1341120.0,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562,
+        "rank": 1,
+        "risk_score": 0.5537710507293973,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.78,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 2,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 132.9,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 1341120.0,
+          "development_cost_total": 64517.23661123967,
+          "projected_cost": 1496319.4557385123,
+          "projected_profit": -155199.45573851233,
+          "ROI": -0.10372080316359533,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.10372080316359533,
+          "ROI_best_case": 0.0661211362749303,
+          "ROI_worst_case": -0.25039478129414605,
+          "break_even_price": 748159.7278692562,
+          "confidence_score": 0.78,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 40216.0716,
+            "utilities": 0.0,
+            "grading": 4021.6071600000005,
+            "sitework": 13279.55785123967,
+            "permitting": 7000.0
+          },
+          "profit_margin": -0.11572376501618971,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 748159.7278692562
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 1342754.816,
+            "development": 64517.23661123967
+          },
+          "revenue_breakdown": {
+            "units": 2,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "38f82615-8a16-5aca-b953-d86c391b7220",
+        "layout_id": "layout-ut-salt-lake-71874-c49a9268cfc4",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 64517.23661123967,
+        "projected_revenue": 1341120.0,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562,
+        "rank": 1,
+        "risk_score": 0.5537710507293973,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.78,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 2,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 132.9,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 1341120.0,
+          "development_cost_total": 64517.23661123967,
+          "projected_cost": 1496319.4557385123,
+          "projected_profit": -155199.45573851233,
+          "ROI": -0.10372080316359533,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.10372080316359533,
+          "ROI_best_case": 0.0661211362749303,
+          "ROI_worst_case": -0.25039478129414605,
+          "break_even_price": 748159.7278692562,
+          "confidence_score": 0.78,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 40216.0716,
+            "utilities": 0.0,
+            "grading": 4021.6071600000005,
+            "sitework": 13279.55785123967,
+            "permitting": 7000.0
+          },
+          "profit_margin": -0.11572376501618971,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 748159.7278692562
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 1342754.816,
+            "development": 64517.23661123967
+          },
+          "revenue_breakdown": {
+            "units": 2,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "d712c5a4-4aa7-5ca7-8477-1b61b4d81e1d",
+        "layout_id": "layout-ut-salt-lake-71874-bc83dccaa2b0",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 64517.23661123967,
+        "projected_revenue": 1341120.0,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562,
+        "rank": 1,
+        "risk_score": 0.5537710507293973,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.78,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 2,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 132.9,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 1341120.0,
+          "development_cost_total": 64517.23661123967,
+          "projected_cost": 1496319.4557385123,
+          "projected_profit": -155199.45573851233,
+          "ROI": -0.10372080316359533,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.10372080316359533,
+          "ROI_best_case": 0.0661211362749303,
+          "ROI_worst_case": -0.25039478129414605,
+          "break_even_price": 748159.7278692562,
+          "confidence_score": 0.78,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 40216.0716,
+            "utilities": 0.0,
+            "grading": 4021.6071600000005,
+            "sitework": 13279.55785123967,
+            "permitting": 7000.0
+          },
+          "profit_margin": -0.11572376501618971,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 748159.7278692562
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 1342754.816,
+            "development": 64517.23661123967
+          },
+          "revenue_breakdown": {
+            "units": 2,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "e8a65235-6cc1-5bca-9a1d-f932406b6f57",
+        "layout_id": "layout-ut-salt-lake-71874-25bc525a17da",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 2,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 64517.23661123967,
+        "projected_revenue": 1341120.0,
+        "projected_cost": 1496319.4557385123,
+        "projected_profit": -155199.45573851233,
+        "ROI": -0.10372080316359533,
+        "ROI_base": -0.10372080316359533,
+        "ROI_best_case": 0.0661211362749303,
+        "ROI_worst_case": -0.25039478129414605,
+        "break_even_price": 748159.7278692562,
+        "profit_margin": -0.11572376501618971,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 748159.7278692562,
+        "rank": 1,
+        "risk_score": 0.5537710507293973,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.78,
+        "confidence_score": 0.78,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 2,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 132.9,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 1341120.0,
+          "development_cost_total": 64517.23661123967,
+          "projected_cost": 1496319.4557385123,
+          "projected_profit": -155199.45573851233,
+          "ROI": -0.10372080316359533,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.10372080316359533,
+          "ROI_best_case": 0.0661211362749303,
+          "ROI_worst_case": -0.25039478129414605,
+          "break_even_price": 748159.7278692562,
+          "confidence_score": 0.78,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 40216.0716,
+            "utilities": 0.0,
+            "grading": 4021.6071600000005,
+            "sitework": 13279.55785123967,
+            "permitting": 7000.0
+          },
+          "profit_margin": -0.11572376501618971,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 748159.7278692562
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 1342754.816,
+            "development": 64517.23661123967
+          },
+          "revenue_breakdown": {
+            "units": 2,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "c4f48f24-24a9-5aa1-affb-951968f02686",
+        "layout_id": "layout-ut-salt-lake-71874-bbb0e991666c",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 86115.21237123969,
+        "projected_revenue": 670560.0,
+        "projected_cost": 846540.0234985125,
+        "projected_profit": -175980.02349851246,
+        "ROI": -0.20788151606965538,
+        "ROI_base": -0.20788151606965538,
+        "ROI_best_case": -0.06148634262700075,
+        "ROI_worst_case": -0.33597820748551416,
+        "break_even_price": 846540.0234985125,
+        "profit_margin": -0.26243740082693934,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 846540.0234985125,
+        "rank": 2,
+        "risk_score": 0.5742841338782453,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 208.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 86115.21237123969,
+          "projected_cost": 846540.0234985125,
+          "projected_profit": -175980.02349851246,
+          "ROI": -0.20788151606965538,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.20788151606965538,
+          "ROI_best_case": -0.06148634262700075,
+          "ROI_worst_case": -0.33597820748551416,
+          "break_even_price": 846540.0234985125,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 63032.4132,
+            "utilities": 0.0,
+            "grading": 6303.241320000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.26243740082693934,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 846540.0234985125
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 86115.21237123969
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "a8f34318-15f4-5780-bbf9-cc3397395f11",
+        "layout_id": "layout-ut-salt-lake-71874-4fcda98ba303",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 86115.21237123969,
+        "projected_revenue": 670560.0,
+        "projected_cost": 846540.0234985125,
+        "projected_profit": -175980.02349851246,
+        "ROI": -0.20788151606965538,
+        "ROI_base": -0.20788151606965538,
+        "ROI_best_case": -0.06148634262700075,
+        "ROI_worst_case": -0.33597820748551416,
+        "break_even_price": 846540.0234985125,
+        "profit_margin": -0.26243740082693934,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 846540.0234985125,
+        "rank": 2,
+        "risk_score": 0.5742841338782453,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 208.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 86115.21237123969,
+          "projected_cost": 846540.0234985125,
+          "projected_profit": -175980.02349851246,
+          "ROI": -0.20788151606965538,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.20788151606965538,
+          "ROI_best_case": -0.06148634262700075,
+          "ROI_worst_case": -0.33597820748551416,
+          "break_even_price": 846540.0234985125,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 63032.4132,
+            "utilities": 0.0,
+            "grading": 6303.241320000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.26243740082693934,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 846540.0234985125
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 86115.21237123969
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "d7abd11c-a037-51c9-a85c-f27f6a7233a7",
+        "layout_id": "layout-ut-salt-lake-71874-3ad12d63609f",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 86115.21237123969,
+        "projected_revenue": 670560.0,
+        "projected_cost": 846540.0234985125,
+        "projected_profit": -175980.02349851246,
+        "ROI": -0.20788151606965538,
+        "ROI_base": -0.20788151606965538,
+        "ROI_best_case": -0.06148634262700075,
+        "ROI_worst_case": -0.33597820748551416,
+        "break_even_price": 846540.0234985125,
+        "profit_margin": -0.26243740082693934,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 846540.0234985125,
+        "rank": 3,
+        "risk_score": 0.5742841338782453,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 208.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 86115.21237123969,
+          "projected_cost": 846540.0234985125,
+          "projected_profit": -175980.02349851246,
+          "ROI": -0.20788151606965538,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.20788151606965538,
+          "ROI_best_case": -0.06148634262700075,
+          "ROI_worst_case": -0.33597820748551416,
+          "break_even_price": 846540.0234985125,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 63032.4132,
+            "utilities": 0.0,
+            "grading": 6303.241320000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.26243740082693934,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 846540.0234985125
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 86115.21237123969
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "75fe4035-f445-5cf6-b8e8-0f0032981db3",
+        "layout_id": "layout-ut-salt-lake-71874-0bb0d2ce1bc4",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 86115.21237123969,
+        "projected_revenue": 670560.0,
+        "projected_cost": 846540.0234985125,
+        "projected_profit": -175980.02349851246,
+        "ROI": -0.20788151606965538,
+        "ROI_base": -0.20788151606965538,
+        "ROI_best_case": -0.06148634262700075,
+        "ROI_worst_case": -0.33597820748551416,
+        "break_even_price": 846540.0234985125,
+        "profit_margin": -0.26243740082693934,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 846540.0234985125,
+        "rank": 2,
+        "risk_score": 0.5742841338782453,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 208.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 86115.21237123969,
+          "projected_cost": 846540.0234985125,
+          "projected_profit": -175980.02349851246,
+          "ROI": -0.20788151606965538,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.20788151606965538,
+          "ROI_best_case": -0.06148634262700075,
+          "ROI_worst_case": -0.33597820748551416,
+          "break_even_price": 846540.0234985125,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 63032.4132,
+            "utilities": 0.0,
+            "grading": 6303.241320000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.26243740082693934,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 846540.0234985125
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 86115.21237123969
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "669d5fff-3104-59b1-8a88-e846a6895186",
+        "layout_id": "layout-ut-salt-lake-71874-964019efab01",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 141204.27057123967,
+        "projected_revenue": 670560.0,
+        "projected_cost": 901629.0816985124,
+        "projected_profit": -231069.08169851243,
+        "ROI": -0.25627953488724925,
+        "ROI_base": -0.25627953488724925,
+        "ROI_best_case": -0.11834075918582737,
+        "ROI_worst_case": -0.37748418100185677,
+        "break_even_price": 901629.0816985124,
+        "profit_margin": -0.34459120988205744,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 901629.0816985124,
+        "rank": 1,
+        "risk_score": 0.5934935543796263,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 373.8,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 141204.27057123967,
+          "projected_cost": 901629.0816985124,
+          "projected_profit": -231069.08169851243,
+          "ROI": -0.25627953488724925,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.25627953488724925,
+          "ROI_best_case": -0.11834075918582737,
+          "ROI_worst_case": -0.37748418100185677,
+          "break_even_price": 901629.0816985124,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 113113.3752,
+            "utilities": 0.0,
+            "grading": 11311.337520000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.34459120988205744,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 901629.0816985124
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 141204.27057123967
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "8b1e7714-7aa5-57b5-9037-0904f51d60e4",
+        "layout_id": "layout-ut-salt-lake-71874-7af7b9d6407f",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 141204.27057123967,
+        "projected_revenue": 670560.0,
+        "projected_cost": 901629.0816985124,
+        "projected_profit": -231069.08169851243,
+        "ROI": -0.25627953488724925,
+        "ROI_base": -0.25627953488724925,
+        "ROI_best_case": -0.11834075918582737,
+        "ROI_worst_case": -0.37748418100185677,
+        "break_even_price": 901629.0816985124,
+        "profit_margin": -0.34459120988205744,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 901629.0816985124,
+        "rank": 2,
+        "risk_score": 0.5934935543796263,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 373.8,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 141204.27057123967,
+          "projected_cost": 901629.0816985124,
+          "projected_profit": -231069.08169851243,
+          "ROI": -0.25627953488724925,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.25627953488724925,
+          "ROI_best_case": -0.11834075918582737,
+          "ROI_worst_case": -0.37748418100185677,
+          "break_even_price": 901629.0816985124,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 113113.3752,
+            "utilities": 0.0,
+            "grading": 11311.337520000001,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.34459120988205744,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 901629.0816985124
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 141204.27057123967
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      },
+      {
+        "schema_name": "FeasibilityResult",
+        "schema_version": "1.0.0",
+        "scenario_id": "64e7c51a-1944-54d3-b909-2692cb347859",
+        "layout_id": "layout-ut-salt-lake-71874-1139d9622993",
+        "parcel_id": "ut-salt-lake-71874",
+        "units": 1,
+        "estimated_home_price": 670560.0,
+        "price_per_sqft": 209.55,
+        "estimated_home_size_sqft": 3200.0,
+        "construction_cost_per_sqft": 131.1284,
+        "construction_cost_per_home": 671377.408,
+        "development_cost_total": 148027.99077123965,
+        "projected_revenue": 670560.0,
+        "projected_cost": 908452.8018985124,
+        "projected_profit": -237892.8018985124,
+        "ROI": -0.26186589044731523,
+        "ROI_base": -0.26186589044731523,
+        "ROI_best_case": -0.12490725327029002,
+        "ROI_worst_case": -0.3822670108371941,
+        "break_even_price": 908452.8018985124,
+        "profit_margin": -0.35476736145686055,
+        "revenue_per_unit": 670560.0,
+        "cost_per_unit": 908452.8018985124,
+        "rank": 3,
+        "risk_score": 0.5957108073921509,
+        "requested_units": null,
+        "constraint_violations": [
+          "projected_profit_negative"
+        ],
+        "confidence": 0.73,
+        "confidence_score": 0.73,
+        "key_risk_factors": [
+          "above_national_cost_region",
+          "negative_or_unknown_base_roi",
+          "high_road_length_per_unit"
+        ],
+        "status": "constrained",
+        "financial_summary": {
+          "units": 1,
+          "estimated_home_price": 670560.0,
+          "construction_cost_per_home": 671377.408,
+          "road_cost_per_ft": 302.604,
+          "road_length": 394.3,
+          "land_cost": 89047.40312727272,
+          "projected_revenue": 670560.0,
+          "development_cost_total": 148027.99077123965,
+          "projected_cost": 908452.8018985124,
+          "projected_profit": -237892.8018985124,
+          "ROI": -0.26186589044731523,
+          "price_per_sqft": 209.55,
+          "estimated_home_size_sqft": 3200.0,
+          "construction_cost_per_sqft": 131.1284,
+          "ROI_base": -0.26186589044731523,
+          "ROI_best_case": -0.12490725327029002,
+          "ROI_worst_case": -0.3822670108371941,
+          "break_even_price": 908452.8018985124,
+          "confidence_score": 0.73,
+          "key_risk_factors": [
+            "above_national_cost_region",
+            "negative_or_unknown_base_roi",
+            "high_road_length_per_unit"
+          ],
+          "market_context": {
+            "jurisdiction": "West Valley City",
+            "county_name": "Salt Lake County, Utah",
+            "median_home_value": 419100.0,
+            "rpp_all_items": 100.868,
+            "reference_home_size_sqft": 2000.0,
+            "baseline_cost_per_sqft": 130.0,
+            "baseline_road_cost_per_ft": 300.0,
+            "land_value_share_of_home_value": 0.18,
+            "price_reference_date": "2024-01-01",
+            "msa_name": "Salt Lake City MSA",
+            "sources": {
+              "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+              "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+              "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+              "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+            },
+            "used_county_fallback": false,
+            "estimated_home_size_sqft": 3200.0,
+            "price_per_sqft": 209.55,
+            "construction_cost_per_sqft": 131.1284,
+            "road_cost_per_ft": 302.604,
+            "land_price_estimate": 89047.40312727272,
+            "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+            "cost_proxy": "bea_rpp_scaled_baseline_costs"
+          },
+          "development_cost_breakdown": {
+            "roads": 119316.7572,
+            "utilities": 0.0,
+            "grading": 11931.67572,
+            "sitework": 13279.55785123967,
+            "permitting": 3500.0
+          },
+          "profit_margin": -0.35476736145686055,
+          "revenue_per_unit": 670560.0,
+          "cost_per_unit": 908452.8018985124
+        },
+        "explanation": {
+          "primary_driver": "home_price",
+          "cost_breakdown": {
+            "construction": 671377.408,
+            "development": 148027.99077123965
+          },
+          "revenue_breakdown": {
+            "units": 1,
+            "price_per_home": 670560.0
+          }
+        },
+        "assumptions": {
+          "used_default_estimated_home_price": false,
+          "used_default_construction_cost_per_home": false,
+          "used_default_road_cost_per_ft": false,
+          "used_default_land_price": false,
+          "used_default_soft_cost_factor": false,
+          "market_sources": {
+            "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+            "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+            "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+            "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+          }
+        },
+        "metadata": null
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration_index": 1,
+      "search_plans": [
+        {
+          "label": "broad_sampling",
+          "strategies": [
+            "grid",
+            "spine-road",
+            "cul-de-sac",
+            "loop_custom",
+            "t_junction"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 1.0,
+          "lot_depth_factor": 1.0,
+          "frontage_hint_factor": 1.0,
+          "road_width_factor": 1.0,
+          "runtime_budget_factor": 1.0
+        },
+        {
+          "label": "compact_yield",
+          "strategies": [
+            "grid",
+            "spine-road",
+            "herringbone",
+            "loop_custom"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 1.0,
+          "lot_depth_factor": 0.92,
+          "frontage_hint_factor": 0.95,
+          "road_width_factor": 0.95,
+          "runtime_budget_factor": 1.0
+        },
+        {
+          "label": "hybrid_spacing",
+          "strategies": [
+            "loop_custom",
+            "spine-road",
+            "grid",
+            "t_junction"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 0.9,
+          "lot_depth_factor": 1.1,
+          "frontage_hint_factor": 0.92,
+          "road_width_factor": 0.9,
+          "runtime_budget_factor": 1.0
+        }
+      ],
+      "candidate_count": 6,
+      "best_layout_id": "layout-ut-salt-lake-71874-bc83dccaa2b0",
+      "best_objective_score": -0.06387,
+      "best_roi": -0.10372080316359533,
+      "best_projected_profit": -155199.45573851233,
+      "improvement_from_prior": null,
+      "score_distribution": {
+        "count": 6,
+        "min_score": -0.124702,
+        "p25_score": -0.122583,
+        "median_score": -0.122583,
+        "p75_score": -0.104221,
+        "max_score": -0.06387
+      }
+    },
+    {
+      "iteration_index": 2,
+      "search_plans": [
+        {
+          "label": "refine_1_dense",
+          "strategies": [
+            "grid",
+            "spine-road",
+            "cul-de-sac",
+            "loop_custom",
+            "t_junction"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 1.0,
+          "lot_depth_factor": 1.08,
+          "frontage_hint_factor": 0.95,
+          "road_width_factor": 0.95,
+          "runtime_budget_factor": 1.05
+        },
+        {
+          "label": "refine_1_conservative",
+          "strategies": [
+            "grid",
+            "spine-road",
+            "cul-de-sac",
+            "loop_custom",
+            "t_junction"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 0.87,
+          "lot_depth_factor": 0.98,
+          "frontage_hint_factor": 1.02,
+          "road_width_factor": 1.05,
+          "runtime_budget_factor": 1.05
+        },
+        {
+          "label": "refine_1_mutated",
+          "strategies": [
+            "t_junction",
+            "loop_custom",
+            "cul-de-sac",
+            "spine-road",
+            "grid"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 2,
+          "density_factor": 1.0,
+          "lot_depth_factor": 0.97,
+          "frontage_hint_factor": 1.05,
+          "road_width_factor": 1.03,
+          "runtime_budget_factor": 1.08
+        },
+        {
+          "label": "refine_2_dense",
+          "strategies": [
+            "grid",
+            "spine-road",
+            "loop_custom"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 1.0,
+          "lot_depth_factor": 1.08,
+          "frontage_hint_factor": 0.95,
+          "road_width_factor": 0.95,
+          "runtime_budget_factor": 1.05
+        },
+        {
+          "label": "refine_2_conservative",
+          "strategies": [
+            "grid",
+            "spine-road",
+            "loop_custom"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 3,
+          "density_factor": 0.87,
+          "lot_depth_factor": 0.98,
+          "frontage_hint_factor": 1.02,
+          "road_width_factor": 1.05,
+          "runtime_budget_factor": 1.05
+        },
+        {
+          "label": "refine_2_mutated",
+          "strategies": [
+            "loop_custom",
+            "spine-road",
+            "grid"
+          ],
+          "max_candidates": 12,
+          "max_layouts": 2,
+          "density_factor": 1.0,
+          "lot_depth_factor": 0.97,
+          "frontage_hint_factor": 1.05,
+          "road_width_factor": 0.96,
+          "runtime_budget_factor": 1.08
+        }
+      ],
+      "candidate_count": 5,
+      "best_layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+      "best_objective_score": -0.06387,
+      "best_roi": -0.10372080316359533,
+      "best_projected_profit": -155199.45573851233,
+      "improvement_from_prior": 0.0,
+      "score_distribution": {
+        "count": 5,
+        "min_score": -0.104221,
+        "p25_score": -0.104221,
+        "median_score": -0.06387,
+        "p75_score": -0.06387,
+        "max_score": -0.06387
+      }
+    }
+  ],
+  "convergence_metrics": {
+    "iteration_count": 2,
+    "plateau_reached": false,
+    "stopped_reason": "max_rounds_reached",
+    "improvement_curve": [
+      -0.06387,
+      -0.06387
+    ],
+    "candidate_score_distribution": {
+      "count": 11,
+      "min_score": -0.124702,
+      "p25_score": -0.122583,
+      "median_score": -0.104221,
+      "p75_score": -0.06387,
+      "max_score": -0.06387
+    }
+  },
+  "sensitivity_analysis": [
+    {
+      "layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+      "status": "best_candidate",
+      "primary_failure_reason": "This deal fails because density_units is outside break-even bounds.",
+      "margin_to_feasibility": -155199.46,
+      "make_it_work_statement": "It becomes viable if density_units changes by 100.0%.",
+      "breakpoints": [
+        {
+          "variable": "land_price",
+          "current_value": 0.0,
+          "break_even_value": -155199.46,
+          "margin_value": -155199.46,
+          "margin_percent": null,
+          "explanation": "This deal becomes viable if acquisition cost falls by the profit deficit."
+        },
+        {
+          "variable": "construction_cost_per_home",
+          "current_value": 260000.0,
+          "break_even_value": 182400.27,
+          "margin_value": -77599.73,
+          "margin_percent": -0.29846,
+          "explanation": "Per-home construction cost can move by this amount before ROI crosses zero."
+        },
+        {
+          "variable": "price_per_sqft",
+          "current_value": 209.55,
+          "break_even_value": 233.7999,
+          "margin_value": -24.2499,
+          "margin_percent": -0.115724,
+          "explanation": "Sale price per square foot must stay above this threshold for feasibility."
+        },
+        {
+          "variable": "density_units",
+          "current_value": 2.0,
+          "break_even_value": 4.0,
+          "margin_value": 2.0,
+          "margin_percent": 1.0,
+          "explanation": "Additional or fewer units required before projected profit crosses zero."
+        }
+      ]
+    }
+  ],
+  "economic_scenarios": [
+    {
+      "scenario_name": "land_price_sweep",
+      "scenario_type": "land_price_sweep",
+      "status": "evaluated",
+      "best_layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+      "best_roi": -0.10372080316359533,
+      "best_projected_profit": -155199.45573851233,
+      "delta_roi": null,
+      "delta_profit": null,
+      "recommended_max_offer_price": -155199.46,
+      "curve": [
+        {
+          "offer_price": 0.0,
+          "projected_profit": -155199.46,
+          "ROI": -0.103721
+        },
+        {
+          "offer_price": -77599.73,
+          "projected_profit": -77599.73,
+          "ROI": -0.05186
+        },
+        {
+          "offer_price": -155199.46,
+          "projected_profit": 0.0,
+          "ROI": 0.0
+        },
+        {
+          "offer_price": -193999.32,
+          "projected_profit": 38799.86,
+          "ROI": 0.02593
+        }
+      ],
+      "explanation": "Recommended max offer equals current land price plus projected profit at break-even."
+    },
+    {
+      "scenario_name": "density_curve",
+      "scenario_type": "density_curve",
+      "status": "evaluated",
+      "best_layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+      "best_roi": -0.10372080316359533,
+      "best_projected_profit": -155199.45573851233,
+      "delta_roi": null,
+      "delta_profit": null,
+      "recommended_max_offer_price": null,
+      "curve": [
+        {
+          "layout_id": "layout-ut-salt-lake-71874-1139d9622993",
+          "units": 1,
+          "ROI": -0.26186589044731523,
+          "projected_profit": -237892.8018985124
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-964019efab01",
+          "units": 1,
+          "ROI": -0.25627953488724925,
+          "projected_profit": -231069.08169851243
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-7af7b9d6407f",
+          "units": 1,
+          "ROI": -0.25627953488724925,
+          "projected_profit": -231069.08169851243
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-bbb0e991666c",
+          "units": 1,
+          "ROI": -0.20788151606965538,
+          "projected_profit": -175980.02349851246
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-4fcda98ba303",
+          "units": 1,
+          "ROI": -0.20788151606965538,
+          "projected_profit": -175980.02349851246
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-3ad12d63609f",
+          "units": 1,
+          "ROI": -0.20788151606965538,
+          "projected_profit": -175980.02349851246
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-0bb0d2ce1bc4",
+          "units": 1,
+          "ROI": -0.20788151606965538,
+          "projected_profit": -175980.02349851246
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+          "units": 2,
+          "ROI": -0.10372080316359533,
+          "projected_profit": -155199.45573851233
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-c49a9268cfc4",
+          "units": 2,
+          "ROI": -0.10372080316359533,
+          "projected_profit": -155199.45573851233
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-bc83dccaa2b0",
+          "units": 2,
+          "ROI": -0.10372080316359533,
+          "projected_profit": -155199.45573851233
+        },
+        {
+          "layout_id": "layout-ut-salt-lake-71874-25bc525a17da",
+          "units": 2,
+          "ROI": -0.10372080316359533,
+          "projected_profit": -155199.45573851233
+        }
+      ],
+      "explanation": "Density curve compares ranked candidate economics across achieved unit counts."
+    },
+    {
+      "scenario_name": "rezoning_uplift",
+      "scenario_type": "rezoning",
+      "status": "not_applicable",
+      "best_layout_id": null,
+      "best_roi": null,
+      "best_projected_profit": null,
+      "delta_roi": null,
+      "delta_profit": null,
+      "recommended_max_offer_price": null,
+      "curve": [],
+      "explanation": "Rezoning scenario did not produce valid layouts."
+    }
+  ],
+  "decision": {
+    "recommendation": "pursue_rezoning",
+    "action": "pursue_rezoning",
+    "best_layout_id": "layout-ut-salt-lake-71874-d3ff7e16a7ea",
+    "expected_roi_base": -0.10372080316359533,
+    "expected_roi_best_case": 0.0661211362749303,
+    "expected_roi_worst_case": -0.25039478129414605,
+    "sensitivity": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "downside_case_breaks_profitability",
+      "break_even_price=748159.73"
+    ],
+    "key_risks": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ],
+    "breakpoints": [
+      {
+        "variable": "land_price",
+        "current_value": 0.0,
+        "break_even_value": -155199.46,
+        "margin_value": -155199.46,
+        "margin_percent": null,
+        "explanation": "This deal becomes viable if acquisition cost falls by the profit deficit."
+      },
+      {
+        "variable": "construction_cost_per_home",
+        "current_value": 260000.0,
+        "break_even_value": 182400.27,
+        "margin_value": -77599.73,
+        "margin_percent": -0.29846,
+        "explanation": "Per-home construction cost can move by this amount before ROI crosses zero."
+      },
+      {
+        "variable": "price_per_sqft",
+        "current_value": 209.55,
+        "break_even_value": 233.7999,
+        "margin_value": -24.2499,
+        "margin_percent": -0.115724,
+        "explanation": "Sale price per square foot must stay above this threshold for feasibility."
+      },
+      {
+        "variable": "density_units",
+        "current_value": 2.0,
+        "break_even_value": 4.0,
+        "margin_value": 2.0,
+        "margin_percent": 1.0,
+        "explanation": "Additional or fewer units required before projected profit crosses zero."
+      }
+    ],
+    "target_price": -155199.46,
+    "reason": "Current zoning-constrained density leaves the deal negative while higher density improves economics.",
+    "alternative": "max offer price should not exceed -155199.46",
+    "rationale": "Selected layout layout-ut-salt-lake-71874-d3ff7e16a7ea with ROI -0.1037 and projected profit -155199.46 from 11 ranked candidates."
+  },
+  "selected_pipeline_run_id": "87edcfee-2226-46bd-a4c7-82fb42b28dc8",
+  "timestamp": "2026-03-31T20:53:49.119267+00:00",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "a470fd6028adca2d121578b3b5f9f8de694baa9eb2df9c20cb0342ace51a7860",
+  "stage_runtimes": {
+    "parcel.load": 0.000495,
+    "zoning.lookup": 0.02783,
+    "layout.search.broad_sampling": 0.067801,
+    "feasibility.evaluate.broad_sampling": 0.000249,
+    "layout.search.compact_yield": 0.10447,
+    "feasibility.evaluate.compact_yield": 0.000224,
+    "layout.search.hybrid_spacing": 0.123772,
+    "layout.search.refine_1_dense": 0.068464,
+    "feasibility.evaluate.refine_1_dense": 0.000162,
+    "layout.search.refine_1_conservative": 0.07153,
+    "feasibility.evaluate.refine_1_conservative": 0.00015,
+    "layout.search.refine_1_mutated": 0.07163,
+    "feasibility.evaluate.refine_1_mutated": 0.000179,
+    "layout.search.refine_2_dense": 0.125444,
+    "layout.search.refine_2_conservative": 0.127847,
+    "layout.search.refine_2_mutated": 0.112444,
+    "optimization.total": 0.874999
+  }
+}

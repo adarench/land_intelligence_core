@@ -26,20 +26,27 @@ _BOUNDARY_SOURCES: tuple[BoundarySource, ...] = (
     BoundarySource("Salt Lake City", "zoning_data_scraper/zoning_dataset_v8/salt-lake-city/zoning_layers.geojson"),
     BoundarySource("Lehi", "zoning_data_scraper/zoning_dataset_v8/lehi/zoning_layers.geojson"),
     BoundarySource("Draper", "zoning_data_scraper/zoning_data_priority_v9b/draper/zoning_layers.geojson"),
+    BoundarySource("South Jordan", "zoning_data_scraper/zoning_data_priority_v9b/south-jordan/zoning_layers.geojson"),
 )
 _UTAH_EXTENT = (-114.1, 36.9, -108.9, 42.5)
 _FIXTURE_JURISDICTIONS = {
     "BenchmarkCounty_UT",
     "Cottonwood Heights",
     "Draper",
+    "Eagle Mountain",
     "Example City",
+    "Herriman",
     "Lehi",
     "Murray",
     "Provo",
+    "Riverton",
     "SampleCounty_CA",
     "Salt Lake City",
     "Salt Lake County",
+    "Saratoga Springs",
+    "South Jordan",
     "Test City",
+    "West Valley City",
     "test_county",
 }
 

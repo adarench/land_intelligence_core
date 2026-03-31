@@ -82,6 +82,7 @@ def test_phase_a_real_lookup_coverage_now_includes_salt_lake_city_and_lehi() -> 
     assert jurisdiction_has_clean_lookup_coverage("Murray", dataset_root=dataset_root) is True
     assert jurisdiction_has_clean_lookup_coverage("Provo", dataset_root=dataset_root) is True
     assert jurisdiction_has_clean_lookup_coverage("Salt Lake City", dataset_root=dataset_root) is True
+    assert jurisdiction_has_clean_lookup_coverage("West Valley City", dataset_root=dataset_root) is True
 
 
 @pytest.mark.parametrize(

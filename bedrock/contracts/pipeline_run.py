@@ -9,6 +9,7 @@ from pydantic import Field
 from .base import BedrockModel
 from .feasibility_result import FeasibilityResult
 from .layout_result import LayoutResult
+from .near_feasible_result import NearFeasibleResult
 from .zoning_rules import ZoningRules
 
 
@@ -23,6 +24,7 @@ class PipelineRun(BedrockModel):
     zoning_result: ZoningRules
     layout_result: Optional[LayoutResult] = None
     feasibility_result: Optional[FeasibilityResult] = None
+    near_feasible_result: Optional[NearFeasibleResult] = None
     timestamp: str
     git_commit: Optional[str] = None
     input_hash: Optional[str] = None

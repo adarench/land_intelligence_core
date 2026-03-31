@@ -1,0 +1,613 @@
+{
+  "batch_id": "real-parcel-batch-20260330T210428Z",
+  "timestamp": "2026-03-30T21:04:28.702552+00:00",
+  "parcel_count": 60,
+  "runs": [
+    {
+      "parcel_id": "ut-utah-13631",
+      "run_id": "66b73457-fa6e-49a3-8fdd-40cf45313b84",
+      "status": "completed",
+      "units": 2,
+      "projected_revenue": 2511360.0,
+      "projected_cost": 2374824.434188099,
+      "roi": 0.057492909305769134,
+      "profit": 136535.5658119009
+    },
+    {
+      "parcel_id": "ut-utah-84832",
+      "run_id": "010c5a97-8825-4d30-a84b-beace3f77106",
+      "status": "near_feasible",
+      "units": 9,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": 0.5442321722457758,
+      "profit": 3982842.215666062
+    },
+    {
+      "parcel_id": "ut-utah-14978",
+      "run_id": "ff4f62a7-7480-4695-bd84-20d41110ec93",
+      "status": "completed",
+      "units": 1,
+      "projected_revenue": 1255680.0,
+      "projected_cost": 1656517.4922426448,
+      "roi": -0.24197600938096858,
+      "profit": -400837.4922426448
+    },
+    {
+      "parcel_id": "ut-utah-13598",
+      "run_id": "a09371e9-6162-43f9-8ce4-349b5d98a4ac",
+      "status": "completed",
+      "units": 2,
+      "projected_revenue": 2511360.0,
+      "projected_cost": 2663450.784767273,
+      "roi": -0.0571029078656553,
+      "profit": -152090.78476727288
+    },
+    {
+      "parcel_id": "ut-utah-14547",
+      "run_id": "a8f5a671-4d2e-435f-9767-00dc21004578",
+      "status": "completed",
+      "units": 18,
+      "projected_revenue": 10532090.24208,
+      "projected_cost": 3244901.7130198455,
+      "roi": 2.2457347474720217,
+      "profit": 7287188.529060153
+    },
+    {
+      "parcel_id": "ut-utah-14847",
+      "run_id": "79372e03-2ca0-4760-9d1c-c680b07fb142",
+      "status": "near_feasible",
+      "units": 5,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": 0.42301340560120376,
+      "profit": 1866354.4245421486
+    },
+    {
+      "parcel_id": "ut-utah-85641",
+      "run_id": "3764e0b8-9b97-4f39-9879-bc52c4b496d3",
+      "status": "near_feasible",
+      "units": 2,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": 0.21021954287611627,
+      "profit": 436232.3797405455
+    },
+    {
+      "parcel_id": "ut-utah-14927",
+      "run_id": "4a62887b-6165-4178-90a5-4f33a48d1597",
+      "status": "near_feasible",
+      "units": 2,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": 0.2863646529984518,
+      "profit": 559067.5499966941
+    },
+    {
+      "parcel_id": "ut-utah-85557",
+      "run_id": "bccfe7e2-19c2-4759-80dc-43075969c278",
+      "status": "near_feasible",
+      "units": 2,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": 0.1905197432216094,
+      "profit": 401894.77332166955
+    },
+    {
+      "parcel_id": "ut-utah-14935",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-14837",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-14482",
+      "run_id": "45c9f11e-35e7-4736-aeb8-ef649fea377b",
+      "status": "near_feasible",
+      "units": 1,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": -0.07618468522291379,
+      "profit": -103552.71666371077
+    },
+    {
+      "parcel_id": "ut-utah-85640",
+      "run_id": "d77ee849-829a-4dc0-b6fa-4436dd0b5598",
+      "status": "near_feasible",
+      "units": 2,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": 0.2805993892009322,
+      "profit": 550278.3212346858
+    },
+    {
+      "parcel_id": "ut-utah-85511",
+      "run_id": "0b71381a-c93a-4202-8e16-93580badf897",
+      "status": "near_feasible",
+      "units": 5,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": 0.6168828528585402,
+      "profit": 2395372.859907438
+    },
+    {
+      "parcel_id": "ut-utah-13727",
+      "run_id": "79cd4c6b-80f0-4d79-8123-336f69fa4898",
+      "status": "completed",
+      "units": 15,
+      "projected_revenue": 18835200.0,
+      "projected_cost": 11564628.213434711,
+      "roi": 0.6286904907257644,
+      "profit": 7270571.786565289
+    },
+    {
+      "parcel_id": "ut-utah-3466",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3478",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-2402",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-2455",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3680",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3534",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3644",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3550",
+      "run_id": "e5afbade-69dc-4454-81f9-8201e48954a0",
+      "status": "completed",
+      "units": 1,
+      "projected_revenue": 747520.0,
+      "projected_cost": 894739.2665500827,
+      "roi": -0.16453873441558872,
+      "profit": -147219.2665500827
+    },
+    {
+      "parcel_id": "ut-utah-3653",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3392",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3128",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3674",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3123",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3080",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-utah-3058",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-141",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-85",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-76",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-182",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-158",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-96",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-84",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-79",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-156",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-56",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-40",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-154",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-63",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-71",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-22",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-72083",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-70058",
+      "run_id": "fd4c03f7-f4b1-48f6-8091-d5d6f5b7173c",
+      "status": "completed",
+      "units": 2,
+      "projected_revenue": 1341120.0,
+      "projected_cost": 1963239.5213821488,
+      "roi": -0.3168841675233635,
+      "profit": -622119.5213821488
+    },
+    {
+      "parcel_id": "ut-salt-lake-70996",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-71957",
+      "run_id": "862879cb-34d9-4cf3-bf92-755fa5f0b367",
+      "status": "near_feasible",
+      "units": 3,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": -0.10696994692126448,
+      "profit": -240965.35394380149
+    },
+    {
+      "parcel_id": "ut-salt-lake-70219",
+      "run_id": "186db5b6-cb14-4afe-81fa-bfe4d5db2e6d",
+      "status": "completed",
+      "units": 1,
+      "projected_revenue": 670560.0,
+      "projected_cost": 1251229.601614215,
+      "roi": -0.4640791752889249,
+      "profit": -580669.601614215
+    },
+    {
+      "parcel_id": "ut-salt-lake-71622",
+      "run_id": "f6ee9c02-c549-4fc3-b48a-ff06b5196577",
+      "status": "completed",
+      "units": 2,
+      "projected_revenue": 1341120.0,
+      "projected_cost": 1639918.3140052892,
+      "roi": -0.18220316917829452,
+      "profit": -298798.3140052892
+    },
+    {
+      "parcel_id": "ut-salt-lake-72087",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-70215",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    },
+    {
+      "parcel_id": "ut-salt-lake-70218",
+      "run_id": "a2d208ce-991a-475c-a2a2-62ad82a44df9",
+      "status": "completed",
+      "units": 2,
+      "projected_revenue": 1341120.0,
+      "projected_cost": 2517058.3469765293,
+      "roi": -0.46718755979139587,
+      "profit": -1175938.3469765293
+    },
+    {
+      "parcel_id": "ut-salt-lake-72089",
+      "run_id": "f25c5939-2129-4afa-8dc7-ac7fb778525b",
+      "status": "near_feasible",
+      "units": 2,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": -0.09977740161187976,
+      "profit": -148644.8674909093
+    },
+    {
+      "parcel_id": "ut-salt-lake-71942",
+      "run_id": "1cae5e0a-d9d0-410f-9a29-37fdb12e2248",
+      "status": "completed",
+      "units": 1,
+      "projected_revenue": 670560.0,
+      "projected_cost": 1082532.265147438,
+      "roi": -0.38056349765365055,
+      "profit": -411972.26514743804
+    },
+    {
+      "parcel_id": "ut-salt-lake-70309",
+      "run_id": "d518723d-3d9b-4c61-84e4-d401cffacc51",
+      "status": "near_feasible",
+      "units": 3,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": -0.10115460078477481,
+      "profit": -226391.19862479344
+    },
+    {
+      "parcel_id": "ut-salt-lake-72088",
+      "run_id": "0751cdfd-8019-403f-8f5d-1eea1cbce977",
+      "status": "near_feasible",
+      "units": 1,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": -0.13878548423757184,
+      "profit": -108061.33966280997
+    },
+    {
+      "parcel_id": "ut-salt-lake-71874",
+      "run_id": "487b6f36-d3fb-414f-bfaf-c9e1b43f36c7",
+      "status": "completed",
+      "units": 2,
+      "projected_revenue": 1341120.0,
+      "projected_cost": 1496319.4557385123,
+      "roi": -0.10372080316359533,
+      "profit": -155199.45573851233
+    },
+    {
+      "parcel_id": "ut-salt-lake-71003",
+      "run_id": null,
+      "status": "failed",
+      "units": null,
+      "projected_revenue": null,
+      "projected_cost": null,
+      "roi": null,
+      "profit": null
+    }
+  ],
+  "metrics": {
+    "avg_roi": 0.10760924014443098,
+    "avg_profit": 838078.2450431846,
+    "pass_rate": 0.2,
+    "near_feasible_rate": 0.2
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "parcel_id": "ut-utah-13631",
+    "jurisdiction": "Draper",
+    "run_id": "6cd87974-14ae-4bc3-bd12-4689b6435afc",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": 0.057492909305769134,
+    "projected_profit": 136535.5658119009,
+    "projected_revenue": 2511360.0,
+    "projected_cost": 2374824.434188099,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "ROI_best_case": 0.2275907333303345,
+    "ROI_worst_case": -0.0972015538584128,
+    "break_even_price": 1187412.2170940496,
+    "confidence": 0.78,
+    "confidence_score": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-13598",
+    "jurisdiction": "Draper",
+    "run_id": "2efa1686-e972-4797-a7c8-77a49bd4fcbd",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 2,
+    "ROI": -0.0571029078656553,
+    "projected_profit": -152090.78476727288,
+    "projected_revenue": 2511360.0,
+    "projected_cost": 2663450.784767273,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "ROI_best_case": 0.09591010567950138,
+    "ROI_worst_case": -0.19707673838695103,
+    "break_even_price": 1331725.3923836364,
+    "confidence": 0.73,
+    "confidence_score": 0.73,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi",
+      "high_road_length_per_unit"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-14547",
+    "jurisdiction": "Draper",
+    "run_id": "eaeed2c8-368b-4dc6-846a-f6c40e87c2af",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 18,
+    "ROI": 2.2457347474720217,
+    "projected_profit": 7287188.529060153,
+    "projected_revenue": 10532090.24208,
+    "projected_cost": 3244901.7130198455,
+    "estimated_home_price": 585116.1245599999,
+    "price_per_sqft": 392.3999999999999,
+    "ROI_best_case": 2.8503337363474945,
+    "ROI_worst_case": 1.7180258782458802,
+    "break_even_price": 180272.31738999143,
+    "confidence": 0.83,
+    "confidence_score": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  },
+  {
+    "parcel_id": "ut-utah-14482",
+    "jurisdiction": "Draper",
+    "run_id": "2104802d-ed7a-468d-a9e6-10f4a47a96e8",
+    "status_code": 200,
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "units": 1,
+    "near_feasible_result": {
+      "schema_name": "NearFeasibleResult",
+      "schema_version": "1.0.0",
+      "status": "near_feasible",
+      "reason_category": "ZONING_CONSTRAINT_FAIL",
+      "limiting_constraints": {
+        "parcel_area_sqft": 97773.16,
+        "min_lot_area_sqft": 22000.0,
+        "max_units": 4,
+        "district": "RR-22"
+      },
+      "required_relaxation": {
+        "min_lot_area_sqft": {
+          "current": 22000.0,
+          "needed": 24443.29,
+          "reduction_sqft": 0.0
+        }
+      },
+      "best_attempt_summary": {
+        "score": 0.537528,
+        "violation": "Layout produced disconnected road geometry for parcel ut-utah-14482",
+        "strategy": "t_junction",
+        "profile": "",
+        "lot_count": 1,
+        "avg_frontage_ft": 169.2,
+        "avg_depth_ft": 166.0,
+        "total_road_ft": 290.6,
+        "compliance_rate": 0.5
+      },
+      "financial_upside": {
+        "relaxed_units": 1,
+        "projected_profit": -103552.71666371077,
+        "ROI": -0.07618468522291379,
+        "break_even_price": 1359232.7166637108,
+        "estimated_home_price": 1255680.0,
+        "price_per_sqft": 392.4,
+        "assumptions": {
+          "zoning_relaxation_share": 0.15,
+          "utility_length_proxy": 217.95000000000002,
+          "road_length_proxy": 290.6
+        }
+      },
+      "attempted_strategies": [
+        "default",
+        "default_dense",
+        "expanded_topologies",
+        "expanded_wide_spacing",
+        "loop_focus",
+        "loop_dense",
+        "grid_compact",
+        "grid_wide",
+        "culdesac_branching",
+        "rural_low_density",
+        "rural_extreme"
+      ],
+      "attempted_repairs": []
+    },
+    "ROI": -0.07618468522291379,
+    "projected_profit": -103552.71666371077,
+    "projected_revenue": null,
+    "projected_cost": null,
+    "upside_ROI": -0.07618468522291379,
+    "upside_projected_profit": -103552.71666371077,
+    "upside_relaxed_units": 1
+  },
+  {
+    "parcel_id": "ut-utah-13727",
+    "jurisdiction": "Draper",
+    "run_id": "d0080538-436f-4295-aaf8-309337f3614b",
+    "status_code": 200,
+    "status": "completed",
+    "reason_category": null,
+    "units": 15,
+    "ROI": 0.6286904907257644,
+    "projected_profit": 7270571.786565289,
+    "projected_revenue": 18835200.0,
+    "projected_cost": 11564628.213434711,
+    "estimated_home_price": 1255680.0,
+    "price_per_sqft": 392.4,
+    "ROI_best_case": 0.9307216662331768,
+    "ROI_worst_case": 0.36650278213380494,
+    "break_even_price": 770975.2142289807,
+    "confidence": 0.83,
+    "confidence_score": 0.83,
+    "key_risk_factors": [
+      "above_national_cost_region"
+    ]
+  }
+]

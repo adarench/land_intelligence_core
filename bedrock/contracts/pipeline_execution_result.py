@@ -8,6 +8,7 @@ from pydantic import AliasChoices, Field
 
 from .base import BedrockModel
 from .feasibility_result import FeasibilityResult
+from .near_feasible_result import NearFeasibleResult
 
 
 class PipelineExecutionResult(BedrockModel):
@@ -21,6 +22,7 @@ class PipelineExecutionResult(BedrockModel):
         default=None,
         validation_alias=AliasChoices("feasibility_result", "feasibility"),
     )
+    near_feasible_result: Optional[NearFeasibleResult] = None
 
     @property
     def feasibility(self) -> FeasibilityResult:

@@ -9,7 +9,9 @@ from .base import BedrockModel
 from .experiment_run import ExperimentRun
 from .feasibility_result import FeasibilityResult
 from .layout_result import LayoutResult
+from .layout_candidate_batch import LayoutCandidateBatch
 from .market_data import MarketData
+from .optimization_run import OptimizationRun
 from .parcel import Parcel
 from .pipeline_execution_result import PipelineExecutionResult
 from .pipeline_run import PipelineRun
@@ -276,6 +278,24 @@ EXTENSION_CONTRACT_REGISTRY: Dict[str, ExtensionContractRegistration] = {
         allowed_consumers=("bedrock.api.experiments_api", "bedrock.docs", "analytics"),
         governance_status="approved_support_contract",
     ),
+    "LayoutCandidateBatch": ExtensionContractRegistration(
+        schema_name="LayoutCandidateBatch",
+        schema_version="1.0.0",
+        model=LayoutCandidateBatch,
+        contract_scope="layout_candidate_batch",
+        allowed_producers=("bedrock.services.layout_service", "bedrock.api.layout_api"),
+        allowed_consumers=("bedrock.services.pipeline_service", "bedrock.api.pipeline_api"),
+        governance_status="approved_support_contract",
+    ),
+    "OptimizationRun": ExtensionContractRegistration(
+        schema_name="OptimizationRun",
+        schema_version="1.0.0",
+        model=OptimizationRun,
+        contract_scope="optimization_execution",
+        allowed_producers=("bedrock.services.pipeline_service", "bedrock.api.pipeline_api"),
+        allowed_consumers=("bedrock.api.pipeline_api", "analytics", "ui"),
+        governance_status="approved_support_contract",
+    ),
     "PipelineExecutionResult": ExtensionContractRegistration(
         schema_name="PipelineExecutionResult",
         schema_version="1.0.0",
@@ -381,6 +401,7 @@ CANONICAL_SERIALIZATION_FIELDS: Dict[str, tuple[str, ...]] = {
         "zoning_result",
         "layout_result",
         "feasibility_result",
+        "near_feasible_result",
         "timestamp",
         "git_commit",
         "input_hash",

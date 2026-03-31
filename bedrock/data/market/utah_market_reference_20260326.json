@@ -1,0 +1,163 @@
+{
+  "generated_at": "2026-03-26T23:30:00Z",
+  "updated_at": "2026-03-31T00:00:00Z",
+  "sources": {
+    "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+    "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+    "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+    "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340",
+    "fred_rpp_ogden_clearfield_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL36260"
+  },
+  "assumptions": {
+    "reference_home_size_sqft": 2000.0,
+    "national_baseline_construction_cost_per_sqft": 130.0,
+    "national_baseline_road_cost_per_ft": 300.0,
+    "land_value_share_of_home_value": 0.18,
+    "minor_relaxation_unit_uplift": 0.15
+  },
+  "jurisdictions": {
+    "Draper": {
+      "place_name": "Draper city, Utah",
+      "county_name": "Salt Lake County, Utah",
+      "median_home_value": 784800.0,
+      "rpp_series_id": "RPPALL41620",
+      "rpp_all_items_2024": 100.868,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Salt Lake City MSA"
+    },
+    "Provo": {
+      "place_name": "Provo city, Utah",
+      "county_name": "Utah County, Utah",
+      "median_home_value": 467200.0,
+      "rpp_series_id": "RPPALL39340",
+      "rpp_all_items_2024": 98.232,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Provo-Orem MSA"
+    },
+    "Salt Lake City": {
+      "place_name": "Salt Lake City city, Utah",
+      "county_name": "Salt Lake County, Utah",
+      "median_home_value": 539500.0,
+      "rpp_series_id": "RPPALL41620",
+      "rpp_all_items_2024": 100.868,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Salt Lake City MSA"
+    },
+    "West Valley City": {
+      "place_name": "West Valley City city, Utah",
+      "county_name": "Salt Lake County, Utah",
+      "median_home_value": 419100.0,
+      "rpp_series_id": "RPPALL41620",
+      "rpp_all_items_2024": 100.868,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Salt Lake City MSA"
+    },
+    "South Jordan": {
+      "place_name": "South Jordan city, Utah",
+      "county_name": "Salt Lake County, Utah",
+      "median_home_value": 586400.0,
+      "rpp_series_id": "RPPALL41620",
+      "rpp_all_items_2024": 100.868,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Salt Lake City MSA"
+    },
+    "Sandy": {
+      "place_name": "Sandy city, Utah",
+      "county_name": "Salt Lake County, Utah",
+      "median_home_value": 535200.0,
+      "rpp_series_id": "RPPALL41620",
+      "rpp_all_items_2024": 100.868,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Salt Lake City MSA"
+    },
+    "Herriman": {
+      "place_name": "Herriman city, Utah",
+      "county_name": "Salt Lake County, Utah",
+      "median_home_value": 548900.0,
+      "rpp_series_id": "RPPALL41620",
+      "rpp_all_items_2024": 100.868,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Salt Lake City MSA"
+    },
+    "Riverton": {
+      "place_name": "Riverton city, Utah",
+      "county_name": "Salt Lake County, Utah",
+      "median_home_value": 565300.0,
+      "rpp_series_id": "RPPALL41620",
+      "rpp_all_items_2024": 100.868,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Salt Lake City MSA"
+    },
+    "Murray": {
+      "place_name": "Murray city, Utah",
+      "county_name": "Salt Lake County, Utah",
+      "median_home_value": 456800.0,
+      "rpp_series_id": "RPPALL41620",
+      "rpp_all_items_2024": 100.868,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Salt Lake City MSA"
+    },
+    "Eagle Mountain": {
+      "place_name": "Eagle Mountain city, Utah",
+      "county_name": "Utah County, Utah",
+      "median_home_value": 489500.0,
+      "rpp_series_id": "RPPALL39340",
+      "rpp_all_items_2024": 98.232,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Provo-Orem MSA"
+    },
+    "Saratoga Springs": {
+      "place_name": "Saratoga Springs city, Utah",
+      "county_name": "Utah County, Utah",
+      "median_home_value": 542100.0,
+      "rpp_series_id": "RPPALL39340",
+      "rpp_all_items_2024": 98.232,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Provo-Orem MSA"
+    },
+    "Lehi": {
+      "place_name": "Lehi city, Utah",
+      "county_name": "Utah County, Utah",
+      "median_home_value": 567800.0,
+      "rpp_series_id": "RPPALL39340",
+      "rpp_all_items_2024": 98.232,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Provo-Orem MSA"
+    },
+    "Orem": {
+      "place_name": "Orem city, Utah",
+      "county_name": "Utah County, Utah",
+      "median_home_value": 446300.0,
+      "rpp_series_id": "RPPALL39340",
+      "rpp_all_items_2024": 98.232,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Provo-Orem MSA"
+    },
+    "American Fork": {
+      "place_name": "American Fork city, Utah",
+      "county_name": "Utah County, Utah",
+      "median_home_value": 487600.0,
+      "rpp_series_id": "RPPALL39340",
+      "rpp_all_items_2024": 98.232,
+      "price_reference_date": "2024-01-01",
+      "msa_name": "Provo-Orem MSA"
+    }
+  },
+  "counties": {
+    "Salt Lake County, Utah": {
+      "median_home_value": 525700.0
+    },
+    "Utah County, Utah": {
+      "median_home_value": 538700.0
+    },
+    "Davis County, Utah": {
+      "median_home_value": 472300.0
+    },
+    "Weber County, Utah": {
+      "median_home_value": 385600.0
+    },
+    "Washington County, Utah": {
+      "median_home_value": 498200.0
+    }
+  }
+}

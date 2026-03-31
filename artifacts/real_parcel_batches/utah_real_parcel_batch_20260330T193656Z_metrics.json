@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-03-30T19:36:56.363566+00:00",
+  "metrics": {
+    "overall_success_rate": 0.8,
+    "overall_actionable_rate": 1.0,
+    "profitable_share": 0.6,
+    "near_feasible_profitable_share": 0.0,
+    "success_rate_by_jurisdiction": {
+      "Draper": {
+        "count": 5,
+        "success_rate": 0.8,
+        "actionable_rate": 1.0,
+        "profitable_share": 0.6
+      }
+    },
+    "failure_distribution": {},
+    "near_feasible_distribution": {
+      "ZONING_CONSTRAINT_FAIL": 1
+    },
+    "roi_distribution": {
+      "count": 4,
+      "min": -0.0571029078656553,
+      "max": 2.2457347474720217,
+      "avg": 0.7187038099094749
+    },
+    "top_5_highest_value_parcels": [
+      {
+        "parcel_id": "ut-utah-14547",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": 7287188.529060153,
+        "upside_projected_profit": null,
+        "ROI": 2.2457347474720217,
+        "upside_ROI": null
+      },
+      {
+        "parcel_id": "ut-utah-13727",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": 7270571.786565289,
+        "upside_projected_profit": null,
+        "ROI": 0.6286904907257644,
+        "upside_ROI": null
+      },
+      {
+        "parcel_id": "ut-utah-13631",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": 136535.5658119009,
+        "upside_projected_profit": null,
+        "ROI": 0.057492909305769134,
+        "upside_ROI": null
+      },
+      {
+        "parcel_id": "ut-utah-14482",
+        "jurisdiction": "Draper",
+        "status": "near_feasible",
+        "projected_profit": null,
+        "upside_projected_profit": -103552.71666371077,
+        "ROI": null,
+        "upside_ROI": -0.07618468522291379
+      },
+      {
+        "parcel_id": "ut-utah-13598",
+        "jurisdiction": "Draper",
+        "status": "completed",
+        "projected_profit": -152090.78476727288,
+        "upside_projected_profit": null,
+        "ROI": -0.0571029078656553,
+        "upside_ROI": null
+      }
+    ]
+  }
+}

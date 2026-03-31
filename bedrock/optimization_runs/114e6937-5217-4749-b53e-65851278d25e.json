@@ -1,0 +1,237 @@
+{
+  "schema_name": "OptimizationRun",
+  "schema_version": "1.0.0",
+  "optimization_run_id": "114e6937-5217-4749-b53e-65851278d25e",
+  "parcel_id": "ut-salt-lake-248181",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-248181",
+    "jurisdiction": "Cottonwood Heights",
+    "district": "R-1-7000",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "R-1-7000:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 7000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "inferred",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.751672Z"
+        }
+      },
+      {
+        "id": "R-1-7000:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 6.22,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "inferred",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.751672Z"
+        }
+      },
+      {
+        "id": "R-1-7000:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "inferred",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.751672Z"
+        }
+      },
+      {
+        "id": "R-1-7000:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.45,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "inferred",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.751672Z"
+        }
+      },
+      {
+        "id": "R-1-7000:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 50.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "inferred",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.751672Z"
+        }
+      },
+      {
+        "id": "R-1-7000:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "inferred",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.751672Z"
+        }
+      },
+      {
+        "id": "R-1-7000:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "inferred",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.751672Z"
+        }
+      },
+      {
+        "id": "R-1-7000:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "inferred",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.751672Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 8.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 7000.0,
+    "max_units_per_acre": 6.22,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.45,
+    "min_frontage_ft": 50.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family_residential"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "jurisdiction_fallback",
+      "source_type": "inferred",
+      "rule_completeness": 1.0,
+      "legal_reliability": false,
+      "observed_at": "2026-03-31T21:39:47.751672Z"
+    }
+  },
+  "layout_candidates": [],
+  "best_candidate": null,
+  "ranking_metrics": {
+    "candidate_count": 0
+  },
+  "objective": {
+    "roi_weight": 0.45,
+    "profit_weight": 0.25,
+    "risk_weight": 0.2,
+    "confidence_weight": 0.1,
+    "min_roi": null,
+    "max_risk": null,
+    "improvement_epsilon": 0.01,
+    "target_score": 0.5
+  },
+  "scenario_evaluation": null,
+  "iterations": [],
+  "convergence_metrics": {
+    "iteration_count": 0,
+    "plateau_reached": false,
+    "stopped_reason": "zoning_degraded",
+    "improvement_curve": [],
+    "candidate_score_distribution": {
+      "count": 0,
+      "min_score": null,
+      "p25_score": null,
+      "median_score": null,
+      "p75_score": null,
+      "max_score": null
+    }
+  },
+  "sensitivity_analysis": [],
+  "economic_scenarios": [],
+  "decision": {
+    "recommendation": "abandon",
+    "action": "abandon",
+    "best_layout_id": null,
+    "expected_roi_base": null,
+    "expected_roi_best_case": null,
+    "expected_roi_worst_case": null,
+    "sensitivity": [
+      "zoning_data_insufficient"
+    ],
+    "key_risks": [
+      "zoning_data_insufficient"
+    ],
+    "breakpoints": [],
+    "target_price": null,
+    "reason": "Zoning data insufficient for optimization (zoning_source_not_overlay_backed). Basic pipeline ran instead.",
+    "alternative": null,
+    "rationale": "No optimization was attempted because zoning data does not meet decision-grade requirements. The basic pipeline produced a near-feasible or fallback result."
+  },
+  "selected_pipeline_run_id": "01f55e4e-56d5-4a36-a53c-ec41e15c57fc",
+  "timestamp": "2026-03-31T21:39:47.779239+00:00",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "a6b2361adc7a4062d239d6cc1481b9277967311b556aaf87247195154c015b5b",
+  "stage_runtimes": {
+    "parcel.load": 0.000994,
+    "zoning.lookup": 0.014009
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "5d4186b2-61ec-48ba-8b10-33334a781580",
+  "status": "near_feasible",
+  "parcel_id": "ut-utah-232513",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-utah-232513",
+    "jurisdiction": "Utah",
+    "district": "RESIDENTIAL",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "RESIDENTIAL:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 5500.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "fallback",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.819819Z"
+        }
+      },
+      {
+        "id": "RESIDENTIAL:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 6.0,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "fallback",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.819819Z"
+        }
+      },
+      {
+        "id": "RESIDENTIAL:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "fallback",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.819819Z"
+        }
+      },
+      {
+        "id": "RESIDENTIAL:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.5,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "fallback",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.819819Z"
+        }
+      },
+      {
+        "id": "RESIDENTIAL:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 45.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "fallback",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.819819Z"
+        }
+      },
+      {
+        "id": "RESIDENTIAL:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "fallback",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.819819Z"
+        }
+      },
+      {
+        "id": "RESIDENTIAL:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "fallback",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.819819Z"
+        }
+      },
+      {
+        "id": "RESIDENTIAL:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 15.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "jurisdiction_fallback",
+          "source_type": "fallback",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-31T21:39:47.819819Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 20.0,
+      "side": 8.0,
+      "rear": 15.0
+    },
+    "min_lot_size_sqft": 5500.0,
+    "max_units_per_acre": 6.0,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.5,
+    "min_frontage_ft": 45.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [
+      "single_family"
+    ],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "jurisdiction_fallback",
+      "source_type": "fallback",
+      "rule_completeness": 1.0,
+      "legal_reliability": false,
+      "observed_at": "2026-03-31T21:39:47.819819Z"
+    }
+  },
+  "layout_result": null,
+  "feasibility_result": null,
+  "near_feasible_result": {
+    "schema_name": "NearFeasibleResult",
+    "schema_version": "1.0.0",
+    "status": "near_feasible",
+    "reason_category": "ZONING_CONSTRAINT_FAIL",
+    "limiting_constraints": {
+      "district": "RESIDENTIAL",
+      "jurisdiction": "Utah",
+      "bypass_reason": "zoning_source_not_overlay_backed",
+      "status": "exploratory_zoning"
+    },
+    "required_relaxation": {
+      "zoning_resolution": {
+        "required": true,
+        "reason": "zoning_source_not_overlay_backed"
+      }
+    },
+    "best_attempt_summary": {
+      "status": "exploratory_zoning",
+      "bypass_reason": "zoning_source_not_overlay_backed"
+    },
+    "financial_upside": {
+      "relaxed_units": 1,
+      "projected_profit": -35262387.97669422,
+      "ROI": -0.9786846591689001,
+      "break_even_price": 36030387.97669422,
+      "estimated_home_price": 768000.0,
+      "price_per_sqft": 240.0,
+      "assumptions": {
+        "zoning_relaxation_share": 0.15,
+        "utility_length_proxy": 0.0,
+        "road_length_proxy": 0.0
+      }
+    },
+    "attempted_strategies": [],
+    "attempted_repairs": []
+  },
+  "timestamp": "2026-03-31T21:39:47.820378Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "4d5bf55cb0a27c9dd6e68fffa537f71fd39dd242bbf55ae2f1925dede8bf3fa4",
+  "stage_runtimes": {
+    "parcel.load": 0.000606,
+    "zoning.lookup": 0.012752
+  },
+  "zoning_bypassed": true,
+  "bypass_reason": "zoning_source_not_overlay_backed"
+}

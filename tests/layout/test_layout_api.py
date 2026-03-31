@@ -19,6 +19,7 @@ for candidate in (WORKSPACE_ROOT, BEDROCK_ROOT):
         sys.path.insert(0, candidate_str)
 
 from bedrock.api.layout_api import app  # type: ignore  # noqa: E402
+from bedrock.contracts.layout_candidate_batch import LayoutCandidateBatch, LayoutSearchPlan  # type: ignore  # noqa: E402
 from bedrock.contracts.layout_result import LayoutResult  # type: ignore  # noqa: E402
 from bedrock.contracts.parcel import Parcel  # type: ignore  # noqa: E402
 from bedrock.contracts.validators import build_zoning_rules_from_lookup  # type: ignore  # noqa: E402
@@ -162,6 +163,59 @@ class LayoutApiTest(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.json()["detail"]["error"], "invalid_layout_input")
         self.assertIn("Contract mismatch", response.json()["detail"]["message"])
+
+    def test_layout_candidates_endpoint_returns_ranked_batch(self) -> None:
+        batch = LayoutCandidateBatch(
+            parcel_id="parcel-123",
+            search_plan=LayoutSearchPlan(
+                label="broad_sampling",
+                strategies=["grid", "spine-road"],
+                max_candidates=12,
+                max_layouts=2,
+            ),
+            candidate_count_generated=12,
+            candidate_count_valid=2,
+            layouts=[
+                LayoutResult(
+                    layout_id="layout-1",
+                    parcel_id="parcel-123",
+                    unit_count=12,
+                    lot_geometries=[{"type": "Polygon", "coordinates": [[[0, 0], [0, 1], [1, 1], [0, 0]]]}],
+                    road_geometries=[{"type": "LineString", "coordinates": [[0, 0], [1, 1]]}],
+                    road_length_ft=820.5,
+                    open_space_area_sqft=1000.0,
+                    utility_length_ft=0.0,
+                    score=0.73,
+                ),
+                LayoutResult(
+                    layout_id="layout-2",
+                    parcel_id="parcel-123",
+                    unit_count=10,
+                    lot_geometries=[{"type": "Polygon", "coordinates": [[[0, 0], [0, 1], [1, 1], [0, 0]]]}],
+                    road_geometries=[{"type": "LineString", "coordinates": [[0, 0], [1, 1]]}],
+                    road_length_ft=760.0,
+                    open_space_area_sqft=1200.0,
+                    utility_length_ft=0.0,
+                    score=0.69,
+                ),
+            ],
+            search_debug={"attempt_profile": "broad_sampling"},
+        )
+
+        with patch("bedrock.api.layout_api.search_layout_candidates_debug", return_value=batch):
+            response = self.client.post(
+                "/layout/candidates",
+                json={**self.request_payload, "label": "broad_sampling", "max_layouts": 2, "strategies": ["grid", "spine-road"]},
+            )
+
+        self.assertEqual(response.status_code, 200)
+        payload = response.json()
+        self.assertEqual(payload["schema_name"], "LayoutCandidateBatch")
+        self.assertEqual(payload["parcel_id"], "parcel-123")
+        self.assertEqual(payload["candidate_count_generated"], 12)
+        self.assertEqual(payload["candidate_count_valid"], 2)
+        self.assertEqual(len(payload["layouts"]), 2)
+        self.assertEqual(payload["search_plan"]["label"], "broad_sampling")
 
     def test_layout_export_endpoint_returns_dxf_file(self) -> None:
         export_payload = {

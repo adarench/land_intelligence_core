@@ -16,8 +16,11 @@ if str(ROOT / "bedrock") not in sys.path:
 from bedrock.api.pipeline_api import create_app
 from bedrock.contracts.base import EngineMetadata
 from bedrock.contracts.feasibility import FeasibilityResult
+from bedrock.contracts.layout_candidate_batch import LayoutCandidateBatch, LayoutSearchPlan
 from bedrock.contracts.layout import SubdivisionLayout
 from bedrock.contracts.market_data import MarketData
+from bedrock.contracts.near_feasible_result import NearFeasibleResult
+from bedrock.contracts.optimization_run import OptimizationRun
 from bedrock.contracts.parcel import Parcel
 from bedrock.contracts.schema_registry import CANONICAL_SERIALIZATION_FIELDS
 from bedrock.contracts.validators import validate_service_output
@@ -55,7 +58,12 @@ def _zoning_rules() -> ZoningRules:
         setbacks=SetbackSet(front=25, side=8, rear=20),
         height_limit_ft=35,
         lot_coverage_max=0.45,
-        metadata=EngineMetadata(source_engine="zoning_data_scraper", source_run_id="test"),
+        metadata=EngineMetadata(
+            source_engine="zoning_data_scraper",
+            source_run_id="test",
+            source_type="real_lookup",
+            legal_reliability=True,
+        ),
     )
 
 
@@ -92,6 +100,22 @@ def _feasibility_result(parcel_id: str, layout_id: str) -> FeasibilityResult:
     )
 
 
+def _candidate_batch(parcel: Parcel, label: str, layouts: list[SubdivisionLayout]) -> LayoutCandidateBatch:
+    return LayoutCandidateBatch(
+        parcel_id=parcel.parcel_id,
+        search_plan=LayoutSearchPlan(
+            label=label,
+            strategies=["grid", "spine-road"],
+            max_candidates=24,
+            max_layouts=len(layouts),
+        ),
+        candidate_count_generated=24,
+        candidate_count_valid=len(layouts),
+        layouts=layouts,
+        search_debug={"attempt_profile": label},
+    )
+
+
 def _pipeline_run_payload(
     *,
     run_id: str = "run-001",
@@ -101,6 +125,7 @@ def _pipeline_run_payload(
     zoning_rules: ZoningRules | None = None,
     layout: SubdivisionLayout | None = None,
     feasibility: FeasibilityResult | None = None,
+    near_feasible_result: NearFeasibleResult | None = None,
     zoning_bypassed: bool = False,
     bypass_reason: str | None = None,
 ) -> dict:
@@ -117,6 +142,9 @@ def _pipeline_run_payload(
         "zoning_result": zoning_rules.model_dump(mode="json"),
         "layout_result": layout.model_dump(mode="json") if layout is not None else None,
         "feasibility_result": feasibility.model_dump(mode="json") if feasibility is not None else None,
+        "near_feasible_result": (
+            near_feasible_result.model_dump(mode="json") if near_feasible_result is not None else None
+        ),
         "zoning_bypassed": zoning_bypassed,
         "bypass_reason": bypass_reason,
     }
@@ -199,32 +227,216 @@ def test_pipeline_service_returns_unsupported_when_overlay_lookup_misses(
         "bedrock.services.pipeline_service.ZoningService.lookup",
         lambda self, arg: (_ for _ in ()).throw(NoZoningMatchError("No zoning district intersects the parcel geometry.")),
     )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.evaluate_near_feasible_upside",
+        lambda **kwargs: {"relaxed_units": 1, "projected_profit": 0.0, "ROI": 0.0},
+    )
 
     service = PipelineService()
     service.run_store.log_path = store_path
     service.run_store.runs_dir = runs_dir
     result = service.run(parcel_geometry=parcel.geometry, jurisdiction=parcel.jurisdiction)
 
-    assert result.status == "unsupported"
+    assert result.status == "near_feasible"
     assert result.feasibility_result is None
 
     persisted_path = runs_dir / f"{result.run_id}.json"
     payload = json.loads(persisted_path.read_text())
-    assert payload["status"] == "unsupported"
+    assert payload["status"] == "near_feasible"
     assert payload["parcel_id"] == parcel.parcel_id
     assert payload["zoning_result"]["district"] == "UNSUPPORTED"
     assert payload["layout_result"] is None
     assert payload["feasibility_result"] is None
+    assert payload["near_feasible_result"] is not None
     assert payload["zoning_bypassed"] is True
     assert payload["bypass_reason"] == "unsupported_jurisdiction"
 
     log_payload = json.loads(store_path.read_text().strip())
-    assert log_payload["status"] == "unsupported"
+    assert log_payload["status"] == "near_feasible"
     assert log_payload["zoning_district"] == "UNSUPPORTED"
     assert log_payload["zoning_bypassed"] is True
     assert log_payload["bypass_reason"] == "unsupported_jurisdiction"
     assert log_payload["layout_units"] is None
     assert log_payload["feasibility_roi"] is None
+
+
+def test_pipeline_service_optimize_persists_ranked_optimization_run(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    parcel = _parcel()
+    zoning_rules = _zoning_rules()
+    layout_a = _layout_result(parcel)
+    layout_b = layout_a.model_copy(update={"layout_id": "layout-002", "unit_count": 5, "score": 0.88})
+    feasibility_a = _feasibility_result(parcel.parcel_id, layout_a.layout_id)
+    feasibility_b = feasibility_a.model_copy(
+        update={
+            "scenario_id": "scenario-002",
+            "layout_id": layout_b.layout_id,
+            "units": 5,
+            "projected_profit": 520000.0,
+            "ROI": 0.32,
+            "risk_score": 0.2,
+            "confidence": 0.82,
+        }
+    )
+
+    monkeypatch.setattr("bedrock.services.pipeline_service.ParcelService.load_parcel", lambda self, **kwargs: parcel)
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.PipelineService._lookup_non_buildable_zoning_stage",
+        lambda self, arg: None,
+    )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.ZoningService.lookup",
+        lambda self, arg: type("ZoningLookup", (), {"rules": zoning_rules})(),
+    )
+
+    call_counter = {"count": 0}
+
+    def _search_candidates(candidate_parcel, candidate_zoning, *, search_plan):
+        call_counter["count"] += 1
+        if call_counter["count"] == 1:
+            return _candidate_batch(candidate_parcel, search_plan.label, [layout_a, layout_b])
+        return _candidate_batch(candidate_parcel, search_plan.label, [layout_b])
+
+    def _evaluate_layouts(self, parcel, layouts, market_data=None):
+        mapping = {layout_a.layout_id: feasibility_a, layout_b.layout_id: feasibility_b}
+        return [mapping[layout.layout_id] for layout in layouts]
+
+    monkeypatch.setattr("bedrock.services.pipeline_service.search_layout_candidates_debug", _search_candidates)
+    monkeypatch.setattr("bedrock.services.pipeline_service.FeasibilityService.evaluate_layouts", _evaluate_layouts)
+
+    service = PipelineService()
+    service.run_store.log_path = tmp_path / "pipeline_runs.jsonl"
+    service.run_store.runs_dir = tmp_path / "runs"
+    service.run_store.optimization_runs_dir = tmp_path / "optimization_runs"
+
+    result = service.optimize(parcel_geometry=parcel.geometry, jurisdiction=parcel.jurisdiction)
+
+    assert isinstance(result, OptimizationRun)
+    assert result.best_candidate is not None
+    assert result.best_candidate.layout_result.layout_id == "layout-002"
+    assert result.best_candidate.feasibility_result.ROI == pytest.approx(0.32)
+    assert result.selected_pipeline_run_id is not None
+    assert (service.run_store.optimization_runs_dir / f"{result.optimization_run_id}.json").exists()
+    assert (service.run_store.runs_dir / f"{result.selected_pipeline_run_id}.json").exists()
+    assert result.decision is not None
+    assert result.decision.best_layout_id == "layout-002"
+    assert result.ranking_metrics["candidate_count"] >= 2
+    assert result.convergence_metrics is not None
+    assert result.convergence_metrics.iteration_count >= 1
+    assert len(result.iterations) == result.convergence_metrics.iteration_count
+    assert result.iterations[0].score_distribution.count >= 1
+    assert result.sensitivity_analysis
+    assert result.sensitivity_analysis[0].breakpoints
+    assert result.economic_scenarios
+    assert any(scenario.scenario_type == "land_price_sweep" for scenario in result.economic_scenarios)
+    assert any(scenario.scenario_type == "density_curve" for scenario in result.economic_scenarios)
+    assert any(scenario.scenario_type == "rezoning" for scenario in result.economic_scenarios)
+    assert result.decision.action in {"acquire", "renegotiate_price", "pursue_rezoning", "abandon"}
+    assert result.decision.reason
+
+
+def test_pipeline_optimize_endpoint_returns_optimization_run(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    parcel = _parcel()
+    zoning_rules = _zoning_rules()
+    layout = _layout_result(parcel)
+    feasibility = _feasibility_result(parcel.parcel_id, layout.layout_id)
+
+    monkeypatch.setattr("bedrock.services.pipeline_service.ParcelService.load_parcel", lambda self, **kwargs: parcel)
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.PipelineService._lookup_non_buildable_zoning_stage",
+        lambda self, arg: None,
+    )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.ZoningService.lookup",
+        lambda self, arg: type("ZoningLookup", (), {"rules": zoning_rules})(),
+    )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.search_layout_candidates_debug",
+        lambda candidate_parcel, candidate_zoning, *, search_plan: _candidate_batch(candidate_parcel, search_plan.label, [layout]),
+    )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.FeasibilityService.evaluate_layouts",
+        lambda self, parcel, layouts, market_data=None: [feasibility],
+    )
+
+    service = PipelineService()
+    service.run_store.log_path = tmp_path / "pipeline_runs.jsonl"
+    service.run_store.runs_dir = tmp_path / "runs"
+    service.run_store.optimization_runs_dir = tmp_path / "optimization_runs"
+    monkeypatch.setattr("bedrock.api.pipeline_api.PipelineService", lambda: service)
+
+    client = TestClient(create_app())
+    response = client.post(
+        "/pipeline/optimize",
+        json={"parcel_geometry": parcel.geometry, "jurisdiction": parcel.jurisdiction},
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["schema_name"] == "OptimizationRun"
+    assert payload["parcel_id"] == parcel.parcel_id
+    assert payload["best_candidate"]["layout_result"]["layout_id"] == layout.layout_id
+    assert payload["selected_pipeline_run_id"]
+    assert payload["convergence_metrics"]["iteration_count"] >= 1
+    assert payload["iterations"]
+    assert payload["sensitivity_analysis"]
+    assert payload["economic_scenarios"]
+    assert payload["decision"]["action"]
+
+
+def test_pipeline_service_optimize_surfaces_break_analysis_for_negative_candidate(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    parcel = _parcel()
+    zoning_rules = _zoning_rules()
+    layout = _layout_result(parcel)
+    negative = _feasibility_result(parcel.parcel_id, layout.layout_id).model_copy(
+        update={
+            "projected_profit": -120000.0,
+            "ROI": -0.08,
+            "risk_score": 0.35,
+            "confidence": 0.78,
+            "revenue_per_unit": 480000.0,
+            "cost_per_unit": 510000.0,
+        }
+    )
+
+    monkeypatch.setattr("bedrock.services.pipeline_service.ParcelService.load_parcel", lambda self, **kwargs: parcel)
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.PipelineService._lookup_non_buildable_zoning_stage",
+        lambda self, arg: None,
+    )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.ZoningService.lookup",
+        lambda self, arg: type("ZoningLookup", (), {"rules": zoning_rules})(),
+    )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.search_layout_candidates_debug",
+        lambda candidate_parcel, candidate_zoning, *, search_plan: _candidate_batch(candidate_parcel, search_plan.label, [layout]),
+    )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.FeasibilityService.evaluate_layouts",
+        lambda self, parcel, layouts, market_data=None: [negative],
+    )
+
+    service = PipelineService()
+    service.run_store.log_path = tmp_path / "pipeline_runs.jsonl"
+    service.run_store.runs_dir = tmp_path / "runs"
+    service.run_store.optimization_runs_dir = tmp_path / "optimization_runs"
+
+    result = service.optimize(parcel_geometry=parcel.geometry, jurisdiction=parcel.jurisdiction)
+
+    assert result.sensitivity_analysis
+    failing = result.sensitivity_analysis[0]
+    assert "deal fails" in failing.primary_failure_reason.lower() or "fails because" in failing.primary_failure_reason.lower()
+    assert "viable" in failing.make_it_work_statement.lower()
+    variables = {breakpoint.variable for breakpoint in failing.breakpoints}
+    assert {"land_price", "construction_cost_per_home", "price_per_sqft", "density_units"} <= variables
+    assert result.decision is not None
+    assert result.decision.breakpoints
 
 
 def test_pipeline_service_normalizes_direct_parcel_input(
@@ -327,28 +539,33 @@ def test_pipeline_service_bypasses_murray_mg_when_overlay_lookup_misses(
         "bedrock.services.pipeline_service.FeasibilityService.evaluate",
         lambda self, **kwargs: (_ for _ in ()).throw(AssertionError("feasibility.evaluate should not execute")),
     )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.evaluate_near_feasible_upside",
+        lambda **kwargs: {"relaxed_units": 1, "projected_profit": 0.0, "ROI": 0.0},
+    )
 
     service = PipelineService()
     service.run_store.log_path = store_path
     service.run_store.runs_dir = runs_dir
     result = service.run(parcel_geometry=parcel.geometry, jurisdiction=parcel.jurisdiction)
 
-    assert result.status == "non_buildable"
+    assert result.status == "near_feasible"
     assert result.feasibility_result is None
 
     persisted_path = runs_dir / f"{result.run_id}.json"
     payload = json.loads(persisted_path.read_text())
-    assert payload["status"] == "non_buildable"
+    assert payload["status"] == "near_feasible"
     assert payload["parcel_id"] == parcel.parcel_id
     assert payload["zoning_result"]["district"] == "M-G"
     assert payload["zoning_result"]["jurisdiction"] == "Murray"
     assert payload["layout_result"] is None
     assert payload["feasibility_result"] is None
+    assert payload["near_feasible_result"] is not None
     assert payload["zoning_bypassed"] is True
     assert payload["bypass_reason"] == "non_residential"
 
     log_payload = json.loads(store_path.read_text().strip())
-    assert log_payload["status"] == "non_buildable"
+    assert log_payload["status"] == "near_feasible"
     assert log_payload["zoning_district"] == "M-G"
     assert log_payload["zoning_bypassed"] is True
     assert log_payload["bypass_reason"] == "non_residential"
@@ -434,27 +651,32 @@ def test_pipeline_service_bypasses_non_buildable_districts(
         "bedrock.services.pipeline_service.FeasibilityService.evaluate",
         lambda self, **kwargs: (_ for _ in ()).throw(AssertionError("feasibility.evaluate should not execute")),
     )
+    monkeypatch.setattr(
+        "bedrock.services.pipeline_service.evaluate_near_feasible_upside",
+        lambda **kwargs: {"relaxed_units": 1, "projected_profit": 0.0, "ROI": 0.0},
+    )
 
     service = PipelineService()
     service.run_store.log_path = store_path
     service.run_store.runs_dir = runs_dir
     result = service.run(parcel_geometry=parcel.geometry, jurisdiction=parcel.jurisdiction)
 
-    assert result.status == "non_buildable"
+    assert result.status == "near_feasible"
     assert result.feasibility_result is None
 
     persisted_path = runs_dir / f"{result.run_id}.json"
     payload = json.loads(persisted_path.read_text())
-    assert payload["status"] == "non_buildable"
+    assert payload["status"] == "near_feasible"
     assert payload["parcel_id"] == parcel.parcel_id
     assert payload["zoning_result"]["district"] == district
     assert payload["layout_result"] is None
     assert payload["feasibility_result"] is None
+    assert payload["near_feasible_result"] is not None
     assert payload["zoning_bypassed"] is True
     assert payload["bypass_reason"] == reason
 
     log_payload = json.loads(store_path.read_text().strip())
-    assert log_payload["status"] == "non_buildable"
+    assert log_payload["status"] == "near_feasible"
     assert log_payload["zoning_district"] == district
     assert log_payload["zoning_bypassed"] is True
     assert log_payload["bypass_reason"] == reason
@@ -511,7 +733,7 @@ def test_pipeline_api_valid_flow(monkeypatch: pytest.MonkeyPatch) -> None:
 def test_pipeline_api_non_buildable_flow(monkeypatch: pytest.MonkeyPatch) -> None:
     expected = PipelineExecutionResult(
         run_id="run-rc-001",
-        status="non_buildable",
+        status="near_feasible",
         feasibility_result=None,
     )
 
@@ -523,12 +745,21 @@ def test_pipeline_api_non_buildable_flow(monkeypatch: pytest.MonkeyPatch) -> Non
                 {
                     "load_run": lambda self, run_id: _pipeline_run_payload(
                         run_id=run_id,
-                        status="non_buildable",
+                        status="near_feasible",
                         zoning_rules=ZoningRules(
                             parcel_id="parcel-001",
                             jurisdiction="Provo",
                             district="RC",
                             metadata=EngineMetadata(source_engine="zoning_data_scraper", source_run_id="/datasets/provo"),
+                        ),
+                        near_feasible_result=NearFeasibleResult(
+                            reason_category="ZONING_CONSTRAINT_FAIL",
+                            limiting_constraints={"district": "RC"},
+                            required_relaxation={"zoning_resolution": {"required": True}},
+                            best_attempt_summary={"status": "non_buildable"},
+                            financial_upside={"relaxed_units": 1, "projected_profit": 0.0, "ROI": 0.0},
+                            attempted_strategies=[],
+                            attempted_repairs=[],
                         ),
                         layout=None,
                         feasibility=None,
@@ -551,10 +782,11 @@ def test_pipeline_api_non_buildable_flow(monkeypatch: pytest.MonkeyPatch) -> Non
 
     assert response.status_code == 200
     payload = response.json()
-    assert payload["status"] == "non_buildable"
+    assert payload["status"] == "near_feasible"
     assert payload["zoning_result"]["district"] == "RC"
     assert payload["layout_result"] is None
     assert payload["feasibility_result"] is None
+    assert payload["near_feasible_result"] is not None
     assert payload["zoning_bypassed"] is True
     assert payload["bypass_reason"] == "historical_constraint"
 
@@ -562,7 +794,7 @@ def test_pipeline_api_non_buildable_flow(monkeypatch: pytest.MonkeyPatch) -> Non
 def test_pipeline_api_unsupported_flow(monkeypatch: pytest.MonkeyPatch) -> None:
     expected = PipelineExecutionResult(
         run_id="run-unsupported-001",
-        status="unsupported",
+        status="near_feasible",
         feasibility_result=None,
     )
 
@@ -574,9 +806,18 @@ def test_pipeline_api_unsupported_flow(monkeypatch: pytest.MonkeyPatch) -> None:
                 {
                     "load_run": lambda self, run_id: _pipeline_run_payload(
                         run_id=run_id,
-                        status="unsupported",
+                        status="near_feasible",
                         zoning_bypassed=True,
                         bypass_reason="unsupported_jurisdiction",
+                        near_feasible_result=NearFeasibleResult(
+                            reason_category="ZONING_CONSTRAINT_FAIL",
+                            limiting_constraints={"district": "UNSUPPORTED"},
+                            required_relaxation={"zoning_resolution": {"required": True}},
+                            best_attempt_summary={"status": "unsupported"},
+                            financial_upside={"relaxed_units": 1, "projected_profit": 0.0, "ROI": 0.0},
+                            attempted_strategies=[],
+                            attempted_repairs=[],
+                        ),
                         layout=None,
                         feasibility=None,
                     )
@@ -596,9 +837,10 @@ def test_pipeline_api_unsupported_flow(monkeypatch: pytest.MonkeyPatch) -> None:
 
     assert response.status_code == 200
     payload = response.json()
-    assert payload["status"] == "unsupported"
+    assert payload["status"] == "near_feasible"
     assert payload["layout_result"] is None
     assert payload["feasibility_result"] is None
+    assert payload["near_feasible_result"] is not None
     assert payload["zoning_bypassed"] is True
     assert payload["bypass_reason"] == "unsupported_jurisdiction"
 
@@ -620,7 +862,7 @@ def test_pipeline_api_invalid_parcel_payload(monkeypatch: pytest.MonkeyPatch) ->
 def test_pipeline_api_unsupported_zoning_miss(monkeypatch: pytest.MonkeyPatch) -> None:
     expected = PipelineExecutionResult(
         run_id="run-unsupported-404-replaced",
-        status="unsupported",
+        status="near_feasible",
         feasibility_result=None,
     )
 
@@ -632,9 +874,18 @@ def test_pipeline_api_unsupported_zoning_miss(monkeypatch: pytest.MonkeyPatch) -
                 {
                     "load_run": lambda self, run_id: _pipeline_run_payload(
                         run_id=run_id,
-                        status="unsupported",
+                        status="near_feasible",
                         layout=None,
                         feasibility=None,
+                        near_feasible_result=NearFeasibleResult(
+                            reason_category="ZONING_CONSTRAINT_FAIL",
+                            limiting_constraints={"district": "UNSUPPORTED"},
+                            required_relaxation={"zoning_resolution": {"required": True}},
+                            best_attempt_summary={"status": "unsupported"},
+                            financial_upside={"relaxed_units": 1, "projected_profit": 0.0, "ROI": 0.0},
+                            attempted_strategies=[],
+                            attempted_repairs=[],
+                        ),
                         zoning_bypassed=True,
                         bypass_reason="unsupported_jurisdiction",
                     )
@@ -651,9 +902,10 @@ def test_pipeline_api_unsupported_zoning_miss(monkeypatch: pytest.MonkeyPatch) -
 
     assert response.status_code == 200
     payload = response.json()
-    assert payload["status"] == "unsupported"
+    assert payload["status"] == "near_feasible"
     assert payload["layout_result"] is None
     assert payload["feasibility_result"] is None
+    assert payload["near_feasible_result"] is not None
     assert payload["zoning_bypassed"] is True
     assert payload["bypass_reason"] == "unsupported_jurisdiction"
 

@@ -1,0 +1,83 @@
+{
+  "jurisdictions": {
+    "Salt Lake City": {
+      "sampled_parcels": 151,
+      "residential_parcels": 32,
+      "decision_grade_residential_parcels": 32,
+      "decision_grade_pct": 100.0,
+      "top_residential_districts": [
+        {
+          "district": "FR-2",
+          "count": 16,
+          "decision_grade_count": 16
+        },
+        {
+          "district": "R-1-7000",
+          "count": 8,
+          "decision_grade_count": 8
+        },
+        {
+          "district": "FR-3",
+          "count": 8,
+          "decision_grade_count": 8
+        }
+      ]
+    },
+    "West Valley City": {
+      "sampled_parcels": 179,
+      "residential_parcels": 174,
+      "decision_grade_residential_parcels": 174,
+      "decision_grade_pct": 100.0,
+      "top_residential_districts": [
+        {
+          "district": "R-1-8DP",
+          "count": 81,
+          "decision_grade_count": 81
+        },
+        {
+          "district": "R-1-7",
+          "count": 71,
+          "decision_grade_count": 71
+        },
+        {
+          "district": "R-1-10",
+          "count": 10,
+          "decision_grade_count": 10
+        },
+        {
+          "district": "A",
+          "count": 6,
+          "decision_grade_count": 6
+        },
+        {
+          "district": "RM",
+          "count": 6,
+          "decision_grade_count": 6
+        }
+      ]
+    },
+    "Provo": {
+      "sampled_parcels": 101,
+      "residential_parcels": 69,
+      "decision_grade_residential_parcels": 69,
+      "decision_grade_pct": 100.0,
+      "top_residential_districts": [
+        {
+          "district": "R-1-6",
+          "count": 68,
+          "decision_grade_count": 68
+        },
+        {
+          "district": "LDR",
+          "count": 1,
+          "decision_grade_count": 1
+        }
+      ]
+    }
+  },
+  "uncovered_high_frequency_residential_districts": {
+    "Salt Lake City": [],
+    "West Valley City": [],
+    "Provo": []
+  }
+}

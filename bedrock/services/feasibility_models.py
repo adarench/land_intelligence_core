@@ -18,7 +18,6 @@ from bedrock.models.cost_models import (
     calculate_sitework_cost,
     calculate_total_cost,
     calculate_utilities_cost,
-    adjusted_cost_per_home,
 )
 from bedrock.models.financial_models import (
     DEFAULT_HOME_SIZE_SQFT,
@@ -37,6 +36,9 @@ class FeasibilityFinancialOutputs:
 
     units: int
     estimated_home_price: float
+    price_per_sqft: float
+    estimated_home_size_sqft: float
+    construction_cost_per_sqft: float
     construction_cost_per_home: float
     development_cost_total: float
     projected_revenue: float
@@ -74,14 +76,10 @@ class ConstructionCostModel:
             baseline_cost_per_home=float(market_data.construction_cost_per_home),
             reference_home_size_sqft=DEFAULT_HOME_SIZE_SQFT,
         )
-        regionalized_baseline = adjusted_cost_per_home(
-            base_cost_per_home=1.0,
-            jurisdiction=parcel.jurisdiction,
-        )
         return calculate_cost_per_home_from_sqft(
             home_size_sqft=estimated_home_size_sqft,
             cost_per_sqft=baseline_cost_per_sqft,
-            regional_factor=regionalized_baseline,
+            regional_factor=1.0,
         )
 
 
@@ -195,9 +193,22 @@ class FeasibilityEngine:
         parcel: Parcel,
         layout: LayoutResult,
         market_data: MarketData,
+        market_context: Optional[dict] = None,
     ) -> FeasibilityFinancialOutputs:
         units = int(layout.unit_count)
         estimated_home_price = self.price_estimator.estimate(parcel=parcel, market_data=market_data)
+        estimated_home_size_sqft = calculate_estimated_home_size_sqft(
+            parcel_area_sqft=float(parcel.area_sqft),
+            units=max(units, 1),
+        )
+        price_per_sqft = float(estimated_home_price) / max(estimated_home_size_sqft, 1.0)
+        if market_context and market_context.get("construction_cost_per_sqft") is not None:
+            construction_cost_per_sqft = float(market_context["construction_cost_per_sqft"])
+        else:
+            construction_cost_per_sqft = calculate_cost_per_sqft(
+                baseline_cost_per_home=float(market_data.construction_cost_per_home),
+                reference_home_size_sqft=DEFAULT_HOME_SIZE_SQFT,
+            )
         construction_cost_per_home = self.construction_cost_model.estimate_per_home(
             parcel=parcel,
             layout=layout,
@@ -230,6 +241,9 @@ class FeasibilityEngine:
         return FeasibilityFinancialOutputs(
             units=units,
             estimated_home_price=estimated_home_price,
+            price_per_sqft=price_per_sqft,
+            estimated_home_size_sqft=estimated_home_size_sqft,
+            construction_cost_per_sqft=construction_cost_per_sqft,
             construction_cost_per_home=construction_cost_per_home,
             development_cost_total=development.development_cost,
             projected_revenue=projected_revenue,

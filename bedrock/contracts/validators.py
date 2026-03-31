@@ -9,6 +9,8 @@ from pydantic import ValidationError
 from .experiment_run import ExperimentRun
 from .feasibility_result import FeasibilityResult
 from .layout_result import LayoutResult
+from .layout_candidate_batch import LayoutCandidateBatch
+from .optimization_run import OptimizationRun
 from .parcel import Parcel
 from .parcel import SUPPORTED_PARCEL_CRS
 from .pipeline_execution_result import PipelineExecutionResult
@@ -251,7 +253,7 @@ def validate_pipeline_run_output(run: PipelineRun | dict[str, Any]) -> PipelineR
         raise ValueError("PipelineRun.parcel_id is required")
     if not contract.timestamp:
         raise ValueError("PipelineRun.timestamp is required")
-    allowed_statuses = {"completed", "non_buildable", "unsupported"}
+    allowed_statuses = {"completed", "non_buildable", "unsupported", "near_feasible"}
     if contract.status not in allowed_statuses:
         raise ValueError(
             "PipelineRun.status must be one of: " + ", ".join(sorted(allowed_statuses))
@@ -263,11 +265,23 @@ def validate_pipeline_run_output(run: PipelineRun | dict[str, Any]) -> PipelineR
             raise ValueError("PipelineRun.layout_result is required when status is completed")
         if contract.feasibility_result is None:
             raise ValueError("PipelineRun.feasibility_result is required when status is completed")
+        if contract.near_feasible_result is not None:
+            raise ValueError("PipelineRun.near_feasible_result must be null when status is completed")
+    elif contract.status == "near_feasible":
+        if contract.layout_result is not None:
+            raise ValueError("PipelineRun.layout_result must be null when status is near_feasible")
+        if contract.feasibility_result is not None:
+            raise ValueError("PipelineRun.feasibility_result must be null when status is near_feasible")
+        if contract.near_feasible_result is None:
+            raise ValueError("PipelineRun.near_feasible_result is required when status is near_feasible")
+        return contract
     else:
         if contract.layout_result is not None:
             raise ValueError("PipelineRun.layout_result must be null when status is not completed")
         if contract.feasibility_result is not None:
             raise ValueError("PipelineRun.feasibility_result must be null when status is not completed")
+        if contract.near_feasible_result is not None:
+            raise ValueError("PipelineRun.near_feasible_result must be null when status is not near_feasible")
         return contract
     if contract.layout_result.parcel_id != contract.parcel_id:
         raise ValueError("PipelineRun.layout_result.parcel_id must match PipelineRun.parcel_id")
@@ -277,6 +291,48 @@ def validate_pipeline_run_output(run: PipelineRun | dict[str, Any]) -> PipelineR
         )
     if contract.feasibility_result.layout_id != contract.layout_result.layout_id:
         raise ValueError("PipelineRun.feasibility_result.layout_id must match PipelineRun.layout_result.layout_id")
+    return contract
+
+
+def validate_layout_candidate_batch_output(
+    payload: LayoutCandidateBatch | dict[str, Any],
+) -> LayoutCandidateBatch:
+    contract = validate_contract("LayoutCandidateBatch", payload)
+    if not contract.parcel_id:
+        raise ValueError("LayoutCandidateBatch.parcel_id is required")
+    if contract.candidate_count_valid != len(contract.layouts):
+        raise ValueError("LayoutCandidateBatch.candidate_count_valid must match layouts length")
+    for layout in contract.layouts:
+        validate_layout_result_output(layout)
+        if layout.parcel_id != contract.parcel_id:
+            raise ValueError("LayoutCandidateBatch layout parcel_id must match batch parcel_id")
+    return contract
+
+
+def validate_optimization_run_output(
+    payload: OptimizationRun | dict[str, Any],
+) -> OptimizationRun:
+    contract = validate_contract("OptimizationRun", payload)
+    if not contract.optimization_run_id:
+        raise ValueError("OptimizationRun.optimization_run_id is required")
+    if not contract.parcel_id:
+        raise ValueError("OptimizationRun.parcel_id is required")
+    if contract.zoning_result.parcel_id != contract.parcel_id:
+        raise ValueError("OptimizationRun.zoning_result.parcel_id must match OptimizationRun.parcel_id")
+    ranked_scores = []
+    for candidate in contract.layout_candidates:
+        if candidate.layout_result.parcel_id != contract.parcel_id:
+            raise ValueError("Optimization candidate layout parcel_id must match OptimizationRun.parcel_id")
+        if candidate.feasibility_result.parcel_id != contract.parcel_id:
+            raise ValueError("Optimization candidate feasibility parcel_id must match OptimizationRun.parcel_id")
+        if candidate.feasibility_result.layout_id != candidate.layout_result.layout_id:
+            raise ValueError("Optimization candidate feasibility layout_id must match layout_result.layout_id")
+        ranked_scores.append(candidate.objective_score)
+    if contract.best_candidate is not None:
+        if contract.best_candidate.optimization_rank != 1:
+            raise ValueError("OptimizationRun.best_candidate must have optimization_rank=1")
+    if ranked_scores and ranked_scores != sorted(ranked_scores, reverse=True):
+        raise ValueError("OptimizationRun.layout_candidates must be sorted by objective_score desc")
     return contract
 
 
@@ -326,7 +382,14 @@ def build_layout_result(parcel_id: str, payload: LayoutResult | dict[str, Any]) 
     layout_payload.setdefault("parcel_id", parcel_id)
     metadata = layout_payload.get("metadata")
     if isinstance(metadata, dict):
-        known_keys = {"source_engine", "source_run_id", "observed_at"}
+        known_keys = {
+            "source_engine",
+            "source_run_id",
+            "source_type",
+            "rule_completeness",
+            "legal_reliability",
+            "observed_at",
+        }
         if not set(metadata).issubset(known_keys):
             layout_payload["metadata"] = {
                 "source_engine": metadata.get("source_engine")
@@ -334,6 +397,9 @@ def build_layout_result(parcel_id: str, payload: LayoutResult | dict[str, Any]) 
                 or metadata.get("service")
                 or "legacy-layout-runtime",
                 "source_run_id": metadata.get("source_run_id") or metadata.get("run_id"),
+                "source_type": metadata.get("source_type"),
+                "rule_completeness": metadata.get("rule_completeness"),
+                "legal_reliability": metadata.get("legal_reliability"),
             }
     return LayoutResult.model_validate(layout_payload)
 
@@ -368,6 +434,10 @@ def validate_service_output(service_name: str, payload: Any, *, parcel_id: str |
         return validate_feasibility_result_output(payload)
     if rule.output_schema == "PipelineRun":
         return validate_pipeline_run_output(payload)
+    if rule.output_schema == "LayoutCandidateBatch":
+        return validate_layout_candidate_batch_output(payload)
+    if rule.output_schema == "OptimizationRun":
+        return validate_optimization_run_output(payload)
     if rule.output_schema == "ExperimentRun":
         return validate_experiment_run_output(payload)
     if rule.output_schema == "PipelineExecutionResult":

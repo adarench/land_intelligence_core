@@ -1,0 +1,559 @@
+{
+  "meta": {
+    "case_id": "exp-lehi-001",
+    "jurisdiction": "Lehi",
+    "parcel_id": "sensitivity-exp-lehi-001",
+    "area_sqft": 659648.75,
+    "baseline_zoning": {
+      "min_lot_size_sqft": 6000.0,
+      "min_frontage_ft": null,
+      "setbacks": {
+        "front": 25.0,
+        "side": 8.0,
+        "rear": 20.0
+      }
+    }
+  },
+  "baseline": {
+    "ok": true,
+    "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+    "units": 30,
+    "avg_lot_size_sqft": 21988.291666666668,
+    "road_length_ft": 3839.8,
+    "layout_score": 1.243257408455636
+  },
+  "sweeps": {
+    "min_lot_size_sqft": [
+      {
+        "x": 4000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-69b5b1849e72",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 4002.3,
+        "layout_score": 1.1896627651600329
+      },
+      {
+        "x": 5000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-5c820c243f4e",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3921.1,
+        "layout_score": 1.1909064002791951
+      },
+      {
+        "x": 6000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 7000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-54f82528e8d1",
+        "units": 32,
+        "avg_lot_size_sqft": 20614.0234375,
+        "road_length_ft": 3096.8,
+        "layout_score": 1.3470195111724852
+      },
+      {
+        "x": 8000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-c7fa2222e4fa",
+        "units": 32,
+        "avg_lot_size_sqft": 20614.0234375,
+        "road_length_ft": 3096.8,
+        "layout_score": 1.3637303719777645
+      },
+      {
+        "x": 9000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ead447edcc7b",
+        "units": 32,
+        "avg_lot_size_sqft": 20614.0234375,
+        "road_length_ft": 3096.8,
+        "layout_score": 1.3884660804139901
+      },
+      {
+        "x": 10000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-8e54b9d0107c",
+        "units": 16,
+        "avg_lot_size_sqft": 41228.046875,
+        "road_length_ft": 2967.1,
+        "layout_score": 1.080986718799082
+      },
+      {
+        "x": 11000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-74b90ce27b55",
+        "units": 16,
+        "avg_lot_size_sqft": 41228.046875,
+        "road_length_ft": 2967.1,
+        "layout_score": 1.1075304172567748
+      },
+      {
+        "x": 12000,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-31e9d5bbc07f",
+        "units": 16,
+        "avg_lot_size_sqft": 41228.046875,
+        "road_length_ft": 2967.1,
+        "layout_score": 1.1308433109448148
+      }
+    ],
+    "frontage_ft": [
+      {
+        "x": 40,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-2376b9bf193b",
+        "units": 36,
+        "avg_lot_size_sqft": 18323.57638888889,
+        "road_length_ft": 4961.5,
+        "layout_score": 1.2287174443212736
+      },
+      {
+        "x": 50,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-685a174baf1f",
+        "units": 36,
+        "avg_lot_size_sqft": 18323.57638888889,
+        "road_length_ft": 4907.5,
+        "layout_score": 1.2287576158940396
+      },
+      {
+        "x": 60,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-dd9b00ed6c85",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3989.3,
+        "layout_score": 1.1896939149725516
+      },
+      {
+        "x": 70,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-bac8b0400454",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3924.3,
+        "layout_score": 1.189751850011467
+      },
+      {
+        "x": 80,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-64757687501a",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3859.3,
+        "layout_score": 1.232299255046252
+      },
+      {
+        "x": 90,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-56afaabe51e5",
+        "units": 32,
+        "avg_lot_size_sqft": 20614.0234375,
+        "road_length_ft": 2993.1,
+        "layout_score": 1.335821214955802
+      },
+      {
+        "x": 100,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-6a77ddc9a23e",
+        "units": 32,
+        "avg_lot_size_sqft": 20614.0234375,
+        "road_length_ft": 3096.8,
+        "layout_score": 1.3578232808059931
+      },
+      {
+        "x": 110,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-fc0f1de997b3",
+        "units": 32,
+        "avg_lot_size_sqft": 20614.0234375,
+        "road_length_ft": 3096.8,
+        "layout_score": 1.3786669171696295
+      },
+      {
+        "x": 120,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-630c821eb944",
+        "units": 32,
+        "avg_lot_size_sqft": 20614.0234375,
+        "road_length_ft": 3096.8,
+        "layout_score": 1.3848711127185052
+      }
+    ],
+    "front_setback_ft": [
+      {
+        "x": 10,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 15,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 20,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 25,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 30,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 35,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 40,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      }
+    ],
+    "side_setback_ft": [
+      {
+        "x": 4,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-fbc49e988615",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3865.8,
+        "layout_score": 1.228447659121763
+      },
+      {
+        "x": 6,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-b55684f919b5",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3852.8,
+        "layout_score": 1.2360560610721463
+      },
+      {
+        "x": 8,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 10,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-4bf45598ac0f",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3826.8,
+        "layout_score": 1.2501560686551196
+      },
+      {
+        "x": 12,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-83e966bcc1a1",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3813.8,
+        "layout_score": 1.2567387317865006
+      },
+      {
+        "x": 14,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-d76579c3e922",
+        "units": 24,
+        "avg_lot_size_sqft": 27485.364583333332,
+        "road_length_ft": 2998.3,
+        "layout_score": 1.1823579693661612
+      },
+      {
+        "x": 16,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-c8cfaeb9b131",
+        "units": 24,
+        "avg_lot_size_sqft": 27485.364583333332,
+        "road_length_ft": 2987.9,
+        "layout_score": 1.1883390547736676
+      }
+    ],
+    "rear_setback_ft": [
+      {
+        "x": 10,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 15,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 20,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 25,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 30,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 35,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      },
+      {
+        "x": 40,
+        "ok": true,
+        "layout_id": "layout-sensitivity-exp-lehi-001-ea21ef0abdec",
+        "units": 30,
+        "avg_lot_size_sqft": 21988.291666666668,
+        "road_length_ft": 3839.8,
+        "layout_score": 1.243257408455636
+      }
+    ]
+  },
+  "analysis": {
+    "flat_regions": {
+      "min_lot_size_sqft": {
+        "units": [
+          {
+            "from": 4000,
+            "to": 6000,
+            "value": 30
+          },
+          {
+            "from": 7000,
+            "to": 9000,
+            "value": 32
+          },
+          {
+            "from": 10000,
+            "to": 12000,
+            "value": 16
+          }
+        ],
+        "road_length_ft": [
+          {
+            "from": 7000,
+            "to": 9000,
+            "value": 3096.8
+          },
+          {
+            "from": 10000,
+            "to": 12000,
+            "value": 2967.1
+          }
+        ],
+        "layout_score": []
+      },
+      "frontage_ft": {
+        "units": [
+          {
+            "from": 40,
+            "to": 50,
+            "value": 36
+          },
+          {
+            "from": 60,
+            "to": 80,
+            "value": 30
+          },
+          {
+            "from": 90,
+            "to": 120,
+            "value": 32
+          }
+        ],
+        "road_length_ft": [
+          {
+            "from": 100,
+            "to": 120,
+            "value": 3096.8
+          }
+        ],
+        "layout_score": []
+      },
+      "front_setback_ft": {
+        "units": [
+          {
+            "from": 10,
+            "to": 40,
+            "value": 30
+          }
+        ],
+        "road_length_ft": [
+          {
+            "from": 10,
+            "to": 40,
+            "value": 3839.8
+          }
+        ],
+        "layout_score": [
+          {
+            "from": 10,
+            "to": 40,
+            "value": 1.243257408455636
+          }
+        ]
+      },
+      "side_setback_ft": {
+        "units": [
+          {
+            "from": 4,
+            "to": 12,
+            "value": 30
+          },
+          {
+            "from": 14,
+            "to": 16,
+            "value": 24
+          }
+        ],
+        "road_length_ft": [],
+        "layout_score": []
+      },
+      "rear_setback_ft": {
+        "units": [
+          {
+            "from": 10,
+            "to": 40,
+            "value": 30
+          }
+        ],
+        "road_length_ft": [
+          {
+            "from": 10,
+            "to": 40,
+            "value": 3839.8
+          }
+        ],
+        "layout_score": [
+          {
+            "from": 10,
+            "to": 40,
+            "value": 1.243257408455636
+          }
+        ]
+      }
+    },
+    "response_strength": {
+      "min_lot_size_sqft": {
+        "units_range": 16,
+        "avg_lot_size_sqft_range": 20614.0234375,
+        "road_length_ft_range": 1035.2000000000003,
+        "layout_score_range": 0.3074793616149081
+      },
+      "frontage_ft": {
+        "units_range": 6,
+        "avg_lot_size_sqft_range": 3664.7152777777774,
+        "road_length_ft_range": 1968.4,
+        "layout_score_range": 0.19517719774595355
+      },
+      "front_setback_ft": {
+        "units_range": 0,
+        "avg_lot_size_sqft_range": 0.0,
+        "road_length_ft_range": 0.0,
+        "layout_score_range": 0.0
+      },
+      "side_setback_ft": {
+        "units_range": 6,
+        "avg_lot_size_sqft_range": 5497.072916666664,
+        "road_length_ft_range": 877.9000000000001,
+        "layout_score_range": 0.07438076242033942
+      },
+      "rear_setback_ft": {
+        "units_range": 0,
+        "avg_lot_size_sqft_range": 0.0,
+        "road_length_ft_range": 0.0,
+        "layout_score_range": 0.0
+      }
+    },
+    "failures": {
+      "min_lot_size_sqft": [],
+      "frontage_ft": [],
+      "front_setback_ft": [],
+      "side_setback_ft": [],
+      "rear_setback_ft": []
+    },
+    "dominant_constraints_rank": [
+      "min_lot_size_sqft",
+      "frontage_ft",
+      "side_setback_ft",
+      "front_setback_ft",
+      "rear_setback_ft"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "4d36b364-7461-4000-a34a-75db2ecfe124",
+  "status": "unsupported",
+  "parcel_id": "ut-salt-lake-242586",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-242586",
+    "jurisdiction": "Cottonwood Heights",
+    "district": "UNSUPPORTED",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [],
+    "setbacks": {
+      "front": null,
+      "side": null,
+      "rear": null
+    },
+    "min_lot_size_sqft": null,
+    "max_units_per_acre": null,
+    "height_limit_ft": null,
+    "lot_coverage_max": null,
+    "min_frontage_ft": null,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [],
+    "citations": [],
+    "metadata": {
+      "source_engine": "bedrock.pipeline_service",
+      "source_run_id": "unsupported_jurisdiction",
+      "observed_at": "2026-03-23T22:58:18.441470Z"
+    }
+  },
+  "layout_result": null,
+  "feasibility_result": null,
+  "timestamp": "2026-03-23T22:58:18.441533Z",
+  "git_commit": "ceaa51d8bb6aa1d29cf293e8e9dd47cbc86f6c8e",
+  "input_hash": "def51a2f065b7c76211313a3730f622518bb4718813401f09a235f0b42614134",
+  "stage_runtimes": {
+    "parcel.load": 0.000026,
+    "zoning.lookup": 0.48934
+  },
+  "zoning_bypassed": true,
+  "bypass_reason": "unsupported_jurisdiction"
+}

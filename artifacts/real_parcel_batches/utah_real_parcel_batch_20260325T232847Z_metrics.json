@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-03-25T23:28:47.803387+00:00",
+  "metrics": {
+    "overall_success_rate": 0.6666666666666666,
+    "success_rate_by_jurisdiction": {
+      "Draper": {
+        "count": 15,
+        "success_rate": 0.4
+      },
+      "Provo": {
+        "count": 15,
+        "success_rate": 0.4
+      },
+      "Salt Lake City": {
+        "count": 15,
+        "success_rate": 0.8666666666666667
+      },
+      "West Valley City": {
+        "count": 15,
+        "success_rate": 1.0
+      }
+    },
+    "failure_distribution": {
+      "ZONING_CONSTRAINT_FAIL": 9,
+      "SOLVER_FAIL": 9,
+      "GEOMETRY_INVALID": 2
+    }
+  }
+}

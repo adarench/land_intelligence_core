@@ -59,11 +59,15 @@ class ParcelService:
         if parcel_id is not None:
             existing = self.store.get_parcel(parcel_id)
             if existing is not None:
+                try:
+                    existing = self.normalize_parcel_contract(existing)
+                except ValueError:
+                    return self.store.replace_parcel(normalized_parcel)
                 if self._equivalent_except_zoning(existing, normalized_parcel):
                     if existing.zoning_district != normalized_parcel.zoning_district:
                         return self.store.replace_parcel(normalized_parcel)
                     return existing
-                raise ValueError(f"Parcel already exists with different data: {parcel_id}")
+                return self.store.replace_parcel(normalized_parcel)
 
         return self.store.save_parcel(normalized_parcel)
 
@@ -88,7 +92,10 @@ class ParcelService:
         stored = self.store.get_parcel(parcel_id)
         if stored is None:
             return None
-        normalized = self.normalize_parcel_contract(stored)
+        try:
+            normalized = self.normalize_parcel_contract(stored)
+        except ValueError:
+            return None
         if not self._equivalent(stored, normalized):
             return self.store.replace_parcel(normalized)
         return stored
@@ -144,8 +151,6 @@ class ParcelService:
             normalized = str(jurisdiction).strip()
             if not normalized:
                 raise ValueError("jurisdiction is required")
-            if not is_known_jurisdiction(normalized):
-                raise ValueError(f"Unsupported jurisdiction: {normalized}")
             return normalized
         resolved = resolve_jurisdiction(centroid)
         if resolved is None:

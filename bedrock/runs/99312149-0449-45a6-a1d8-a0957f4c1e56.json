@@ -1,0 +1,645 @@
+{
+  "schema_name": "PipelineRun",
+  "schema_version": "1.0.0",
+  "run_id": "99312149-0449-45a6-a1d8-a0957f4c1e56",
+  "status": "completed",
+  "parcel_id": "ut-salt-lake-70996",
+  "zoning_result": {
+    "schema_name": "ZoningRules",
+    "schema_version": "1.0.0",
+    "parcel_id": "ut-salt-lake-70996",
+    "jurisdiction": "West Valley City",
+    "district": "C-2",
+    "district_id": null,
+    "description": null,
+    "overlays": [],
+    "standards": [
+      {
+        "id": "C-2:min_lot_size_sqft",
+        "district_id": null,
+        "standard_type": "min_lot_size_sqft",
+        "value": 7000.0,
+        "units": "sqft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-30T20:40:36.200406Z"
+        }
+      },
+      {
+        "id": "C-2:max_units_per_acre",
+        "district_id": null,
+        "standard_type": "max_units_per_acre",
+        "value": 6.22,
+        "units": "du/ac",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-30T20:40:36.200406Z"
+        }
+      },
+      {
+        "id": "C-2:height_limit_ft",
+        "district_id": null,
+        "standard_type": "height_limit_ft",
+        "value": 35.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-30T20:40:36.200406Z"
+        }
+      },
+      {
+        "id": "C-2:lot_coverage_max",
+        "district_id": null,
+        "standard_type": "lot_coverage_max",
+        "value": 0.45,
+        "units": null,
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-30T20:40:36.200406Z"
+        }
+      },
+      {
+        "id": "C-2:min_frontage_ft",
+        "district_id": null,
+        "standard_type": "min_frontage_ft",
+        "value": 50.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-30T20:40:36.200406Z"
+        }
+      },
+      {
+        "id": "C-2:front_setback_ft",
+        "district_id": null,
+        "standard_type": "front_setback_ft",
+        "value": 25.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-30T20:40:36.200406Z"
+        }
+      },
+      {
+        "id": "C-2:side_setback_ft",
+        "district_id": null,
+        "standard_type": "side_setback_ft",
+        "value": 8.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-30T20:40:36.200406Z"
+        }
+      },
+      {
+        "id": "C-2:rear_setback_ft",
+        "district_id": null,
+        "standard_type": "rear_setback_ft",
+        "value": 20.0,
+        "units": "ft",
+        "conditions": [],
+        "citation": null,
+        "metadata": {
+          "source_engine": "zoning_data_scraper",
+          "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+          "source_type": "real_lookup",
+          "rule_completeness": 1.0,
+          "legal_reliability": false,
+          "observed_at": "2026-03-30T20:40:36.200406Z"
+        }
+      }
+    ],
+    "setbacks": {
+      "front": 25.0,
+      "side": 8.0,
+      "rear": 20.0
+    },
+    "min_lot_size_sqft": 7000.0,
+    "max_units_per_acre": 6.22,
+    "height_limit_ft": 35.0,
+    "lot_coverage_max": 0.45,
+    "min_frontage_ft": 50.0,
+    "road_right_of_way_ft": null,
+    "allowed_uses": [],
+    "citations": [],
+    "metadata": {
+      "source_engine": "zoning_data_scraper",
+      "source_run_id": "/Users/arench/Desktop/land-intelligence-workspace/zoning_data_scraper/zoning_dataset_v8/west-valley-city",
+      "source_type": "real_lookup",
+      "rule_completeness": 1.0,
+      "legal_reliability": false,
+      "observed_at": "2026-03-30T20:40:36.200406Z"
+    }
+  },
+  "layout_result": {
+    "schema_name": "LayoutResult",
+    "schema_version": "1.0.0",
+    "layout_id": "layout-ut-salt-lake-70996-b1da9132c29d",
+    "parcel_id": "ut-salt-lake-70996",
+    "unit_count": 10,
+    "road_length_ft": 636.2,
+    "lot_geometries": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.938569,
+              40.689897
+            ],
+            [
+              -111.938569,
+              40.69026
+            ],
+            [
+              -111.93832,
+              40.69026
+            ],
+            [
+              -111.93832,
+              40.689897
+            ],
+            [
+              -111.938569,
+              40.689897
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93832,
+              40.689897
+            ],
+            [
+              -111.93832,
+              40.69026
+            ],
+            [
+              -111.93807,
+              40.69026
+            ],
+            [
+              -111.93807,
+              40.689897
+            ],
+            [
+              -111.93832,
+              40.689897
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.937754,
+              40.689809
+            ],
+            [
+              -111.937754,
+              40.689539
+            ],
+            [
+              -111.938232,
+              40.689539
+            ],
+            [
+              -111.938232,
+              40.689809
+            ],
+            [
+              -111.937754,
+              40.689809
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.93807,
+              40.689897
+            ],
+            [
+              -111.93807,
+              40.69026
+            ],
+            [
+              -111.937821,
+              40.69026
+            ],
+            [
+              -111.937821,
+              40.689897
+            ],
+            [
+              -111.93807,
+              40.689897
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.937821,
+              40.689897
+            ],
+            [
+              -111.937821,
+              40.69026
+            ],
+            [
+              -111.937571,
+              40.69026
+            ],
+            [
+              -111.937571,
+              40.689897
+            ],
+            [
+              -111.937821,
+              40.689897
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.937571,
+              40.689897
+            ],
+            [
+              -111.937571,
+              40.69026
+            ],
+            [
+              -111.937322,
+              40.69026
+            ],
+            [
+              -111.937322,
+              40.689897
+            ],
+            [
+              -111.937571,
+              40.689897
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.937638,
+              40.689809
+            ],
+            [
+              -111.93716,
+              40.689809
+            ],
+            [
+              -111.93716,
+              40.689539
+            ],
+            [
+              -111.937638,
+              40.689539
+            ],
+            [
+              -111.937638,
+              40.689809
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.937322,
+              40.689897
+            ],
+            [
+              -111.937322,
+              40.69026
+            ],
+            [
+              -111.937073,
+              40.69026
+            ],
+            [
+              -111.937073,
+              40.689897
+            ],
+            [
+              -111.937322,
+              40.689897
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.936823,
+              40.689809
+            ],
+            [
+              -111.936823,
+              40.689447
+            ],
+            [
+              -111.937073,
+              40.689447
+            ],
+            [
+              -111.937073,
+              40.689809
+            ],
+            [
+              -111.936823,
+              40.689809
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -111.937073,
+              40.689897
+            ],
+            [
+              -111.937073,
+              40.69026
+            ],
+            [
+              -111.936823,
+              40.69026
+            ],
+            [
+              -111.936823,
+              40.689897
+            ],
+            [
+              -111.937073,
+              40.689897
+            ]
+          ]
+        ]
+      }
+    ],
+    "road_geometries": [
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.938569,
+            40.689853
+          ],
+          [
+            -111.936823,
+            40.689853
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.937696,
+            40.689429
+          ],
+          [
+            -111.937696,
+            40.689539
+          ]
+        ]
+      },
+      {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.937696,
+            40.689539
+          ],
+          [
+            -111.937696,
+            40.689853
+          ]
+        ]
+      }
+    ],
+    "open_space_area_sqft": 169352.53999901758,
+    "utility_length_ft": 0.0,
+    "score": null,
+    "buildable_area_sqft": null,
+    "metadata": {
+      "source_engine": "bedrock.layout_service",
+      "source_run_id": null,
+      "source_type": null,
+      "rule_completeness": null,
+      "legal_reliability": null,
+      "observed_at": "2026-03-30T20:40:36.574224Z"
+    }
+  },
+  "feasibility_result": {
+    "schema_name": "FeasibilityResult",
+    "schema_version": "1.0.0",
+    "scenario_id": "579018ca-8dd2-5709-a17b-c6f3281c236c",
+    "layout_id": "layout-ut-salt-lake-70996-b1da9132c29d",
+    "parcel_id": "ut-salt-lake-70996",
+    "units": 10,
+    "estimated_home_price": 670560.0,
+    "price_per_sqft": 209.55,
+    "estimated_home_size_sqft": 3200.0,
+    "construction_cost_per_sqft": 131.1284,
+    "construction_cost_per_home": 671377.408,
+    "development_cost_total": 316748.71970975207,
+    "projected_revenue": 6705600.0,
+    "projected_cost": 7499783.292364297,
+    "projected_profit": -794183.2923642974,
+    "ROI": -0.1058941653918019,
+    "ROI_base": -0.1058941653918019,
+    "ROI_best_case": 0.06325456712951448,
+    "ROI_worst_case": -0.2520301104369617,
+    "break_even_price": 749978.3292364298,
+    "profit_margin": -0.11843582861552993,
+    "revenue_per_unit": 670560.0,
+    "cost_per_unit": 749978.3292364298,
+    "rank": null,
+    "risk_score": 0.7234620340370748,
+    "requested_units": null,
+    "constraint_violations": [
+      "projected_profit_negative"
+    ],
+    "confidence": 0.78,
+    "confidence_score": 0.78,
+    "key_risk_factors": [
+      "above_national_cost_region",
+      "negative_or_unknown_base_roi"
+    ],
+    "status": "constrained",
+    "financial_summary": {
+      "units": 10,
+      "estimated_home_price": 670560.0,
+      "construction_cost_per_home": 671377.408,
+      "road_cost_per_ft": 302.604,
+      "road_length": 636.2,
+      "land_cost": 469260.49265454547,
+      "projected_revenue": 6705600.0,
+      "development_cost_total": 316748.71970975207,
+      "projected_cost": 7499783.292364297,
+      "projected_profit": -794183.2923642974,
+      "ROI": -0.1058941653918019,
+      "price_per_sqft": 209.55,
+      "estimated_home_size_sqft": 3200.0,
+      "construction_cost_per_sqft": 131.1284,
+      "ROI_base": -0.1058941653918019,
+      "ROI_best_case": 0.06325456712951448,
+      "ROI_worst_case": -0.2520301104369617,
+      "break_even_price": 749978.3292364298,
+      "confidence_score": 0.78,
+      "key_risk_factors": [
+        "above_national_cost_region",
+        "negative_or_unknown_base_roi"
+      ],
+      "market_context": {
+        "jurisdiction": "West Valley City",
+        "county_name": "Salt Lake County, Utah",
+        "median_home_value": 419100.0,
+        "rpp_all_items": 100.868,
+        "reference_home_size_sqft": 2000.0,
+        "baseline_cost_per_sqft": 130.0,
+        "baseline_road_cost_per_ft": 300.0,
+        "land_value_share_of_home_value": 0.18,
+        "price_reference_date": "2024-01-01",
+        "msa_name": "Salt Lake City MSA",
+        "sources": {
+          "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+          "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+          "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+          "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+        },
+        "used_county_fallback": false,
+        "estimated_home_size_sqft": 3200.0,
+        "price_per_sqft": 209.55,
+        "construction_cost_per_sqft": 131.1284,
+        "road_cost_per_ft": 302.604,
+        "land_price_estimate": 469260.49265454547,
+        "pricing_proxy": "acs_median_home_value_per_reference_home_size",
+        "cost_proxy": "bea_rpp_scaled_baseline_costs"
+      },
+      "development_cost_breakdown": {
+        "roads": 192516.6648,
+        "utilities": 0.0,
+        "grading": 19251.66648,
+        "sitework": 69980.38842975207,
+        "permitting": 35000.0
+      },
+      "profit_margin": -0.11843582861552993,
+      "revenue_per_unit": 670560.0,
+      "cost_per_unit": 749978.3292364298
+    },
+    "explanation": {
+      "primary_driver": "home_price",
+      "cost_breakdown": {
+        "construction": 6713774.08,
+        "development": 316748.71970975207
+      },
+      "revenue_breakdown": {
+        "units": 10,
+        "price_per_home": 670560.0
+      }
+    },
+    "assumptions": {
+      "used_default_estimated_home_price": false,
+      "used_default_construction_cost_per_home": false,
+      "used_default_road_cost_per_ft": false,
+      "used_default_land_price": false,
+      "used_default_soft_cost_factor": false,
+      "market_sources": {
+        "census_acs_2024_place_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=place:*&in=state:49",
+        "census_acs_2024_county_median_home_value": "https://api.census.gov/data/2024/acs/acs5?get=NAME,B25077_001E&for=county:*&in=state:49",
+        "fred_rpp_salt_lake_city_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL41620",
+        "fred_rpp_provo_orem_msa": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPPALL39340"
+      }
+    },
+    "metadata": null
+  },
+  "near_feasible_result": null,
+  "timestamp": "2026-03-30T20:40:36.574563Z",
+  "git_commit": "05222bb8c8c582cae630ed93bacc9765ba243990",
+  "input_hash": "d0fbe8a15bd047b2c4b7826e0875d08f9ea5ba3d791ca8aca9aef8ff6faef3e3",
+  "stage_runtimes": {
+    "parcel.load": 0.000852,
+    "zoning.lookup": 0.005157,
+    "layout.search": 0.373529,
+    "feasibility.evaluate": 0.000281
+  },
+  "zoning_bypassed": false,
+  "bypass_reason": null
+}
