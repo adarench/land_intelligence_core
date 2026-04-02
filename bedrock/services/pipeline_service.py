@@ -143,6 +143,33 @@ class ZoningStageResult(BedrockModel):
         return self.status != "completed"
 
 
+def _classify_zoning_bypass(zoning_rules) -> str:
+    """Return a structured failure category for why zoning was bypassed."""
+    meta = zoning_rules.metadata
+    if meta is None:
+        return "NO_METADATA"
+    source = str(meta.source_run_id or "unknown")
+    source_type = str(meta.source_type or "unknown")
+    legal = bool(meta.legal_reliability) if meta.legal_reliability is not None else False
+
+    # Check for match_classification from the new overlap-based system
+    match_class = getattr(meta, "match_classification", None)
+    if match_class == "LOW_CONFIDENCE":
+        return "LOW_INTERSECTION_AREA"
+    if match_class == "INFERRED":
+        return "CENTROID_FALLBACK"
+
+    if source in ("jurisdiction_fallback", "safe_minimum_viable"):
+        return "NO_INTERSECTION"
+    if "precomputed_district_index" in source:
+        return "LOW_INTERSECTION_AREA"
+    if source_type != "real_lookup":
+        return "NO_INTERSECTION"
+    if not legal:
+        return "LOW_LEGAL_RELIABILITY"
+    return "UNKNOWN_BYPASS"
+
+
 class PipelineService:
     """Compose the canonical PO-2 execution chain."""
 
@@ -1298,18 +1325,36 @@ class PipelineService:
             zoning_rules = validate_zoning_rules_for_layout(zoning.rules)
             try:
                 self._validate_real_overlay_zoning_source(parcel, zoning_rules)
-            except PipelineStageError:
+            except PipelineStageError as zoning_exc:
+                bypass_reason = _classify_zoning_bypass(zoning_rules)
+                logger.warning(
+                    "zoning_bypass_classified",
+                    extra={
+                        "parcel_id": parcel.parcel_id,
+                        "jurisdiction": parcel.jurisdiction,
+                        "district": zoning_rules.district,
+                        "bypass_reason": bypass_reason,
+                        "source_type": str(getattr(zoning_rules.metadata, "source_type", None)),
+                        "legal_reliability": str(getattr(zoning_rules.metadata, "legal_reliability", None)),
+                        "source_run_id": str(getattr(zoning_rules.metadata, "source_run_id", None)),
+                    },
+                )
                 return ZoningStageResult(
                     rules=zoning_rules,
                     status="exploratory_zoning",
-                    bypass_reason="zoning_source_not_overlay_backed",
+                    bypass_reason=bypass_reason,
                 )
             return ZoningStageResult(rules=zoning_rules)
-        except (NoJurisdictionMatchError, NoZoningMatchError) as exc:
+        except NoJurisdictionMatchError as exc:
             hinted = self._lookup_non_buildable_from_parcel_hint(parcel)
             if hinted is not None:
                 return hinted
-            return self._build_unsupported_zoning_stage(parcel, reason="unsupported_jurisdiction")
+            return self._build_unsupported_zoning_stage(parcel, reason="NO_JURISDICTION_MATCH")
+        except NoZoningMatchError as exc:
+            hinted = self._lookup_non_buildable_from_parcel_hint(parcel)
+            if hinted is not None:
+                return hinted
+            return self._build_unsupported_zoning_stage(parcel, reason="NO_INTERSECTION")
         except (AmbiguousJurisdictionMatchError, AmbiguousZoningMatchError) as exc:
             raise PipelineStageError(
                 stage="zoning.lookup",

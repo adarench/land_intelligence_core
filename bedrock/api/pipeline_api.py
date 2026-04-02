@@ -19,6 +19,7 @@ from bedrock.services.zoning_service import IncompleteZoningRulesError
 from zoning_data_scraper.services.zoning_overlay import (
     AmbiguousJurisdictionMatchError,
     AmbiguousZoningMatchError,
+    diagnose_zoning_resolution,
 )
 
 
@@ -306,6 +307,36 @@ async def infer_feasibility_stream(request: InferenceRequest):
             yield _json.dumps(event, default=str) + "\n"
 
     return StreamingResponse(generate(), media_type="application/x-ndjson")
+
+
+@router.get("/zoning-debug/{parcel_id}")
+def zoning_debug(parcel_id: str):
+    """Return structured diagnostics for zoning resolution on a parcel."""
+    from shapely.geometry import shape as shapely_shape
+
+    service = PipelineService()
+    parcel = service.parcel_service.get_parcel(parcel_id)
+    if parcel is None:
+        raise HTTPException(status_code=404, detail=f"Parcel '{parcel_id}' not found")
+
+    try:
+        parcel_geometry = shapely_shape(parcel.geometry)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=422,
+            detail={"error": "invalid_geometry", "message": f"Cannot parse parcel geometry: {exc}"},
+        ) from exc
+
+    diag = diagnose_zoning_resolution(
+        parcel_geometry,
+        parcel_jurisdiction=parcel.jurisdiction or "",
+    )
+
+    diag["parcel_id"] = parcel_id
+    diag["parcel_jurisdiction"] = parcel.jurisdiction
+    diag["parcel_zoning_district"] = parcel.zoning_district
+
+    return diag
 
 
 def create_app() -> FastAPI:
