@@ -52,12 +52,23 @@ MIN_HOME_SIZE_SQFT = 1200.0
 MAX_HOME_SIZE_SQFT = 3200.0
 
 
-def calculate_estimated_home_size_sqft(*, parcel_area_sqft: float, units: int) -> float:
-    if int(units) <= 0:
-        return DEFAULT_HOME_SIZE_SQFT
-    area_per_unit = float(parcel_area_sqft) / float(units)
-    heuristic_size = area_per_unit * 0.22
-    return min(MAX_HOME_SIZE_SQFT, max(MIN_HOME_SIZE_SQFT, heuristic_size))
+def calculate_estimated_home_size_sqft(
+    *,
+    parcel_area_sqft: float,
+    units: int,
+    reference_home_size_sqft: float = DEFAULT_HOME_SIZE_SQFT,
+) -> float:
+    """Return the reference home size for the jurisdiction.
+
+    Previous versions scaled home size with lot size using a 0.22 heuristic.
+    This produced inflated prices and costs for large-lot parcels because home
+    size does not scale linearly with lot size in Utah subdivisions.
+
+    Now returns the reference size directly (default 2,000 sqft), clamped to
+    the valid range.  Jurisdiction-specific overrides can be passed via
+    ``reference_home_size_sqft`` once calibration data is available.
+    """
+    return min(MAX_HOME_SIZE_SQFT, max(MIN_HOME_SIZE_SQFT, float(reference_home_size_sqft)))
 
 
 def calculate_cost_per_sqft(*, baseline_cost_per_home: float, reference_home_size_sqft: float = DEFAULT_HOME_SIZE_SQFT) -> float:

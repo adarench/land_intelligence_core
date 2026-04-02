@@ -52,9 +52,18 @@ class FeasibilityService:
         parcel: Parcel,
         layout: SubdivisionLayout,
         market_data: Optional[MarketData] = None,
+        zoning_metadata: Optional[dict] = None,
         include_runtime_metadata: bool = False,
     ) -> FeasibilityResult:
         effective_market_data, market_context = self.resolve_market_data(parcel=parcel, layout=layout, market_data=market_data)
+        # Merge zoning source metadata so _evaluation_grade can route correctly.
+        # source_type and legal_reliability live on the zoning result, not market data,
+        # so they must be explicitly threaded in here.
+        if zoning_metadata:
+            if zoning_metadata.get("source_type") and not market_context.get("source_type"):
+                market_context["source_type"] = zoning_metadata["source_type"]
+            if zoning_metadata.get("legal_reliability") is not None:
+                market_context["legal_reliability"] = bool(zoning_metadata["legal_reliability"])
         outputs = self._engine.compute(
             parcel=parcel,
             layout=layout,
@@ -151,6 +160,7 @@ class FeasibilityService:
                     "sitework": outputs.cost_breakdown.sitework_cost,
                     "permitting": outputs.cost_breakdown.permitting_cost,
                 },
+                "evaluation_grade": self._evaluation_grade(market_context, key_risk_factors, confidence_score),
             },
             explanation=self._build_explanation(financials),
             assumptions={**self._assumption_flags(effective_market_data), "market_sources": market_context.get("sources", {})},
@@ -162,9 +172,10 @@ class FeasibilityService:
         parcel: Parcel,
         layouts: Iterable[SubdivisionLayout],
         market_data: Optional[MarketData] = None,
+        zoning_metadata: Optional[dict] = None,
     ) -> list[FeasibilityResult]:
         results = [
-            self.evaluate(parcel=parcel, layout=layout, market_data=market_data)
+            self.evaluate(parcel=parcel, layout=layout, market_data=market_data, zoning_metadata=zoning_metadata)
             for layout in layouts
         ]
         ranked = sorted(
@@ -343,6 +354,14 @@ class FeasibilityService:
             risks.append("high_road_length_per_unit")
         if float(parcel.area_sqft) / max(int(layout.unit_count), 1) < 5000.0:
             risks.append("small_area_per_unit")
+        if int(layout.unit_count) < 3:
+            risks.append("below_subdivision_threshold")
+        if roi is not None and roi > 0.80:
+            risks.append("unusually_high_roi")
+        median = float(market_context.get("median_home_value", 0) or 0)
+        estimated = float(market_context.get("estimated_home_price", 0) or 0) if "estimated_home_price" in market_context else 0
+        if median > 0 and estimated > median * 1.5:
+            risks.append("estimated_price_exceeds_market")
         return risks
 
     @staticmethod
@@ -420,6 +439,20 @@ class FeasibilityService:
             development_cost_total=financials.development_cost_total,
             roi=financials.ROI,
         )
+
+    @staticmethod
+    def _evaluation_grade(market_context: dict, key_risk_factors: list[str], confidence: float) -> str:
+        """Classify the output quality into DECISION_GRADE, EXPLORATORY, or BLOCKED."""
+        source_type = market_context.get("source_type", "")
+        legal = market_context.get("legal_reliability", False)
+        calibration = market_context.get("calibration_source", "none")
+        has_internal_price = market_context.get("pricing_proxy", "").startswith("internal")
+
+        if legal and confidence >= 0.7 and "unusually_high_roi" not in key_risk_factors:
+            return "DECISION_GRADE"
+        if confidence >= 0.5 and source_type in ("real_lookup", "inferred"):
+            return "EXPLORATORY"
+        return "BLOCKED"
 
     @staticmethod
     def _build_explanation(financials: FinancialMetrics) -> dict:

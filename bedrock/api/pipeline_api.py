@@ -232,6 +232,82 @@ def optimize_batch(request: BatchOptimizeRequest) -> BatchOptimizeResponse:
     )
 
 
+class InferenceRequest(BedrockModel):
+    parcel: Optional[Parcel] = None
+    parcel_id: Optional[str] = None
+
+    @model_validator(mode="after")
+    def _require_input(self) -> "InferenceRequest":
+        if self.parcel is None and not self.parcel_id:
+            raise ValueError("Request must include either 'parcel' or 'parcel_id'")
+        return self
+
+
+@router.post("/infer")
+def infer_feasibility(request: InferenceRequest) -> dict:
+    """Run LLM-powered feasibility inference for parcels without overlay zoning."""
+    from bedrock.services.inference_service import run_inference
+
+    service = PipelineService()
+    if request.parcel:
+        parcel = request.parcel
+    else:
+        parcel = service.parcel_service.get_parcel(request.parcel_id)
+        if parcel is None:
+            raise HTTPException(status_code=404, detail={"error": "parcel_not_found"})
+
+    # Get zoning hint from fallback
+    zoning_hint = None
+    try:
+        from bedrock.services.zoning_service import ZoningService
+        zs = ZoningService()
+        result = zs.lookup(parcel)
+        zoning_hint = {
+            "district": result.rules.district,
+            "max_units_per_acre": result.rules.max_units_per_acre,
+            "min_lot_size_sqft": result.rules.min_lot_size_sqft,
+        }
+    except Exception:
+        pass
+
+    return run_inference(parcel, zoning_hint=zoning_hint)
+
+
+@router.post("/infer/stream")
+async def infer_feasibility_stream(request: InferenceRequest):
+    """Stream progressive inference updates then final result."""
+    from fastapi.responses import StreamingResponse
+    from bedrock.services.inference_service import run_inference_streaming
+    import json as _json
+
+    service = PipelineService()
+    if request.parcel:
+        parcel = request.parcel
+    else:
+        parcel = service.parcel_service.get_parcel(request.parcel_id)
+        if parcel is None:
+            raise HTTPException(status_code=404, detail={"error": "parcel_not_found"})
+
+    zoning_hint = None
+    try:
+        from bedrock.services.zoning_service import ZoningService
+        zs = ZoningService()
+        result = zs.lookup(parcel)
+        zoning_hint = {
+            "district": result.rules.district,
+            "max_units_per_acre": result.rules.max_units_per_acre,
+            "min_lot_size_sqft": result.rules.min_lot_size_sqft,
+        }
+    except Exception:
+        pass
+
+    def generate():
+        for event in run_inference_streaming(parcel, zoning_hint=zoning_hint):
+            yield _json.dumps(event, default=str) + "\n"
+
+    return StreamingResponse(generate(), media_type="application/x-ndjson")
+
+
 def create_app() -> FastAPI:
     app = FastAPI()
     app.include_router(router)

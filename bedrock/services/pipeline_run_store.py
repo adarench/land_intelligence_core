@@ -173,6 +173,7 @@ class PipelineRunStore:
                 "layout_result": payload.get("layout"),
                 "feasibility_result": payload.get("feasibility"),
                 "near_feasible_result": payload.get("near_feasible_result") or payload.get("near_feasible"),
+                "inferred_analysis": payload.get("inferred_analysis"),
                 "timestamp": payload.get("timestamp"),
                 "git_commit": payload.get("git_commit"),
                 "input_hash": payload.get("input_hash"),

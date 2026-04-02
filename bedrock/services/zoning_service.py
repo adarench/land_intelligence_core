@@ -198,6 +198,166 @@ _JURISDICTION_FALLBACK_DEFAULTS: dict[str, dict[str, Any]] = {
         "lot_coverage_max": 0.45,
         "allowed_uses": ["single_family_residential"],
     },
+    "Orem": {
+        "district": "R-8",
+        "min_lot_size_sqft": 8000.0,
+        "max_units_per_acre": 5.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 55.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "American Fork": {
+        "district": "R1-9000",
+        "min_lot_size_sqft": 9000.0,
+        "max_units_per_acre": 4.5,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Pleasant Grove": {
+        "district": "R1-9",
+        "min_lot_size_sqft": 9000.0,
+        "max_units_per_acre": 4.5,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Spanish Fork": {
+        "district": "R-1-10",
+        "min_lot_size_sqft": 10000.0,
+        "max_units_per_acre": 4.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Springville": {
+        "district": "R-1-10",
+        "min_lot_size_sqft": 10000.0,
+        "max_units_per_acre": 4.0,
+        "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Taylorsville": {
+        "district": "R-1-7",
+        "min_lot_size_sqft": 7000.0,
+        "max_units_per_acre": 5.5,
+        "setbacks": {"front": 20.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Millcreek": {
+        "district": "R-1-7",
+        "min_lot_size_sqft": 7000.0,
+        "max_units_per_acre": 5.5,
+        "setbacks": {"front": 20.0, "side": 8.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "Holladay": {
+        "district": "R-1-10",
+        "min_lot_size_sqft": 10000.0,
+        "max_units_per_acre": 4.0,
+        "setbacks": {"front": 25.0, "side": 10.0, "rear": 20.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 50.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.40,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "South Salt Lake": {
+        "district": "R-1-6",
+        "min_lot_size_sqft": 6000.0,
+        "max_units_per_acre": 6.0,
+        "setbacks": {"front": 20.0, "side": 6.0, "rear": 15.0},
+        "height_limit_ft": 35.0,
+        "min_frontage_ft": 45.0,
+        "road_right_of_way_ft": 40.0,
+        "lot_coverage_max": 0.50,
+        "allowed_uses": ["single_family_residential"],
+    },
+    "West Jordan": {"district": "R-1-8", "min_lot_size_sqft": 8500.0, "max_units_per_acre": 4.5, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Ogden": {"district": "R-1-6", "min_lot_size_sqft": 6000.0, "max_units_per_acre": 6.0, "setbacks": {"front": 20.0, "side": 6.0, "rear": 15.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.45, "allowed_uses": ["single_family_residential"]},
+    "Layton": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Logan": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Murray": {"district": "R-1-8", "min_lot_size_sqft": 7500.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.45, "allowed_uses": ["single_family_residential"]},
+    "Bountiful": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Roy": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.45, "allowed_uses": ["single_family_residential"]},
+    "Midvale": {"district": "R-1-7", "min_lot_size_sqft": 7000.0, "max_units_per_acre": 5.5, "setbacks": {"front": 20.0, "side": 8.0, "rear": 15.0}, "height_limit_ft": 35.0, "min_frontage_ft": 45.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.45, "allowed_uses": ["single_family_residential"]},
+    "Cottonwood Heights": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 10.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 55.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Kaysville": {"district": "R-1-9", "min_lot_size_sqft": 9000.0, "max_units_per_acre": 4.5, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Clearfield": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Syracuse": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Farmington": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Clinton": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "North Ogden": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Bluffdale": {"district": "R-1-43", "min_lot_size_sqft": 43560.0, "max_units_per_acre": 1.0, "setbacks": {"front": 30.0, "side": 10.0, "rear": 25.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.30, "allowed_uses": ["single_family_residential"]},
+    "Centerville": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "South Ogden": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Highland": {"district": "R-1-40", "min_lot_size_sqft": 40000.0, "max_units_per_acre": 1.0, "setbacks": {"front": 30.0, "side": 10.0, "rear": 25.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.30, "allowed_uses": ["single_family_residential"]},
+    "Vineyard": {"district": "R-1-8", "min_lot_size_sqft": 8000.0, "max_units_per_acre": 5.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Payson": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Salem": {"district": "R-1-15", "min_lot_size_sqft": 15000.0, "max_units_per_acre": 2.5, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.35, "allowed_uses": ["single_family_residential"]},
+    "Santaquin": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "St. George": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Washington": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Hurricane": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Smithfield": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    # --- Utah Counties (unincorporated areas) ---
+    # Jurisdiction names match parcel DB records exactly (county name without "County")
+    "Utah": {"district": "RA-5", "min_lot_size_sqft": 217800.0, "max_units_per_acre": 0.2, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.25, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Salt Lake": {"district": "R-1-21", "min_lot_size_sqft": 21780.0, "max_units_per_acre": 2.0, "setbacks": {"front": 25.0, "side": 10.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.35, "allowed_uses": ["single_family_residential"]},
+    "Davis": {"district": "A-1", "min_lot_size_sqft": 43560.0, "max_units_per_acre": 1.0, "setbacks": {"front": 30.0, "side": 10.0, "rear": 25.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.30, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Weber": {"district": "A-1", "min_lot_size_sqft": 43560.0, "max_units_per_acre": 1.0, "setbacks": {"front": 30.0, "side": 10.0, "rear": 25.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.30, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Tooele": {"district": "RR-5", "min_lot_size_sqft": 217800.0, "max_units_per_acre": 0.2, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.20, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Washington": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Cache": {"district": "A-10", "min_lot_size_sqft": 435600.0, "max_units_per_acre": 0.1, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.20, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Summit": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Iron": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Box Elder": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Juab": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Sanpete": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Sevier": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Millard": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Uintah": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Duchesne": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Carbon": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Emery": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    "Grand": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    "San Juan": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    "Garfield": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    "Kane": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    "Wayne": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    "Piute": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    "Beaver": {"district": "A-20", "min_lot_size_sqft": 871200.0, "max_units_per_acre": 0.05, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.15, "allowed_uses": ["agricultural"]},
+    "Rich": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    "Morgan": {"district": "A-5", "min_lot_size_sqft": 217800.0, "max_units_per_acre": 0.2, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 60.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.20, "allowed_uses": ["single_family_residential", "agricultural"]},
+    "Daggett": {"district": "A-40", "min_lot_size_sqft": 1742400.0, "max_units_per_acre": 0.025, "setbacks": {"front": 30.0, "side": 15.0, "rear": 30.0}, "height_limit_ft": 35.0, "min_frontage_ft": 100.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.10, "allowed_uses": ["agricultural"]},
+    # --- Additional cities with known jurisdiction names ---
+    "North Salt Lake": {"district": "R-1-10", "min_lot_size_sqft": 10000.0, "max_units_per_acre": 4.0, "setbacks": {"front": 25.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.40, "allowed_uses": ["single_family_residential"]},
+    "Magna": {"district": "R-1-7", "min_lot_size_sqft": 7000.0, "max_units_per_acre": 5.5, "setbacks": {"front": 20.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.45, "allowed_uses": ["single_family_residential"]},
+    "Kearns": {"district": "R-1-7", "min_lot_size_sqft": 7000.0, "max_units_per_acre": 5.5, "setbacks": {"front": 20.0, "side": 8.0, "rear": 20.0}, "height_limit_ft": 35.0, "min_frontage_ft": 50.0, "road_right_of_way_ft": 40.0, "lot_coverage_max": 0.45, "allowed_uses": ["single_family_residential"]},
 }
 _SAFE_MINIMUM_VIABLE_RULES: dict[str, Any] = {
     "min_lot_size_sqft": 5000.0,
@@ -382,6 +542,10 @@ class ZoningService:
     def _apply_rule_fallbacks(self, raw: dict[str, Any]) -> dict[str, Any]:
         payload = self._sanitize_rule_values(raw)
         core_fields_complete_before_fallback = self._has_core_layout_fields(payload)
+        # A real_lookup source is legally reliable even when some numeric fields are
+        # missing and must be supplemented from jurisdiction defaults.  The source
+        # reliability tracks where the district/overlay match came from, not whether
+        # every numeric field was fully populated by the GIS layer.
         jurisdiction_defaults = self._sanitize_rule_values(
             {
                 "setbacks": dict(self._jurisdiction_fallback_defaults(payload.get("jurisdiction")).get("setbacks") or {}),
@@ -397,7 +561,7 @@ class ZoningService:
         safe_minimum_defaults = self._sanitize_rule_values(_SAFE_MINIMUM_VIABLE_RULES)
         used_jurisdiction_fallback = False
         used_safe_minimum = False
-        preserves_real_lookup = payload.get("source_type") == "real_lookup" and core_fields_complete_before_fallback
+        preserves_real_lookup = payload.get("source_type") == "real_lookup"
 
         def _select_fallback_value(primary: Any, secondary: Any) -> tuple[Any, bool, bool]:
             if primary is not None:
@@ -469,40 +633,23 @@ class ZoningService:
 
     @staticmethod
     def _jurisdiction_fallback_defaults(jurisdiction: Optional[str]) -> dict[str, Any]:
+        """Return fallback defaults for a jurisdiction.
+
+        Only returns defaults that are explicitly defined for the requested
+        jurisdiction. Does NOT inherit from neighboring cities (e.g., Orem
+        does not silently receive Provo defaults).
+
+        If no explicit defaults exist, returns the generic BenchmarkCounty_UT
+        safe defaults so the pipeline can produce an exploratory result rather
+        than crashing — but the output will be clearly labeled as generic.
+        """
         if not jurisdiction:
             return {}
         direct = _JURISDICTION_FALLBACK_DEFAULTS.get(jurisdiction)
         if direct is not None:
             return dict(direct)
-
-        normalized = jurisdiction.strip().lower()
-        salt_lake_family = {
-            "salt lake city",
-            "west valley city",
-            "murray",
-            "midvale",
-            "cottonwood heights",
-            "south salt lake",
-            "millcreek",
-            "taylorsville",
-            "holladay",
-        }
-        utah_county_family = {
-            "provo",
-            "orem",
-            "pleasant grove",
-            "american fork",
-            "lindon",
-            "orem city",
-            "spanish fork",
-            "saratoga springs",
-            "eagle mountain",
-            "orem, ut",
-        }
-        if normalized in salt_lake_family:
-            return dict(_JURISDICTION_FALLBACK_DEFAULTS["Salt Lake City"])
-        if normalized in utah_county_family:
-            return dict(_JURISDICTION_FALLBACK_DEFAULTS["Provo"])
+        # No case-insensitive family group matching. Return generic defaults
+        # that are clearly not jurisdiction-specific.
         return dict(_JURISDICTION_FALLBACK_DEFAULTS["BenchmarkCounty_UT"])
 
     def _jurisdiction_uses_real_data_path(self, jurisdiction: Optional[str]) -> bool:

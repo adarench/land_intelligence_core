@@ -25,6 +25,7 @@ class PipelineRun(BedrockModel):
     layout_result: Optional[LayoutResult] = None
     feasibility_result: Optional[FeasibilityResult] = None
     near_feasible_result: Optional[NearFeasibleResult] = None
+    inferred_analysis: Optional[dict] = None
     timestamp: str
     git_commit: Optional[str] = None
     input_hash: Optional[str] = None

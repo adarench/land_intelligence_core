@@ -125,6 +125,7 @@ class PipelineRunRecord(BedrockModel):
     layout: Optional[LayoutResult] = None
     feasibility: Optional[FeasibilityResult] = None
     near_feasible_result: Optional[NearFeasibleResult] = None
+    inferred_analysis: Optional[dict] = None
     git_commit: Optional[str] = None
     input_hash: Optional[str] = None
     stage_runtimes: dict[str, float] = {}
@@ -198,6 +199,7 @@ class PipelineService:
         layout_result: Optional[LayoutResult] = None
         feasibility_result: Optional[FeasibilityResult] = None
         near_feasible_result: Optional[NearFeasibleResult] = None
+        inferred_analysis: Optional[dict] = None
         if zoning_bypassed:
             near_feasible_result = self._build_bypassed_near_feasible_result(
                 parcel_contract,
@@ -206,6 +208,17 @@ class PipelineService:
                 bypass_reason=bypass_reason,
             )
             status = "near_feasible"
+            try:
+                from bedrock.services.inference_service import run_inference
+                zoning_hint = {
+                    "district": zoning_rules.district,
+                    "max_units_per_acre": zoning_rules.max_units_per_acre,
+                    "min_lot_size_sqft": zoning_rules.min_lot_size_sqft,
+                }
+                inferred_analysis = run_inference(parcel_contract, zoning_hint=zoning_hint)
+                stage_runtimes["inference.analyze"] = 0.0
+            except Exception:
+                pass
         else:
             stage_started = time.perf_counter()
             try:
@@ -235,6 +248,17 @@ class PipelineService:
                     raise
                 near_feasible_result = near_feasible_payload
                 status = "near_feasible"
+                if inferred_analysis is None:
+                    try:
+                        from bedrock.services.inference_service import run_inference
+                        zoning_hint = {
+                            "district": zoning_rules.district,
+                            "max_units_per_acre": zoning_rules.max_units_per_acre,
+                            "min_lot_size_sqft": zoning_rules.min_lot_size_sqft,
+                        }
+                        inferred_analysis = run_inference(parcel_contract, zoning_hint=zoning_hint)
+                    except Exception:
+                        pass
         run_id = str(uuid4())
         timestamp = datetime.now(timezone.utc)
         run_record = PipelineRunRecord(
@@ -246,6 +270,7 @@ class PipelineService:
             layout=layout_result,
             feasibility=feasibility_result,
             near_feasible_result=near_feasible_result,
+            inferred_analysis=inferred_analysis,
             git_commit=self._resolve_git_commit(),
             input_hash=input_hash,
             stage_runtimes=stage_runtimes,
@@ -468,10 +493,17 @@ class PipelineService:
                     continue
 
                 started = time.perf_counter()
+                opt_zoning_metadata = None
+                if getattr(zoning_rules, "metadata", None) is not None:
+                    opt_zoning_metadata = {
+                        "source_type": zoning_rules.metadata.source_type,
+                        "legal_reliability": zoning_rules.metadata.legal_reliability,
+                    }
                 feasible_results = self.feasibility_service.evaluate_layouts(
                     parcel,
                     batch.layouts,
                     market_data=market_data,
+                    zoning_metadata=opt_zoning_metadata,
                 )
                 stage_runtimes[f"feasibility.evaluate.{plan.label}"] = round(time.perf_counter() - started, 6)
                 layout_index = {layout.layout_id: layout for layout in batch.layouts}
@@ -1058,7 +1090,13 @@ class PipelineService:
                 status="not_applicable",
                 explanation="Rezoning scenario did not produce valid layouts.",
             )
-        evaluated = self.feasibility_service.evaluate_layouts(parcel, batch.layouts, market_data=market_data)
+        rezoning_zoning_metadata = None
+        if getattr(zoning_rules, "metadata", None) is not None:
+            rezoning_zoning_metadata = {
+                "source_type": zoning_rules.metadata.source_type,
+                "legal_reliability": zoning_rules.metadata.legal_reliability,
+            }
+        evaluated = self.feasibility_service.evaluate_layouts(parcel, batch.layouts, market_data=market_data, zoning_metadata=rezoning_zoning_metadata)
         best = evaluated[0]
         baseline = baseline_candidate.feasibility_result
         return EconomicScenario(
@@ -1581,10 +1619,17 @@ class PipelineService:
         market_data: Optional[MarketData],
     ) -> FeasibilityResult:
         try:
+            zoning_metadata = None
+            if getattr(zoning_rules, "metadata", None) is not None:
+                zoning_metadata = {
+                    "source_type": zoning_rules.metadata.source_type,
+                    "legal_reliability": zoning_rules.metadata.legal_reliability,
+                }
             feasibility = self.feasibility_service.evaluate(
                 parcel=parcel,
                 layout=layout_result,
                 market_data=market_data,
+                zoning_metadata=zoning_metadata,
             )
             feasibility = validate_feasibility_result_output(feasibility)
             validate_feasibility_pipeline_contracts(

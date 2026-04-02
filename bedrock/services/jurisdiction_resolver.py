@@ -22,12 +22,49 @@ class BoundarySource:
     path: str
 
 
-_BOUNDARY_SOURCES: tuple[BoundarySource, ...] = (
-    BoundarySource("Salt Lake City", "zoning_data_scraper/zoning_dataset_v8/salt-lake-city/zoning_layers.geojson"),
-    BoundarySource("Lehi", "zoning_data_scraper/zoning_dataset_v8/lehi/zoning_layers.geojson"),
-    BoundarySource("Draper", "zoning_data_scraper/zoning_data_priority_v9b/draper/zoning_layers.geojson"),
-    BoundarySource("South Jordan", "zoning_data_scraper/zoning_data_priority_v9b/south-jordan/zoning_layers.geojson"),
-)
+def _discover_boundary_sources() -> tuple[BoundarySource, ...]:
+    """Auto-discover all cities with normalized_zoning.json in dataset directories.
+
+    Scans zoning_dataset_v* directories in descending version order.
+    Higher versions take priority. Each city appears at most once.
+    """
+    repo_root = Path(__file__).resolve().parents[2]
+    scraper_root = repo_root / "zoning_data_scraper"
+    sources: list[BoundarySource] = []
+    seen_slugs: set[str] = set()
+
+    def _version_key(d: Path) -> tuple[int, str]:
+        """Extract numeric version for sorting. zoning_dataset_v10 > v9b > v8."""
+        import re
+        match = re.search(r"v(\d+)", d.name)
+        num = int(match.group(1)) if match else 0
+        suffix = d.name.split(str(num))[-1] if match else d.name
+        return (num, suffix)
+
+    dataset_dirs = sorted(
+        [d for d in scraper_root.iterdir() if d.is_dir() and d.name.startswith("zoning_dataset_v")],
+        key=_version_key,
+        reverse=True,
+    )
+    for dataset_dir in dataset_dirs:
+        for city_dir in sorted(dataset_dir.iterdir()):
+            if not city_dir.is_dir():
+                continue
+            nz = city_dir / "normalized_zoning.json"
+            if not nz.exists():
+                continue
+            slug = city_dir.name
+            if slug in seen_slugs:
+                continue
+            seen_slugs.add(slug)
+            jurisdiction = slug.replace("-", " ").title()
+            rel_path = str(nz.relative_to(repo_root))
+            sources.append(BoundarySource(jurisdiction, rel_path))
+
+    return tuple(sources)
+
+
+_BOUNDARY_SOURCES: tuple[BoundarySource, ...] = _discover_boundary_sources()
 _UTAH_EXTENT = (-114.1, 36.9, -108.9, 42.5)
 _FIXTURE_JURISDICTIONS = {
     "BenchmarkCounty_UT",
@@ -98,7 +135,8 @@ class JurisdictionResolver:
             data_path = repo_root / source.path
             if not data_path.exists():
                 continue
-            features = json.loads(data_path.read_text()).get("features", [])
+            raw = json.loads(data_path.read_text())
+            features = raw.get("features", raw) if isinstance(raw, dict) else raw
             components: list[BaseGeometry] = []
             for feature in features:
                 geometry = feature.get("geometry")

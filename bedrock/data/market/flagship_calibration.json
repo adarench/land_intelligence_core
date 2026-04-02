@@ -1,0 +1,130 @@
+{
+  "generated_at": "2026-03-31",
+  "data_sources": {
+    "bcp_prof": {
+      "file": "Inventory _ Closing Report - BCP Prof.csv",
+      "records": 300
+    },
+    "closed": {
+      "file": "Inventory _ Closing Report - CLOSED .csv",
+      "records": 2414
+    }
+  },
+  "global": {
+    "median_sale_price": 389990.0,
+    "median_final_margin_pct": 14.4,
+    "p25_final_margin_pct": 11.8,
+    "p75_final_margin_pct": 16.6,
+    "median_total_cost_per_home": 398712.352,
+    "implied_cost_per_sqft_2000": 199.36,
+    "sf_median_final_margin_pct": 15.4,
+    "th_median_final_margin_pct": 13.5,
+    "total_calibration_records": 2714,
+    "total_cost_records": 299
+  },
+  "jurisdictions": {
+    "Draper": {
+      "n_total": 15,
+      "n_with_cost": 4,
+      "n_bcp": 4,
+      "n_closed": 11,
+      "median_sale_price": 717912.0,
+      "p25_sale_price": 300000.0,
+      "p75_sale_price": 899727.0,
+      "median_total_cost_per_home": 776464.0,
+      "median_final_margin_pct": 13.7,
+      "implied_cost_per_sqft_2000": 388.23,
+      "sf_median_sale_price": 717912.0
+    },
+    "Eagle Mountain": {
+      "n_total": 68,
+      "n_with_cost": 0,
+      "n_bcp": 0,
+      "n_closed": 68,
+      "median_sale_price": 355253.0,
+      "p25_sale_price": 340990.0,
+      "p75_sale_price": 373931.0,
+      "sf_median_sale_price": 355253.0
+    },
+    "Herriman": {
+      "n_total": 324,
+      "n_with_cost": 0,
+      "n_bcp": 0,
+      "n_closed": 324,
+      "median_sale_price": 374630.0,
+      "p25_sale_price": 350000.0,
+      "p75_sale_price": 415000.0,
+      "sf_median_sale_price": 374630.0
+    },
+    "North Salt Lake": {
+      "n_total": 134,
+      "n_with_cost": 0,
+      "n_bcp": 0,
+      "n_closed": 134,
+      "median_sale_price": 588838.0,
+      "p25_sale_price": 561452.0,
+      "p75_sale_price": 632271.0,
+      "sf_median_sale_price": 588838.0
+    },
+    "Riverton": {
+      "n_total": 92,
+      "n_with_cost": 50,
+      "n_bcp": 50,
+      "n_closed": 42,
+      "median_sale_price": 378990.0,
+      "p25_sale_price": 373990.0,
+      "p75_sale_price": 385000.0,
+      "median_total_cost_per_home": 341922.0,
+      "median_final_margin_pct": 10.6,
+      "implied_cost_per_sqft_2000": 170.96,
+      "th_median_sale_price": 378990.0
+    },
+    "Salem": {
+      "n_total": 2,
+      "n_with_cost": 1,
+      "n_bcp": 1,
+      "n_closed": 1,
+      "median_sale_price": 615000.0,
+      "p25_sale_price": 615000.0,
+      "p75_sale_price": 615000.0,
+      "median_total_cost_per_home": 540585.0,
+      "median_final_margin_pct": 12.1,
+      "implied_cost_per_sqft_2000": 270.29,
+      "sf_median_sale_price": 615000.0
+    },
+    "Saratoga Springs": {
+      "n_total": 201,
+      "n_with_cost": 0,
+      "n_bcp": 0,
+      "n_closed": 201,
+      "median_sale_price": 325155.0,
+      "p25_sale_price": 303626.0,
+      "p75_sale_price": 361830.0,
+      "sf_median_sale_price": 325155.0
+    },
+    "South Jordan": {
+      "n_total": 1714,
+      "n_with_cost": 244,
+      "n_bcp": 245,
+      "n_closed": 1469,
+      "median_sale_price": 404140.0,
+      "p25_sale_price": 351500.0,
+      "p75_sale_price": 495420.0,
+      "median_total_cost_per_home": 409721.0,
+      "median_final_margin_pct": 15.2,
+      "implied_cost_per_sqft_2000": 204.86,
+      "sf_median_sale_price": 409227.0,
+      "th_median_sale_price": 385000.0
+    },
+    "West Jordan": {
+      "n_total": 164,
+      "n_with_cost": 0,
+      "n_bcp": 0,
+      "n_closed": 164,
+      "median_sale_price": 366875.0,
+      "p25_sale_price": 333990.0,
+      "p75_sale_price": 392121.0,
+      "sf_median_sale_price": 366875.0
+    }
+  }
+}
