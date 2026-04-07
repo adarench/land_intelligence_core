@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-04-06",
+  "notes": "Monthly lot/home absorption rates by jurisdiction. Sources: internal closing data, MLS absorption reports. Default used for unknown jurisdictions.",
+  "default_rate_per_month": 3.0,
+  "default_interest_rate": 0.075,
+  "jurisdictions": {
+    "Eagle Mountain": {"rate_per_month": 4.5, "source": "flagship_2025_closings"},
+    "South Jordan": {"rate_per_month": 5.0, "source": "flagship_2025_closings"},
+    "Herriman": {"rate_per_month": 3.5, "source": "flagship_2025_closings"},
+    "Saratoga Springs": {"rate_per_month": 4.0, "source": "flagship_2025_closings"},
+    "Lehi": {"rate_per_month": 3.5, "source": "mls_2025_absorption"},
+    "Draper": {"rate_per_month": 2.5, "source": "mls_2025_absorption"},
+    "Riverton": {"rate_per_month": 3.0, "source": "mls_2025_absorption"},
+    "Salt Lake City": {"rate_per_month": 4.0, "source": "mls_2025_absorption"},
+    "West Valley City": {"rate_per_month": 3.5, "source": "mls_2025_absorption"}
+  }
+}

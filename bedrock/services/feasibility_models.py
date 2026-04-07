@@ -14,8 +14,8 @@ from bedrock.models.cost_models import (
     calculate_development_cost,
     calculate_grading_cost,
     calculate_land_cost,
-    calculate_permitting_cost,
     calculate_sitework_cost,
+    calculate_soft_costs,
     calculate_total_cost,
     calculate_utilities_cost,
 )
@@ -46,6 +46,9 @@ class FeasibilityFinancialOutputs:
     projected_profit: float
     roi: Optional[float]
     land_cost: float
+    soft_costs: float
+    flood_cost_adjustment: float
+    carry_cost: float
     cost_breakdown: CostBreakdown
 
 
@@ -111,12 +114,20 @@ class DevelopmentCostModel:
             road_length=float(layout.road_length_ft),
             road_cost_per_ft=float(market_data.road_cost_per_ft),
         )
+        # Proxy: when the layout engine doesn't compute utility routing
+        # (utility_length_ft defaults to 0.0), assume utilities follow road corridors.
+        effective_utility_length = float(layout.utility_length_ft) or float(layout.road_length_ft)
         utilities_cost = calculate_utilities_cost(
-            utility_length=float(layout.utility_length_ft),
+            utility_length=effective_utility_length,
             road_cost_per_ft=float(market_data.road_cost_per_ft),
         )
-        grading_cost = calculate_grading_cost(roads_cost=roads_cost, utilities_cost=utilities_cost)
-        permitting_cost = calculate_permitting_cost(units=units)
+        from bedrock.models.slope_models import assess_slope
+
+        grading_factor = assess_slope(slope_percent=parcel.slope_percent)
+        grading_cost = calculate_grading_cost(roads_cost=roads_cost, utilities_cost=utilities_cost, grading_factor=grading_factor)
+        from bedrock.models.impact_fee_models import calculate_impact_fees
+
+        permitting_cost = calculate_impact_fees(units=units, jurisdiction=parcel.jurisdiction)
         sitework_cost = calculate_sitework_cost(parcel_area_sqft=float(parcel.area_sqft))
         development_cost = roads_cost + utilities_cost + grading_cost + permitting_cost + sitework_cost
         land_cost = calculate_land_cost(land_price=market_data.land_price)
@@ -151,7 +162,9 @@ class RiskScoringModel:
         parcel_area_acres = float(parcel.area_sqft) / 43560.0 if float(parcel.area_sqft) > 0 else 0.0
         units_per_acre = 0.0 if parcel_area_acres == 0 else float(layout.unit_count) / parcel_area_acres
         density_risk = min(0.25, max(0.0, (units_per_acre - 4.0) / 20.0))
-        market_volatility_risk = min(0.2, max(0.0, float(market_data.soft_cost_factor or 0.0)))
+        # soft_cost_factor is now applied as real cost in projected_cost — using it
+        # here as well would double-count.  Use a small fixed component instead.
+        market_volatility_risk = 0.05
         development_cost_ratio = 0.0 if projected_cost == 0 else float(development_cost_total) / float(projected_cost)
         cost_model_variance_risk = min(0.2, development_cost_ratio * 0.35)
 
@@ -223,11 +236,46 @@ class FeasibilityEngine:
 
         projected_revenue = calculate_revenue(units=units, estimated_home_price=estimated_home_price)
         construction_cost = calculate_construction_cost(units=units, cost_per_home=construction_cost_per_home)
-        projected_cost = calculate_total_cost(
+        soft_cost_factor = float(market_data.soft_cost_factor or 0.0)
+        soft_costs = calculate_soft_costs(
             construction_cost=construction_cost,
             development_cost=development.development_cost,
-            land_cost=development.land_cost,
+            soft_cost_factor=soft_cost_factor,
         )
+        # Flood cost: if a multiplier is provided, apply it to development cost.
+        # Also accept a pre-computed flood_cost_adjustment for backward compat.
+        if market_context and market_context.get("flood_cost_multiplier") is not None:
+            _multiplier = float(market_context["flood_cost_multiplier"])
+            flood_cost_adjustment = development.development_cost * max(_multiplier - 1.0, 0.0)
+        elif market_context:
+            flood_cost_adjustment = float(market_context.get("flood_cost_adjustment", 0.0))
+        else:
+            flood_cost_adjustment = 0.0
+        base_cost = (
+            calculate_total_cost(
+                construction_cost=construction_cost,
+                development_cost=development.development_cost,
+                land_cost=development.land_cost,
+            )
+            + soft_costs
+            + flood_cost_adjustment
+        )
+        # Carry cost: opt-in via market_context
+        carry_cost = 0.0
+        if market_context and market_context.get("include_carry_cost", False):
+            from bedrock.models.carry_cost_models import calculate_carry_cost, resolve_absorption_rate, resolve_interest_rate
+
+            absorption = float(market_context.get("absorption_rate_per_month", 0)) or resolve_absorption_rate(jurisdiction=parcel.jurisdiction)
+            interest = float(market_context.get("interest_rate", 0)) or resolve_interest_rate()
+            carry = calculate_carry_cost(
+                units=units,
+                total_capital=base_cost,
+                absorption_rate=absorption,
+                interest_rate=interest,
+            )
+            carry_cost = carry.carry_cost
+
+        projected_cost = base_cost + carry_cost
         projected_profit = calculate_profit(revenue=projected_revenue, total_cost=projected_cost)
         roi = calculate_roi(profit=projected_profit, total_cost=projected_cost)
 
@@ -251,5 +299,8 @@ class FeasibilityEngine:
             projected_profit=projected_profit,
             roi=roi,
             land_cost=development.land_cost,
+            soft_costs=soft_costs,
+            flood_cost_adjustment=flood_cost_adjustment,
+            carry_cost=carry_cost,
             cost_breakdown=cost_breakdown,
         )

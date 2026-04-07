@@ -85,6 +85,16 @@ def calculate_permitting_cost(
     return float(units) * float(permitting_cost_per_unit)
 
 
+def calculate_soft_costs(
+    *,
+    construction_cost: float,
+    development_cost: float,
+    soft_cost_factor: float,
+) -> float:
+    """Soft costs (architecture, engineering, legal, insurance, etc.) as a fraction of hard costs."""
+    return (float(construction_cost) + float(development_cost)) * float(soft_cost_factor)
+
+
 def calculate_land_cost(*, land_price: float | None) -> float:
     return 0.0 if land_price is None else float(land_price)
 

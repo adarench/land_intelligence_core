@@ -88,6 +88,7 @@ class FeasibilityResult(BedrockModel):
     confidence: float = Field(ge=0, le=1)
     confidence_score: Optional[float] = Field(default=None, ge=0, le=1)
     key_risk_factors: List[str] = Field(default_factory=list)
+    warnings: List[str] = Field(default_factory=list)
     status: str = "unknown"
     financial_summary: Dict[str, Any] = Field(default_factory=dict)
     explanation: Optional[FeasibilityExplanation] = None

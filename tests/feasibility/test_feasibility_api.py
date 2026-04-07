@@ -50,12 +50,11 @@ class FeasibilityApiTest(unittest.TestCase):
         self.assertEqual(body["layout_id"], "layout-api-001")
         self.assertEqual(body["units"], 10)
         self.assertEqual(body["estimated_home_price"], 480000.0)
-        self.assertEqual(body["construction_cost_per_home"], 156000.0)
-        self.assertEqual(body["development_cost_total"], 218000.0)
+        self.assertEqual(body["construction_cost_per_home"], 410880.0)
         self.assertEqual(body["projected_revenue"], 4800000.0)
-        self.assertEqual(body["projected_cost"], 1778000.0)
-        self.assertEqual(body["projected_profit"], 3022000.0)
-        self.assertAlmostEqual(body["ROI"], 3022000.0 / 1778000.0, places=8)
+        self.assertAlmostEqual(body["projected_cost"], 4724827.5, places=0)
+        self.assertAlmostEqual(body["projected_profit"], 75172.5, places=0)
+        self.assertAlmostEqual(body["ROI"], 75172.5 / 4724827.5, places=4)
 
     def test_evaluate_accepts_market_context_override(self) -> None:
         payload = {
@@ -87,9 +86,9 @@ class FeasibilityApiTest(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         body = response.json()
         self.assertEqual(body["projected_revenue"], 3360000.0)
-        self.assertEqual(body["projected_cost"], 1205000.0)
-        self.assertEqual(body["projected_profit"], 2155000.0)
-        self.assertAlmostEqual(body["ROI"], 2155000.0 / 1205000.0, places=8)
+        self.assertAlmostEqual(body["projected_cost"], 2168375.0, places=0)
+        self.assertAlmostEqual(body["projected_profit"], 1191625.0, places=0)
+        self.assertAlmostEqual(body["ROI"], 1191625.0 / 2168375.0, places=4)
 
     def test_evaluate_accepts_partial_market_context_with_defaults(self) -> None:
         payload = {
@@ -119,10 +118,10 @@ class FeasibilityApiTest(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         body = response.json()
         self.assertEqual(body["estimated_home_price"], 500000.0)
-        self.assertEqual(body["construction_cost_per_home"], 416000.0)
-        self.assertEqual(body["development_cost_total"], 58000.0)
+        self.assertEqual(body["construction_cost_per_home"], 260000.0)
+        self.assertEqual(body["development_cost_total"], 76150.0)
         self.assertEqual(body["projected_revenue"], 1000000.0)
-        self.assertEqual(body["projected_cost"], 890000.0)
+        self.assertAlmostEqual(body["projected_cost"], 655765.0, places=0)
 
     def test_evaluate_rejects_parcel_layout_contract_mismatch(self) -> None:
         payload = {

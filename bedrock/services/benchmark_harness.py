@@ -23,8 +23,13 @@ from contracts.market_data import MarketData
 from contracts.validators import build_zoning_rules, validate_contract, validate_feasibility_pipeline_contracts
 from contracts.zoning import ZoningDistrict, ZoningRules
 from engines import parcel_engine, zoning_engine
-from orchestration.pipeline_runner import PipelineRunner, PipelineTelemetryRun
-from pipelines.parcel_feasibility_pipeline import ParcelFeasibilityPipeline
+try:
+    from orchestration.pipeline_runner import PipelineRunner, PipelineTelemetryRun
+    from pipelines.parcel_feasibility_pipeline import ParcelFeasibilityPipeline
+except ImportError:
+    PipelineRunner = None  # type: ignore[assignment,misc]
+    PipelineTelemetryRun = None  # type: ignore[assignment,misc]
+    ParcelFeasibilityPipeline = None  # type: ignore[assignment,misc]
 from services.feasibility_service import FeasibilityService
 
 

@@ -58,7 +58,7 @@ SCHEMA_REGISTRY: Dict[str, SchemaRegistration] = {
         consumer_services=(
             "bedrock.engines.zoning_engine.get_zoning",
             "bedrock.engines.parcel_engine.generate_layout",
-            "bedrock.pipelines.parcel_feasibility_pipeline",
+            "bedrock.services.pipeline_service",
         ),
         compatibility_modules=("contracts.parcel",),
         invariants=(
@@ -74,7 +74,7 @@ SCHEMA_REGISTRY: Dict[str, SchemaRegistration] = {
         producer_services=("bedrock.engines.zoning_engine.get_zoning",),
         consumer_services=(
             "bedrock.engines.parcel_engine.generate_layout",
-            "bedrock.pipelines.parcel_feasibility_pipeline",
+            "bedrock.services.pipeline_service",
         ),
         compatibility_modules=("contracts.zoning",),
         invariants=(
@@ -92,7 +92,7 @@ SCHEMA_REGISTRY: Dict[str, SchemaRegistration] = {
         model=LayoutResult,
         producer_services=("bedrock.engines.parcel_engine.generate_layout",),
         consumer_services=(
-            "bedrock.pipelines.parcel_feasibility_pipeline",
+            "bedrock.services.pipeline_service",
             "bedrock.feasibility_agent.score_layout",
         ),
         compatibility_modules=("contracts.layout", "GIS_lot_layout_optimizer.services.layout_models"),
@@ -106,7 +106,7 @@ SCHEMA_REGISTRY: Dict[str, SchemaRegistration] = {
         schema_name="FeasibilityResult",
         schema_version="1.0.0",
         model=FeasibilityResult,
-        producer_services=("bedrock.pipelines.parcel_feasibility_pipeline.score_layout",),
+        producer_services=("bedrock.services.pipeline_service.score_layout",),
         consumer_services=("bedrock.orchestration.pipeline_runner",),
         compatibility_modules=("contracts.feasibility",),
         invariants=(
@@ -170,8 +170,8 @@ SERVICE_VALIDATION_RULES: Dict[str, ServiceValidationRule] = {
             "Layout outputs that omit parcel_id must be enriched before leaving the adapter.",
         ),
     ),
-    "bedrock.pipelines.parcel_feasibility_pipeline.score_layout": ServiceValidationRule(
-        service_name="bedrock.pipelines.parcel_feasibility_pipeline.score_layout",
+    "bedrock.services.pipeline_service.score_layout": ServiceValidationRule(
+        service_name="bedrock.services.pipeline_service.score_layout",
         input_schema="LayoutResult",
         output_schema="FeasibilityResult",
         rule_notes=(
@@ -257,7 +257,7 @@ EXTENSION_CONTRACT_REGISTRY: Dict[str, ExtensionContractRegistration] = {
         model=MarketData,
         contract_scope="feasibility_input",
         allowed_producers=("bedrock.api.feasibility_api", "bedrock.services.benchmark_harness"),
-        allowed_consumers=("bedrock.services.feasibility_service", "bedrock.pipelines.parcel_feasibility_pipeline"),
+        allowed_consumers=("bedrock.services.feasibility_service", "bedrock.services.pipeline_service"),
         governance_status="approved_support_contract",
     ),
     "ScenarioEvaluation": ExtensionContractRegistration(

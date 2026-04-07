@@ -92,8 +92,14 @@ class MarketIntelligenceService:
         reference_home_size = float(profile["reference_home_size_sqft"])
         regional_factor = float(profile["rpp_all_items"]) / 100.0
 
-        # --- Revenue: prefer internal calibration, then public median ---
-        if cal["has_price"]:
+        # --- Revenue: prefer SF-specific calibration, then all-products, then public ---
+        product_type = "all_products"
+        if cal["has_price"] and cal.get("sf_median_sale_price") and cal["sf_median_sale_price"] > 0:
+            estimated_home_price = cal["sf_median_sale_price"]
+            pricing_proxy = "internal_calibration_sf_median"
+            pricing_sample = cal["n_price"]
+            product_type = "single_family"
+        elif cal["has_price"]:
             estimated_home_price = cal["median_sale_price"]
             pricing_proxy = "internal_calibration_median"
             pricing_sample = cal["n_price"]
@@ -148,12 +154,31 @@ class MarketIntelligenceService:
             "construction_cost_per_home": construction_cost_per_home,
             "road_cost_per_ft": road_cost_per_ft,
             "land_price_estimate": land_price,
+            "land_basis_source": "18pct_of_home_value",
             "pricing_proxy": pricing_proxy,
             "pricing_sample_size": pricing_sample,
             "cost_proxy": cost_proxy,
             "cost_sample_size": cost_sample,
             "calibration_source": cal["source"],
             "calibration_jurisdiction_match": cal["jurisdiction_match"],
+            "market_model_debug": {
+                "data_source": pricing_proxy,
+                "sample_size": pricing_sample,
+                "jurisdiction": parcel.jurisdiction,
+                "product_type": product_type,
+                "product_assumptions": {
+                    "home_size_sqft": reference_home_size,
+                    "type": product_type,
+                },
+                "price_distribution": {
+                    "median": cal.get("median_sale_price"),
+                    "p25": cal.get("p25_sale_price"),
+                    "p75": cal.get("p75_sale_price"),
+                    "sf_median": cal.get("sf_median_sale_price"),
+                    "th_median": cal.get("th_median_sale_price"),
+                },
+                "final_selected_price": estimated_home_price,
+            },
         }
 
     def _resolve_calibration(self, parcel: Parcel) -> dict[str, Any]:

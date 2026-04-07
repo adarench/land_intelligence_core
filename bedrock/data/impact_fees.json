@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-04-06",
+  "notes": "Impact fees per single-family residential unit. Sources: municipal fee schedules (2025-2026). Fees include transportation, parks, public safety, water, sewer, and storm drain where applicable.",
+  "default_per_unit": 3500.0,
+  "jurisdictions": {
+    "Herriman": {
+      "impact_fee_per_unit": 7843,
+      "source": "herriman_consolidated_fee_schedule_2025",
+      "components": {
+        "transportation": 3186,
+        "parks": 1821,
+        "public_safety": 1036,
+        "water": 1800
+      }
+    },
+    "Lehi": {
+      "impact_fee_per_unit": 11842,
+      "source": "lehi_impact_fee_schedule_2025",
+      "components": {
+        "transportation": 4200,
+        "parks": 2100,
+        "water": 2542,
+        "sewer": 1500,
+        "storm_drain": 1500
+      }
+    },
+    "Eagle Mountain": {
+      "impact_fee_per_unit": 5247,
+      "source": "eagle_mountain_fee_schedule_2025"
+    },
+    "Saratoga Springs": {
+      "impact_fee_per_unit": 6834,
+      "source": "saratoga_springs_fee_schedule_2025"
+    },
+    "Draper": {
+      "impact_fee_per_unit": 8512,
+      "source": "draper_impact_fee_schedule_2025"
+    },
+    "South Jordan": {
+      "impact_fee_per_unit": 7215,
+      "source": "south_jordan_fee_schedule_2025"
+    },
+    "Salt Lake City": {
+      "impact_fee_per_unit": 4186,
+      "source": "slc_impact_fee_schedule_2025"
+    },
+    "Riverton": {
+      "impact_fee_per_unit": 6523,
+      "source": "riverton_fee_schedule_2025"
+    },
+    "Sandy": {
+      "impact_fee_per_unit": 5890,
+      "source": "sandy_impact_fee_schedule_2025"
+    },
+    "West Valley City": {
+      "impact_fee_per_unit": 4750,
+      "source": "west_valley_city_fee_schedule_2025"
+    },
+    "Murray": {
+      "impact_fee_per_unit": 4320,
+      "source": "murray_fee_schedule_2025"
+    },
+    "Provo": {
+      "impact_fee_per_unit": 5100,
+      "source": "provo_fee_schedule_2025"
+    },
+    "Orem": {
+      "impact_fee_per_unit": 4800,
+      "source": "orem_fee_schedule_2025"
+    },
+    "American Fork": {
+      "impact_fee_per_unit": 5400,
+      "source": "american_fork_fee_schedule_2025"
+    },
+    "Heber City": {
+      "impact_fee_per_unit": 6200,
+      "source": "heber_city_fee_schedule_2025"
+    },
+    "St. George": {
+      "impact_fee_per_unit": 7100,
+      "source": "st_george_fee_schedule_2025"
+    }
+  }
+}

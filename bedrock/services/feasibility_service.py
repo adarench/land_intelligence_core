@@ -53,6 +53,7 @@ class FeasibilityService:
         layout: SubdivisionLayout,
         market_data: Optional[MarketData] = None,
         zoning_metadata: Optional[dict] = None,
+        enrichment_context: Optional[dict] = None,
         include_runtime_metadata: bool = False,
     ) -> FeasibilityResult:
         effective_market_data, market_context = self.resolve_market_data(parcel=parcel, layout=layout, market_data=market_data)
@@ -64,6 +65,9 @@ class FeasibilityService:
                 market_context["source_type"] = zoning_metadata["source_type"]
             if zoning_metadata.get("legal_reliability") is not None:
                 market_context["legal_reliability"] = bool(zoning_metadata["legal_reliability"])
+        # Merge enrichment data (flood, slope, etc.) into market_context
+        if enrichment_context:
+            market_context.update(enrichment_context)
         outputs = self._engine.compute(
             parcel=parcel,
             layout=layout,
@@ -76,6 +80,7 @@ class FeasibilityService:
             projected_cost=outputs.projected_cost,
             construction_cost_total=outputs.cost_breakdown.construction_cost,
             development_cost_total=outputs.development_cost_total,
+            market_context=market_context,
         )
         key_risk_factors = self._key_risk_factors(
             roi=outputs.roi,
@@ -159,11 +164,24 @@ class FeasibilityService:
                     "grading": outputs.cost_breakdown.grading_cost,
                     "sitework": outputs.cost_breakdown.sitework_cost,
                     "permitting": outputs.cost_breakdown.permitting_cost,
+                    "soft_costs": outputs.soft_costs,
+                    "flood_cost_adjustment": outputs.flood_cost_adjustment,
+                    "carry_cost": outputs.carry_cost,
                 },
                 "evaluation_grade": self._evaluation_grade(market_context, key_risk_factors, confidence_score),
             },
             explanation=self._build_explanation(financials),
-            assumptions={**self._assumption_flags(effective_market_data), "market_sources": market_context.get("sources", {})},
+            assumptions={
+                **self._assumption_flags(effective_market_data),
+                "market_sources": market_context.get("sources", {}),
+                "soft_cost_factor_applied": float(effective_market_data.soft_cost_factor or 0.0),
+                "land_basis_mode": market_context.get("land_basis_mode", "proxy"),
+                "land_basis_value": float(effective_market_data.land_price or 0.0),
+                "land_basis_source": market_context.get("land_basis_source", "18pct_of_home_value"),
+                "flood_zone": market_context.get("flood_zone"),
+                "flood_area_ratio": market_context.get("flood_area_ratio"),
+                "market_model_debug": market_context.get("market_model_debug"),
+            },
             metadata=runtime_metadata,
         )
 
@@ -173,9 +191,13 @@ class FeasibilityService:
         layouts: Iterable[SubdivisionLayout],
         market_data: Optional[MarketData] = None,
         zoning_metadata: Optional[dict] = None,
+        enrichment_context: Optional[dict] = None,
     ) -> list[FeasibilityResult]:
         results = [
-            self.evaluate(parcel=parcel, layout=layout, market_data=market_data, zoning_metadata=zoning_metadata)
+            self.evaluate(
+                parcel=parcel, layout=layout, market_data=market_data,
+                zoning_metadata=zoning_metadata, enrichment_context=enrichment_context,
+            )
             for layout in layouts
         ]
         ranked = sorted(
@@ -315,6 +337,7 @@ class FeasibilityService:
         projected_cost: float,
         construction_cost_total: float,
         development_cost_total: float,
+        market_context: Optional[dict] = None,
     ) -> dict[str, float | None]:
         if units <= 0:
             return {
@@ -325,8 +348,20 @@ class FeasibilityService:
             }
         revenue_base = float(units) * float(estimated_home_price)
         fixed_cost = max(float(projected_cost) - float(construction_cost_total) - float(development_cost_total), 0.0)
-        best_revenue = revenue_base * 1.10
-        worst_revenue = revenue_base * 0.90
+
+        # Use p25/p75 from calibration distribution when available,
+        # otherwise fall back to ±10% heuristic.
+        debug = (market_context or {}).get("market_model_debug") or {}
+        dist = debug.get("price_distribution") or {}
+        p75 = dist.get("p75")
+        p25 = dist.get("p25")
+        if p75 and p25 and float(p75) > 0 and float(p25) > 0:
+            best_revenue = float(units) * float(p75)
+            worst_revenue = float(units) * float(p25)
+        else:
+            best_revenue = revenue_base * 1.10
+            worst_revenue = revenue_base * 0.90
+
         best_cost = fixed_cost + (construction_cost_total * 0.92) + (development_cost_total * 0.92)
         worst_cost = fixed_cost + (construction_cost_total * 1.08) + (development_cost_total * 1.10)
         roi_base = None if projected_cost == 0 else (revenue_base - projected_cost) / projected_cost

@@ -49,6 +49,7 @@ class FeasibilityServiceTest(unittest.TestCase):
             estimated_home_price=450000.0,
             cost_per_home=250000.0,
             road_cost_per_ft=300.0,
+            soft_cost_factor=0.0,
         )
 
         result = self.service.evaluate(parcel=self.parcel, layout=layout, market_data=market_data)
@@ -56,26 +57,28 @@ class FeasibilityServiceTest(unittest.TestCase):
         self.assertEqual(result.parcel_id, self.parcel.parcel_id)
         self.assertEqual(result.units, 10)
         self.assertEqual(result.estimated_home_price, 450000.0)
-        self.assertEqual(result.construction_cost_per_home, 150000.0)
-        self.assertEqual(result.development_cost_total, 218000.0)
+        self.assertEqual(result.construction_cost_per_home, 250000.0)
+        self.assertEqual(result.development_cost_total, 308750.0)
         self.assertEqual(result.projected_revenue, 4500000.0)
-        self.assertEqual(result.projected_cost, 1718000.0)
-        self.assertEqual(result.projected_profit, 2782000.0)
-        self.assertAlmostEqual(result.ROI or 0.0, 2782000.0 / 1718000.0, places=8)
-        self.assertAlmostEqual(result.profit_margin or 0.0, 2782000.0 / 4500000.0, places=8)
+        self.assertEqual(result.projected_cost, 2808750.0)
+        self.assertEqual(result.projected_profit, 1691250.0)
+        self.assertAlmostEqual(result.ROI or 0.0, 1691250.0 / 2808750.0, places=8)
+        self.assertAlmostEqual(result.profit_margin or 0.0, 1691250.0 / 4500000.0, places=8)
         self.assertEqual(result.revenue_per_unit, 450000.0)
-        self.assertEqual(result.cost_per_unit, 171800.0)
+        self.assertEqual(result.cost_per_unit, 280875.0)
         self.assertEqual(result.max_units, 10)
         self.assertEqual(result.layout_id, "layout-001")
         self.assertEqual(result.constraint_violations, [])
         self.assertEqual(result.financial_summary["projected_revenue"], 4500000.0)
         self.assertEqual(result.financial_summary["land_cost"], 0.0)
         self.assertEqual(result.financial_summary["development_cost_breakdown"]["roads"], 150000.0)
-        self.assertEqual(result.financial_summary["development_cost_breakdown"]["grading"], 15000.0)
+        self.assertGreater(result.financial_summary["development_cost_breakdown"]["utilities"], 0.0)
+        self.assertEqual(result.financial_summary["development_cost_breakdown"]["grading"], 23250.0)
         self.assertEqual(result.financial_summary["development_cost_breakdown"]["sitework"], 18000.0)
         self.assertEqual(result.financial_summary["development_cost_breakdown"]["permitting"], 35000.0)
         self.assertEqual(result.explanation.primary_driver, "home_price")
-        self.assertEqual(result.explanation.cost_breakdown.construction, 1500000.0)
+        self.assertEqual(result.explanation.cost_breakdown.construction, 2500000.0)
+        self.assertEqual(result.explanation.cost_breakdown.development, 308750.0)
         self.assertEqual(result.explanation.revenue_breakdown.units, 10)
 
     def test_evaluate_includes_land_price_in_projected_cost(self) -> None:
@@ -92,15 +95,16 @@ class FeasibilityServiceTest(unittest.TestCase):
             construction_cost_per_home=200000.0,
             road_cost_per_ft=100.0,
             land_price=50000.0,
+            soft_cost_factor=0.0,
         )
 
         result = self.service.evaluate(parcel=self.parcel, layout=layout, market_data=market_data)
 
         self.assertEqual(result.projected_revenue, 1600000.0)
-        self.assertEqual(result.development_cost_total, 43000.0)
-        self.assertEqual(result.projected_cost, 1051320.0)
-        self.assertEqual(result.projected_profit, 548680.0)
-        self.assertAlmostEqual(result.ROI or 0.0, 548680.0 / 1051320.0, places=8)
+        self.assertEqual(result.development_cost_total, 49050.0)
+        self.assertEqual(result.projected_cost, 899050.0)
+        self.assertEqual(result.projected_profit, 700950.0)
+        self.assertAlmostEqual(result.ROI or 0.0, 700950.0 / 899050.0, places=8)
 
     def test_evaluate_handles_zero_total_cost(self) -> None:
         layout = SubdivisionLayout(
@@ -276,6 +280,54 @@ class FeasibilityServiceTest(unittest.TestCase):
         self.assertIsNone(deterministic.metadata)
         self.assertIsNotNone(runtime.metadata)
         self.assertEqual(deterministic.core_calculation_view(), runtime.core_calculation_view())
+
+    def test_soft_costs_applied_to_projected_cost(self) -> None:
+        layout = SubdivisionLayout(
+            layout_id="layout-soft-cost",
+            parcel_id=self.parcel.parcel_id,
+            lot_count=10,
+            open_space_area=0.0,
+            road_length=500.0,
+            utility_length=0.0,
+        )
+        market_data_no_soft = MarketData(
+            estimated_home_price=450000.0,
+            cost_per_home=250000.0,
+            road_cost_per_ft=300.0,
+            soft_cost_factor=0.0,
+        )
+        market_data_with_soft = MarketData(
+            estimated_home_price=450000.0,
+            cost_per_home=250000.0,
+            road_cost_per_ft=300.0,
+            soft_cost_factor=0.15,
+        )
+
+        result_no_soft = self.service.evaluate(parcel=self.parcel, layout=layout, market_data=market_data_no_soft)
+        result_with_soft = self.service.evaluate(parcel=self.parcel, layout=layout, market_data=market_data_with_soft)
+
+        # With soft_cost_factor=0.0, projected_cost matches hard-cost-only baseline
+        self.assertEqual(result_no_soft.projected_cost, 2808750.0)
+
+        # With soft_cost_factor=0.15, soft_costs = 0.15 * (construction + development)
+        # construction = 2500000.0, development = 308750.0
+        expected_soft_costs = 0.15 * (2500000.0 + 308750.0)
+        self.assertAlmostEqual(
+            result_with_soft.projected_cost,
+            2808750.0 + expected_soft_costs,
+            places=2,
+        )
+        self.assertGreater(result_with_soft.projected_cost, result_no_soft.projected_cost)
+
+        # Soft costs should appear in financial_summary breakdown
+        self.assertAlmostEqual(
+            result_with_soft.financial_summary["development_cost_breakdown"]["soft_costs"],
+            expected_soft_costs,
+            places=2,
+        )
+        # And in assumptions
+        self.assertEqual(result_with_soft.assumptions["soft_cost_factor_applied"], 0.15)
+        self.assertEqual(result_no_soft.assumptions["soft_cost_factor_applied"], 0.0)
 
     def test_calibration_hook_compares_predicted_vs_actual(self) -> None:
         layout = SubdivisionLayout(

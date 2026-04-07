@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Optional
+from typing import Literal, Optional
 
 from fastapi import APIRouter, FastAPI, HTTPException
 from pydantic import Field, model_validator
@@ -14,8 +14,13 @@ from bedrock.contracts.parcel import Parcel
 from bedrock.contracts.pipeline_run import PipelineRun
 from bedrock.contracts.validators import validate_optimization_run_output, validate_pipeline_run_output
 from bedrock.services.pipeline_run_store import PipelineRunStore
+from bedrock.services.flood_enrichment_service import FloodEnrichmentService
 from bedrock.services.pipeline_service import PipelineExecutionResult, PipelineService, PipelineStageError
+from bedrock.services.slope_enrichment_service import SlopeEnrichmentService
 from bedrock.services.zoning_service import IncompleteZoningRulesError
+
+_flood_service = FloodEnrichmentService()
+_slope_service = SlopeEnrichmentService()
 from zoning_data_scraper.services.zoning_overlay import (
     AmbiguousJurisdictionMatchError,
     AmbiguousZoningMatchError,
@@ -26,6 +31,48 @@ from zoning_data_scraper.services.zoning_overlay import (
 router = APIRouter(prefix="/pipeline", tags=["pipeline"])
 
 
+def _resolve_land_basis(
+    market_context: Optional[MarketData],
+    land_basis_mode: str,
+    land_basis_value: Optional[float],
+) -> Optional[MarketData]:
+    """Apply land basis mode to market data before passing to pipeline."""
+    if land_basis_mode == "excluded":
+        if market_context is None:
+            return MarketData(
+                estimated_home_price=480000.0,
+                construction_cost_per_home=260000.0,
+                road_cost_per_ft=300.0,
+                land_price=0.0,
+            )
+        return MarketData(
+            estimated_home_price=market_context.estimated_home_price,
+            construction_cost_per_home=market_context.construction_cost_per_home,
+            road_cost_per_ft=market_context.road_cost_per_ft,
+            land_price=0.0,
+            soft_cost_factor=market_context.soft_cost_factor,
+        )
+    if land_basis_mode == "user":
+        if land_basis_value is None:
+            raise ValueError("land_basis_value is required when land_basis_mode is 'user'")
+        if market_context is None:
+            return MarketData(
+                estimated_home_price=480000.0,
+                construction_cost_per_home=260000.0,
+                road_cost_per_ft=300.0,
+                land_price=land_basis_value,
+            )
+        return MarketData(
+            estimated_home_price=market_context.estimated_home_price,
+            construction_cost_per_home=market_context.construction_cost_per_home,
+            road_cost_per_ft=market_context.road_cost_per_ft,
+            land_price=land_basis_value,
+            soft_cost_factor=market_context.soft_cost_factor,
+        )
+    # "proxy" — let MarketIntelligenceService compute land_price
+    return market_context
+
+
 class PipelineRunRequest(BedrockModel):
     parcel: Optional[Parcel] = None
     parcel_geometry: Optional[dict] = None
@@ -33,6 +80,9 @@ class PipelineRunRequest(BedrockModel):
     jurisdiction: Optional[str] = None
     max_candidates: int = Field(default=50, ge=1, le=250)
     market_context: Optional[MarketData] = None
+    include_carry_cost: bool = False
+    land_basis_mode: Literal["excluded", "proxy", "user"] = "proxy"
+    land_basis_value: Optional[float] = Field(default=None, ge=0)
 
     @model_validator(mode="after")
     def _require_parcel_input(self) -> "PipelineRunRequest":
@@ -52,6 +102,9 @@ class PipelineOptimizeRequest(BedrockModel):
     market_context: Optional[MarketData] = None
     objective: OptimizationObjective = Field(default_factory=OptimizationObjective)
     max_rounds: int = Field(default=3, ge=1, le=4)
+    include_carry_cost: bool = False
+    land_basis_mode: Literal["excluded", "proxy", "user"] = "proxy"
+    land_basis_value: Optional[float] = Field(default=None, ge=0)
 
     @model_validator(mode="after")
     def _require_parcel_input(self) -> "PipelineOptimizeRequest":
@@ -73,7 +126,10 @@ def _to_pipeline_run_response(
 
 @router.post("/run", response_model=PipelineRun)
 def run_pipeline(request: PipelineRunRequest) -> PipelineRun:
-    service = PipelineService()
+    service = PipelineService(flood_enrichment_service=_flood_service, slope_enrichment_service=_slope_service)
+    service._include_carry_cost = request.include_carry_cost
+    market_data = _resolve_land_basis(request.market_context, request.land_basis_mode, request.land_basis_value)
+    service._land_basis_mode = request.land_basis_mode
     try:
         execution_result = service.run(
             parcel=request.parcel,
@@ -81,7 +137,7 @@ def run_pipeline(request: PipelineRunRequest) -> PipelineRun:
             max_candidates=request.max_candidates,
             parcel_id=request.parcel_id,
             jurisdiction=request.jurisdiction,
-            market_data=request.market_context,
+            market_data=market_data,
         )
         return _to_pipeline_run_response(execution_result, service=service)
     except PipelineStageError as exc:
@@ -114,7 +170,10 @@ def run_pipeline(request: PipelineRunRequest) -> PipelineRun:
 
 @router.post("/optimize", response_model=OptimizationRun)
 def optimize_pipeline(request: PipelineOptimizeRequest) -> OptimizationRun:
-    service = PipelineService()
+    service = PipelineService(flood_enrichment_service=_flood_service, slope_enrichment_service=_slope_service)
+    service._include_carry_cost = request.include_carry_cost
+    market_data = _resolve_land_basis(request.market_context, request.land_basis_mode, request.land_basis_value)
+    service._land_basis_mode = request.land_basis_mode
     try:
         result = service.optimize(
             parcel=request.parcel,
@@ -122,7 +181,7 @@ def optimize_pipeline(request: PipelineOptimizeRequest) -> OptimizationRun:
             max_candidates=request.max_candidates,
             parcel_id=request.parcel_id,
             jurisdiction=request.jurisdiction,
-            market_data=request.market_context,
+            market_data=market_data,
             objective=request.objective,
             max_rounds=request.max_rounds,
         )
@@ -183,7 +242,7 @@ class BatchOptimizeResponse(BedrockModel):
 
 @router.post("/optimize/batch", response_model=BatchOptimizeResponse)
 def optimize_batch(request: BatchOptimizeRequest) -> BatchOptimizeResponse:
-    service = PipelineService()
+    service = PipelineService(flood_enrichment_service=_flood_service, slope_enrichment_service=_slope_service)
     results: list[BatchOptimizeResultItem] = []
 
     for parcel_id in request.parcel_ids:
